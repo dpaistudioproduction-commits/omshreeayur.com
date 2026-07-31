@@ -1,0 +1,44 @@
+{
+  "slug": "heart-disease",
+  "category": "cardiology",
+  "seoTitle": "Heart Disease & Cardiomyopathy Treatment in Ayurveda | Omshree Sidha",
+  "seoDescription": "Discover authentic, research-based Ayurvedic & Siddha treatments for Cardiomyopathy and Heart Disease at Omshree Sidha Hospital, Kerala.",
+  "hero": {
+    "title": "Heart Disease & Cardiomyopathy",
+    "subtitle": "Restoring heart function and vitality through integrated Ayurvedic protocols and classical formulations.",
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070"
+  },
+  "overview": "Cardiomyopathy is a disease of the heart muscle that makes it harder for your heart to pump blood to the rest of your body. In Ayurveda, this is often correlated with 'Hrid Roga', arising from an imbalance of the Vata and Pitta doshas. Our approach focuses on strengthening the myocardium (heart muscle), reducing fluid overload, and clearing the channels (Srotas) of circulation using specialized formulations like KAFASTHA.",
+  "symptoms": [
+    "Breathlessness with exertion or even at rest",
+    "Swelling of the legs, ankles, and feet (Edema)",
+    "Bloating of the abdomen due to fluid buildup",
+    "Cough while lying down",
+    "Fatigue, irregular heartbeats that feel rapid, pounding or fluttering"
+  ],
+  "causes": [
+    "Long-term high blood pressure",
+    "Heart tissue damage from a previous heart attack",
+    "Chronic rapid heart rate",
+    "Metabolic disorders, such as obesity, thyroid disease or diabetes",
+    "Sedentary lifestyle and high-stress levels (Vata aggravation)"
+  ],
+  "treatmentApproach": "We employ a highly integrative clinical approach. Treatment begins with a thorough pulse diagnosis (Nadi Pariksha) and a review of modern diagnostics (Echocardiogram). The core protocol involves internal administration of Hridya (heart-strengthening) herbs like Arjuna and Pushkarmool, strict Pathya (dietary regimens restricting sodium and fluid), and gentle detoxifying therapies to reduce the workload on the heart.",
+  "benefits": [
+    "Gradual improvement in Ejection Fraction (EF)",
+    "Significant reduction in breathlessness and fatigue",
+    "Natural management of fluid retention without harsh synthetic diuretics",
+    "Improved overall quality of life and exercise tolerance"
+  ],
+  "recoveryTimeline": "Patients often notice a reduction in acute symptoms like swelling and breathlessness within 3-4 weeks of strict adherence. Measurable structural improvements (like increased EF) typically require 6 to 12 months of consistent therapy and lifestyle modification.",
+  "faqs": [
+    {
+      "q": "Is Ayurvedic treatment safe alongside my current heart medications?",
+      "a": "Yes. We strongly advise against abruptly stopping any life-saving allopathic medications. Our Ayurvedic protocols are designed to be taken safely alongside your current prescriptions, with appropriate time gaps."
+    },
+    {
+      "q": "Can Ayurveda reverse cardiomyopathy completely?",
+      "a": "While complete reversal of structural damage is challenging, our treatments focus on halting disease progression, strengthening remaining healthy tissue, and significantly improving cardiac output and quality of life."
+    }
+  ]
+}
