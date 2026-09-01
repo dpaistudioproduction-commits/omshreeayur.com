@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Pause, Play, MessageCircle } from "lucide-react";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface SlideData {
   id: string;
@@ -60,7 +61,7 @@ const HERO_SLIDES: SlideData[] = [
     tag: "A Multi Speciality Ayurveda Hospital & Research Centre",
     title: "Omshree Sidha Hospital: Clinical Care, Inpatient Comfort",
     subtitle: "A dedicated hospital in Vayala, Kerala with 24-hour resident doctor supervision, GMP-certified pharmacy, and tailored Panchakarma regimens.",
-    imageSrc: BRAND_ASSETS.therapies.shirodhara,
+    imageSrc: "/images/hospital/banner.png",
     imageAlt: "Omshree Sidha Hospital Campus and Clinical Environment",
     primaryCtaText: "About Our Hospital",
     primaryCtaLink: "/about",
@@ -185,127 +186,162 @@ export function HeroSlider() {
   return (
     <section
       aria-label="Omshree Sidha Hospital Highlights"
-      className="relative w-full min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center bg-[#402816] overflow-hidden select-none"
+      className="relative w-full min-h-screen flex items-center justify-center bg-[#402816] overflow-hidden select-none"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Background Slides with Crossfade */}
-      {HERO_SLIDES.map((slide, index) => {
-        const isActive = index === currentSlide;
-        return (
-          <div
-            key={slide.id}
-            aria-hidden={!isActive}
-            className={cn(
-              "absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out pointer-events-none",
-              isActive ? "opacity-100" : "opacity-0"
-            )}
-          >
-            <Image
-              src={slide.imageSrc}
-              alt={slide.imageAlt}
-              fill
-              sizes="100vw"
-              priority={index === 0}
-              className={cn(
-                "object-cover object-center transition-transform duration-[7000ms] ease-out",
-                isActive ? "scale-105" : "scale-100"
-              )}
-            />
-            {/* Deep Multi-Layer Earth/Kobicha Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#402816]/95 via-[#402816]/80 to-[#2c1b0f]/60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#402816] via-transparent to-[#402816]/40" />
-          </div>
-        );
-      })}
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={activeSlide.id}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="absolute inset-0 z-0 pointer-events-none"
+        >
+          <Image
+            src={activeSlide.imageSrc}
+            alt={activeSlide.imageAlt}
+            fill
+            sizes="100vw"
+            priority={currentSlide === 0}
+            className="object-cover object-center"
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Refined Dark Vignette / Overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#2c1b0f]/90 via-[#402816]/50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#1a110a]/90 via-transparent to-[#402816]/20 pointer-events-none" />
 
       {/* Main Content Area */}
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-24">
+      <div className="w-full max-w-[1440px] mx-auto px-[4%] relative z-10 py-24">
         <div className="max-w-3xl">
-          
-          {/* Tag / Category Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#517B32]/40 border border-[#6F9940]/40 backdrop-blur-md mb-6">
-            <span className="h-2 w-2 rounded-full bg-[#B4833D] animate-pulse" />
-            <span className="text-xs md:text-sm font-semibold tracking-wider uppercase text-[#E3D8C1]">
-              {activeSlide.tag}
-            </span>
-          </div>
-
-          {/* Heading (Dramatic Serif) */}
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F1E1] mb-6 leading-[1.12] tracking-tight">
-            {activeSlide.title}
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-[#E3D8C1] mb-10 leading-relaxed font-light max-w-2xl">
-            {activeSlide.subtitle}
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <Button
-              render={<Link href={activeSlide.primaryCtaLink} />}
-              size="lg"
-              className="bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 text-base font-bold shadow-xl border border-[#6F9940]/40 transition-all transform hover:-translate-y-0.5"
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeSlide.id}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } },
+                exit: { transition: { staggerChildren: 0.05 } }
+              }}
+              className="flex flex-col items-start"
             >
-              {activeSlide.primaryCtaText}
-            </Button>
+              {/* Tag / Category Badge (Glassmorphism) */}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
+                }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-sm"
+              >
+                <span className="h-2 w-2 rounded-full bg-[#B4833D] animate-pulse shadow-[0_0_8px_rgba(180,131,61,0.8)]" />
+                <span className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#F7F1E1]">
+                  {activeSlide.tag}
+                </span>
+              </motion.div>
 
-            <Button
-              render={<Link href={activeSlide.secondaryCtaLink} />}
-              variant="outline"
-              size="lg"
-              className="border-[#E3D8C1]/40 text-[#F7F1E1] bg-[#402816]/40 hover:bg-white/10 backdrop-blur-xs rounded-full px-6 h-14 text-base font-medium transition-all"
-            >
-              {activeSlide.secondaryCtaText}
-            </Button>
-          </div>
+              {/* Heading */}
+              <motion.h1
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
+                }}
+                className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F1E1] mb-6 leading-[1.12] tracking-tight drop-shadow-lg"
+              >
+                {activeSlide.title}
+              </motion.h1>
 
+              {/* Subtitle */}
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
+                }}
+                className="text-base sm:text-lg md:text-xl text-[#E3D8C1] mb-10 leading-relaxed font-light max-w-2xl drop-shadow-md"
+              >
+                {activeSlide.subtitle}
+              </motion.p>
+
+              {/* CTAs */}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
+                }}
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+              >
+                <Button
+                  render={<Link href={activeSlide.primaryCtaLink} />}
+                  size="lg"
+                  className="bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 text-base font-semibold shadow-[0_0_20px_rgba(81,123,50,0.4)] border border-[#6F9940]/50 transition-all hover:-translate-y-0.5"
+                >
+                  {activeSlide.primaryCtaText}
+                </Button>
+
+                <Button
+                  render={<Link href={activeSlide.secondaryCtaLink} />}
+                  variant="outline"
+                  size="lg"
+                  className="border-[#E3D8C1]/30 text-[#F7F1E1] bg-[#402816]/40 hover:bg-white/10 backdrop-blur-md rounded-full px-8 h-14 text-base font-medium transition-all hover:border-[#E3D8C1]/60"
+                >
+                  {activeSlide.secondaryCtaText}
+                </Button>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
-      {/* Slider Controls (Bottom Bar) */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 pointer-events-none">
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between pointer-events-auto">
+      {/* Slider Controls - Unified Control Island at Bottom Right */}
+      <div className="absolute bottom-8 right-4 sm:right-6 lg:right-8 z-20 pointer-events-auto">
+        <div className="flex items-center gap-4 bg-[#2c1b0f]/60 backdrop-blur-xl border border-[#E3D8C1]/10 rounded-full px-6 py-3 shadow-2xl">
           
-          {/* Slide Indicator & Progress Line */}
-          <div className="flex items-center gap-4">
+          {/* Slide Indicator */}
+          <div className="flex items-center gap-2 border-r border-[#E3D8C1]/20 pr-4">
             <span className="font-mono text-sm md:text-base font-bold text-[#B4833D]">
-              {activeSlide.number} <span className="text-slate-500">/ 05</span>
+              {activeSlide.number}
             </span>
+            <span className="font-mono text-sm md:text-base text-[#E3D8C1]/50">
+              / 05
+            </span>
+          </div>
 
-            {/* Progress line */}
-            <div className="w-24 md:w-36 h-1 bg-white/20 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-[#B4833D] transition-all duration-75 ease-linear rounded-full"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
-
-            {/* Jump Dots */}
-            <div className="hidden sm:flex items-center gap-2 ml-2">
-              {HERO_SLIDES.map((slide, idx) => (
-                <button
-                  key={slide.id}
-                  onClick={() => goToSlide(idx)}
-                  aria-label={`Go to slide ${idx + 1}: ${slide.theme}`}
-                  className={cn(
-                    "h-2.5 rounded-full transition-all duration-300",
-                    idx === currentSlide
-                      ? "w-8 bg-[#517B32]"
-                      : "w-2.5 bg-white/40 hover:bg-white/70"
-                  )}
-                />
-              ))}
-            </div>
+          {/* Jump Dots with internal progress */}
+          <div className="hidden sm:flex items-center gap-2 px-2">
+            {HERO_SLIDES.map((slide, idx) => (
+              <button
+                key={slide.id}
+                onClick={() => goToSlide(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={cn(
+                  "rounded-full transition-all duration-300 relative overflow-hidden",
+                  idx === currentSlide ? "w-10 h-1.5 bg-[#E3D8C1]/20" : "w-1.5 h-1.5 bg-[#E3D8C1]/40 hover:bg-[#E3D8C1]/70"
+                )}
+              >
+                {idx === currentSlide && (
+                  <div 
+                    className="absolute top-0 left-0 bottom-0 bg-[#B4833D] transition-all duration-75 ease-linear rounded-full"
+                    style={{ width: `${progress}%` }}
+                  />
+                )}
+              </button>
+            ))}
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pl-2 sm:pl-4 sm:border-l border-[#E3D8C1]/20">
             <button
               onClick={() => setIsPlaying((p) => !p)}
               aria-label={isPlaying ? "Pause hero slider" : "Play hero slider"}
-              className="h-10 w-10 rounded-full bg-slate-900/80 border border-slate-700/60 text-[#E3D8C1] hover:text-white hover:bg-slate-800 flex items-center justify-center transition-colors backdrop-blur-md"
+              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
             </button>
@@ -313,7 +349,7 @@ export function HeroSlider() {
             <button
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="h-10 w-10 rounded-full bg-slate-900/80 border border-slate-700/60 text-[#E3D8C1] hover:text-white hover:bg-slate-800 flex items-center justify-center transition-colors backdrop-blur-md"
+              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -321,12 +357,11 @@ export function HeroSlider() {
             <button
               onClick={nextSlide}
               aria-label="Next slide"
-              className="h-10 w-10 rounded-full bg-slate-900/80 border border-slate-700/60 text-[#E3D8C1] hover:text-white hover:bg-slate-800 flex items-center justify-center transition-colors backdrop-blur-md"
+              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
-
         </div>
       </div>
     </section>

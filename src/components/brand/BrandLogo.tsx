@@ -46,9 +46,9 @@ export function BrandLogo({
           <Image
             src={BRAND_ASSETS.logo.primaryWebp}
             alt={BRAND_ASSETS.logo.alt}
-            width={240}
-            height={48}
-            className="h-8 min-[1080px]:h-9 2xl:h-11 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+            width={320}
+            height={64}
+            className="h-12 min-[1080px]:h-14 2xl:h-16 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
             priority
           />
         </div>

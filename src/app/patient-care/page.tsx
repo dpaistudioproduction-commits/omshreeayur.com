@@ -14,7 +14,7 @@ export default function PatientCareHubPage() {
     <div className="flex flex-col w-full font-sans overflow-hidden">
       
       <section className="bg-emerald-900 text-white py-16 md:py-24">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto text-center">
+        <div className="container px-[4%] max-w-5xl mx-auto text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Patient Care at Omshree
           </h1>
@@ -25,7 +25,7 @@ export default function PatientCareHubPage() {
       </section>
 
       <section className="py-20 bg-slate-50">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
+        <div className="container px-[4%] max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <Card className="border-slate-200 hover:border-emerald-400 hover:shadow-lg transition-all flex flex-col bg-white">

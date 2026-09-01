@@ -5,7 +5,7 @@ import { BrandLogo } from "@/components/brand/BrandLogo";
 export function Footer() {
   return (
     <footer className="bg-[#402816] border-t border-[#66371B] pt-16 pb-8 text-[#E3D8C1]">
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1440px] mx-auto px-[4%]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           {/* Column 1: Brand & Intro */}

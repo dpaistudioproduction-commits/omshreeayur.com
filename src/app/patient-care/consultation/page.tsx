@@ -52,7 +52,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 1: HERO */}
       <section className="bg-emerald-900 text-white py-16 md:py-24 relative">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto text-center relative z-10">
+        <div className="container px-[4%] max-w-5xl mx-auto text-center relative z-10">
           <nav className="flex justify-center text-sm text-emerald-200 mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -81,7 +81,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 2: WHAT HAPPENS DURING CONSULTATION? */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+        <div className="container px-[4%] max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               What Happens During a Consultation?
@@ -127,7 +127,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 3 & 4: INFORMATION & ASSESSMENT */}
       <section className="py-20 bg-white">
-        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+        <div className="container px-[4%] max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
             <div>
@@ -193,7 +193,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 5 & 6: CARE PLAN & NEXT STEPS */}
       <section className="py-20 bg-emerald-50 border-t border-emerald-100">
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
+        <div className="container px-[4%] max-w-4xl mx-auto text-center">
           <ClipboardList className="h-12 w-12 text-emerald-600 mx-auto mb-6" />
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6">
             Your Personalized Care Plan
@@ -216,7 +216,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 7: FAQ */}
       <section className="py-20 bg-white">
-        <div className="container px-4 md:px-6 max-w-3xl mx-auto">
+        <div className="container px-[4%] max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl font-bold text-slate-900">Common Questions</h2>
           </div>
@@ -245,7 +245,7 @@ export default function ConsultationPage() {
       
       {/* FINAL CTA */}
       <section className="py-16 bg-slate-900 text-center">
-        <div className="container px-4 md:px-6">
+        <div className="container px-[4%]">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Ready to discuss your health concern?</h2>
           <Button render={<Link href="/contact" />} size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 h-12 text-lg">
             Submit a Consultation Enquiry

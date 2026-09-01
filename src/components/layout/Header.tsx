@@ -31,17 +31,14 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full flex flex-col transition-all duration-300">
+    <header className="sticky -top-9 z-50 w-full flex flex-col">
       
       {/* =========================================================================
           TIER 1: TOP UTILITY BAR (Slim Dark Natural-Green Bar)
           ========================================================================= */}
-      <div className={cn(
-        "w-full bg-[#517B32] text-[#F7F1E1] text-[11px] font-medium tracking-wider transition-all duration-300 overflow-hidden",
-        isScrolled ? "h-0 opacity-0 py-0" : "h-9 opacity-100 py-1.5 border-b border-[#6F9940]/40"
-      )}>
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-full">
-          {/* Left / Center: Location & Hours */}
+      <div className="w-full h-9 bg-[#517B32] text-[#F7F1E1] text-[11px] font-medium tracking-wider py-1.5 border-b border-[#6F9940]/40">
+        <div className="w-full max-w-[1440px] mx-auto px-[4%] flex justify-end items-center h-full gap-4 sm:gap-6 lg:gap-8">
+          {/* Location & Hours */}
           <div className="flex items-center gap-4 sm:gap-6">
             <span className="flex items-center gap-1.5 text-[#F7F1E1] font-medium">
               <MapPin className="h-3.5 w-3.5 text-[#B4833D] shrink-0" />
@@ -53,8 +50,8 @@ export function Header() {
             </span>
           </div>
 
-          {/* Right: International Patient Action */}
-          <div className="flex items-center gap-4">
+          {/* International Patient Action */}
+          <div className="flex items-center">
             <Link
               href="/international-patients"
               className="flex items-center gap-1.5 text-[#F7F1E1] hover:text-[#B4833D] transition-colors font-bold uppercase tracking-wider text-[11px]"
@@ -75,7 +72,7 @@ export function Header() {
           ? "h-16 lg:h-20 shadow-md backdrop-blur-md bg-[#F7F1E1]/98" 
           : "h-20 lg:h-24 shadow-xs"
       )}>
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
+        <div className="w-full max-w-[1440px] mx-auto px-[4%] h-full flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
           
           {/* Left: Authentic Hospital Brand Logo (Aligned to Left Edge) */}
           <div className="flex-shrink-0 flex items-center">

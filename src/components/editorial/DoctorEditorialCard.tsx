@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Award } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 interface DoctorEditorialCardProps {
   id: string;
@@ -30,9 +29,9 @@ export function DoctorEditorialCard({
   const showImage = imagePath && !imgError;
 
   return (
-    <div className="bg-[#F7F1E1] border border-[#DBCFA8] rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#517B32] transition-all duration-300">
-      {/* Top: Portrait Area */}
-      <div className="relative h-72 sm:h-80 w-full bg-[#E3D8C1] overflow-hidden flex items-center justify-center">
+    <div className="flex flex-col items-center text-center group cursor-pointer w-full max-w-sm mx-auto">
+      {/* Top: Arch Portrait Area */}
+      <div className="relative h-80 sm:h-96 w-full bg-[#F7F1E1] overflow-hidden rounded-t-[10rem] rounded-b-3xl mb-8 group-hover:-translate-y-2 transition-transform duration-500 shadow-md">
         {showImage ? (
           <Image
             src={imagePath!}
@@ -40,48 +39,49 @@ export function DoctorEditorialCard({
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             onError={() => setImgError(true)}
-            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
           />
         ) : (
-          <div className="flex flex-col items-center justify-center text-center p-6 space-y-3">
-            <div className="h-24 w-24 rounded-full bg-[#517B32]/15 border-2 border-[#517B32]/30 flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-3">
+            <div className="h-24 w-24 rounded-full bg-[#517B32]/10 border-2 border-[#517B32]/20 flex items-center justify-center">
               <span className="font-heading font-bold text-3xl text-[#517B32] tracking-wider">
                 {initials}
               </span>
             </div>
             <span className="text-[11px] uppercase tracking-widest text-[#81754B] font-semibold">
-              Verified Clinician • Omshree
+              Verified Clinician
             </span>
           </div>
         )}
 
-        <div className="absolute top-4 right-4 bg-[#402816]/80 backdrop-blur-xs text-[#E3D8C1] text-[11px] font-mono uppercase px-3 py-1 rounded-full border border-[#DBCFA8]/40">
-          {qualifications}
+        {/* Qualifications Tag */}
+        <div className="absolute bottom-4 inset-x-0 flex justify-center">
+          <div className="bg-white/90 backdrop-blur-sm text-[#517B32] text-[10px] font-bold uppercase tracking-[0.1em] px-4 py-1.5 rounded-full shadow-sm">
+            {qualifications}
+          </div>
         </div>
       </div>
 
       {/* Bottom: Doctor Details & Editorial Copy */}
-      <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
-        <div className="space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#517B32] block">
-            {role}
-          </span>
-          <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#66371B] group-hover:text-[#517B32] transition-colors">
-            {name}
-          </h3>
-          {bioSnippet && (
-            <p className="text-sm text-[#81754B] leading-relaxed pt-2 font-light">
-              {bioSnippet}
-            </p>
-          )}
-        </div>
+      <div className="flex flex-col items-center space-y-3 w-full px-4">
+        <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B4833D] block">
+          {role}
+        </span>
+        <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#66371B] group-hover:text-[#517B32] transition-colors">
+          {name}
+        </h3>
+        {bioSnippet && (
+          <p className="text-sm text-[#81754B] leading-relaxed font-light line-clamp-3">
+            {bioSnippet}
+          </p>
+        )}
 
-        <div className="pt-4 border-t border-[#DBCFA8]">
+        <div className="pt-4">
           <Link
             href="/about/doctors"
             className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] group-hover:text-[#6F9940] transition-colors"
           >
-            <span>View Full Clinical Profile</span>
+            <span className="border-b border-[#517B32]/30 pb-0.5 group-hover:border-[#6F9940] transition-colors">View Clinical Profile</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

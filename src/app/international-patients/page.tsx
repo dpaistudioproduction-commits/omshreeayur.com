@@ -13,7 +13,7 @@ export default function InternationalPatientsPage() {
     <div className="flex flex-col w-full font-sans overflow-hidden">
       
       <section className="bg-[#402816] text-[#F7F1E1] py-16 md:py-24 relative overflow-hidden">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto relative z-20 text-center">
+        <div className="container px-[4%] max-w-5xl mx-auto relative z-20 text-center">
           <span className="inline-block py-1 px-3.5 rounded-full bg-[#517B32]/40 text-[#E3D8C1] border border-[#6F9940]/40 text-xs font-bold uppercase tracking-wider mb-6">
             Global Patient Services
           </span>
@@ -35,7 +35,7 @@ export default function InternationalPatientsPage() {
       </section>
 
       <section className="py-20 bg-[#F7F1E1] border-b border-[#DBCFA8]">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+        <div className="container px-[4%] max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-[#517B32] mb-2 block">
               Clear & Transparent Pathway
@@ -112,7 +112,7 @@ export default function InternationalPatientsPage() {
       </section>
 
       <section className="py-20 bg-[#E3D8C1]/50">
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
+        <div className="container px-[4%] max-w-4xl mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#66371B] mb-4">Ready to Discuss Your Case?</h2>
           <p className="text-base text-[#81754B] mb-10 max-w-2xl mx-auto">
             Contact our international coordination desk today via WhatsApp or enquiry form with your medical history.

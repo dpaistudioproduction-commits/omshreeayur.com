@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Award, Sparkles, Stethoscope, HelpCircle } from "lucide-react";
-import { AUTHENTIC_PRODUCTS, ProductItem } from "@/lib/product-assets";
+import { ArrowRight, ShieldCheck, Award, Stethoscope, FlaskConical, FileCheck } from "lucide-react";
+import { AUTHENTIC_PRODUCTS } from "@/lib/product-assets";
 import { cn } from "@/lib/utils";
 
 const CATEGORIES = [
@@ -24,54 +24,56 @@ export function PharmacyEditorial() {
     : AUTHENTIC_PRODUCTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <section className="py-24 md:py-32 bg-[#E3D8C1]/30 border-y border-[#DBCFA8]">
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 md:py-32 bg-[#F7F1E1]">
+      <div className="w-full max-w-[1440px] mx-auto px-[4%]">
         
-        {/* Top Header */}
-        <div className="grid lg:grid-cols-12 gap-8 items-end mb-16">
-          <div className="lg:col-span-8 space-y-4">
-            <div className="inline-flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B4833D]" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#517B32]">
-                In-House Ayurvedic Pharmacy & Research
-              </span>
-            </div>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#66371B] leading-tight">
-              GMP Certified Classical & Patented Formulations
-            </h2>
-            <p className="text-base sm:text-lg text-[#81754B] leading-relaxed font-light max-w-3xl">
-              Manufactured exclusively in our Vayala pharmacy under the direction of Sri M.J. Jose, holder of multiple Government of India Ayurvedic patents. Medicines are prepared from freshly harvested botanical extracts.
-            </p>
+        {/* Premium Centered Header */}
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
+          <div className="inline-flex items-center justify-center gap-4 mb-8">
+            <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#B4833D]"></span>
+            <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#B4833D]">
+              In-House Ayurvedic Pharmacy
+            </span>
+            <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#B4833D]"></span>
           </div>
           
-          <div className="lg:col-span-4 lg:text-right space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E3D8C1] text-[#66371B] border border-[#DBCFA8] text-xs font-semibold">
-              <ShieldCheck className="h-4 w-4 text-[#517B32]" />
-              <span>100% In-House Clinical Formulations</span>
+          <h2 className="font-heading font-normal text-4xl sm:text-5xl md:text-6xl text-[#66371B] leading-[1.1] mb-8 relative">
+            <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-[120px] text-[#E3D8C1]/30 z-0 select-none">
+              <FlaskConical className="w-24 h-24 stroke-1" />
+            </span>
+            <span className="relative z-10">GMP Certified Classical &amp; Patented Formulations</span>
+          </h2>
+          
+          <p className="text-base sm:text-lg text-[#81754B] leading-relaxed font-light max-w-3xl mx-auto mb-10">
+            Manufactured exclusively in our Vayala pharmacy under the direction of Sri M.J. Jose, holder of multiple Government of India Ayurvedic patents. Medicines are prepared from freshly harvested botanical extracts.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#DBCFA8] shadow-sm text-xs font-bold uppercase tracking-widest text-[#517B32]">
+              <ShieldCheck className="h-4 w-4" />
+              <span>100% In-House Formulations</span>
             </div>
-            <div>
-              <Link
-                href="/patient-care/consultation"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] hover:text-[#6F9940] transition-colors"
-              >
-                <span>Consult Physician for Prescription</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            <Link
+              href="/patient-care/consultation"
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#66371B] hover:text-[#517B32] transition-colors border-b border-[#66371B]/30 hover:border-[#517B32] pb-1 group"
+            >
+              <span>Consult For Prescription</span>
+              <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
 
-        {/* Category Filters (Mobile Horizontal Scroll / Desktop Tabs) */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-12 scrollbar-none">
+        {/* Category Filters */}
+        <div className="flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-4 mb-16 scrollbar-none px-[4%] md:px-0">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.key}
               onClick={() => setSelectedCategory(cat.key)}
               className={cn(
-                "px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold tracking-wide transition-all whitespace-nowrap cursor-pointer",
+                "px-6 py-2.5 rounded-full text-xs font-bold tracking-widest transition-all whitespace-nowrap cursor-pointer uppercase border",
                 selectedCategory === cat.key
-                  ? "bg-[#517B32] text-white shadow-xs"
-                  : "bg-white text-[#66371B] border border-[#DBCFA8] hover:bg-[#E3D8C1]"
+                  ? "bg-[#66371B] text-white border-[#66371B] shadow-md"
+                  : "bg-white/60 text-[#81754B] border-[#DBCFA8] hover:bg-white hover:text-[#66371B]"
               )}
             >
               {cat.label}
@@ -79,63 +81,61 @@ export function PharmacyEditorial() {
           ))}
         </div>
 
-        {/* Product Cards Gallery */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Uniform Grid Gallery */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-[4%]">
           {filteredProducts.map((product, idx) => (
             <div
               key={product.id}
-              className="bg-[#F7F1E1] rounded-3xl border border-[#DBCFA8] hover:border-[#517B32] transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-xs hover:shadow-md"
+              className="group bg-white rounded-3xl border border-[#DBCFA8] hover:border-[#B4833D] transition-all duration-500 overflow-hidden shadow-sm hover:shadow-md relative flex flex-col"
             >
-              {/* Product Visual Container */}
-              <div className="relative h-72 sm:h-80 w-full bg-white/70 flex items-center justify-center p-6 border-b border-[#DBCFA8]/60 overflow-hidden">
+              {/* Visual Container */}
+              <div className="relative flex items-center justify-center bg-[#FDFBF7] w-full h-48 sm:h-52 border-b border-[#DBCFA8]/50 overflow-hidden">
                 <Image
                   src={product.image}
-                  alt={`${product.name} - Authentic Ayurvedic Formulation by Omshree Sidha Hospital`}
+                  alt={`${product.name} - Authentic Ayurvedic Formulation`}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority={idx === 0}
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  priority={idx < 4}
+                  className="object-contain p-6 group-hover:scale-110 transition-transform duration-700 ease-out mix-blend-multiply"
                 />
                 
-                {/* Category & Patent Tag */}
-                <div className="absolute top-4 left-4 bg-[#E3D8C1]/90 backdrop-blur-xs text-[#66371B] text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#DBCFA8]">
-                  {product.categoryLabel}
-                </div>
-
+                {/* Patent Tag */}
                 {product.patentStatus && (
-                  <div className="absolute top-4 right-4 bg-[#517B32]/15 text-[#517B32] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-[#517B32]/30 flex items-center gap-1">
-                    <Award className="h-3 w-3 text-[#B4833D]" />
+                  <div className="absolute top-3 right-3 bg-[#517B32] text-white text-[8px] font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-sm flex items-center gap-1 z-10">
+                    <Award className="h-2.5 w-2.5" />
                     <span>Patented</span>
                   </div>
                 )}
               </div>
 
-              {/* Product Content Details */}
-              <div className="p-8 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
-                  <h3 className="font-heading font-bold text-2xl text-[#66371B] group-hover:text-[#517B32] transition-colors">
+              {/* Content Details */}
+              <div className="flex flex-col flex-1 p-5 sm:p-6">
+                <div className="mb-4">
+                  <div className="text-[#81754B] text-[8px] font-bold uppercase tracking-[0.2em] mb-2">
+                    {product.categoryLabel}
+                  </div>
+                  <h3 className="font-heading font-medium text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-tight mb-2">
                     {product.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#81754B] leading-relaxed font-light">
+                  <p className="text-xs text-[#81754B] leading-relaxed font-light line-clamp-2">
                     {product.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#DBCFA8] space-y-3">
-                  <div className="text-xs text-[#66371B] font-medium bg-[#E3D8C1]/50 p-3 rounded-xl border border-[#DBCFA8]/40">
-                    <strong className="text-[#517B32] block mb-0.5">Clinical Focus:</strong>
-                    {product.therapeuticFocus}
+                <div className="mt-auto space-y-3">
+                  <div className="text-[10px] text-[#81754B] font-medium bg-[#FDFBF7] p-3 rounded-xl border border-[#DBCFA8]/50">
+                    <strong className="text-[#B4833D] block mb-0.5 uppercase tracking-[0.2em] text-[8px]">Clinical Focus</strong>
+                    <span className="font-light line-clamp-1">{product.therapeuticFocus}</span>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-[11px] text-[#81754B] font-mono italic">
+                  <div className="flex items-center justify-between pt-1">
+                    <span className="text-[9px] text-[#81754B]/60 font-mono italic">
                       * Physician Prescribed
                     </span>
                     <Link
                       href="/patient-care/consultation"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#517B32] hover:text-[#6F9940] transition-colors"
+                      className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors"
                     >
-                      <span>Enquire / Consult</span>
                       <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                   </div>
@@ -143,20 +143,40 @@ export function PharmacyEditorial() {
               </div>
             </div>
           ))}
-        </div>
 
-        {/* Pharmacy Governance Notice */}
-        <div className="mt-16 p-8 bg-white rounded-3xl border border-[#DBCFA8] max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-          <div className="h-16 w-16 rounded-full bg-[#E3D8C1] text-[#517B32] flex items-center justify-center shrink-0 border border-[#DBCFA8]">
-            <Stethoscope className="h-8 w-8" />
-          </div>
-          <div className="space-y-1">
-            <h4 className="font-heading font-bold text-lg text-[#66371B]">
-              Ethical Medicine Governance Notice
-            </h4>
-            <p className="text-xs sm:text-sm text-[#81754B] leading-relaxed font-light">
-              Omshree Sidha Hospital does not sell medicines through commercial e-commerce checkout. All formulations are compounded in accordance with classical Ayurvedic texts and dispensed exclusively following a physical or tele-consultation assessment by our certified physicians.
-            </p>
+          {/* Ethical Governance Card (Fills empty space in the grid) */}
+          <div className="sm:col-span-2 bg-[#3D2618] rounded-3xl border border-[#DBCFA8]/30 overflow-hidden relative flex flex-col justify-between p-8 sm:p-10 group hover:shadow-xl transition-shadow">
+            <div className="absolute inset-0 opacity-[0.15] bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#DBCFA8] via-transparent to-transparent group-hover:opacity-20 transition-opacity"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-14 w-14 rounded-full bg-[#2D1B10] text-[#DBCFA8] flex items-center justify-center shrink-0 border border-[#DBCFA8]/30 shadow-inner">
+                  <FileCheck className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-medium text-2xl text-[#FDFBF7]">
+                    Ethical Governance
+                  </h4>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mt-1">
+                    Prescription Only Policy
+                  </span>
+                </div>
+              </div>
+              
+              <p className="text-[13px] md:text-sm text-[#DBCFA8]/80 leading-relaxed font-light mb-8">
+                Omshree Sidha Hospital does not sell medicines through commercial e-commerce. All formulations are compounded in accordance with classical Ayurvedic texts and dispensed exclusively following a formal consultation assessment by our certified physicians.
+              </p>
+            </div>
+
+            <div className="relative z-10 mt-auto">
+              <Link
+                href="/patient-care/consultation"
+                className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2D1B10] bg-[#DBCFA8] hover:bg-white transition-colors px-6 py-3.5 rounded-full"
+              >
+                <span>Book Consultation</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
 

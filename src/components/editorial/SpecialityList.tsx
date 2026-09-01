@@ -66,64 +66,60 @@ const SPECIALITIES: SpecialityItem[] = [
 ];
 
 export function SpecialityList() {
-  const [hoveredIdx, setHoveredIdx] = useState<number | null>(0);
-
   return (
     <div className="w-full">
-      <div className="divide-y divide-[#DBCFA8]">
-        {SPECIALITIES.map((item, idx) => {
-          const isHovered = hoveredIdx === idx;
-          return (
-            <Link
-              key={item.number}
-              href={item.link}
-              onMouseEnter={() => setHoveredIdx(idx)}
-              className={cn(
-                "group py-8 md:py-10 transition-all duration-300 flex flex-col lg:flex-row lg:items-center justify-between gap-6 cursor-pointer block",
-                isHovered ? "bg-[#E3D8C1]/30 -mx-4 px-4 rounded-xl" : "hover:bg-[#E3D8C1]/20"
-              )}
-            >
-              {/* Left Column: Number & Titles */}
-              <div className="flex items-start gap-6 md:gap-10 lg:w-5/12">
-                <span className="font-mono text-xl md:text-2xl font-bold text-[#B4833D] shrink-0 pt-1">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {SPECIALITIES.map((item) => (
+          <Link
+            key={item.number}
+            href={item.link}
+            className="group relative flex flex-col justify-between bg-white/5 backdrop-blur-xs border border-white/10 p-8 sm:p-10 rounded-[2rem] overflow-hidden hover:bg-white/10 hover:border-[#B4833D]/50 transition-all duration-500 hover:-translate-y-1 shadow-lg"
+          >
+            {/* Large Watermark Number */}
+            <div className="absolute -right-4 -top-8 text-[120px] font-heading font-bold text-white/5 select-none pointer-events-none transition-transform duration-700 group-hover:scale-110">
+              {item.number}
+            </div>
+
+            <div className="relative z-10 flex flex-col h-full">
+              {/* Header */}
+              <div className="flex justify-between items-start mb-8">
+                <span className="text-xl md:text-2xl font-mono font-bold text-[#B4833D]">
                   {item.number}
                 </span>
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#517B32] block mb-1">
-                    {item.category}
+                <div className="h-10 w-10 rounded-full border border-white/10 bg-black/20 flex items-center justify-center group-hover:bg-[#B4833D] group-hover:border-[#B4833D] group-hover:text-white transition-all duration-300">
+                  <ArrowUpRight className="h-5 w-5 text-[#E3D8C1]/60 group-hover:text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </div>
+              </div>
+
+              {/* Title & Category */}
+              <div className="mb-6">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B4833D] block mb-2">
+                  {item.category}
+                </span>
+                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#F7F1E1] leading-snug">
+                  {item.title}
+                </h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm sm:text-base text-[#E3D8C1]/70 leading-relaxed font-light mb-8 flex-1">
+                {item.description}
+              </p>
+
+              {/* Focus Conditions */}
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {item.focusConditions.map((cond) => (
+                  <span
+                    key={cond}
+                    className="text-[10px] sm:text-xs font-medium px-3 py-1 rounded-full bg-black/30 text-[#E3D8C1] border border-white/10 shadow-inner group-hover:border-[#B4833D]/30 transition-colors"
+                  >
+                    {cond}
                   </span>
-                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-tight">
-                    {item.title}
-                  </h3>
-                </div>
+                ))}
               </div>
-
-              {/* Middle Column: Clinical Description & Tags */}
-              <div className="lg:w-6/12 pl-12 lg:pl-0 space-y-3">
-                <p className="text-sm md:text-base text-[#81754B] leading-relaxed font-light">
-                  {item.description}
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {item.focusConditions.map((cond) => (
-                    <span
-                      key={cond}
-                      className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#E3D8C1] text-[#66371B] border border-[#DBCFA8]"
-                    >
-                      {cond}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right Column: Arrow Action */}
-              <div className="hidden lg:flex lg:w-1/12 justify-end items-center">
-                <div className="h-12 w-12 rounded-full border border-[#DBCFA8] group-hover:border-[#517B32] group-hover:bg-[#517B32] group-hover:text-white flex items-center justify-center text-[#66371B] transition-all duration-300">
-                  <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </div>
-              </div>
-            </Link>
-          );
-        })}
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

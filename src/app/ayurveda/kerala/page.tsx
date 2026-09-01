@@ -23,40 +23,42 @@ export default function KeralaAyurvedaPage() {
   };
 
   return (
-    <div className="flex flex-col w-full font-sans overflow-hidden">
+    <div className="flex flex-col w-full font-sans overflow-hidden bg-[#FDFBF7]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* HERO SECTION */}
-      <section className="bg-emerald-900 text-white py-16 md:py-24 relative overflow-hidden">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto relative z-20 text-center">
-          <nav className="flex justify-center text-sm text-emerald-200 mb-8" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-2">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+      <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
+        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+          <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
+            <ol className="inline-flex items-center space-x-3">
+              <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
               <li><span>/</span></li>
-              <li><Link href="/ayurveda" className="hover:text-white transition-colors">Ayurveda</Link></li>
+              <li><Link href="/ayurveda" className="hover:text-[#66371B] transition-colors">Ayurveda</Link></li>
               <li><span>/</span></li>
-              <li className="text-white font-medium">Kerala Ayurveda</li>
+              <li className="text-[#66371B]">Kerala Ayurveda</li>
             </ol>
           </nav>
 
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="font-heading font-normal text-5xl sm:text-6xl md:text-7xl text-[#66371B] leading-[1.1] mb-8">
             The Tradition of Kerala Ayurveda
           </h1>
-          <p className="text-xl text-emerald-100 font-light leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-[#81754B] font-light leading-relaxed max-w-3xl mx-auto">
             Discover why the tropical landscape of Kerala provides the ideal environment for authentic Ayurvedic healing.
           </p>
         </div>
       </section>
 
       {/* AEO BLOCK */}
-      <section className="bg-emerald-50 py-12 border-b border-emerald-100">
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto">
-          <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-emerald-100">
-            <h2 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-              <AlertCircle className="h-6 w-6 text-emerald-600" />
+      <section className="bg-white py-24 border-t border-[#DBCFA8]/30">
+        <div className="container px-[4%] max-w-4xl mx-auto">
+          <div className="bg-[#FDFBF7] p-10 md:p-14 rounded-[3.5rem] shadow-sm border border-[#DBCFA8]/50">
+            <div className="inline-flex justify-center items-center h-16 w-16 rounded-full bg-white border border-[#DBCFA8] text-[#517B32] mb-8 shadow-sm">
+              <AlertCircle className="h-8 w-8" />
+            </div>
+            <h2 className="font-heading text-4xl font-normal text-[#66371B] mb-6">
               What is Kerala Ayurveda?
             </h2>
-            <p className="text-slate-700 text-lg leading-relaxed">
+            <p className="text-[#81754B] text-lg leading-relaxed font-light">
               Kerala Ayurveda refers to the highly authentic and unbroken tradition of Ayurvedic practice maintained in the southern Indian state of Kerala. While Ayurveda is practiced worldwide, Kerala is uniquely recognized for preserving classical texts, developing specialized therapies (such as Kizhi and Pizhichil), and utilizing the region's rich biodiversity of medicinal plants. It is deeply integrated into the local culture as a primary healthcare system.
             </p>
           </div>
@@ -64,49 +66,55 @@ export default function KeralaAyurvedaPage() {
       </section>
 
       {/* CONTENT */}
-      <section className="py-20 bg-white">
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto">
-          <div className="prose prose-emerald max-w-none text-slate-700 text-lg leading-relaxed space-y-8">
+      <section className="py-24 bg-[#FDFBF7]">
+        <div className="container px-[4%] max-w-4xl mx-auto">
+          <div className="max-w-none text-[#81754B] text-lg leading-relaxed space-y-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">A Legacy of Healing</h2>
-              <p>
-                For centuries, the Vaidyas (physicians) of Kerala have strictly adhered to the classical Ayurvedic treatises, particularly the <em>Ashtanga Hridaya</em>. This dedication has allowed Kerala to offer a pure, clinical form of Ayurveda that focuses heavily on chronic disease management rather than just wellness or relaxation.
+              <h2 className="font-heading text-4xl font-normal text-[#66371B] mb-6">A Legacy of Healing</h2>
+              <p className="font-light">
+                For centuries, the Vaidyas (physicians) of Kerala have strictly adhered to the classical Ayurvedic treatises, particularly the <em className="font-medium text-[#66371B]">Ashtanga Hridaya</em>. This dedication has allowed Kerala to offer a pure, clinical form of Ayurveda that focuses heavily on chronic disease management rather than just wellness or relaxation.
               </p>
             </div>
             
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">The Ideal Healing Environment</h2>
-              <p>
+              <h2 className="font-heading text-4xl font-normal text-[#66371B] mb-6">The Ideal Healing Environment</h2>
+              <p className="font-light">
                 Kerala's unique geography—featuring a tropical climate, abundant monsoons, and high humidity—creates the perfect environment for Ayurvedic treatments. The humidity opens the body's pores, making it exceptionally receptive to herbal oils and purification therapies. At Omshree Sidha Hospital, located in the peaceful village of Vayala, Kottayam, patients heal surrounded by tranquil nature, away from urban pollution and stress.
               </p>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Patients Travel to Kerala</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="h-6 w-6 text-emerald-600 shrink-0" />
-                  <span><strong>Authentic Therapies:</strong> Access to traditional treatments exactly as prescribed in ancient texts.</span>
+            <div className="bg-white p-10 md:p-14 rounded-[3rem] border border-[#DBCFA8]/50 shadow-sm">
+              <h3 className="font-heading text-3xl font-normal text-[#66371B] mb-8">Why Patients Travel to Kerala</h3>
+              <ul className="space-y-6 font-light">
+                <li className="flex items-start gap-4">
+                  <div className="mt-1 bg-[#FDFBF7] p-2 rounded-full border border-[#DBCFA8] text-[#517B32] shrink-0">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                  <span className="mt-1"><strong className="text-[#66371B] font-medium">Authentic Therapies:</strong> Access to traditional treatments exactly as prescribed in ancient texts.</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="h-6 w-6 text-emerald-600 shrink-0" />
-                  <span><strong>Fresh Medicinal Herbs:</strong> Treatments utilize freshly prepared medicines sourced from the local biodiversity.</span>
+                <li className="flex items-start gap-4">
+                  <div className="mt-1 bg-[#FDFBF7] p-2 rounded-full border border-[#DBCFA8] text-[#517B32] shrink-0">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                  <span className="mt-1"><strong className="text-[#66371B] font-medium">Fresh Medicinal Herbs:</strong> Treatments utilize freshly prepared medicines sourced from the local biodiversity.</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="h-6 w-6 text-emerald-600 shrink-0" />
-                  <span><strong>Dedicated Hospital Care:</strong> In-patient facilities designed specifically for long-term Ayurvedic recovery, offering continuous medical supervision.</span>
+                <li className="flex items-start gap-4">
+                  <div className="mt-1 bg-[#FDFBF7] p-2 rounded-full border border-[#DBCFA8] text-[#517B32] shrink-0">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                  <span className="mt-1"><strong className="text-[#66371B] font-medium">Dedicated Hospital Care:</strong> In-patient facilities designed specifically for long-term Ayurvedic recovery, offering continuous medical supervision.</span>
                 </li>
               </ul>
             </div>
           </div>
           
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Plan Your Healing Journey</h3>
+          <div className="mt-24 text-center">
+            <h3 className="font-heading text-4xl font-normal text-[#66371B] mb-10">Plan Your Healing Journey</h3>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button render={<Link href="/international-patients" />} size="lg" className="bg-emerald-700 text-white hover:bg-emerald-800 rounded-full px-8">
+              <Button render={<Link href="/international-patients" />} size="lg" className="bg-[#66371B] text-white hover:bg-[#B4833D] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full sm:w-auto">
                 International Patient Guide
               </Button>
-              <Button render={<Link href="/about" />} variant="outline" size="lg" className="border-emerald-700 text-emerald-700 hover:bg-emerald-50 rounded-full px-8">
+              <Button render={<Link href="/about" />} variant="outline" size="lg" className="border-[#DBCFA8] text-[#66371B] hover:bg-white bg-[#FDFBF7] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full sm:w-auto">
                 About Omshree Hospital
               </Button>
             </div>
