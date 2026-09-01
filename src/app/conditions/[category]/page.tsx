@@ -141,7 +141,7 @@ export default async function CategoryPage({ params }: Props) {
               <h2 className="font-heading font-normal text-4xl md:text-5xl text-[#66371B] mb-12 text-center">
                 Frequently Asked Questions
               </h2>
-              <Accordion type="single" collapsible className="w-full bg-white rounded-[2.5rem] border border-[#DBCFA8]/50 shadow-sm overflow-hidden px-8 md:px-12">
+              <Accordion className="w-full bg-white rounded-[2.5rem] border border-[#DBCFA8]/50 shadow-sm overflow-hidden px-8 md:px-12">
                 {category.faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-[#DBCFA8]/30">
                     <AccordionTrigger className="text-left font-medium text-[#66371B] hover:text-[#B4833D] text-lg py-8">
