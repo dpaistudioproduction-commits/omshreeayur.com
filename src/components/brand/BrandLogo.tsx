@@ -20,8 +20,8 @@ export function BrandLogo({
   const content = (
     <div className={cn("inline-flex items-center gap-3 select-none", className)}>
       {isFooter ? (
-        /* Footer: Logo in a light pill container for contrast on dark background */
-        <div className="bg-[#FDFBF7] p-3 px-5 rounded-2xl inline-flex items-center border border-[#DBCFA8]/30 shadow-sm transition-transform duration-300 hover:scale-[1.02]">
+        /* Footer: Logo with transparent background as requested */
+        <div className="inline-flex items-center transition-transform duration-300 hover:scale-[1.02]">
           <Image
             src={BRAND_ASSETS.logo.primaryWebp}
             alt={BRAND_ASSETS.logo.alt}
