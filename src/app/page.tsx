@@ -1,377 +1,459 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Heart, Wind, Activity, Leaf, ArrowRight, ShieldCheck, Clock, 
-  Users, Stethoscope, Microscope, Quote, CheckCircle2, Pill
+  ShieldCheck, 
+  MapPin, 
+  Clock, 
+  Award, 
+  ArrowRight, 
+  Phone, 
+  MessageCircle, 
+  Sparkles, 
+  CheckCircle2, 
+  HeartHandshake, 
+  Building2, 
+  Stethoscope, 
+  FlaskConical, 
+  FileCheck, 
+  Plane, 
+  HelpCircle,
+  CalendarCheck
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { HeroSlider } from "@/components/home/HeroSlider";
+import { TrustSignals } from "@/components/ui/TrustSignals";
+import { SectionHeading } from "@/components/editorial/SectionHeading";
+import { SpecialityList } from "@/components/editorial/SpecialityList";
+import { DoctorEditorialCard } from "@/components/editorial/DoctorEditorialCard";
+import { PharmacyEditorial } from "@/components/editorial/PharmacyEditorial";
+import { BRAND_ASSETS } from "@/lib/brand-assets";
 
-export default function Home() {
+export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalOrganization",
+        "@id": "https://omshreeayur.com/#organization",
+        "name": "Omshree Sidha Hospital",
+        "alternateName": "Omshree Ayurvedic Hospital",
+        "url": "https://omshreeayur.com",
+        "logo": "https://omshreeayur.com/images/logo/logo.webp",
+        "description": "Multi-speciality Ayurvedic Hospital & Research Centre in Vayala, Kottayam, Kerala. Established in 1880, specializing in cardiovascular, hepatic, gastrointestinal, and chronic disease management.",
+        "foundingDate": "1880",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vayala P.O., Kaduthuruthy",
+          "addressLocality": "Kottayam",
+          "addressRegion": "Kerala",
+          "postalCode": "686587",
+          "addressCountry": "IN"
+        },
+        "telephone": "+914822229434",
+        "medicalSpecialty": [
+          "Ayurvedic Cardiovascular Medicine",
+          "Hepatic and Liver Care",
+          "Gastrointestinal Medicine",
+          "Panchakarma Shodhana"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://omshreeayur.com/#website",
+        "url": "https://omshreeayur.com",
+        "name": "Omshree Sidha Hospital",
+        "publisher": { "@id": "https://omshreeayur.com/#organization" }
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col w-full bg-background overflow-hidden font-sans">
-      
-      {/* 1. Hero Section (Full-width Cinematic Banner) */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-        {/* Cinematic Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/kizhi_hero.png"
-            alt="Authentic Ayurvedic Kizhi Treatment at Omshree Sidha"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          {/* Dark Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-black/50 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/50 sm:to-transparent" />
-        </div>
-        
-        <div className="container relative z-10 px-4 md:px-6 w-full pt-16">
-          <div className="max-w-2xl text-center sm:text-left">
-            <FadeIn>
-              <div className="inline-flex items-center gap-2 mb-6">
-                <span className="w-8 h-px bg-primary" />
-                <span className="text-xs font-bold tracking-[0.2em] text-primary-foreground uppercase">Welcome to Omshree</span>
-                <span className="w-8 h-px bg-primary sm:hidden" />
+    <div className="flex flex-col w-full bg-[#F7F1E1] text-[#402816] font-sans overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* =========================================================================
+          SECTION 01: 5-SLIDE CINEMATIC HERO SLIDER
+          ========================================================================= */}
+      <HeroSlider />
+
+      {/* =========================================================================
+          SECTION 02: TRUST STRIP
+          ========================================================================= */}
+      <TrustSignals />
+
+      {/* =========================================================================
+          SECTION 03: HERITAGE STATEMENT (Huge Editorial Typography)
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#F7F1E1] border-b border-[#DBCFA8]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <div className="lg:col-span-5 space-y-6">
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#517B32] block">
+                Since 1880 • Kerala, India
+              </span>
+              <div className="font-heading font-bold text-6xl sm:text-7xl md:text-8xl text-[#B4833D] leading-none tracking-tight">
+                140+
+                <span className="block text-2xl sm:text-3xl text-[#66371B] font-serif font-normal italic mt-2">
+                  Years of Unbroken Lineage
+                </span>
               </div>
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-[1.15] tracking-tight text-shadow-sm">
-                Natural care for<br />
-                <span className="font-bold text-white">deep healing.</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-200 mb-10 leading-relaxed font-light text-shadow-sm">
-                Specialized Ayurveda & Siddha treatments for Cardiology, Respiratory, and chronic conditions. Experience authentic healing backed by clinical evidence.
+              <p className="text-base sm:text-lg text-[#81754B] leading-relaxed font-light">
+                Founded in the late nineteenth century by Sri Kochukutty Vaidhyar, Omshree Sidha Hospital has carried forward pure Kerala Ayurvedic clinical traditions across three generations of the Marozhukayil family.
               </p>
-              
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <Button size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 h-14 text-sm font-bold uppercase tracking-widest transition-all shadow-xl">
-                  Discover More
-                </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-black rounded-full px-10 h-14 text-sm font-bold uppercase tracking-widest transition-all bg-white/10 backdrop-blur-md">
-                  Book Consultation
-                </Button>
+              <div className="pt-2">
+                <Link
+                  href="/about/history"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] hover:text-[#6F9940] transition-colors"
+                >
+                  <span>Read the Full Institutional History</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
-            </FadeIn>
+            </div>
+
+            <div className="lg:col-span-7 bg-[#E3D8C1]/60 p-8 sm:p-12 rounded-3xl border border-[#DBCFA8] space-y-6">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#B4833D]">
+                Institutional Definition & Medical Governance
+              </span>
+              <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#66371B] leading-snug">
+                An Authentic In-Patient Ayurvedic Hospital, Not a Wellness Resort
+              </h3>
+              <p className="text-sm sm:text-base text-[#66371B]/90 leading-relaxed font-light">
+                Omshree Sidha Hospital is a licensed, clinical Ayurvedic institution located in Vayala, Kottayam, Kerala. We specialize in the therapeutic management of chronic cardiovascular, hepatic, gastrointestinal, and metabolic conditions.
+              </p>
+              <p className="text-xs sm:text-sm text-[#81754B] leading-relaxed italic border-l-2 border-[#B4833D] pl-4">
+                Note on terminology: While our heritage institution bears the proper family brand name "Sidha", we practice exclusively the classical medical system of Kerala Ayurveda.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 2. Floating Cards */}
-      <section className="relative z-20 -mt-20 mb-20">
-        <div className="container px-4 md:px-6">
-          <StaggerContainer className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: "Online Consultations", icon: Stethoscope, desc: "Global expert access" },
-              { title: "Specialized Treatments", icon: Heart, desc: "Root-cause healing", active: true },
-              { title: "Proprietary Medicines", icon: Pill, desc: "GMP Certified safety" }
-            ].map((item, i) => (
-              <StaggerItem key={i}>
-                <Card className={`border-none shadow-xl h-full transition-all hover:-translate-y-1 cursor-pointer ${item.active ? 'bg-[#599863] text-white' : 'bg-white text-foreground'}`}>
-                  <CardContent className="p-6 flex items-center gap-4">
-                    <div className={`p-3 rounded-full ${item.active ? 'bg-white/20' : 'bg-[#eef6ec] text-[#599863]'}`}>
-                      <item.icon className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">{item.title}</h3>
-                      <p className={`text-sm ${item.active ? 'text-white/80' : 'text-muted-foreground'}`}>{item.desc}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+      {/* =========================================================================
+          SECTION 04: AREAS OF CARE (Editorial Numbered List)
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#F7F1E1]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Clinical Specialities"
+            title="Comprehensive Ayurvedic Hospital Care"
+            description="Our clinical practice addresses complex lifestyle and degenerative disorders through root-cause correction and tailored therapeutic regimens."
+            className="mb-16 md:mb-24"
+          />
+
+          <SpecialityList />
         </div>
       </section>
 
-      {/* 3. Experience Split Section */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* =========================================================================
+          SECTION 05: SIGNATURE THERAPIES (Asymmetrical Editorial Compositions)
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#E3D8C1]/40 border-y border-[#DBCFA8]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Signature Therapies"
+            title="Authentic Kerala Panchakarma & External Procedures"
+            description="Every treatment procedure is individualized according to Dosha Prakriti, disease chronicity, and internal metabolic Agni."
+            className="mb-16 md:mb-24"
+          />
+
+          <div className="grid md:grid-cols-3 gap-8">
             
-            <FadeIn className="relative">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-                <Image 
-                  src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070" 
-                  alt="Clinical Ayurveda Treatment" 
-                  fill 
-                  className="object-cover"
+            {/* Shirodhara */}
+            <div className="bg-[#F7F1E1] rounded-3xl border border-[#DBCFA8] overflow-hidden flex flex-col justify-between group hover:border-[#517B32] transition-all duration-300">
+              <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#E3D8C1]">
+                <Image
+                  src={BRAND_ASSETS.therapies.shirodhara}
+                  alt="Authentic Shirodhara Therapy at Omshree Sidha Hospital"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              {/* Floating Badge */}
-              <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-[#599863] text-white flex flex-col items-center justify-center shadow-xl border-4 border-white z-10">
-                <span className="text-3xl font-bold font-heading">25+</span>
-                <span className="text-xs font-medium uppercase tracking-wider text-center leading-tight mt-1">Years<br/>Experience</span>
+              <div className="p-8 flex-1 flex flex-col justify-between space-y-4">
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#B4833D] block mb-1">
+                    Nervous System & Calm
+                  </span>
+                  <h3 className="font-heading font-bold text-2xl text-[#66371B] mb-2">
+                    Shirodhara
+                  </h3>
+                  <p className="text-sm text-[#81754B] leading-relaxed font-light">
+                    Continuous rhythmic pouring of warm medicated herbal oil over the forehead to soothe Prana Vata and support neurological equilibrium.
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-[#DBCFA8]">
+                  <Link
+                    href="/treatments/therapies/shirodhara"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] group-hover:text-[#6F9940] transition-colors"
+                  >
+                    <span>View Therapy Protocol</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
-            </FadeIn>
+            </div>
 
-            <FadeIn delay={0.2} className="space-y-6">
-              <h2 className="font-heading text-4xl lg:text-5xl font-light text-foreground leading-tight">
-                The combination of <br/><span className="font-bold">nature and science.</span>
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Our approach integrates classical Panchakarma practices with modern clinical diagnostics. We document your healing journey using Echocardiograms, PFTs, and comprehensive blood panels to prove the efficacy of our natural interventions.
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-4 pt-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-1 rounded-full bg-[#599863]/10 text-[#599863]">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </div>
-                  <span className="font-medium">Expert Chief Physicians</span>
+            {/* Kizhi */}
+            <div className="bg-[#F7F1E1] rounded-3xl border border-[#DBCFA8] overflow-hidden flex flex-col justify-between group hover:border-[#517B32] transition-all duration-300">
+              <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#E3D8C1]">
+                <Image
+                  src={BRAND_ASSETS.therapies.kizhi}
+                  alt="Authentic Elakizhi Therapy at Omshree Sidha Hospital"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-8 flex-1 flex flex-col justify-between space-y-4">
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#B4833D] block mb-1">
+                    Musculoskeletal Rejuvenation
+                  </span>
+                  <h3 className="font-heading font-bold text-2xl text-[#66371B] mb-2">
+                    Elakizhi (Patra Pinda Sweda)
+                  </h3>
+                  <p className="text-sm text-[#81754B] leading-relaxed font-light">
+                    Warm herbal bolus fermentation prepared with medicated leaves to alleviate deep inflammation, stiffness, and chronic joint pain.
+                  </p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="p-1 rounded-full bg-[#599863]/10 text-[#599863]">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </div>
-                  <span className="font-medium">Clinical Evidence Backed</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="p-1 rounded-full bg-[#599863]/10 text-[#599863]">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </div>
-                  <span className="font-medium">GMP Certified Medicines</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="p-1 rounded-full bg-[#599863]/10 text-[#599863]">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </div>
-                  <span className="font-medium">Global Patient Support</span>
+                <div className="pt-4 border-t border-[#DBCFA8]">
+                  <Link
+                    href="/treatments/therapies/elakizhi"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] group-hover:text-[#6F9940] transition-colors"
+                  >
+                    <span>View Therapy Protocol</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </div>
-            </FadeIn>
+            </div>
+
+            {/* Hrid Basti */}
+            <div className="bg-[#F7F1E1] rounded-3xl border border-[#DBCFA8] overflow-hidden flex flex-col justify-between group hover:border-[#517B32] transition-all duration-300">
+              <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#E3D8C1]">
+                <Image
+                  src={BRAND_ASSETS.therapies.hridBasti}
+                  alt="Ayurvedic Cardiovascular Therapy at Omshree Sidha Hospital"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-8 flex-1 flex flex-col justify-between space-y-4">
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#B4833D] block mb-1">
+                    Cardiovascular Nourishment
+                  </span>
+                  <h3 className="font-heading font-bold text-2xl text-[#66371B] mb-2">
+                    Hrid Basti
+                  </h3>
+                  <p className="text-sm text-[#81754B] leading-relaxed font-light">
+                    Retention of specially formulated warm medicated lipid decoctions over the cardiac region (Hridaya) to support heart muscle strength.
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-[#DBCFA8]">
+                  <Link
+                    href="/treatments/therapies/hrid-basti"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] group-hover:text-[#6F9940] transition-colors"
+                  >
+                    <span>View Therapy Protocol</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
       </section>
 
-      {/* 4. Dark Parallax Banner */}
-      <section className="relative py-20 md:py-32 bg-[#2a4533] text-white overflow-hidden my-8 md:my-12">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070')] opacity-20 mix-blend-overlay bg-cover bg-fixed bg-center" />
-        <div className="container relative z-10 px-4 md:px-6 text-center max-w-4xl mx-auto">
-          <FadeIn>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light mb-8 leading-tight">
-              Extraordinary medicine for <br/><span className="font-bold">chronic conditions.</span>
-            </h2>
-            <Button size="lg" className="bg-[#599863] text-white hover:bg-white hover:text-[#599863] rounded-full px-8 h-12 text-base font-medium transition-all shadow-md">
-              Discover More
-            </Button>
-          </FadeIn>
-        </div>
-      </section>
+      {/* =========================================================================
+          SECTION 06: MEDICAL GOVERNANCE & PHYSICIANS
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#F7F1E1]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Clinical Leadership"
+            title="Qualified Ayurvedic Physicians & Vaidyars"
+            description="Our clinical team blends unbroken hereditary healing traditions with modern BAMS university medical qualifications."
+            className="mb-16 md:mb-24"
+          />
 
-      {/* 5. Stats Bar */}
-      <section className="py-12 bg-white border-b border-border shadow-sm relative z-20 -mt-20 mx-4 md:mx-auto max-w-6xl rounded-2xl">
-        <div className="container px-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center divide-y md:divide-y-0 md:divide-x divide-border">
-            <div className="md:pr-8">
-              <p className="text-xl text-foreground font-medium leading-relaxed">
-                We offer Ayurvedic Treatments based on the revered Ashta Vaidya Tradition from Kerala, India.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4 md:pl-8 pt-6 md:pt-0 text-center">
-              <div>
-                <div className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-1">14K<span className="text-[#599863]">+</span></div>
-                <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Patients Cured</div>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-1">95<span className="text-[#599863]">%</span></div>
-                <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Cardiac Success</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Services 6-Grid (Dark Glassmorphism) */}
-      <section className="py-16 md:py-24 relative overflow-hidden bg-[#12221b]">
-        {/* Subtle glowing background orbs */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#25D366]/10 rounded-full blur-[120px] pointer-events-none" />
-        
-        <div className="container px-4 md:px-6 relative z-10">
-          <FadeIn className="text-center mb-16">
-            <p className="text-sm font-semibold tracking-wider text-primary uppercase mb-3">What we offer</p>
-            <h2 className="font-heading text-4xl lg:text-5xl font-light text-white">
-              Centers of <span className="font-bold">Excellence.</span>
-            </h2>
-          </FadeIn>
-
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Heart Disease", desc: "Reversing cardiomyopathy, blocks & improving low Ejection Fraction.", icon: Heart },
-              { title: "Respiratory Care", desc: "Effective clinical management for Asthma, Bronchitis & COPD.", icon: Wind },
-              { title: "Gastrointestinal", desc: "Healing IBS, GERD, Gastritis and restoring gut microbiome.", icon: Activity },
-              { title: "Panchakarma", desc: "Authentic therapies for deep cellular detox and rejuvenation.", icon: Leaf },
-              { title: "Online Consultations", desc: "Global access to our senior Ayurvedic cardiologists and specialists.", icon: Stethoscope },
-              { title: "Proprietary Medicine", desc: "Access our exclusive GMP certified formulas like KAFASTHA.", icon: Pill },
-            ].map((service, i) => (
-              <StaggerItem key={i}>
-                <Card className="h-full border border-white/10 shadow-2xl hover:shadow-[0_0_40px_rgba(89,152,99,0.15)] hover:border-primary/40 transition-all duration-500 bg-white/5 backdrop-blur-xl group rounded-2xl overflow-hidden relative">
-                  <CardContent className="p-8 flex flex-col h-full items-start text-left">
-                    {/* Background Watermark Icon */}
-                    <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none">
-                      <service.icon className="w-32 h-32 text-primary translate-x-4 -translate-y-4" />
-                    </div>
-                    
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 relative z-10 shadow-[0_0_15px_rgba(89,152,99,0.2)]">
-                      <service.icon className="h-6 w-6" />
-                    </div>
-                    
-                    <h3 className="font-heading text-2xl font-bold mb-3 text-white group-hover:text-primary transition-colors duration-300 relative z-10">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-white/70 text-sm leading-relaxed mb-8 flex-grow pr-4 relative z-10">
-                      {service.desc}
-                    </p>
-                    
-                    <div className="flex items-center text-primary font-semibold text-sm mt-auto group-hover:translate-x-2 group-hover:text-white transition-all duration-300 relative z-10 cursor-pointer">
-                      <span>Explore treatments</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 7. Products Grid */}
-      <section className="py-16 md:py-24 bg-background border-t border-border">
-        <div className="container px-4 md:px-6">
-          <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl lg:text-5xl font-light text-foreground">
-              Our Proprietary <span className="font-bold">Medicines.</span>
-            </h2>
-            <p className="text-muted-foreground mt-4">Formulated from clinical research. Manufactured in our GMP certified facility.</p>
-          </FadeIn>
-
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "KAFASTHA", desc: "For Cardiovascular Support", price: "₹850", image: "/images/products/premium_bottle.png" },
-              { title: "CUFPRO", desc: "For Respiratory Health", price: "₹650", image: "/images/products/premium_bottle.png" },
-              { title: "HRUDYAM", desc: "Heart Muscle Tonic", price: "₹1200", image: "/images/products/premium_bottle.png" },
-              { title: "GASTROCARE", desc: "Digestive Balance", price: "₹750", image: "/images/products/premium_bottle.png" },
-            ].map((product, i) => (
-              <StaggerItem key={i}>
-                <Card className="border border-border shadow-sm hover:shadow-md transition-all rounded-2xl overflow-hidden text-center group">
-                  <div className="h-48 bg-white relative flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-500">
-                    <Image 
-                      src={product.image}
-                      alt={product.title}
-                      fill
-                      className="object-contain p-4"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="font-bold text-lg mb-1">{product.title}</h3>
-                    <p className="text-xs text-muted-foreground mb-4 h-8">{product.desc}</p>
-                    <div className="flex items-center justify-between mt-4 border-t border-border pt-4">
-                      <span className="font-bold text-[#599863]">{product.price}</span>
-                      <Button size="sm" className="rounded-full bg-[#599863] hover:bg-[#4a8153] text-white px-4">
-                        Add to cart
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 8. Promo / Consultation Banner */}
-      <section className="py-24 relative bg-[#1a2e22] text-white">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070')] opacity-30 mix-blend-overlay bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e22] to-transparent opacity-80" />
-        
-        <div className="container relative z-10 px-4 md:px-6 text-center max-w-3xl mx-auto">
-          <FadeIn>
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6">
-              Free Preliminary <span className="font-bold">Assessment.</span>
-            </h2>
-            <p className="text-lg text-white/90 mb-8">
-              Upload your recent medical reports (Echo, ECG, Blood tests). Our senior cardiologists will review them and provide a preliminary opinion on whether our Ayurvedic protocols can help your specific condition.
-            </p>
-            <Button size="lg" className="bg-white text-[#1a2e22] hover:bg-gray-100 rounded-full px-10 h-14 text-lg font-bold shadow-xl">
-              Upload Reports Now
-            </Button>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* 9. Testimonials */}
-      <section className="py-24 bg-[#f9fbf9]">
-        <div className="container px-4 md:px-6">
-          <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl lg:text-5xl font-light text-foreground">
-              What they <span className="font-bold">say about us</span>
-            </h2>
-            <p className="text-muted-foreground mt-4">Real clinical outcomes from our patients worldwide.</p>
-          </FadeIn>
-
-          <StaggerContainer className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: "Rajesh K.", location: "Kerala, India", text: "I was told a heart transplant was my only option. After 6 months of strict treatment at Omshree Sidha, my Ejection Fraction improved dramatically. I have my life back." },
-              { name: "Sarah M.", location: "Dubai, UAE", text: "The international patient care team was exceptional. The combination of CUFPRO and their classical treatments cured a chronic cough I suffered with for 3 years." },
-              { name: "Anand V.", location: "Mumbai, India", text: "Dr. Omshree's approach is highly scientific. They reviewed all my allopathic reports and guided me perfectly. The swelling in my legs is gone, and I can walk miles now." },
-            ].map((testimonial, i) => (
-              <StaggerItem key={i}>
-                <Card className="h-full border-none shadow-sm bg-white rounded-2xl p-8 flex flex-col relative">
-                  <Quote className="absolute top-8 right-8 h-8 w-8 text-[#eef6ec]" />
-                  <p className="text-muted-foreground leading-relaxed flex-grow italic relative z-10">"{testimonial.text}"</p>
-                  <div className="mt-8 flex items-center gap-4 border-t border-border pt-6">
-                    <div className="w-10 h-10 rounded-full bg-[#599863] text-white flex items-center justify-center font-bold text-sm">
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
-                      <p className="text-xs text-muted-foreground">{testimonial.location}</p>
-                    </div>
-                  </div>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 10. Simple Footer Newsletter */}
-      <footer className="bg-primary text-primary-foreground py-16">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-primary-foreground/20 pb-12 mb-8">
-            <div>
-              <h3 className="font-heading text-2xl font-bold mb-2">Newsletter</h3>
-              <p className="text-primary-foreground/80 text-sm">Subscribe to get medical updates and wellness tips.</p>
-            </div>
-            <div className="flex w-full md:w-auto max-w-md">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="bg-white/10 border border-white/20 rounded-l-full px-6 py-3 text-sm outline-none focus:bg-white/20 text-white placeholder:text-white/50 w-full"
+          <div className="grid md:grid-cols-3 gap-8">
+            {BRAND_ASSETS.doctors.map((doc) => (
+              <DoctorEditorialCard
+                key={doc.id}
+                id={doc.id}
+                name={doc.name}
+                role={doc.role}
+                qualifications={doc.qualifications}
+                initials={doc.initials}
+                imagePath={doc.imagePath}
+                altText={doc.name}
               />
-              <Button className="rounded-r-full rounded-l-none bg-white text-primary hover:bg-gray-100 h-auto px-6 font-bold">
-                Sign Up
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 07: IN-HOUSE GMP PHARMACY SHOWCASE
+          ========================================================================= */}
+      <PharmacyEditorial />
+
+      {/* =========================================================================
+          SECTION 08: THE PATIENT JOURNEY
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#F7F1E1]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Care Pathway"
+            title="The Patient Healing Journey"
+            description="A structured, compassionate clinical process designed to provide clarity, comfort, and sustainable health restoration."
+            className="mb-16 md:mb-24"
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Enquiry & Assessment",
+                description: "Initial review of medical history, current reports, and primary complaints by our care team.",
+              },
+              {
+                step: "02",
+                title: "Vaidya Consultation",
+                description: "In-depth pulse analysis (Nadi Pariksha) and Prakriti assessment with our chief physicians.",
+              },
+              {
+                step: "03",
+                title: "Personalized Protocol",
+                description: "Customized formulation of Panchakarma schedule, internal medications, and dietary plan.",
+              },
+              {
+                step: "04",
+                title: "Inpatient Care",
+                description: "Comfortable room accommodations, 24/7 resident medical care, and daily therapeutic sessions.",
+              },
+              {
+                step: "05",
+                title: "Discharge & Follow-Up",
+                description: "Post-discharge medicine regimen, lifestyle guidelines, and ongoing tele-consultation support.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="bg-[#E3D8C1]/30 p-8 rounded-3xl border border-[#DBCFA8] space-y-4 hover:border-[#517B32] transition-colors"
+              >
+                <span className="font-mono text-2xl font-bold text-[#B4833D]">
+                  {item.step}
+                </span>
+                <h4 className="font-heading font-bold text-xl text-[#66371B]">
+                  {item.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-[#81754B] leading-relaxed font-light">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 09: FAQ ACCORDION (AEO Structured)
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#E3D8C1]/30 border-y border-[#DBCFA8]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Answers & Guidance"
+            title="Frequently Asked Questions"
+            description="Clear clinical answers regarding consultations, inpatient admissions, and treatment protocols."
+            className="mb-16 md:mb-20 text-center mx-auto"
+          />
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion className="w-full space-y-4">
+              {[
+                {
+                  q: "What conditions are primarily treated at Omshree Sidha Hospital?",
+                  a: "We specialize in the Ayurvedic management of chronic cardiovascular disorders (including low ejection fraction support and coronary block management), hepatic conditions (fatty liver, cirrhosis support), gastrointestinal diseases (IBS, ulcerative colitis), and classical Panchakarma detoxification.",
+                },
+                {
+                  q: "Is Omshree Sidha Hospital an Ayurvedic hospital or a wellness resort?",
+                  a: "Omshree Sidha Hospital is a fully licensed clinical Ayurvedic hospital located in Vayala, Kerala. We provide authentic medical care, inpatient doctor supervision, and individualized classical therapies, not recreational spa packages.",
+                },
+                {
+                  q: "How can international patients arrange consultation and admission?",
+                  a: "International patients can submit their medical reports online via our International Patient portal or WhatsApp. Our medical team conducts an initial review, determines admission eligibility, and assists with medical visas and travel logistics.",
+                },
+                {
+                  q: "Are the medicines prepared in-house?",
+                  a: "Yes. Omshree Sidha Hospital operates a licensed GMP-compliant pharmacy utilizing classical formulations and patented herbal compounds developed across 140+ years of clinical practice.",
+                },
+              ].map((faq, idx) => (
+                <AccordionItem
+                  key={idx}
+                  value={`item-${idx}`}
+                  className="bg-white border border-[#DBCFA8] rounded-2xl px-6 py-2 shadow-2xs"
+                >
+                  <AccordionTrigger className="text-left font-heading font-bold text-lg text-[#66371B] hover:text-[#517B32] py-4">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm sm:text-base text-[#81754B] leading-relaxed font-light pt-2 pb-4">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 10: FINAL CONSULTATION CALL TO ACTION
+          ========================================================================= */}
+      <section className="py-24 md:py-32 bg-[#402816] text-[#F7F1E1] relative overflow-hidden">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B4833D] block">
+              Begin Your Healing Journey
+            </span>
+            <h2 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl leading-tight">
+              Personalized Ayurvedic Clinical Care in Kerala
+            </h2>
+            <p className="text-base sm:text-lg text-[#E3D8C1] font-light leading-relaxed max-w-2xl mx-auto">
+              Schedule a comprehensive clinical consultation with our experienced physicians or speak directly with our care coordination team.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+              <Button
+                render={<Link href="/patient-care/consultation" />}
+                size="lg"
+                className="w-full sm:w-auto bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 text-base font-bold shadow-xl border border-[#6F9940]/40 transition-all transform hover:-translate-y-0.5"
+              >
+                Book a Consultation
+              </Button>
+              <Button
+                render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />}
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto border-[#E3D8C1]/40 text-[#F7F1E1] bg-white/5 hover:bg-white/15 backdrop-blur-xs rounded-full px-8 h-14 text-base font-medium transition-all"
+              >
+                <MessageCircle className="h-5 w-5 mr-2 text-[#25D366]" />
+                <span>WhatsApp Enquiry</span>
               </Button>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <div className="flex items-center gap-2">
-              <Leaf className="h-5 w-5 text-white" />
-              <span className="font-heading font-bold text-white text-lg">Omshree Sidha Hospital</span>
-            </div>
-            <p>Copyright © 2026 Omshree. All rights reserved.</p>
-            <div className="flex gap-6">
-              <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
-              <Link href="/treatments" className="hover:text-white transition-colors">Treatments</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-            </div>
-          </div>
         </div>
-      </footer>
+      </section>
 
     </div>
   );

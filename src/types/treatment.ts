@@ -5,6 +5,7 @@ export interface TreatmentFAQ {
 
 export interface TreatmentData {
   slug: string;
+  name: string;
   category: string;
   seoTitle: string;
   seoDescription: string;
@@ -13,11 +14,26 @@ export interface TreatmentData {
     subtitle: string;
     backgroundImageUrl: string;
   };
-  overview: string;
-  symptoms: string[];
-  causes: string[];
-  treatmentApproach: string;
-  benefits: string[];
-  recoveryTimeline: string;
+  quickAnswer: string;
+  whatItMeans: string;
+  ayurvedicContext: string;
+  howTreatmentIsPlanned: string;
+  therapies: {
+    name: string;
+    slug: string;
+    description: string;
+  }[];
+  whoShouldSeek: string;
+  patientJourney: string;
   faqs: TreatmentFAQ[];
+  relatedConditions: {
+    name: string;
+    slug: string;
+    categorySlug: string;
+  }[];
+  relatedTherapies: {
+    name: string;
+    slug: string;
+  }[];
+  needsVerification?: boolean;
 }

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/'],
+      disallow: ['/api/', '/_next/'],
     },
     sitemap: 'https://omshreeayur.com/sitemap.xml',
   };

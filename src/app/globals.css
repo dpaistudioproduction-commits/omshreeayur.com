@@ -5,6 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-old-lace: #F7F1E1;
+  --color-bone: #E3D8C1;
+  --color-ayur-green: #517B32;
+  --color-ayur-green-light: #6F9940;
+  --color-ayur-gold: #B4833D;
+  --color-kobicha: #66371B;
+  --color-coyote: #81754B;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -49,39 +56,39 @@
 }
 
 :root {
-  --background: #FDFCF0; /* Warm Ivory */
-  --foreground: #2A2A2A; /* Dark Charcoal */
-  --card: #FFFFFF; /* Pure White */
-  --card-foreground: #2A2A2A;
+  --background: #F7F1E1; /* Old Lace */
+  --foreground: #402816; /* Kobicha/Deep Earth text */
+  --card: #FFFFFF;
+  --card-foreground: #402816;
   --popover: #FFFFFF;
-  --popover-foreground: #2A2A2A;
-  --primary: #2F5D50; /* Deep Herbal Green */
+  --popover-foreground: #402816;
+  --primary: #517B32; /* Primary Ayurvedic Green */
   --primary-foreground: #FFFFFF;
-  --secondary: #7A9B76; /* Warm Sage Green */
-  --secondary-foreground: #FFFFFF;
-  --muted: #FAF8F5; /* Rice White */
-  --muted-foreground: #5C664A; /* Darker Natural Olive for contrast */
-  --accent: #E3A857; /* Turmeric Gold */
+  --secondary: #E3D8C1; /* Bone */
+  --secondary-foreground: #66371B; /* Kobicha */
+  --muted: #EFE7D3;
+  --muted-foreground: #81754B; /* Coyote */
+  --accent: #B4833D; /* Dark Goldenrod */
   --accent-foreground: #FFFFFF;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #D4DED8; /* Soft Green-tinted border */
-  --input: #D4DED8;
-  --ring: #2F5D50;
-  --chart-1: #2F5D50;
-  --chart-2: #7A9B76;
-  --chart-3: #E3A857;
-  --chart-4: #B87333; /* Ayurvedic Copper */
-  --chart-5: #1A3C34; /* Forest Green */
-  --radius: 0.75rem; /* Slightly more rounded for organic feel */
-  --sidebar: #FDFCF0;
-  --sidebar-foreground: #2A2A2A;
-  --sidebar-primary: #2F5D50;
+  --border: #DBCFA8;
+  --input: #DBCFA8;
+  --ring: #517B32;
+  --chart-1: #517B32;
+  --chart-2: #6F9940;
+  --chart-3: #B4833D;
+  --chart-4: #66371B;
+  --chart-5: #81754B;
+  --radius: 0.75rem;
+  --sidebar: #F7F1E1;
+  --sidebar-foreground: #402816;
+  --sidebar-primary: #517B32;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #FAF8F5;
-  --sidebar-accent-foreground: #2A2A2A;
-  --sidebar-border: #D4DED8;
-  --sidebar-ring: #2F5D50;
+  --sidebar-accent: #E3D8C1;
+  --sidebar-accent-foreground: #66371B;
+  --sidebar-border: #DBCFA8;
+  --sidebar-ring: #517B32;
 }
 
 .dark {

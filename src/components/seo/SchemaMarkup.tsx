@@ -17,26 +17,25 @@ export function generateMedicalOrganizationSchema() {
     "@type": "MedicalOrganization",
     "name": "Omshree Sidha Hospital",
     "url": "https://omshreeayur.com",
-    "logo": "https://omshreeayur.com/logo.png",
+    "logo": "https://omshreeayur.com/images/logo/logo.webp",
     "medicalSpecialty": [
       "Ayurvedic Medicine",
-      "Siddha Medicine",
       "Cardiovascular",
       "Pulmonary",
       "Gastroenterologic"
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Hospital Road",
-      "addressLocality": "Kerala",
-      "addressRegion": "KL",
-      "postalCode": "682001",
+      "streetAddress": "Vayala P.O.",
+      "addressLocality": "Kottayam",
+      "addressRegion": "Kerala",
+      "postalCode": "686587",
       "addressCountry": "IN"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-98765-43210",
-      "contactType": "customer service"
+      "telephone": "+91-4822-229434",
+      "contactType": "Customer Service"
     }
   };
 }
@@ -48,19 +47,15 @@ export function generateTreatmentSchema(data: TreatmentData) {
       {
         "@type": "MedicalCondition",
         "name": data.hero.title,
-        "description": data.overview,
+        "description": data.whatItMeans,
         "associatedAnatomy": {
           "@type": "AnatomicalStructure",
           "name": data.category
         },
-        "signOrSymptom": data.symptoms.map(s => ({
-          "@type": "MedicalSymptom",
-          "name": s
-        })),
         "possibleTreatment": {
           "@type": "MedicalTherapy",
           "name": "Ayurvedic Treatment for " + data.hero.title,
-          "description": data.treatmentApproach
+          "description": data.howTreatmentIsPlanned
         }
       },
       {

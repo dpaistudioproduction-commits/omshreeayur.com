@@ -1,36 +1,32 @@
 {
   "slug": "heart-disease",
-  "category": "cardiology",
-  "seoTitle": "Heart Disease & Cardiomyopathy Treatment in Ayurveda | Omshree Sidha",
-  "seoDescription": "Discover authentic, research-based Ayurvedic & Siddha treatments for Cardiomyopathy and Heart Disease at Omshree Sidha Hospital, Kerala.",
+  "name": "Heart Disease & Cardiomyopathy",
+  "category": "cardiovascular",
+  "seoTitle": "Ayurvedic Treatment for Heart Disease & Cardiomyopathy | Omshree",
+  "seoDescription": "Discover Omshree Sidha Hospital's authentic Ayurvedic protocols for supportive management of Cardiomyopathy and Heart Disease in Kerala.",
   "hero": {
     "title": "Heart Disease & Cardiomyopathy",
-    "subtitle": "Restoring heart function and vitality through integrated Ayurvedic protocols and classical formulations.",
+    "subtitle": "Supportive clinical management aiming to strengthen heart function and vitality through integrated Ayurvedic protocols.",
     "backgroundImageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070"
   },
-  "overview": "Cardiomyopathy is a disease of the heart muscle that makes it harder for your heart to pump blood to the rest of your body. In Ayurveda, this is often correlated with 'Hrid Roga', arising from an imbalance of the Vata and Pitta doshas. Our approach focuses on strengthening the myocardium (heart muscle), reducing fluid overload, and clearing the channels (Srotas) of circulation using specialized formulations like KAFASTHA.",
-  "symptoms": [
-    "Breathlessness with exertion or even at rest",
-    "Swelling of the legs, ankles, and feet (Edema)",
-    "Bloating of the abdomen due to fluid buildup",
-    "Cough while lying down",
-    "Fatigue, irregular heartbeats that feel rapid, pounding or fluttering"
+  "quickAnswer": "Cardiomyopathy is a disease of the heart muscle that makes it harder for your heart to pump blood to the rest of your body. In Ayurveda, our approach focuses on strengthening the myocardium (heart muscle), reducing fluid overload, and clearing the channels of circulation to provide supportive care alongside your primary medical treatment.",
+  "whatItMeans": "When the heart muscle weakens, patients often experience breathlessness, swelling in the legs, and extreme fatigue. This condition requires careful, ongoing management. Rather than claiming a structural reversal, our goal is to halt progression, reduce the burden on the heart, and significantly improve your quality of life.",
+  "ayurvedicContext": "In Ayurveda, this is often correlated with 'Hrid Roga', arising from an imbalance of the Vata and Pitta doshas. When Ama (toxins) obstructs the Rasa (plasma) and Rakta (blood) channels, the heart must work harder. Additionally, diminished Ojas (the ultimate essence of health) results in muscular weakness.",
+  "howTreatmentIsPlanned": "Treatment begins with a thorough pulse diagnosis (Nadi Pariksha) and a review of your modern diagnostics (like an Echocardiogram). The core protocol involves the internal administration of Hridya (heart-strengthening) herbs like Arjuna and Pushkarmool, strict Pathya (dietary regimens restricting sodium and fluid), and gentle therapies to reduce the workload on the heart.",
+  "therapies": [
+    {
+      "name": "Hrid Basti",
+      "slug": "hrid-basti",
+      "description": "Retention of warm medicated oil over the heart region to nourish cardiac muscles and relieve stress."
+    },
+    {
+      "name": "Abhyanga",
+      "slug": "abhyanga",
+      "description": "Gentle therapeutic massage to improve peripheral circulation and reduce Vata imbalance without overtaxing the heart."
+    }
   ],
-  "causes": [
-    "Long-term high blood pressure",
-    "Heart tissue damage from a previous heart attack",
-    "Chronic rapid heart rate",
-    "Metabolic disorders, such as obesity, thyroid disease or diabetes",
-    "Sedentary lifestyle and high-stress levels (Vata aggravation)"
-  ],
-  "treatmentApproach": "We employ a highly integrative clinical approach. Treatment begins with a thorough pulse diagnosis (Nadi Pariksha) and a review of modern diagnostics (Echocardiogram). The core protocol involves internal administration of Hridya (heart-strengthening) herbs like Arjuna and Pushkarmool, strict Pathya (dietary regimens restricting sodium and fluid), and gentle detoxifying therapies to reduce the workload on the heart.",
-  "benefits": [
-    "Gradual improvement in Ejection Fraction (EF)",
-    "Significant reduction in breathlessness and fatigue",
-    "Natural management of fluid retention without harsh synthetic diuretics",
-    "Improved overall quality of life and exercise tolerance"
-  ],
-  "recoveryTimeline": "Patients often notice a reduction in acute symptoms like swelling and breathlessness within 3-4 weeks of strict adherence. Measurable structural improvements (like increased EF) typically require 6 to 12 months of consistent therapy and lifestyle modification.",
+  "whoShouldSeek": "You may consider our Ayurvedic consultation if you are looking to support your heart health naturally, wish to improve your exercise tolerance, and are seeking a holistic approach to cardiovascular wellness. You must continue your prescribed life-saving medications.",
+  "patientJourney": "Patients often notice a reduction in acute symptoms like swelling and breathlessness within 3-4 weeks of strict adherence to our diet and herbal protocols. Measurable improvements in vitality typically require 6 to 12 months of consistent therapy and lifestyle modification.",
   "faqs": [
     {
       "q": "Is Ayurvedic treatment safe alongside my current heart medications?",
@@ -38,7 +34,25 @@
     },
     {
       "q": "Can Ayurveda reverse cardiomyopathy completely?",
-      "a": "While complete reversal of structural damage is challenging, our treatments focus on halting disease progression, strengthening remaining healthy tissue, and significantly improving cardiac output and quality of life."
+      "a": "While complete reversal of structural damage is highly challenging, our treatments focus on halting disease progression, strengthening remaining healthy tissue, and significantly improving cardiac output and quality of life. [VERIFY BEFORE PUBLICATION]"
     }
-  ]
+  ],
+  "relatedConditions": [
+    {
+      "name": "Low Ejection Fraction",
+      "slug": "low-ejection-fraction",
+      "categorySlug": "cardiovascular"
+    }
+  ],
+  "relatedTherapies": [
+    {
+      "name": "Hrid Basti",
+      "slug": "hrid-basti"
+    },
+    {
+      "name": "Abhyanga",
+      "slug": "abhyanga"
+    }
+  ],
+  "needsVerification": true
 }

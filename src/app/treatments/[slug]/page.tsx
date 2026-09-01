@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
+import { FadeIn } from "@/components/ui/motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, HeartPulse, CheckCircle2, FileText, Globe } from "lucide-react";
+import { Phone, HeartPulse, CheckCircle2, FileText, Globe, ArrowRight, HeartHandshake } from "lucide-react";
 import { TreatmentData } from "@/types/treatment";
 import { SchemaMarkup, generateTreatmentSchema } from "@/components/seo/SchemaMarkup";
 import fs from 'fs';
@@ -50,15 +50,17 @@ export default async function TreatmentPage({ params }: Props) {
   }
 
   return (
-    <div className="flex flex-col w-full bg-background">
-      <SchemaMarkup schema={generateTreatmentSchema(data)} />
+    <div className="flex flex-col w-full bg-slate-50">
+      <SchemaMarkup schema={generateTreatmentSchema(data as any)} />
+      
       {/* 1. Dynamic Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-primary text-primary-foreground">
+      <section className="relative py-20 lg:py-28 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
           <Image 
             src={data.hero.backgroundImageUrl}
-            alt={data.hero.title}
+            alt={`Atmospheric background for ${data.hero.title}`}
             fill
+            sizes="100vw"
             className="object-cover opacity-20 mix-blend-overlay"
             priority
           />
@@ -66,22 +68,23 @@ export default async function TreatmentPage({ params }: Props) {
         <div className="container relative z-10 px-4 md:px-6">
           <div className="max-w-3xl">
             <FadeIn>
-              <span className="inline-block py-1 px-3 rounded-full bg-accent text-primary-foreground text-sm font-semibold tracking-wider uppercase mb-6 shadow-sm">
-                {data.category.toUpperCase()} CENTRE
-              </span>
+              <nav className="flex text-sm text-slate-300 mb-6 font-medium tracking-wide" aria-label="Breadcrumb">
+                <ol className="inline-flex items-center space-x-2">
+                  <li><Link href="/treatments" className="hover:text-white transition-colors">Treatments</Link></li>
+                  <li><span>/</span></li>
+                  <li className="text-emerald-400">{data.name}</li>
+                </ol>
+              </nav>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 {data.hero.title}
               </h1>
-              <p className="text-xl text-primary-foreground/90 leading-relaxed mb-10">
+              <p className="text-xl text-emerald-100 leading-relaxed mb-10 border-l-4 border-emerald-500 pl-6 py-2">
                 {data.hero.subtitle}
               </p>
             </FadeIn>
             <FadeIn delay={0.2} className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 text-lg h-14 px-8 rounded-full shadow-lg">
-                Book Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary text-lg h-14 px-8 rounded-full bg-primary/20 backdrop-blur-sm">
-                <FileText className="mr-2 h-5 w-5" /> Upload Reports
+              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto bg-emerald-600 text-white hover:bg-emerald-700 text-lg h-14 px-8 rounded-full shadow-lg font-bold">
+                Book a Consultation
               </Button>
             </FadeIn>
           </div>
@@ -96,135 +99,189 @@ export default async function TreatmentPage({ params }: Props) {
             {/* Left Column: Clinical Content */}
             <div className="lg:col-span-2 space-y-16">
               
+              {/* 2. Quick Answer */}
               <FadeIn>
-                <h2 className="font-heading text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
-                  <HeartPulse className="text-primary h-8 w-8" /> Overview
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {data.overview}
-                </p>
+                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500"></div>
+                  <h2 className="font-heading text-2xl font-bold mb-4 text-slate-900">
+                    Clinical Overview
+                  </h2>
+                  <p className="text-lg text-slate-700 leading-relaxed font-medium">
+                    {data.quickAnswer}
+                  </p>
+                  {data.needsVerification && (
+                     <p className="text-xs text-rose-600 font-bold mt-4 bg-rose-50 p-2 rounded inline-block uppercase">
+                       [Verify Before Publication] Clinical claim under review.
+                     </p>
+                  )}
+                </div>
               </FadeIn>
 
+              {/* 3 & 4. Meaning & Ayurvedic Perspective */}
               <div className="grid md:grid-cols-2 gap-8">
                 <FadeIn delay={0.1}>
-                  <Card className="h-full border-border bg-muted/30 shadow-sm">
+                  <Card className="h-full border-slate-200 bg-white shadow-sm hover:border-emerald-200 transition-colors">
                     <CardContent className="p-8">
-                      <h3 className="font-heading text-2xl font-bold mb-4 text-primary">Common Symptoms</h3>
-                      <ul className="space-y-3">
-                        {data.symptoms.map((symptom, i) => (
-                          <li key={i} className="flex items-start gap-3">
-                            <span className="w-2 h-2 mt-2 rounded-full bg-accent shrink-0" />
-                            <span className="text-muted-foreground">{symptom}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <h3 className="font-heading text-xl font-bold mb-4 text-slate-900">What It Means for You</h3>
+                      <p className="text-slate-600 leading-relaxed">
+                        {data.whatItMeans}
+                      </p>
                     </CardContent>
                   </Card>
                 </FadeIn>
 
                 <FadeIn delay={0.2}>
-                  <Card className="h-full border-border bg-muted/30 shadow-sm">
+                  <Card className="h-full border-slate-200 bg-white shadow-sm hover:border-emerald-200 transition-colors">
                     <CardContent className="p-8">
-                      <h3 className="font-heading text-2xl font-bold mb-4 text-primary">Key Causes</h3>
-                      <ul className="space-y-3">
-                        {data.causes.map((cause, i) => (
-                          <li key={i} className="flex items-start gap-3">
-                            <span className="w-2 h-2 mt-2 rounded-full bg-accent shrink-0" />
-                            <span className="text-muted-foreground">{cause}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <h3 className="font-heading text-xl font-bold mb-4 text-slate-900">Ayurvedic Perspective</h3>
+                      <p className="text-slate-600 leading-relaxed">
+                        {data.ayurvedicContext}
+                      </p>
                     </CardContent>
                   </Card>
                 </FadeIn>
               </div>
 
+              {/* 5. How Treatment is Planned */}
               <FadeIn delay={0.3}>
-                <h2 className="font-heading text-3xl font-bold mb-6 text-foreground">Our Treatment Approach</h2>
-                <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10">
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    {data.treatmentApproach}
+                <h2 className="font-heading text-3xl font-bold mb-6 text-slate-900">How Treatment is Planned</h2>
+                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                  <p className="text-lg text-slate-700 leading-relaxed">
+                    {data.howTreatmentIsPlanned}
                   </p>
-                  <h4 className="font-bold text-lg mb-4">Expected Clinical Benefits:</h4>
-                  <ul className="grid sm:grid-cols-2 gap-4">
-                    {data.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground font-medium">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </FadeIn>
 
+              {/* 6. Therapies That May Be Used */}
               <FadeIn delay={0.4}>
-                <h2 className="font-heading text-3xl font-bold mb-6 text-foreground">Recovery Timeline</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {data.recoveryTimeline}
+                <h2 className="font-heading text-3xl font-bold mb-6 text-slate-900">Therapies That May Be Used</h2>
+                <p className="text-slate-600 mb-6 text-lg">
+                  Depending on your individual assessment, your physician may prescribe specific therapies as part of your comprehensive treatment plan.
                 </p>
+                <div className="grid sm:grid-cols-2 gap-6">
+                  {data.therapies.map((therapy, i) => (
+                    <Card key={i} className="border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                      <CardContent className="p-6">
+                        <h4 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-emerald-600" /> {therapy.name}
+                        </h4>
+                        <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+                          {therapy.description}
+                        </p>
+                        <Link href={`/treatments/therapies/${therapy.slug}`} className="text-emerald-700 font-semibold text-sm hover:underline flex items-center gap-1">
+                          Read About Therapy <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </FadeIn>
 
-              {/* FAQs */}
+              {/* 7 & 8. Who Needs It & Patient Journey */}
               <FadeIn delay={0.5}>
-                <h2 className="font-heading text-3xl font-bold mb-6 text-foreground">Frequently Asked Questions</h2>
-                <Accordion className="w-full">
-                  {data.faqs.map((faq, i) => (
-                    <AccordionItem key={i} value={`item-${i}`} className="border-border">
-                      <AccordionTrigger className="text-left text-lg font-medium hover:text-primary py-4">
-                        {faq.q}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-4">
-                        {faq.a}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
+                <div className="space-y-12">
+                  <div>
+                    <h2 className="font-heading text-2xl font-bold mb-4 text-slate-900">Who Should Seek Consultation?</h2>
+                    <p className="text-lg text-slate-700 leading-relaxed">
+                      {data.whoShouldSeek}
+                    </p>
+                  </div>
+                  <div className="bg-emerald-50 p-8 rounded-2xl border border-emerald-100">
+                    <h2 className="font-heading text-2xl font-bold mb-4 text-emerald-900">The Patient Journey & Recovery</h2>
+                    <p className="text-lg text-emerald-800 leading-relaxed">
+                      {data.patientJourney}
+                    </p>
+                  </div>
+                </div>
               </FadeIn>
+
+              {/* 9. FAQs */}
+              {data.faqs.length > 0 && (
+                <FadeIn delay={0.6}>
+                  <h2 className="font-heading text-3xl font-bold mb-6 text-slate-900">Frequently Asked Questions</h2>
+                  <Accordion className="w-full bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    {data.faqs.map((faq, i) => (
+                      <AccordionItem key={i} value={`item-${i}`} className="border-slate-200 px-6">
+                        <AccordionTrigger className="text-left text-lg font-bold text-slate-800 hover:text-emerald-700 py-6">
+                          {faq.q}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-slate-600 text-base leading-relaxed pb-6">
+                          {faq.a}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </FadeIn>
+              )}
             </div>
 
             {/* Right Column: Global Lead Gen Sidebar */}
             <div className="lg:col-span-1">
-              <div className="sticky top-32 space-y-6">
-                <FadeIn>
-                  <Card className="border-border shadow-xl overflow-hidden">
-                    <div className="bg-primary p-6 text-white text-center">
-                      <h3 className="font-heading text-2xl font-bold mb-2">Speak to a Specialist</h3>
-                      <p className="opacity-90 text-sm">Get a free preliminary assessment of your medical reports.</p>
+              <div className="sticky top-32 space-y-8">
+                
+                {/* 10 & 11. Related Links */}
+                {(data.relatedConditions.length > 0 || data.relatedTherapies.length > 0) && (
+                  <FadeIn>
+                    <Card className="border-slate-200 shadow-sm bg-white">
+                      <CardContent className="p-6">
+                        <h3 className="font-heading text-xl font-bold mb-4 text-slate-900 border-b border-slate-100 pb-4">Explore Further</h3>
+                        
+                        {data.relatedConditions.length > 0 && (
+                          <div className="mb-6">
+                            <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Related Conditions</h4>
+                            <ul className="space-y-3">
+                              {data.relatedConditions.map(c => (
+                                <li key={c.slug}>
+                                  <Link href={`/conditions/${c.categorySlug}/${c.slug}`} className="text-emerald-700 font-medium hover:underline flex items-center gap-2">
+                                    <ArrowRight className="h-4 w-4" /> {c.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {data.relatedTherapies.length > 0 && (
+                          <div>
+                            <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Related Therapies</h4>
+                            <ul className="space-y-3">
+                              {data.relatedTherapies.map(t => (
+                                <li key={t.slug}>
+                                  <Link href={`/treatments/therapies/${t.slug}`} className="text-emerald-700 font-medium hover:underline flex items-center gap-2">
+                                    <ArrowRight className="h-4 w-4" /> {t.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </FadeIn>
+                )}
+
+                {/* 12. Consultation CTA */}
+                <FadeIn delay={0.1}>
+                  <Card className="border-emerald-200 shadow-md bg-emerald-50 overflow-hidden">
+                    <div className="bg-emerald-700 p-6 text-white text-center">
+                      <HeartHandshake className="h-10 w-10 mx-auto mb-3 opacity-90" />
+                      <h3 className="font-heading text-2xl font-bold mb-2">Book a Consultation</h3>
+                      <p className="opacity-90 text-sm font-medium">Get a clinical assessment by our expert physicians.</p>
                     </div>
-                    <CardContent className="p-6 space-y-6">
-                      <div className="flex items-center gap-4 bg-muted p-4 rounded-lg">
-                        <Phone className="h-8 w-8 text-primary shrink-0" />
-                        <div>
-                          <p className="text-sm text-muted-foreground">Call Us Directly</p>
-                          <p className="font-bold text-lg text-foreground">+91 4822229434</p>
-                        </div>
-                      </div>
-                      
-                      <Button className="w-full h-14 bg-[#25D366] text-white hover:bg-[#1ebd5a] rounded-full text-lg shadow-md font-bold">
-                        WhatsApp Chat
+                    <CardContent className="p-6 space-y-4">
+                      <Button render={<Link href="/patient-care/consultation" />} className="w-full h-12 bg-emerald-600 text-white hover:bg-emerald-800 text-base shadow-sm font-bold">
+                        Start Assessment
                       </Button>
-                      
-                      <Button variant="outline" className="w-full h-14 border-primary text-primary hover:bg-primary hover:text-white rounded-full text-lg shadow-sm">
-                        Book Appointment
+                      <Button render={<Link href="https://wa.me/919846992789" target="_blank" />} variant="outline" className="w-full h-12 border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white text-base shadow-sm">
+                        WhatsApp Us
                       </Button>
+                      <p className="text-center text-xs text-emerald-700 mt-4">
+                        Or call us directly at <br/><strong>+91 4822229434</strong>
+                      </p>
                     </CardContent>
                   </Card>
                 </FadeIn>
 
-                <FadeIn delay={0.1}>
-                  <Card className="border-accent bg-accent/5 shadow-sm">
-                    <CardContent className="p-6 flex flex-col items-center text-center gap-4">
-                      <Globe className="h-10 w-10 text-accent" />
-                      <h4 className="font-heading font-bold text-xl">International Patients</h4>
-                      <p className="text-sm text-muted-foreground">
-                        We offer dedicated online video consultations and comprehensive medical tourism packages.
-                      </p>
-                      <Link href="/international-patients" className="text-primary font-bold text-sm hover:underline">
-                        Learn More
-                      </Link>
-                    </CardContent>
-                  </Card>
-                </FadeIn>
               </div>
             </div>
 

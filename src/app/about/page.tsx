@@ -1,113 +1,126 @@
 import { Metadata } from "next";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Award, Heart, Leaf, ShieldCheck, Clock, Users } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { TrustSignals } from "@/components/ui/TrustSignals";
+import { MapPin, ArrowRight, Info } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Omshree Sidha Hospital",
-  description: "Learn about the heritage, clinical expertise, and founder of Omshree Sidha Hospital, Kerala's trusted destination for authentic Ayurveda.",
+  description: "Learn about Omshree Sidha Hospital, a premier Ayurvedic institution in Kottayam, Kerala, offering clinical disease management and traditional healing.",
 };
 
-export default function AboutPage() {
-  return (
-    <div className="flex flex-col w-full bg-background">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070')] bg-cover bg-center" />
-        <div className="container relative z-10 px-4 md:px-6 text-center">
-          <FadeIn>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold max-w-4xl mx-auto mb-6">
-              A Legacy of Authentic Healing
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-              Omshree Sidha Hospital combines the ancient wisdom of Kerala Ayurveda and Siddha with modern clinical standards to offer hope and healing.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+export default function AboutMasterPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "MedicalOrganization",
+      "name": "Omshree Sidha Hospital",
+      "url": "https://omshreeayur.com",
+      "logo": "https://omshreeayur.com/images/logo/logo.webp",
+      "description": "An Ayurvedic Hospital providing healing, detox, rejuvenation treatments and Ayurvedic products.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16,18, Marozhukayil House, Kummannoor-Vayala",
+        "addressLocality": "Kottayam",
+        "addressRegion": "Kerala",
+        "postalCode": "686587",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-4822229434"
+    }
+  };
 
-      {/* Founder Story */}
-      <section className="py-20 md:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeIn>
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-muted">
-                {/* Placeholder for Founder Image */}
-                <div className="absolute inset-0 bg-secondary/20 flex items-center justify-center">
-                   <div className="text-center text-secondary-foreground p-8">
-                     <Users className="h-16 w-16 mx-auto mb-4 opacity-50 text-primary" />
-                     <p className="font-heading text-xl opacity-70">Chief Physician & Founder</p>
-                   </div>
-                </div>
-              </div>
-            </FadeIn>
-            <div className="space-y-6">
-              <FadeIn delay={0.1}>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">Our Founder's Vision</h2>
-                <div className="w-20 h-1 bg-accent mt-4 mb-6 rounded-full" />
-              </FadeIn>
-              <FadeIn delay={0.2} className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Rooted in the rich traditions of Kerala, Omshree Sidha Hospital was established with a singular mission: to provide genuine, evidence-based Ayurvedic and Siddha treatments for severe chronic illnesses that often challenge conventional medicine.
-                </p>
-                <p>
-                  Under the guidance of our esteemed Chief Physician, the hospital has pioneered integrative approaches to Cardiology (specifically managing Low EF and Heart Failure), Respiratory disorders, and complex Gastrointestinal diseases.
-                </p>
-                <p>
-                  "We do not just treat the disease; we treat the person. Our goal is to restore harmony at the cellular level, empowering the body's innate ability to heal itself."
-                </p>
-              </FadeIn>
-            </div>
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is Omshree Sidha Hospital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Omshree Sidha Hospital is a traditional, clinical Ayurvedic hospital located in Vayala, Kottayam, Kerala. Despite the name 'Sidha', the hospital specializes strictly in authentic Kerala Ayurveda for chronic disease management, operating an in-house GMP-certified medicine pharmacy and in-patient treatment facility."
+      }
+    }]
+  };
+
+  return (
+    <div className="flex flex-col w-full font-sans overflow-hidden">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+
+      <section className="bg-[#402816] text-[#F7F1E1] py-16 md:py-24 relative">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto relative z-20 text-center">
+          <span className="inline-block py-1 px-3.5 rounded-full bg-[#517B32]/40 text-[#E3D8C1] border border-[#6F9940]/40 text-xs font-bold uppercase tracking-wider mb-6">
+            Our Institution
+          </span>
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#F7F1E1]">
+            About Omshree Sidha Hospital
+          </h1>
+          <p className="text-xl text-[#E3D8C1] font-light leading-relaxed mb-8 max-w-3xl mx-auto">
+            A traditional Ayurvedic Hospital in Kerala, India, dedicated to clinical healing and chronic disease management.
+          </p>
+          <div className="flex items-center justify-center gap-2 text-[#B4833D]">
+            <MapPin className="h-5 w-5" />
+            <span className="font-medium text-[#E3D8C1]">Vayala, Kottayam, Kerala</span>
           </div>
         </div>
       </section>
 
-      {/* Clinical Approach */}
-      <section className="py-20 bg-muted">
-        <div className="container px-4 md:px-6">
-          <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">Our Clinical Approach</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We uphold the highest standards of safety, hygiene, and authenticity.
-            </p>
-          </FadeIn>
+      <TrustSignals />
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <StaggerItem>
-              <Card className="h-full border-border bg-card">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
-                  <div className="p-4 rounded-full bg-primary/10 text-primary">
-                    <Leaf className="h-8 w-8" />
-                  </div>
-                  <h3 className="font-heading text-xl font-bold">100% Authentic Medicines</h3>
-                  <p className="text-muted-foreground">All our medicines are prepared under strict supervision using high-quality raw herbs, ensuring maximum efficacy.</p>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-            <StaggerItem>
-              <Card className="h-full border-border bg-card">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
-                  <div className="p-4 rounded-full bg-primary/10 text-primary">
-                    <ShieldCheck className="h-8 w-8" />
-                  </div>
-                  <h3 className="font-heading text-xl font-bold">Evidence-Based Practice</h3>
-                  <p className="text-muted-foreground">We rely on documented case studies, modern diagnostics (ECGs, Echos), and classical texts to formulate treatment plans.</p>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-            <StaggerItem>
-              <Card className="h-full border-border bg-card">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
-                  <div className="p-4 rounded-full bg-primary/10 text-primary">
-                    <Award className="h-8 w-8" />
-                  </div>
-                  <h3 className="font-heading text-xl font-bold">Expert Doctors</h3>
-                  <p className="text-muted-foreground">Our team consists of highly qualified Ayurvedic and Siddha practitioners with decades of specialized clinical experience.</p>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-          </StaggerContainer>
+      <section className="bg-[#E3D8C1]/50 py-12 border-b border-[#DBCFA8]">
+        <div className="container px-4 md:px-6 max-w-4xl mx-auto">
+          <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-[#DBCFA8]">
+            <h2 className="text-xl font-bold text-[#66371B] mb-3 flex items-center gap-2">
+              <Info className="h-6 w-6 text-[#517B32]" />
+              What is Omshree Sidha Hospital?
+            </h2>
+            <p className="text-[#66371B]/90 text-lg leading-relaxed mb-4">
+              Omshree Sidha Hospital is a traditional Ayurvedic hospital located in the tranquil village of Vayala, Kerala. We specialize in clinical disease management and Panchakarma therapies. 
+            </p>
+            <p className="text-[#66371B] text-lg leading-relaxed font-medium">
+              Note on our name: While the institution bears the proper name "Sidha", we are exclusively an Ayurvedic hospital. We practice the classical medical systems of Kerala Ayurveda, utilizing our own GMP-certified medicinal preparations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#F7F1E1]">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            <div className="bg-white p-8 rounded-2xl border border-[#DBCFA8] flex flex-col items-start shadow-xs">
+              <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4">Heritage & History</h3>
+              <p className="text-[#81754B] mb-6 flex-1">
+                Founded in the 1880s by Sri Kochukutty Vaidhyar, our hospital carries over 140 years of unbroken traditional Ayurvedic lineage.
+              </p>
+              <Button render={<Link href="/about/history" />} variant="outline" className="text-[#517B32] border-[#517B32] hover:bg-[#E3D8C1] rounded-full mt-auto">
+                Discover Our Roots <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl border border-[#DBCFA8] flex flex-col items-start shadow-xs">
+              <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4">Our Doctors</h3>
+              <p className="text-[#81754B] mb-6 flex-1">
+                Led by Sri M.J. Jose, our team of qualified Ayurvedic physicians (BAMS) blends deep traditional knowledge with rigorous clinical diagnosis.
+              </p>
+              <Button render={<Link href="/about/doctors" />} variant="outline" className="text-[#517B32] border-[#517B32] hover:bg-[#E3D8C1] rounded-full mt-auto">
+                Meet the Team <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl border border-[#DBCFA8] flex flex-col items-start shadow-xs">
+              <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4">Why Choose Us</h3>
+              <p className="text-[#81754B] mb-6 flex-1">
+                We are a hospital, not a spa. With our own GMP pharmacy and dedicated in-patient care, we focus strictly on therapeutic results.
+              </p>
+              <Button render={<Link href="/about/why-omshree" />} variant="outline" className="text-[#517B32] border-[#517B32] hover:bg-[#E3D8C1] rounded-full mt-auto">
+                The Omshree Difference <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>
