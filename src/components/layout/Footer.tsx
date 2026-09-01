@@ -64,31 +64,67 @@ export function Footer() {
           </div>
 
           {/* Column 4: Connect */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:col-span-1 xl:col-span-2">
             <h3 className="font-heading font-bold text-lg text-[#F7F1E1]">Connect</h3>
-            <ul className="space-y-4 text-sm text-[#E3D8C1]/80">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#B4833D] shrink-0 mt-0.5" />
-                <span>
-                  Omshree Sidha Hospital<br />
-                  Vayala P.O., Kottayam<br />
-                  Kerala 686587, India
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#B4833D] shrink-0" />
-                <a href="tel:+914822229434" className="hover:text-[#B4833D] transition-colors">+91 4822229434</a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-[#B4833D] shrink-0" />
-                <a href="mailto:info@omshreeayur.com" className="hover:text-[#B4833D] transition-colors">info@omshreeayur.com</a>
-              </li>
-              <li>
-                <Link href="/contact" className="inline-block mt-2 text-[#B4833D] hover:text-[#E3D8C1] font-medium transition-colors">
-                  View Full Contact Details &rarr;
-                </Link>
-              </li>
-            </ul>
+            
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+              {/* Kottayam */}
+              <ul className="space-y-4 text-sm text-[#E3D8C1]/80">
+                <li className="font-bold text-[#F7F1E1]">Kottayam (Main Hospital)</li>
+                <li className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-[#B4833D] shrink-0 mt-0.5" />
+                  <span>
+                    OmShree Sidha Hospital<br />
+                    Vayala P.O, Kottayam<br />
+                    Kerala 686587, India
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Phone className="h-5 w-5 text-[#B4833D] shrink-0 mt-0.5" />
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+914822229434" className="hover:text-[#B4833D] transition-colors">+91 4822229434</a>
+                    <a href="tel:+919846992789" className="hover:text-[#B4833D] transition-colors">+91 9846992789</a>
+                    <a href="tel:+914822229435" className="hover:text-[#B4833D] transition-colors">+91 4822229435</a>
+                    <a href="tel:+918086662789" className="hover:text-[#B4833D] transition-colors">+91 8086662789</a>
+                  </div>
+                </li>
+              </ul>
+
+              {/* Kochi */}
+              <ul className="space-y-4 text-sm text-[#E3D8C1]/80">
+                <li className="font-bold text-[#F7F1E1]">Kochi (Branch)</li>
+                <li className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-[#B4833D] shrink-0 mt-0.5" />
+                  <span>
+                    Omshree Sidha Hospital<br />
+                    K.P Vallon Road, Pavana Homes<br />
+                    Kadavanthra, Kochi
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Phone className="h-5 w-5 text-[#B4833D] shrink-0 mt-0.5" />
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+916282553899" className="hover:text-[#B4833D] transition-colors">+91 6282553899</a>
+                    <a href="tel:+914842324899" className="hover:text-[#B4833D] transition-colors">+91 4842324899</a>
+                    <a href="tel:+914842324789" className="hover:text-[#B4833D] transition-colors">+91 4842324789</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="pt-4 mt-4 border-t border-[#66371B]/40">
+              <ul className="space-y-4 text-sm text-[#E3D8C1]/80">
+                <li className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-[#B4833D] shrink-0" />
+                  <a href="mailto:info@omshreeayur.com" className="hover:text-[#B4833D] transition-colors">info@omshreeayur.com</a>
+                </li>
+                <li>
+                  <Link href="/contact" className="inline-block mt-2 text-[#B4833D] hover:text-[#E3D8C1] font-medium transition-colors">
+                    View Full Contact Details &rarr;
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
