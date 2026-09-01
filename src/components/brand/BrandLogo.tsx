@@ -54,7 +54,7 @@ export function BrandLogo({
     <Link
       href="/"
       aria-label={`${BRAND_ASSETS.institution.name} - Home`}
-      className="focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 rounded-lg inline-block"
+      className="focus:outline-none inline-block"
     >
       {content}
     </Link>
