@@ -175,7 +175,7 @@ export default async function TreatmentPage({ params }: Props) {
               {data.faqs.length > 0 && (
                 <FadeIn delay={0.6}>
                   <h2 className="font-heading font-normal text-3xl md:text-4xl mb-8 text-[#66371B]">Frequently Asked Questions</h2>
-                  <Accordion type="single" collapsible className="w-full bg-[#FDFBF7] rounded-[2.5rem] border border-[#DBCFA8]/50 shadow-sm overflow-hidden px-8 md:px-12">
+                  <Accordion className="w-full bg-[#FDFBF7] rounded-[2.5rem] border border-[#DBCFA8]/50 shadow-sm overflow-hidden px-8 md:px-12">
                     {data.faqs.map((faq, i) => (
                       <AccordionItem key={i} value={`item-${i}`} className="border-[#DBCFA8]/30">
                         <AccordionTrigger className="text-left text-lg font-medium text-[#66371B] hover:text-[#B4833D] py-8">
