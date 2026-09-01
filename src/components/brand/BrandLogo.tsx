@@ -20,19 +20,15 @@ export function BrandLogo({
   const content = (
     <div className={cn("inline-flex items-center gap-3 select-none", className)}>
       {isFooter ? (
-        /* Footer: Premium Typography Logo */
-        <div className="flex flex-col items-start gap-1 group">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="h-8 w-8 rounded-full bg-[#B4833D]/20 flex items-center justify-center border border-[#B4833D]/30">
-              <span className="font-heading font-bold text-[#F7F1E1] text-sm">OS</span>
-            </div>
-            <span className="font-heading text-2xl text-[#F7F1E1] tracking-wide group-hover:text-[#B4833D] transition-colors">
-              Omshree Sidha
-            </span>
-          </div>
-          <span className="text-[10px] text-[#B4833D] font-bold tracking-[0.2em] uppercase pl-10">
-            {BRAND_ASSETS.institution.properEntity} • Est. 1880
-          </span>
+        /* Footer: Logo with transparent background and white filter for contrast */
+        <div className="inline-flex items-center transition-transform duration-300 hover:scale-[1.02]">
+          <Image
+            src={BRAND_ASSETS.logo.primaryWebp}
+            alt={BRAND_ASSETS.logo.alt}
+            width={240}
+            height={48}
+            className="h-12 w-auto object-contain brightness-0 invert opacity-90"
+          />
         </div>
       ) : (
         /* Header: Authentic Official Hospital Brand Logo */
