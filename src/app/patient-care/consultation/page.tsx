@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Stethoscope, FileText, Activity, ClipboardList, ArrowRight, Video } from "lucide-react";
+import { Stethoscope, FileText, Activity, ClipboardList, ArrowRight, Video, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Book an Ayurvedic Consultation | Omshree Sidha Hospital",
@@ -139,19 +139,19 @@ export default function ConsultationPage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
                   <span className="text-slate-700"><strong>Medical History:</strong> Past illnesses, chronic conditions, and previous surgical history.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
                   <span className="text-slate-700"><strong>Current Medications:</strong> Allopathic, homeopathic, or supplement prescriptions you are currently taking.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
                   <span className="text-slate-700"><strong>Diagnostic Reports:</strong> Recent lab results, blood work, MRIs, CT scans, or doctor summaries.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
                   <span className="text-slate-700"><strong>Lifestyle Details:</strong> Daily routine, work stress, sleep duration, and food habits.</span>
                 </li>
               </ul>

@@ -6,7 +6,7 @@
 
 ## 1. Global Content Container Architecture
 
-A single, unified content container (`w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8`) has been applied across all sections of the website:
+A single, unified content container standard (**`w-full px-[4%]`**) has been applied across all sections of the website and across every subpage:
 - **Header Top Utility Bar**
 - **Header Main Navigation**
 - **Cinematic Hero Slider**
@@ -20,32 +20,28 @@ A single, unified content container (`w-full max-w-[1440px] mx-auto px-4 sm:px-6
 - **AEO FAQ Accordion**
 - **Consultation Conversion Block**
 - **Footer**
+- **All Routes & Subpages** (`/treatments/*`, `/conditions/*`, `/ayurveda/*`, `/about/*`, `/patient-care/*`, `/international-patients`, `/contact`)
 
 ---
 
 ## 2. Precise Multi-Viewport Measurements
 
-### A. 1080 × 720 Viewport (Minimum Desktop Requirement)
-- **Container Boundary:** `X = 32px` to `X = 1048px` (exact 32px side padding on 1080px screen).
-- **Logo Position:** `Left: 32px`, `Right: 186.56px` (flushed with left content edge).
-- **Desktop Navigation Menu:** `Left: 202.56px`, `Right: 826.12px` (6 items fit with zero wrapping).
-- **Contact & CTA Actions:** `Left: 842.12px`, `Right: 1048px`.
-- **Book Consultation Button:** `Left: 918.12px`, `Right: 1048px` (flushed with right content edge, 0px clipping, 0px overflow).
-- **Hero Content Alignment:** Inner boundary `32px` to `1048px` (exact match with header).
-- **Trust Signals Feature Strip:** 4 equal columns bounded from `32px` to `1048px` (exact match with header & hero).
+### A. 1920 × 1080 Viewport (Widescreen / Ultrawide Displays)
+- **Universal 4% Margin Standard:** Left offset = `76.8px` (4%), Right offset = `1843.2px` (96%). Total active content width = `1766.4px` (92%).
+- **Edge-to-Edge Fluid Immersion:** Content seamlessly spans the display without restrictive 240px+ empty side gutters.
+- **Header, Hero, Feature Strip & Grids:** All share exact `4%` left boundary and `4%` right boundary.
 
 ### B. 1440 × 900 Viewport (Standard Desktop)
-- **Container Boundary:** `X = 32px` to `X = 1408px` (exact 32px side padding).
-- **Header, Hero, Feature Strip & Heritage:** All share identical `32px` left alignment and `1408px` right alignment.
+- **Container Boundary:** Left = `57.6px` (4%), Right = `1382.4px` (96%).
+- **Alignment:** 100% aligned from header to footer across every route.
 
-### C. 1920 × 1080 Viewport (Ultrawide Desktop)
-- **Max Width:** Constrained to `1440px` with auto-margins: `(1920px - 1440px) / 2 = 240px` on left and right.
-- **Content Boundary:** Centered from `X = 272px` to `X = 1648px`.
-- **Zero Stretch:** No stretching across ultrawide monitors; all sections remain in vertical harmony.
+### C. 1200 × 800 Viewport (Compact Laptops)
+- **Container Boundary:** Left = `48px` (4%), Right = `1152px` (96%).
+- **Desktop Navigation:** Fits comfortably with optimized pill spacing and zero collisions.
 
-### D. Mobile & Tablet (< 1080px)
-- **Navigation:** Clean hamburger drawer with accessible touch targets.
-- **Feature Strip:** Responsive 2×2 grid on tablet/mobile with zero horizontal scrolling.
+### D. Mobile & Tablet (< 1200px)
+- **Navigation:** Clean hierarchical mobile drawer with active states and touch CTAs.
+- **Layout:** Responsive 1-col / 2-col stacking with uniform 4% side margins.
 
 ---
 

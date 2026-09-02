@@ -152,7 +152,7 @@ export default function ConsultationPage() {
               </Button>
             </div>
           </div>
-
+          </div>
         </div>
       </section>
     </div>

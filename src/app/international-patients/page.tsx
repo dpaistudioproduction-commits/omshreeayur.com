@@ -126,6 +126,7 @@ export default function InternationalPatientsPage() {
               <MessageCircle className="h-5 w-5 mr-2 text-[#25D366]" /> Chat on WhatsApp
             </Button>
           </div>
+          </div>
         </div>
       </section>
 
