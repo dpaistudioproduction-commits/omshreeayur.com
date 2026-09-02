@@ -15,7 +15,7 @@ export default function ChallengingOfferPage() {
 
 
       <section className="bg-slate-900 text-white py-16 md:py-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Our Challenging Offer
           </h1>
@@ -26,7 +26,7 @@ export default function ChallengingOfferPage() {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="container px-[4%] max-w-4xl mx-auto">
+        <div className="w-full px-[4%]">
           
           <div className="bg-red-50 border border-red-200 text-red-900 p-6 rounded-xl mb-12 flex items-start gap-4">
             <AlertTriangle className="h-6 w-6 shrink-0 mt-1" />

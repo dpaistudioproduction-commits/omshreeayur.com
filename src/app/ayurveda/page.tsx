@@ -28,7 +28,7 @@ export default function AyurvedaHubPage() {
 
       {/* HERO SECTION */}
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -63,8 +63,8 @@ export default function AyurvedaHubPage() {
 
       {/* AEO BLOCK: WHAT IS AYURVEDA */}
       <section className="bg-white py-24 border-t border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-4xl mx-auto">
-          <div className="bg-[#FDFBF7] p-10 md:p-14 rounded-[3.5rem] shadow-sm border border-[#DBCFA8]/50">
+        <div className="w-full px-[4%]">
+          <div className="bg-[#FDFBF7] p-10 md:p-14 rounded-[3.5rem] shadow-sm border border-[#DBCFA8]/50 max-w-4xl mx-auto">
             <div className="inline-flex justify-center items-center h-16 w-16 rounded-full bg-white border border-[#DBCFA8] text-[#517B32] mb-8 shadow-sm">
               <AlertCircle className="h-8 w-8" />
             </div>
@@ -80,7 +80,7 @@ export default function AyurvedaHubPage() {
 
       {/* CORE TOPICS GRID */}
       <section className="py-24 bg-[#FDFBF7]">
-        <div className="container px-[4%] max-w-[1440px] mx-auto">
+        <div className="w-full px-[4%]">
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             
             <div className="bg-white p-10 md:p-12 rounded-[2.5rem] shadow-sm border border-[#DBCFA8]/50 flex flex-col group hover:shadow-md transition-shadow">
@@ -128,7 +128,7 @@ export default function AyurvedaHubPage() {
 
       {/* THE OMSHREE APPROACH */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-4xl mx-auto">
+        <div className="w-full px-[4%]">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl md:text-5xl font-normal text-[#66371B] mb-6">
               How Does Omshree Approach Care?

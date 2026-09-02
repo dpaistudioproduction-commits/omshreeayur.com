@@ -12,7 +12,7 @@ export default function TariffPage() {
     <div className="flex flex-col w-full font-sans overflow-hidden">
       
       <section className="bg-emerald-900 text-white py-16 md:py-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Hospital Tariff
           </h1>
@@ -23,7 +23,7 @@ export default function TariffPage() {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="container px-[4%] max-w-4xl mx-auto">
+        <div className="w-full px-[4%]">
           
           <div className="bg-amber-50 border border-amber-200 text-amber-900 p-6 rounded-xl mb-12">
             <h2 className="font-bold text-lg mb-2">Subject to Confirmation</h2>

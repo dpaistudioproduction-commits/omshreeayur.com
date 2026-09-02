@@ -27,7 +27,7 @@ export default function HistoryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -54,21 +54,23 @@ export default function HistoryPage() {
       </section>
 
       <section className="bg-white py-20 md:py-32 border-y border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-4xl mx-auto text-center">
-          <div className="inline-flex justify-center items-center h-20 w-20 rounded-full bg-[#FDFBF7] border border-[#DBCFA8] text-[#B4833D] mb-10 shadow-sm">
-            <Info className="h-8 w-8" />
+        <div className="w-full px-[4%] text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex justify-center items-center h-20 w-20 rounded-full bg-[#FDFBF7] border border-[#DBCFA8] text-[#B4833D] mb-10 shadow-sm">
+              <Info className="h-8 w-8" />
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl font-normal text-[#66371B] mb-8">
+              How long has Omshree been providing care?
+            </h2>
+            <p className="text-[#81754B] text-lg md:text-xl leading-relaxed font-light">
+              Our clinical heritage dates back to the <strong className="font-medium text-[#66371B]">1880s</strong>. Founded by Sri Kochukutty Vaidhyar of the Marozhukayil family in Vayala, the practice began as a community service treating complex fractures, respiratory conditions, and skin diseases. Today, this unbroken lineage spans more than <strong className="font-medium text-[#66371B]">140 years</strong>, evolving from a village practice into a modern Ayurvedic clinical hospital.
+            </p>
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl font-normal text-[#66371B] mb-8">
-            How long has Omshree been providing care?
-          </h2>
-          <p className="text-[#81754B] text-lg md:text-xl leading-relaxed font-light">
-            Our clinical heritage dates back to the <strong className="font-medium text-[#66371B]">1880s</strong>. Founded by Sri Kochukutty Vaidhyar of the Marozhukayil family in Vayala, the practice began as a community service treating complex fractures, respiratory conditions, and skin diseases. Today, this unbroken lineage spans more than <strong className="font-medium text-[#66371B]">140 years</strong>, evolving from a village practice into a modern Ayurvedic clinical hospital.
-          </p>
         </div>
       </section>
 
       <section className="py-24 md:py-32 bg-[#FDFBF7] relative">
-        <div className="container px-[4%] w-full mx-auto">
+        <div className="w-full px-[4%]">
           
           <div className="relative max-w-6xl mx-auto">
             {/* Center Line for Desktop */}

@@ -11,7 +11,7 @@ export default function FacilitiesPage() {
   return (
     <div className="flex flex-col w-full font-sans overflow-hidden">
       <section className="bg-slate-900 text-white py-16 md:py-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -31,7 +31,7 @@ export default function FacilitiesPage() {
       </section>
 
       <section className="py-20 bg-white">
-        <div className="container px-[4%] max-w-6xl mx-auto">
+        <div className="w-full px-[4%]">
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             

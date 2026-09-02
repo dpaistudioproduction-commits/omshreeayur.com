@@ -11,7 +11,7 @@ export default function WhyOmshreePage() {
   return (
     <div className="flex flex-col w-full font-sans overflow-hidden bg-[#FDFBF7]">
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -38,7 +38,7 @@ export default function WhyOmshreePage() {
       </section>
 
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-[1440px] mx-auto">
+        <div className="w-full px-[4%]">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             
             <div className="bg-[#FDFBF7] p-10 md:p-12 rounded-[2.5rem] shadow-sm border border-[#DBCFA8]/50 relative overflow-hidden group hover:shadow-md transition-shadow">

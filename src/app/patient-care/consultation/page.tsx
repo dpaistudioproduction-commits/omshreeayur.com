@@ -52,7 +52,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 1: HERO */}
       <section className="bg-emerald-900 text-white py-16 md:py-24 relative">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center relative z-10">
+        <div className="w-full px-[4%] text-center relative z-10">
           <nav className="flex justify-center text-sm text-emerald-200 mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -81,7 +81,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 2: WHAT HAPPENS DURING CONSULTATION? */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
-        <div className="container px-[4%] max-w-5xl mx-auto">
+        <div className="w-full px-[4%]">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               What Happens During a Consultation?
@@ -127,7 +127,7 @@ export default function ConsultationPage() {
 
       {/* SECTION 3 & 4: INFORMATION & ASSESSMENT */}
       <section className="py-20 bg-white">
-        <div className="container px-[4%] max-w-6xl mx-auto">
+        <div className="w-full px-[4%]">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
             <div>
@@ -138,44 +138,44 @@ export default function ConsultationPage() {
                 To provide safe and effective care, our physicians require a complete view of your current health status. Please prepare to share:
               </p>
               <ul className="space-y-4 mb-8">
-                <li className="flex gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">1</div>
-                  <p className="text-slate-700 font-medium">A chronological history of your primary health concern.</p>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <span className="text-slate-700"><strong>Medical History:</strong> Past illnesses, chronic conditions, and previous surgical history.</span>
                 </li>
-                <li className="flex gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">2</div>
-                  <p className="text-slate-700 font-medium">Any current allopathic (modern medicine) prescriptions.</p>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <span className="text-slate-700"><strong>Current Medications:</strong> Allopathic, homeopathic, or supplement prescriptions you are currently taking.</span>
                 </li>
-                <li className="flex gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">3</div>
-                  <p className="text-slate-700 font-medium">Recent diagnostic reports (Blood tests, MRI, X-rays, etc.).</p>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <span className="text-slate-700"><strong>Diagnostic Reports:</strong> Recent lab results, blood work, MRIs, CT scans, or doctor summaries.</span>
                 </li>
-                <li className="flex gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">4</div>
-                  <p className="text-slate-700 font-medium">Details of any previous surgeries or major illnesses.</p>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 shrink-0" />
+                  <span className="text-slate-700"><strong>Lifestyle Details:</strong> Daily routine, work stress, sleep duration, and food habits.</span>
                 </li>
               </ul>
-              <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg text-amber-800 text-sm">
-                <strong>Note:</strong> We will never ask you to abruptly stop essential life-saving medications. Ayurvedic treatments can often run parallel to conventional care.
-              </div>
             </div>
 
-            <div className="bg-emerald-900 text-white p-8 md:p-12 rounded-2xl relative overflow-hidden">
-              <div className="absolute -top-24 -right-24 h-64 w-64 bg-emerald-800 rounded-full opacity-50 blur-3xl"></div>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6 relative z-10">
-                Understanding the Assessment
+            <div className="bg-slate-900 text-white p-8 md:p-12 rounded-2xl shadow-xl">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6 text-white">
+                Key Assessment Parameters
               </h2>
-              <div className="space-y-6 relative z-10">
-                <div>
-                  <h3 className="font-bold text-emerald-300 mb-2">Prakriti (Natural Constitution)</h3>
+              <p className="text-slate-300 mb-6 text-sm leading-relaxed">
+                During your evaluation, the doctor will assess classical Ayurvedic markers to determine your unique baseline and imbalance:
+              </p>
+              
+              <div className="space-y-6">
+                <div className="border-b border-slate-800 pb-4">
+                  <h3 className="font-bold text-emerald-300 mb-2">Prakriti (Constitutional Type)</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    Every person is born with a unique genetic makeup governed by the three doshas (Vata, Pitta, and Kapha). This is your Prakriti. Understanding this helps the doctor know what is "normal" for your specific body type.
+                    Your unique natural baseline of Vata, Pitta, and Kapha that was present at birth.
                   </p>
                 </div>
-                <div>
+                <div className="border-b border-slate-800 pb-4">
                   <h3 className="font-bold text-emerald-300 mb-2">Vikriti (Current Imbalance)</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    When lifestyle, diet, or stress pushes the doshas out of their natural balance, a state of Vikriti occurs, leading to disease. Our primary diagnostic goal is to measure the distance between your healthy Prakriti and your current Vikriti.
+                    The active disruption in your doshas caused by stress, incorrect diet, poor digestion, or environmental factors.
                   </p>
                 </div>
                 <div>
@@ -193,59 +193,63 @@ export default function ConsultationPage() {
 
       {/* SECTION 5 & 6: CARE PLAN & NEXT STEPS */}
       <section className="py-20 bg-emerald-50 border-t border-emerald-100">
-        <div className="container px-[4%] max-w-4xl mx-auto text-center">
-          <ClipboardList className="h-12 w-12 text-emerald-600 mx-auto mb-6" />
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Your Personalized Care Plan
-          </h2>
-          <p className="text-lg text-slate-700 leading-relaxed mb-10">
-            Because treatments are based on your individual assessment (Vikriti) rather than just the name of the disease, no two patients receive the exact same protocol. Following the consultation, the doctor will propose a structured care plan that may involve customized internal medicines, dietary restrictions, and specific Panchakarma therapies.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 bg-white p-6 rounded-xl border border-emerald-100 shadow-sm max-w-2xl mx-auto">
-            <div className="text-left flex-1">
-              <h3 className="font-bold text-slate-900 mb-1">What Happens Next?</h3>
-              <p className="text-sm text-slate-500">Learn how your treatment progresses from admission to follow-up.</p>
+        <div className="w-full px-[4%] text-center">
+          <div className="max-w-4xl mx-auto">
+            <ClipboardList className="h-12 w-12 text-emerald-600 mx-auto mb-6" />
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Your Personalized Care Plan
+            </h2>
+            <p className="text-lg text-slate-700 leading-relaxed mb-10">
+              Because treatments are based on your individual assessment (Vikriti) rather than just the name of the disease, no two patients receive the exact same protocol. Following the consultation, the doctor will propose a structured care plan that may involve customized internal medicines, dietary restrictions, and specific Panchakarma therapies.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 bg-white p-6 rounded-xl border border-emerald-100 shadow-sm max-w-2xl mx-auto">
+              <div className="text-left flex-1">
+                <h3 className="font-bold text-slate-900 mb-1">What Happens Next?</h3>
+                <p className="text-sm text-slate-500">Learn how your treatment progresses from admission to follow-up.</p>
+              </div>
+              <Button render={<Link href="/patient-care/journey" />} className="bg-emerald-700 hover:bg-emerald-800 text-white rounded-full shrink-0">
+                View Patient Journey <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
-            <Button render={<Link href="/patient-care/journey" />} className="bg-emerald-700 hover:bg-emerald-800 text-white rounded-full shrink-0">
-              View Patient Journey <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </div>
         </div>
       </section>
 
       {/* SECTION 7: FAQ */}
       <section className="py-20 bg-white">
-        <div className="container px-[4%] max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl font-bold text-slate-900">Common Questions</h2>
+        <div className="w-full px-[4%]">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl font-bold text-slate-900">Common Questions</h2>
+            </div>
+            <Accordion className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-left font-bold text-slate-800">Can I consult a doctor online before traveling to Kerala?</AccordionTrigger>
+                <AccordionContent className="text-slate-600 leading-relaxed">
+                  Yes. We highly recommend international and out-of-state patients complete an initial online assessment and video consultation before finalizing travel plans. This ensures our therapies are appropriate for your specific health condition.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-left font-bold text-slate-800">How long does a typical Ayurvedic consultation take?</AccordionTrigger>
+                <AccordionContent className="text-slate-600 leading-relaxed">
+                  An initial in-depth consultation usually takes 30 to 45 minutes, as the physician needs to understand your complete medical history, daily routines, diet, and current symptoms in detail.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-left font-bold text-slate-800">Do I need to bring my past medical records?</AccordionTrigger>
+                <AccordionContent className="text-slate-600 leading-relaxed">
+                  Yes, please bring or share any recent blood tests, MRI/CT scans, and details of your current allopathic medications. Ayurveda works integratively, and this information is crucial for safe treatment planning.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
-                <Accordion className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left font-bold text-slate-800">Can I consult a doctor online before traveling to Kerala?</AccordionTrigger>
-              <AccordionContent className="text-slate-600 leading-relaxed">
-                Yes. We highly recommend international and out-of-state patients complete an initial online assessment and video consultation before finalizing travel plans. This ensures our therapies are appropriate for your specific health condition.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left font-bold text-slate-800">How long does a typical Ayurvedic consultation take?</AccordionTrigger>
-              <AccordionContent className="text-slate-600 leading-relaxed">
-                An initial in-depth consultation usually takes 30 to 45 minutes, as the physician needs to understand your complete medical history, daily routines, diet, and current symptoms in detail.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-bold text-slate-800">Do I need to bring my past medical records?</AccordionTrigger>
-              <AccordionContent className="text-slate-600 leading-relaxed">
-                Yes, please bring or share any recent blood tests, MRI/CT scans, and details of your current allopathic medications. Ayurveda works integratively, and this information is crucial for safe treatment planning.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
         </div>
       </section>
       
       {/* FINAL CTA */}
       <section className="py-16 bg-slate-900 text-center">
-        <div className="container px-[4%]">
+        <div className="w-full px-[4%]">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Ready to discuss your health concern?</h2>
           <Button render={<Link href="/contact" />} size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 h-12 text-lg">
             Submit a Consultation Enquiry

@@ -14,7 +14,7 @@ export default function TherapiesHubPage() {
     <div className="flex flex-col w-full font-sans overflow-hidden bg-[#FDFBF7]">
 
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%] text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -34,7 +34,7 @@ export default function TherapiesHubPage() {
       </section>
 
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           
           <div className="bg-[#FDFBF7] border border-[#DBCFA8]/50 p-10 md:p-14 rounded-[3.5rem] mb-16 shadow-sm text-center">
             <h2 className="font-heading font-normal text-3xl md:text-4xl text-[#66371B] mb-6">Therapies are Clinical Tools, Not Independent Cures</h2>

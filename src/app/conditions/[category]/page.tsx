@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {/* SECTION 1: HERO */}
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%] text-center">
+        <div className="w-full px-[4%] text-center">
           {/* Breadcrumbs */}
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
@@ -74,7 +74,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {/* SECTION 2: CONDITIONS IN CATEGORY */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="mb-16 text-center">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-4 block">
               Clinical Specialities
@@ -101,7 +101,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {/* SECTION 3: AYURVEDIC PERSPECTIVE */}
       <section className="py-24 bg-[#FDFBF7] border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-heading font-normal text-3xl md:text-4xl text-[#66371B] mb-8 text-center">
               The Ayurvedic Perspective on {category.name}
@@ -115,7 +115,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {/* SECTION 4: PATIENT JOURNEY (Reused) */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%] text-center">
+        <div className="w-full px-[4%] text-center">
           <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-4 block">
             Our Protocol
           </span>
@@ -136,7 +136,7 @@ export default async function CategoryPage({ params }: Props) {
       {/* SECTION 5: FAQ */}
       {category.faqs && category.faqs.length > 0 && (
         <section className="py-24 bg-[#FDFBF7] border-t border-[#DBCFA8]/30">
-          <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+          <div className="w-full px-[4%]">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-heading font-normal text-4xl md:text-5xl text-[#66371B] mb-12 text-center">
                 Frequently Asked Questions
@@ -160,7 +160,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {/* SECTION 6: CTA */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="bg-[#402816] rounded-[3.5rem] p-12 md:p-20 text-center text-[#F7F1E1] max-w-5xl mx-auto">
             <h2 className="font-heading font-normal text-4xl md:text-5xl mb-6">
               Speak With Our Ayurvedic Care Team

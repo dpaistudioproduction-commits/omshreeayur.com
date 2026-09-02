@@ -153,7 +153,7 @@ export default function ContactPage() {
     <div className="flex flex-col w-full bg-background font-sans">
       {/* Hero Section */}
       <section className="bg-emerald-900 text-white py-20 lg:py-24 relative overflow-hidden">
-        <div className="container relative z-10 px-[4%] text-center">
+        <div className="w-full relative z-10 px-[4%] text-center">
           <FadeIn>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
               Book a Consultation
@@ -166,7 +166,7 @@ export default function ContactPage() {
       </section>
 
       <section className="py-20 bg-slate-50">
-        <div className="container px-[4%] max-w-7xl mx-auto">
+        <div className="w-full px-[4%]">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             
             {/* Contact Info (2 columns wide) */}

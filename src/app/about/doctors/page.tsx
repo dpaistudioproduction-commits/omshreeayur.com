@@ -50,7 +50,7 @@ export default function DoctorsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -77,7 +77,7 @@ export default function DoctorsPage() {
       </section>
 
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-5xl mx-auto">
+        <div className="w-full px-[4%]">
           
           <div className="space-y-16">
             

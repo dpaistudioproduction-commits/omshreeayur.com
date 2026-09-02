@@ -12,7 +12,7 @@ export default function PatientJourneyPage() {
   return (
     <div className="flex flex-col w-full font-sans overflow-hidden">
       <section className="bg-emerald-900 text-white py-16 md:py-24">
-        <div className="container px-[4%] max-w-5xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-sm text-emerald-200 mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -32,7 +32,7 @@ export default function PatientJourneyPage() {
       </section>
 
       <section className="py-20 bg-white">
-        <div className="container px-[4%] max-w-4xl mx-auto">
+        <div className="w-full px-[4%]">
           
           <div className="space-y-8">
             <div className="flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-slate-100 bg-slate-50">

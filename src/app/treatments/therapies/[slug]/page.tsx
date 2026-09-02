@@ -49,7 +49,7 @@ export default async function TherapyPage({ params }: Props) {
             priority
           />
         </div>
-        <div className="container relative z-10 px-[4%]">
+        <div className="w-full relative z-10 px-[4%]">
           <div className="max-w-3xl">
             <FadeIn>
               <nav className="flex text-sm text-[#E3D8C1] mb-6 font-medium tracking-wide" aria-label="Breadcrumb">
@@ -77,7 +77,7 @@ export default async function TherapyPage({ params }: Props) {
 
       {/* Main Content Layout */}
       <section className="py-20 md:py-28">
-        <div className="container px-[4%] max-w-7xl mx-auto">
+        <div className="w-full px-[4%]">
           <div className="grid lg:grid-cols-3 gap-12">
             
             {/* Left Column: Clinical Content */}

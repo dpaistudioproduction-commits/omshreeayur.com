@@ -38,7 +38,7 @@ export function BrandLogo({
             alt={BRAND_ASSETS.logo.alt}
             width={320}
             height={64}
-            className="h-12 min-[1080px]:h-14 2xl:h-16 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+            className="h-10 sm:h-11 md:h-12 xl:h-13 2xl:h-14 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
             priority
           />
         </div>

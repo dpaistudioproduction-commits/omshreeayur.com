@@ -68,7 +68,7 @@ export default function ConditionsHubPage() {
       
       {/* HERO SECTION */}
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%] text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -88,7 +88,7 @@ export default function ConditionsHubPage() {
 
       {/* APPROACH SECTION (Added for Landing Page feel) */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="text-center mb-16">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-4 block">
               Our Methodology
@@ -134,7 +134,7 @@ export default function ConditionsHubPage() {
 
       {/* CATEGORIES GRID */}
       <section className="py-24 bg-[#FDFBF7] border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="text-center mb-16">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-4 block">
               Health Conditions
@@ -176,7 +176,7 @@ export default function ConditionsHubPage() {
 
       {/* CTA SECTION */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="bg-[#402816] rounded-[3.5rem] p-12 md:p-20 text-center text-[#F7F1E1] max-w-5xl mx-auto">
             <h2 className="font-heading font-normal text-4xl md:text-5xl mb-6">
               Discuss Your Case
@@ -198,8 +198,8 @@ export default function ConditionsHubPage() {
 
       {/* DISCLAIMER */}
       <section className="py-12 bg-[#FDFBF7] text-[#81754B] border-t border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-4xl mx-auto text-center">
-          <p className="text-xs sm:text-sm font-light leading-relaxed">
+        <div className="w-full px-[4%] text-center">
+          <p className="text-xs sm:text-sm font-light leading-relaxed max-w-4xl mx-auto">
             <strong className="text-[#66371B]">Important Medical Notice:</strong> The information provided is for educational purposes regarding Ayurvedic approaches. Treatment is individualized after consultation and assessment. Suitability depends on the individual's condition. Patients should discuss changes to prescribed medication with their treating physician.
           </p>
         </div>

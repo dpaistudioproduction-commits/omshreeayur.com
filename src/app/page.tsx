@@ -89,7 +89,7 @@ export default function HomePage() {
           SECTION 03: HERITAGE & INSTITUTIONAL DEFINITION
           ========================================================================= */}
       <section className="py-24 md:py-32 bg-[#F7F1E1] border-b border-[#DBCFA8]">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             
             {/* Left: Cinematic Hospital Image */}
@@ -160,7 +160,7 @@ export default function HomePage() {
           SECTION 04: AREAS OF CARE (Premium Grid)
           ========================================================================= */}
       <section className="py-24 md:py-32 bg-[#28422B]">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <SectionHeading
             eyebrow="Clinical Specialities"
             title="Comprehensive Ayurvedic Hospital Care"
@@ -178,7 +178,7 @@ export default function HomePage() {
           SECTION 05: SIGNATURE THERAPIES (Immersive Image-First Cards)
           ========================================================================= */}
       <section className="py-24 md:py-32 bg-[#F7F1E1] border-y border-[#DBCFA8]">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <SectionHeading
             eyebrow="Signature Therapies"
             title="Authentic Kerala Panchakarma & External Procedures"
@@ -299,7 +299,7 @@ export default function HomePage() {
           SECTION 06: DOCTORS / LEADERSHIP (SIMPLE & COMPACT)
           ========================================================================= */}
       <section className="py-20 md:py-24 bg-white">
-        <div className="w-full max-w-5xl mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           
           {/* Minimal Header */}
           <div className="text-center mb-16">
@@ -368,7 +368,7 @@ export default function HomePage() {
           SECTION 08: THE PATIENT JOURNEY
           ========================================================================= */}
       <section className="py-24 md:py-32 bg-[#FDFBF7]">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           
           {/* Custom Editorial Header */}
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20 md:mb-24">
@@ -445,7 +445,7 @@ export default function HomePage() {
           SECTION 09: FAQ (Editorial Split Layout)
           ========================================================================= */}
       <section className="py-24 md:py-32 bg-white">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             
             {/* Left: Sticky Header */}
@@ -509,7 +509,7 @@ export default function HomePage() {
           SECTION 10: ELEGANT CALL TO ACTION
           ========================================================================= */}
       <section className="py-24 md:py-32 bg-[#FDFBF7] px-[4%]">
-        <div className="w-full max-w-7xl mx-auto bg-gradient-to-br from-[#E3D8C1]/30 to-transparent rounded-[3rem] border border-[#DBCFA8]/50 p-10 md:p-20 text-center relative overflow-hidden shadow-sm">
+        <div className="w-full bg-gradient-to-br from-[#E3D8C1]/30 to-transparent rounded-[3rem] border border-[#DBCFA8]/50 p-10 md:p-20 text-center relative overflow-hidden shadow-sm">
           
           {/* Subtle Background Ornamentation */}
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-[#B4833D]/5 rounded-full blur-3xl"></div>

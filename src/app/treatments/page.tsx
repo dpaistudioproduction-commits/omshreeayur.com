@@ -25,7 +25,7 @@ export default function TreatmentsHubPage() {
 
       {/* HERO SECTION */}
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%] text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -55,7 +55,7 @@ export default function TreatmentsHubPage() {
 
       {/* HOW TREATMENT IS PLANNED */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="text-center mb-16">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-4 block">
               Medical Process
@@ -104,7 +104,7 @@ export default function TreatmentsHubPage() {
 
       {/* TREATMENT APPROACHES */}
       <section className="py-24 bg-[#FDFBF7] border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="mb-16 text-center">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-4 block">
               Clinical Specialities
@@ -145,7 +145,7 @@ export default function TreatmentsHubPage() {
 
       {/* EXPLORE MORE (Therapies, Conditions, Packages) */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="grid md:grid-cols-2 gap-8">
             
             <div className="bg-[#FDFBF7] p-10 rounded-[3rem] border border-[#DBCFA8]/50 shadow-sm flex flex-col items-start">
@@ -180,7 +180,7 @@ export default function TreatmentsHubPage() {
 
       {/* DISCLAIMER */}
       <section className="py-12 bg-[#FDFBF7] border-t border-[#DBCFA8]/30">
-        <div className="container px-[4%] max-w-4xl mx-auto text-center">
+        <div className="w-full px-[4%] text-center">
           <p className="text-sm font-light text-[#81754B] leading-relaxed">
             <strong className="text-[#66371B] font-medium">Clinical Notice:</strong> A specific therapy or treatment program is only administered after a thorough clinical assessment by our Ayurvedic physicians. The information provided is for educational transparency and does not constitute a guaranteed medical prescription.
           </p>

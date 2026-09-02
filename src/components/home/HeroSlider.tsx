@@ -216,7 +216,7 @@ export function HeroSlider() {
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#1a110a]/90 via-transparent to-[#402816]/20 pointer-events-none" />
 
       {/* Main Content Area */}
-      <div className="w-full max-w-[1440px] mx-auto px-[4%] relative z-10 py-24">
+      <div className="w-full px-[4%] relative z-10 py-24">
         <div className="max-w-3xl">
           <AnimatePresence mode="wait">
             <motion.div
@@ -301,7 +301,7 @@ export function HeroSlider() {
       </div>
 
       {/* Slider Controls - Unified Control Island at Bottom Right */}
-      <div className="absolute bottom-8 right-4 sm:right-6 lg:right-8 z-20 pointer-events-auto">
+      <div className="absolute bottom-8 right-[4%] z-20 pointer-events-auto">
         <div className="flex items-center gap-4 bg-[#2c1b0f]/60 backdrop-blur-xl border border-[#E3D8C1]/10 rounded-full px-6 py-3 shadow-2xl">
           
           {/* Slide Indicator */}

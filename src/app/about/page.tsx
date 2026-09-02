@@ -54,7 +54,7 @@ export default function AboutMasterPage() {
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-[4%] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-[#E3D8C1]/20 blur-3xl rounded-full -z-10 translate-x-1/2 -translate-y-1/2"></div>
         
-        <div className="max-w-[1440px] mx-auto">
+        <div className="w-full">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
             
             <div className="w-full lg:w-1/2 text-left relative z-10">
@@ -114,7 +114,7 @@ export default function AboutMasterPage() {
       <TrustSignals />
 
       <section className="bg-white py-24 md:py-32 border-b border-[#DBCFA8]/30 overflow-hidden">
-        <div className="container px-[4%] max-w-[1440px] mx-auto">
+        <div className="w-full px-[4%]">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             
             <div className="w-full lg:w-1/2 relative">
@@ -161,7 +161,7 @@ export default function AboutMasterPage() {
       </section>
 
       <section className="py-24 bg-[#FDFBF7]">
-        <div className="container px-[4%] max-w-[1440px] mx-auto">
+        <div className="w-full px-[4%]">
           <div className="grid md:grid-cols-3 gap-8">
             
             <div className="bg-white p-10 rounded-[2rem] border border-[#DBCFA8]/50 flex flex-col items-start shadow-sm hover:shadow-md transition-shadow">

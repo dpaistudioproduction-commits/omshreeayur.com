@@ -7,7 +7,7 @@ interface TrustSignalProps {
 export function TrustSignals({ className = "" }: TrustSignalProps) {
   return (
     <section className={`bg-[#402816] py-6 sm:py-8 border-t border-[#66371B]/30 ${className}`}>
-      <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+      <div className="w-full px-[4%]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           
           <div className="flex items-center gap-4 group">

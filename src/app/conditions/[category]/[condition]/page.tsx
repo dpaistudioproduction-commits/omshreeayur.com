@@ -122,7 +122,7 @@ export default async function ConditionPage({ params }: Props) {
 
       {/* SECTION 1: HERO */}
       <section className="bg-[#402816] text-[#F7F1E1] py-16 md:py-24 relative overflow-hidden">
-        <div className="container px-[4%] max-w-5xl mx-auto relative z-20">
+        <div className="w-full px-[4%] relative z-20">
           {/* Breadcrumbs */}
           <nav className="flex text-sm text-[#E3D8C1] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
@@ -169,7 +169,7 @@ export default async function ConditionPage({ params }: Props) {
 
       {/* SECTION 2: QUICK ANSWER (AEO Block) */}
       <section className="bg-[#E3D8C1]/40 py-12 border-b border-[#DBCFA8]">
-        <div className="container px-[4%] max-w-4xl mx-auto">
+        <div className="w-full px-[4%]">
           <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xs border border-[#DBCFA8]">
             <h2 className="text-xl font-bold text-[#66371B] mb-3 flex items-center gap-2">
               <AlertCircle className="h-6 w-6 text-[#517B32]" />
@@ -182,7 +182,7 @@ export default async function ConditionPage({ params }: Props) {
         </div>
       </section>
 
-      <div className="container px-[4%] max-w-7xl mx-auto py-16 md:py-24">
+      <div className="w-full px-[4%] py-16 md:py-24">
         <div className="grid lg:grid-cols-12 gap-12">
           
           {/* Main Content Column */}

@@ -55,7 +55,7 @@ export default async function TreatmentPage({ params }: Props) {
       
       {/* 1. Dynamic Hero Section */}
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%] text-center">
+        <div className="w-full px-[4%] text-center">
           <nav className="flex justify-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#B4833D] mb-8" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-3">
               <li><Link href="/" className="hover:text-[#66371B] transition-colors">Home</Link></li>
@@ -81,7 +81,7 @@ export default async function TreatmentPage({ params }: Props) {
 
       {/* Main Content Layout */}
       <section className="py-24 bg-white border-t border-[#DBCFA8]/30">
-        <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+        <div className="w-full px-[4%]">
           <div className="grid lg:grid-cols-3 gap-12">
             
             {/* Left Column: Clinical Content */}

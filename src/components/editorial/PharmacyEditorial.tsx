@@ -25,7 +25,7 @@ export function PharmacyEditorial() {
 
   return (
     <section className="py-24 md:py-32 bg-[#F7F1E1]">
-      <div className="w-full max-w-[1440px] mx-auto px-[4%]">
+      <div className="w-full px-[4%]">
         
         {/* Premium Centered Header */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
@@ -64,7 +64,7 @@ export function PharmacyEditorial() {
         </div>
 
         {/* Category Filters */}
-        <div className="flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-4 mb-16 scrollbar-none px-[4%] md:px-0">
+        <div className="flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-4 mb-16 scrollbar-none">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.key}
@@ -82,7 +82,7 @@ export function PharmacyEditorial() {
         </div>
 
         {/* Uniform Grid Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-[4%]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product, idx) => (
             <div
               key={product.id}
