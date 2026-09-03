@@ -14,6 +14,7 @@ export interface TreatmentData {
     subtitle: string;
     backgroundImageUrl: string;
   };
+  contentHtml?: string;
   quickAnswer: string;
   whatItMeans: string;
   ayurvedicContext: string;

@@ -115,26 +115,48 @@ export default function TreatmentsHubPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatments.map((treatment: any) => (
-              <Link key={treatment.slug} href={`/treatments/${treatment.slug}`} className="group bg-white rounded-[2.5rem] border border-[#DBCFA8]/50 overflow-hidden hover:shadow-lg transition-all flex flex-col">
-                <div className="h-56 relative bg-[#FDFBF7] overflow-hidden">
-                   <div className="absolute inset-0 bg-[#66371B]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-500" />
-                   <Image 
-                     src={treatment.hero.backgroundImageUrl} 
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {treatments.map((treatment: any, index: number) => (
+              <Link 
+                key={treatment.slug} 
+                href={`/treatments/${treatment.slug}`} 
+                className="group relative bg-white rounded-[2rem] border border-[#DBCFA8]/50 hover:border-[#B4833D]/50 hover:shadow-xl transition-all duration-500 flex flex-col overflow-hidden"
+              >
+                {/* Thumbnail Image */}
+                <div className="w-full h-48 relative bg-[#FDFBF7] overflow-hidden border-b border-[#DBCFA8]/30">
+                  <div className="absolute inset-0 bg-[#66371B]/5 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-500" />
+                  <Image 
+                     src={treatment.hero?.backgroundImageUrl || "/images/logo/logo.webp"} 
                      alt={`Clinical treatment approach for ${treatment.name}`} 
                      fill 
-                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                      className="object-cover group-hover:scale-105 transition-transform duration-700" 
                    />
+                   {/* Number Badge */}
+                   <div className="absolute top-4 left-4 z-20 w-10 h-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-sm text-[#B4833D] font-mono text-xs font-bold border border-[#DBCFA8]/30">
+                     {String(index + 1).padStart(2, '0')}
+                   </div>
                 </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <h3 className="font-heading font-normal text-2xl text-[#66371B] mb-4">{treatment.name}</h3>
-                  <p className="text-[#81754B] mb-8 flex-1 text-base leading-relaxed font-light">
-                    {treatment.quickAnswer.substring(0, 120)}...
+
+                <div className="p-6 flex flex-col flex-1 relative z-10">
+                  {/* Subtle background gradient on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#E3D8C1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  
+                  <h3 className="font-heading font-normal text-xl text-[#66371B] mb-3 group-hover:text-[#517B32] transition-colors duration-300 relative z-10">
+                    {treatment.name}
+                  </h3>
+                  
+                  <p className="text-[#81754B] text-[13.5px] leading-relaxed font-light line-clamp-3 mb-6 flex-1 relative z-10">
+                    {treatment.quickAnswer}
                   </p>
-                  <div className="text-[#517B32] font-bold text-sm flex items-center group-hover:text-[#B4833D] transition-colors">
-                    Read Treatment Approach <ArrowRight className="ml-2 h-4 w-4" />
+
+                  <div className="flex justify-between items-center relative z-10 mt-auto pt-4 border-t border-[#DBCFA8]/20">
+                    <span className="text-[#517B32] text-xs font-bold uppercase tracking-widest group-hover:text-[#B4833D] transition-colors duration-300">
+                      Explore Protocol
+                    </span>
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#FDFBF7] group-hover:bg-[#B4833D]/10 transition-colors duration-500">
+                      <ArrowRight className="w-4 h-4 text-[#DBCFA8] group-hover:text-[#B4833D] group-hover:-rotate-45 transition-all duration-500" />
+                    </div>
                   </div>
                 </div>
               </Link>

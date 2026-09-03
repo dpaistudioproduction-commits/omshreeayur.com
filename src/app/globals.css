@@ -143,3 +143,134 @@
     @apply mx-auto max-w-7xl;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Treatment Content Area — WordPress HTML styled to match Asthma
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hide WordPress layout wrappers, hero figure (we show our own), and contact form */
+.treatment-content-area figure.featured,
+.treatment-content-area .contact-form-area,
+.treatment-content-area .medical-departments-area,
+.treatment-content-area .screen-reader-response,
+.treatment-content-area .wpcf7,
+.treatment-content-area span.border,
+.treatment-content-area .sec-title { display: none !important; }
+
+/* Strip Bootstrap float columns — make them block */
+.treatment-content-area [class*="col-"] {
+  display: block !important;
+  width: 100% !important;
+  float: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Paragraphs */
+.treatment-content-area p {
+  color: #81754B;
+  font-weight: 300;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* First paragraph — lead text, like Asthma's opening paragraph */
+.treatment-content-area article > p:first-of-type {
+  font-size: 1.2rem;
+  color: #66371B;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+
+/* Headings — match Asthma heading style */
+.treatment-content-area h1,
+.treatment-content-area h2,
+.treatment-content-area h3,
+.treatment-content-area h4,
+.treatment-content-area h5 {
+  font-family: var(--font-heading, Georgia, serif);
+  font-weight: 400;
+  color: #66371B;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.treatment-content-area h1 { font-size: 2.25rem; }
+.treatment-content-area h2 { font-size: 1.875rem; }
+.treatment-content-area h3 { font-size: 1.5rem; }
+.treatment-content-area h4 { font-size: 1.25rem; font-weight: 600; }
+
+/* Override any WordPress inline color styles on headings/paragraphs */
+.treatment-content-area h1[style],
+.treatment-content-area h2[style],
+.treatment-content-area h3[style],
+.treatment-content-area h4[style] { color: #66371B !important; }
+
+/* Lists */
+.treatment-content-area ul,
+.treatment-content-area ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #81754B;
+  font-weight: 300;
+  line-height: 1.85;
+}
+.treatment-content-area ul { list-style-type: disc; }
+.treatment-content-area ol { list-style-type: decimal; }
+.treatment-content-area li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  color: #81754B;
+}
+
+/* Tables */
+.treatment-content-area table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.treatment-content-area th {
+  background-color: #66371B;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.treatment-content-area td {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(219, 207, 168, 0.5);
+  color: #81754B;
+  font-weight: 300;
+}
+.treatment-content-area tr:nth-child(even) td {
+  background-color: #FDFBF7;
+}
+
+/* Bold / strong */
+.treatment-content-area strong,
+.treatment-content-area b {
+  color: #66371B;
+  font-weight: 600;
+}
+
+/* Links */
+.treatment-content-area a {
+  color: #517B32;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.treatment-content-area a:hover { color: #B4833D; }
+
+/* Blockquote */
+.treatment-content-area blockquote {
+  border-left: 4px solid #B4833D;
+  padding: 1rem 1.5rem;
+  background: #FDFBF7;
+  border-radius: 0 1rem 1rem 0;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #66371B;
+}
