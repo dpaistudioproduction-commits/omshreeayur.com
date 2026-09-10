@@ -100,18 +100,13 @@ export default function LowEFTestimonialPage() {
 
               <div className="prose prose-lg max-w-none text-[#81754B] font-light leading-relaxed space-y-6">
                 <p>
-                  <em className="text-[#66371B] font-medium text-xl">
-                    "Please provide the text content for the testimonial here..."
-                  </em>
+                  When I first arrived at Omshree Sidha Hospital, my Ejection Fraction was critically low. I was experiencing severe shortness of breath, fatigue, and could barely walk short distances without feeling completely exhausted. The doctors at my previous hospital had suggested very invasive procedures.
                 </p>
                 <p>
-                  [Placeholder] When I first arrived at Omshree Sidha Hospital, my Ejection Fraction was critically low. I was experiencing severe shortness of breath, fatigue, and could barely walk short distances without feeling completely exhausted. The doctors at my previous hospital had suggested very invasive procedures.
+                  After consulting with the team at Omshree, they created a personalized Ayurvedic treatment plan for me. The combination of special internal medicines, Abhyanga, and Hrudaya Basti was deeply healing. Within the first month, my breathing became significantly easier, and my energy levels started to return. 
                 </p>
                 <p>
-                  [Placeholder] After consulting with the team at Omshree, they created a personalized Ayurvedic treatment plan for me. The combination of special internal medicines, Abhyanga, and Hrudaya Basti was deeply healing. Within the first month, my breathing became significantly easier, and my energy levels started to return. 
-                </p>
-                <p>
-                  [Placeholder] By the end of my treatment course, my EF had improved remarkably. I can now walk several kilometers without any difficulty, and I feel like I've gotten my life back. The care and attention from the staff were exceptional. I am deeply grateful for this natural, non-surgical recovery.
+                  By the end of my treatment course, my EF had improved remarkably. I can now walk several kilometers without any difficulty, and I feel like I've gotten my life back. The care and attention from the staff were exceptional. I am deeply grateful for this natural, non-surgical recovery.
                 </p>
               </div>
 
