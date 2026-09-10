@@ -40,6 +40,11 @@ const nextConfig: NextConfig = {
         destination: '/treatments',
         permanent: true,
       },
+      {
+        source: '/ulcerative-colitis-treatment-omshree-sidha-hospitals-ayurvedic-approach-vs-modern-medicine',
+        destination: '/treatments/ulcerative-colitis',
+        permanent: true,
+      },
     ]
   },
 };
