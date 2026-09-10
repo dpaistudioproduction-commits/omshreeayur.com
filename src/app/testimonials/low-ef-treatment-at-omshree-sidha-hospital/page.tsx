@@ -68,13 +68,34 @@ export default function LowEFTestimonialPage() {
                 </div>
               </div>
 
-              {/* Video Placeholder - You can add the actual YouTube embed here */}
-              <div className="w-full aspect-video bg-[#402816] rounded-2xl flex items-center justify-center group cursor-pointer relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
-                <PlayCircle className="w-20 h-20 text-white/80 group-hover:text-white group-hover:scale-110 transition-all z-20" />
-                <p className="absolute bottom-6 left-0 right-0 text-center text-[#E3D8C1] font-medium z-20">
-                  Video Testimonial Coming Soon
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Heart Blocks Treatment Video */}
+                <div className="w-full aspect-video bg-[#402816] rounded-2xl flex items-center justify-center overflow-hidden shadow-sm">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/U5sKJH0yCSM" 
+                    title="HEART BLOCKS TREATMENT" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+
+                {/* Ayurvedic Treatment Specialties Video */}
+                <div className="w-full aspect-video bg-[#402816] rounded-2xl flex items-center justify-center overflow-hidden shadow-sm">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/PfE1e414PwY" 
+                    title="Ayurvedic Treatment Specialties" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
               </div>
 
               <div className="prose prose-lg max-w-none text-[#81754B] font-light leading-relaxed space-y-6">
