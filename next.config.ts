@@ -45,6 +45,11 @@ const nextConfig: NextConfig = {
         destination: '/treatments/ulcerative-colitis',
         permanent: true,
       },
+      {
+        source: '/products',
+        destination: '/',
+        permanent: true,
+      },
     ]
   },
 };
