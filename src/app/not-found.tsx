@@ -17,10 +17,10 @@ export default function NotFound() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Button render={<Link href="/" />} size="lg" className="w-full sm:w-auto bg-emerald-700 hover:bg-emerald-800 text-white rounded-full px-6 flex items-center gap-2">
+          <Button render={<Link href="/" />} size="lg" className="w-full sm:w-auto gap-2">
             <Home className="h-4 w-4" /> Return Home
           </Button>
-          <Button render={<Link href="/patient-care/consultation" />} variant="outline" size="lg" className="w-full sm:w-auto border-emerald-700 text-emerald-700 hover:bg-emerald-50 rounded-full px-6 flex items-center gap-2">
+          <Button render={<Link href="/patient-care/consultation" />} variant="outline" size="lg" className="w-full sm:w-auto gap-2">
             <HeartHandshake className="h-4 w-4" /> Book Consultation
           </Button>
         </div>

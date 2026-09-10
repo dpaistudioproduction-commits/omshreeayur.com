@@ -535,8 +535,9 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               <Button
                 render={<Link href="/patient-care/consultation" />}
+                variant="default"
                 size="lg"
-                className="w-full sm:w-auto bg-[#517B32] hover:bg-[#3f6126] text-white rounded-full px-10 h-14 text-sm font-bold tracking-wider uppercase shadow-xl transition-all transform hover:-translate-y-1"
+                className="w-full sm:w-auto px-10 shadow-xl hover:-translate-y-1"
               >
                 Book a Consultation
               </Button>
@@ -544,7 +545,7 @@ export default function HomePage() {
                 render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />}
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto border-[#B4833D] text-[#B4833D] hover:bg-[#B4833D] hover:text-white rounded-full px-10 h-14 text-sm font-bold tracking-wider uppercase transition-all bg-transparent"
+                className="w-full sm:w-auto px-10 border-[#B4833D] text-[#B4833D] hover:bg-[#B4833D] hover:text-white"
               >
                 Chat on WhatsApp
               </Button>

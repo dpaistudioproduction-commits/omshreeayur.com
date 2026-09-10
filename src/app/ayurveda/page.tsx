@@ -51,10 +51,10 @@ export default function AyurvedaHubPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button render={<Link href="/patient-care/consultation" />} size="lg" className="bg-[#66371B] text-white hover:bg-[#B4833D] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full sm:w-auto">
+            <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
               Book a Consultation
             </Button>
-            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="border-[#DBCFA8] text-[#66371B] hover:bg-[#FDFBF7] bg-white rounded-full px-8 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full sm:w-auto">
+            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto">
               <MessageCircle className="mr-2 h-5 w-5 text-[#517B32]" /> WhatsApp Enquiry
             </Button>
           </div>
@@ -145,7 +145,7 @@ export default function AyurvedaHubPage() {
           </div>
           
           <div className="mt-16 text-center">
-            <Button render={<Link href="/treatments" />} size="lg" className="bg-[#66371B] text-white hover:bg-[#B4833D] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors">
+            <Button render={<Link href="/treatments" />} size="lg" >
               View Our Treatments & Therapies
             </Button>
           </div>

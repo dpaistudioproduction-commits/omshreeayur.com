@@ -24,10 +24,10 @@ export default function InternationalPatientsPage() {
             Every year, patients travel from across the globe to Omshree Sidha Hospital for authentic, clinical Ayurveda in the heart of Kerala, India.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 font-bold shadow-lg border border-[#6F9940]/40">
+            <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
               International Patient Enquiry
             </Button>
-            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto border-[#E3D8C1]/40 text-[#F7F1E1] hover:bg-white/10 rounded-full px-6 h-14 font-medium backdrop-blur-sm">
+            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto backdrop-blur-sm">
               <span className="flex items-center justify-center"><Plane className="mr-2 h-5 w-5 text-[#B4833D]" /> Plan Your Travel</span>
             </Button>
           </div>
@@ -119,10 +119,10 @@ export default function InternationalPatientsPage() {
             Contact our international coordination desk today via WhatsApp or enquiry form with your medical history.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 font-bold shadow-md">
+            <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
               Submit International Enquiry
             </Button>
-            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto border-[#517B32] text-[#517B32] hover:bg-[#E3D8C1] rounded-full px-8 h-14 font-medium">
+            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto">
               <MessageCircle className="h-5 w-5 mr-2 text-[#25D366]" /> Chat on WhatsApp
             </Button>
           </div>

@@ -89,7 +89,7 @@ export default async function CategoryPage({ params }: Props) {
                 <CardContent className="p-10 flex flex-col flex-1">
                   <h3 className="font-heading font-normal text-3xl text-[#66371B] mb-4">{cond.name}</h3>
                   <p className="text-[#81754B] mb-8 flex-1 text-lg font-light leading-relaxed">{cond.heroDescription}</p>
-                  <Button render={<Link href={`/conditions/${category.slug}/${cond.slug}`} />} variant="link" className="text-[#517B32] px-0 self-start mt-auto flex items-center group font-bold tracking-widest text-xs uppercase hover:no-underline hover:text-[#B4833D] transition-colors">
+                  <Button render={<Link href={`/conditions/${category.slug}/${cond.slug}`} />} variant="link" className="self-start mt-auto hover:no-underline">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -169,10 +169,10 @@ export default async function CategoryPage({ params }: Props) {
               Treatment recommendations are determined strictly after an individual assessment. Reach out to discuss your medical history.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors">
+              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
                 Book a Consultation
               </Button>
-              <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto border-[#E3D8C1]/40 text-[#F7F1E1] hover:bg-white/10 rounded-full px-8 h-14 font-bold text-sm tracking-widest uppercase">
+              <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto">
                 <span className="flex items-center justify-center"><MessageCircle className="mr-2 h-5 w-5 text-[#25D366]" /> WhatsApp Enquiry</span>
               </Button>
             </div>

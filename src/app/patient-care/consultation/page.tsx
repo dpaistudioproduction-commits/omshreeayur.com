@@ -69,10 +69,10 @@ export default function ConsultationPage() {
             A precise diagnosis is the foundation of true healing. Schedule an assessment with our experienced Ayurvedic physicians to determine the root cause of your condition.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button render={<Link href="/contact" />} size="lg" className="bg-white text-emerald-900 hover:bg-slate-100 rounded-full px-8 h-14 font-bold shadow-lg w-full sm:w-auto">
+            <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
               Book a Consultation
             </Button>
-            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="border-emerald-500 text-white hover:bg-emerald-800 rounded-full px-8 h-14 font-medium w-full sm:w-auto flex items-center gap-2">
+            <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto gap-2">
               <Video className="h-5 w-5" /> Online Assessment
             </Button>
           </div>
@@ -208,7 +208,7 @@ export default function ConsultationPage() {
                 <h3 className="font-bold text-slate-900 mb-1">What Happens Next?</h3>
                 <p className="text-sm text-slate-500">Learn how your treatment progresses from admission to follow-up.</p>
               </div>
-              <Button render={<Link href="/patient-care/journey" />} className="bg-emerald-700 hover:bg-emerald-800 text-white rounded-full shrink-0">
+              <Button render={<Link href="/patient-care/journey" />} className="shrink-0">
                 View Patient Journey <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -251,7 +251,7 @@ export default function ConsultationPage() {
       <section className="py-16 bg-slate-900 text-center">
         <div className="w-full px-[4%]">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Ready to discuss your health concern?</h2>
-          <Button render={<Link href="/contact" />} size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 h-12 text-lg">
+          <Button render={<Link href="/contact" />} size="lg" >
             Submit a Consultation Enquiry
           </Button>
         </div>

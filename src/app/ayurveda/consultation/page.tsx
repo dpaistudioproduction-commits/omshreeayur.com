@@ -144,10 +144,10 @@ export default function ConsultationPage() {
           <div className="mt-24 text-center">
             <h2 className="font-heading text-4xl font-normal text-[#66371B] mb-10">Begin Your Consultation</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button render={<Link href="/contact" />} size="lg" className="bg-[#66371B] text-white hover:bg-[#B4833D] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full sm:w-auto">
+              <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
                 Book Appointment
               </Button>
-              <Button render={<Link href="/patient-care/journey" />} variant="outline" size="lg" className="border-[#DBCFA8] text-[#66371B] hover:bg-white bg-[#FDFBF7] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full sm:w-auto">
+              <Button render={<Link href="/patient-care/journey" />} variant="outline" size="lg" className="w-full sm:w-auto">
                 View Patient Journey Overview
               </Button>
             </div>

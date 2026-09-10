@@ -61,7 +61,7 @@ export default function TherapiesHubPage() {
                   <p className="text-[#81754B] font-light text-lg leading-relaxed mb-8 flex-1">
                     {therapy.shortDescription}
                   </p>
-                  <Button render={<Link href={`/treatments/therapies/${therapy.slug}`} />} variant="outline" className="border-[#DBCFA8] text-[#66371B] hover:bg-[#FDFBF7] rounded-full px-8 h-12 text-xs tracking-widest uppercase font-bold self-start transition-colors">
+                  <Button render={<Link href={`/treatments/therapies/${therapy.slug}`} />} variant="outline" className="self-start">
                     Read Therapy Details
                   </Button>
                 </div>

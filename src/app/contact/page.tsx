@@ -263,7 +263,7 @@ export default function ContactPage() {
                         </p>
                       )}
                       <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                        <Button onClick={handleReset} variant="outline" className="text-emerald-700 border-emerald-200 hover:bg-emerald-50">
+                        <Button onClick={handleReset} variant="outline" >
                           Submit Another Enquiry
                         </Button>
                         <Button 
@@ -275,7 +275,7 @@ export default function ContactPage() {
                               onClick={() => analytics.whatsappClick("enquiry_success_cta")}
                             />
                           }
-                          className="bg-[#25D366] hover:bg-[#128C7E] text-white"
+                          
                         >
                           Quick WhatsApp Follow-up
                         </Button>
@@ -478,7 +478,7 @@ export default function ContactPage() {
                       <Button 
                         type="submit" 
                         disabled={status === "submitting"}
-                        className="w-full h-14 bg-emerald-700 hover:bg-emerald-800 text-white text-lg font-bold shadow-md rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                        className="w-full gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                       >
                         {status === "submitting" ? (
                           <>

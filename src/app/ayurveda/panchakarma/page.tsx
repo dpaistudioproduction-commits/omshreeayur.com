@@ -120,7 +120,7 @@ export default function PanchakarmaPage() {
               <div className="inline-block bg-white p-10 md:p-14 rounded-[3rem] border border-[#DBCFA8]/50 shadow-sm w-full md:w-auto">
                 <h2 className="font-heading text-4xl font-normal text-[#66371B] mb-6">Is Panchakarma Right For You?</h2>
                 <p className="mb-10 font-light max-w-lg mx-auto">Suitability for Panchakarma can only be determined after a detailed consultation and pulse diagnosis.</p>
-                <Button render={<Link href="/contact" />} size="lg" className="bg-[#66371B] text-white hover:bg-[#B4833D] rounded-full px-10 h-14 text-sm tracking-widest uppercase font-bold transition-colors w-full md:w-auto">
+                <Button render={<Link href="/contact" />} size="lg" className="w-full md:w-auto">
                   Consult Our Doctors
                 </Button>
               </div>

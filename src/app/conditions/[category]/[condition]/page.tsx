@@ -156,10 +156,10 @@ export default async function ConditionPage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 font-bold shadow-lg border border-[#6F9940]/40">
+              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
                 Book a Consultation
               </Button>
-              <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto border-[#E3D8C1]/40 text-[#F7F1E1] hover:bg-white/10 rounded-full px-6 h-14 font-medium backdrop-blur-xs">
+              <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto backdrop-blur-xs">
                 <span className="flex items-center justify-center"><MessageCircle className="mr-2 h-5 w-5 text-[#25D366]" /> WhatsApp</span>
               </Button>
             </div>
@@ -253,7 +253,7 @@ export default async function ConditionPage({ params }: Props) {
               <p className="text-[#E3D8C1]/90 text-lg leading-relaxed font-light">
                 {condition.whoShouldSeek}
               </p>
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 font-bold border border-[#6F9940]/40">
+              <Button render={<Link href="/patient-care/consultation" />} size="lg" >
                 Speak with our Care Team
               </Button>
             </section>
@@ -326,7 +326,7 @@ export default async function ConditionPage({ params }: Props) {
                   <p className="text-[#E3D8C1]/90 text-sm font-light leading-relaxed">
                     Travelling to Kerala for Ayurvedic care? Begin with an online consultation before planning your travel.
                   </p>
-                  <Button render={<Link href="/international-patients" />} variant="outline" className="w-full border-[#E3D8C1]/40 text-[#F7F1E1] hover:bg-white/10 rounded-full">
+                  <Button render={<Link href="/international-patients" />} variant="outline" className="w-full">
                     International Enquiry
                   </Button>
                 </CardContent>

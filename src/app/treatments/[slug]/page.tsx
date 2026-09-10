@@ -255,6 +255,56 @@ export default async function TreatmentPage({ params }: Props) {
                     </FadeIn>
                   )}
 
+                  {data.slug === 'heart-disease' && (
+                    <FadeIn delay={0.55}>
+                      <div className="bg-[#517B32] p-8 md:p-12 rounded-[2.5rem] shadow-xl text-center relative overflow-hidden">
+                        <div className="relative z-10">
+                          <h2 className="font-heading font-normal text-3xl md:text-4xl mb-4 text-[#F7F1E1]">
+                            Low Ejection Fraction Protocol
+                          </h2>
+                          <p className="text-lg text-[#F7F1E1]/90 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+                            For patients diagnosed with Low Ejection Fraction (Heart Failure), we offer a highly specialized Ayurvedic protocol designed to safely support cardiac function and improve daily vitality—working alongside your essential allopathic life-saving medications.
+                          </p>
+                          <Button
+                            render={<Link href="/conditions/cardiovascular/low-ejection-fraction" />}
+                            variant="secondary"
+                            size="lg"
+                            className="px-8 font-bold shadow-lg"
+                          >
+                            Explore Our Low EF Protocol <ArrowRight className="ml-2 h-5 w-5" />
+                          </Button>
+                        </div>
+                        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#6F9940]/20 rounded-full blur-3xl pointer-events-none"></div>
+                        <div className="absolute -top-24 -left-24 w-64 h-64 bg-[#6F9940]/20 rounded-full blur-3xl pointer-events-none"></div>
+                      </div>
+                    </FadeIn>
+                  )}
+
+                  {data.slug === 'liver-disease' && (
+                    <FadeIn delay={0.55}>
+                      <div className="bg-[#66371B] p-8 md:p-12 rounded-[2.5rem] shadow-xl text-center relative overflow-hidden mt-12">
+                        <div className="relative z-10">
+                          <h2 className="font-heading font-normal text-3xl md:text-4xl mb-4 text-[#F7F1E1]">
+                            Liver Cirrhosis &amp; Advanced Hepatic Function
+                          </h2>
+                          <p className="text-lg text-[#F7F1E1]/90 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+                            For advanced hepatic conditions, including liver cirrhosis, we provide comprehensive, long-term Ayurvedic management protocols. Our focus is on halting disease progression, reducing fluid retention, and profoundly supporting liver cellular regeneration.
+                          </p>
+                          <Button
+                            render={<Link href="/conditions/hepatic/liver-cirrhosis" />}
+                            variant="secondary"
+                            size="lg"
+                            className="px-8 font-bold shadow-lg"
+                          >
+                            View Our Cirrhosis Care Protocol <ArrowRight className="ml-2 h-5 w-5" />
+                          </Button>
+                        </div>
+                        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#B4833D]/20 rounded-full blur-3xl pointer-events-none"></div>
+                        <div className="absolute -top-24 -left-24 w-64 h-64 bg-[#B4833D]/20 rounded-full blur-3xl pointer-events-none"></div>
+                      </div>
+                    </FadeIn>
+                  )}
+
                   {data.faqs && data.faqs.length > 0 && (
                     <FadeIn delay={0.6}>
                       <h2 className="font-heading font-normal text-3xl md:text-4xl mb-8 text-[#66371B]">
@@ -351,14 +401,14 @@ export default async function TreatmentPage({ params }: Props) {
                     <div className="p-8 space-y-4">
                       <Button
                         render={<Link href="/patient-care/consultation" />}
-                        className="w-full bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-6 h-12 text-xs tracking-widest uppercase font-bold transition-colors"
+                        className="w-full"
                       >
                         Start Assessment
                       </Button>
                       <Button
                         render={<Link href="https://wa.me/919846992789" target="_blank" />}
                         variant="outline"
-                        className="w-full border-[#DBCFA8] text-[#66371B] hover:bg-[#FDFBF7] rounded-full px-6 h-12 text-xs tracking-widest uppercase font-bold transition-colors"
+                        className="w-full"
                       >
                         WhatsApp Us
                       </Button>

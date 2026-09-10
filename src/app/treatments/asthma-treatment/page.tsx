@@ -250,10 +250,10 @@ export default function AsthmaTreatmentPage() {
                       <p className="text-[#E3D8C1] font-light text-sm">Get a clinical assessment by our expert physicians.</p>
                     </div>
                     <div className="p-8 space-y-4">
-                      <Button render={<Link href="/patient-care/consultation" />} className="w-full bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-6 h-12 text-xs tracking-widest uppercase font-bold transition-colors">
+                      <Button render={<Link href="/patient-care/consultation" />} className="w-full">
                         Start Assessment
                       </Button>
-                      <Button render={<Link href="https://wa.me/919846992789" target="_blank" />} variant="outline" className="w-full border-[#DBCFA8] text-[#66371B] hover:bg-[#FDFBF7] rounded-full px-6 h-12 text-xs tracking-widest uppercase font-bold transition-colors">
+                      <Button render={<Link href="https://wa.me/919846992789" target="_blank" />} variant="outline" className="w-full">
                         WhatsApp Us
                       </Button>
                       <p className="text-center text-xs text-[#81754B] font-light mt-4">

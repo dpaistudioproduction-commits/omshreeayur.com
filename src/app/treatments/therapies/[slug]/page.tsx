@@ -191,10 +191,10 @@ export default async function TherapyPage({ params }: Props) {
                       <p className="text-xs text-[#E3D8C1]/90 font-light">Get a clinical assessment by our expert physicians.</p>
                     </div>
                     <CardContent className="p-6 space-y-4">
-                      <Button render={<Link href="/patient-care/consultation" />} className="w-full h-12 bg-[#517B32] hover:bg-[#6F9940] text-white text-sm font-bold shadow-xs rounded-full">
+                      <Button render={<Link href="/patient-care/consultation" />} className="w-full">
                         Start Assessment
                       </Button>
-                      <Button render={<Link href="https://wa.me/919846992789" target="_blank" />} variant="outline" className="w-full h-12 border-[#517B32] text-[#517B32] hover:bg-[#E3D8C1] text-sm rounded-full">
+                      <Button render={<Link href="https://wa.me/919846992789" target="_blank" />} variant="outline" className="w-full">
                         WhatsApp Us
                       </Button>
                       <p className="text-center text-xs text-[#81754B] mt-4 font-light">

@@ -74,7 +74,7 @@ export default function ChallengingOfferPage() {
           </div>
 
           <div className="mt-16 pt-8 border-t border-slate-200 text-center">
-            <Button render={<Link href="/contact" />} size="lg" className="bg-emerald-700 text-white hover:bg-emerald-800 rounded-full px-8">
+            <Button render={<Link href="/contact" />} size="lg" >
               Discuss Your Case With Us
             </Button>
           </div>

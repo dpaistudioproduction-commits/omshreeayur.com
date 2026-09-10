@@ -98,7 +98,7 @@ export default function TariffPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <Button render={<Link href="/contact" />} size="lg" className="bg-emerald-700 text-white hover:bg-emerald-800 rounded-full px-8">
+            <Button render={<Link href="/contact" />} size="lg" >
               Enquire About Treatment Costs
             </Button>
           </div>

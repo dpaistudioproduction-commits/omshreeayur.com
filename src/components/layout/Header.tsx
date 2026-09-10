@@ -32,7 +32,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky -top-9 z-50 w-full flex flex-col antialiased">
+    <header className="sticky top-0 z-50 w-full flex flex-col antialiased shadow-sm bg-[#F7F1E1]">
       
       {/* =========================================================================
           TIER 1: TOP UTILITY BAR (Slim Dark Natural-Green Bar)
@@ -69,12 +69,7 @@ export function Header() {
       {/* =========================================================================
           TIER 2: MAIN NAVIGATION (Full-width Warm Ivory / Global Content Container)
           ========================================================================= */}
-      <div className={cn(
-        "w-full bg-[#F7F1E1] border-b border-[#DBCFA8] transition-all duration-300",
-        isScrolled 
-          ? "h-16 lg:h-18 shadow-md backdrop-blur-md bg-[#F7F1E1]/98" 
-          : "h-18 lg:h-22 shadow-xs"
-      )}>
+      <div className="w-full bg-[#F7F1E1] transition-all duration-300 h-18 lg:h-20 flex items-center">
         <div className="w-full px-[4%] h-full flex items-center justify-between gap-3 lg:gap-4 xl:gap-6">
           
           {/* Left: Authentic Hospital Brand Logo */}
@@ -168,7 +163,12 @@ export function Header() {
                       </li>
                       <li>
                         <Link href="/treatments/heart-disease" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
-                          Heart Disease Protocol
+                          Heart Disease
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/treatments/liver-disease" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                          Liver Disease
                         </Link>
                       </li>
                     </ul>
@@ -256,7 +256,8 @@ export function Header() {
             {/* Primary CTA: Book Consultation */}
             <Button
               render={<Link href="/patient-care/consultation" />}
-              className="bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-4 2xl:px-5 h-9 2xl:h-10 text-xs 2xl:text-sm font-bold shadow-md border border-[#6F9940]/40 transition-all transform hover:-translate-y-0.5 whitespace-nowrap cursor-pointer"
+              variant="default"
+              className="px-6 shadow-md shadow-[#517B32]/20 hover:-translate-y-0.5"
             >
               Book Consultation
             </Button>
@@ -288,7 +289,9 @@ export function Header() {
             <div className="hidden sm:block">
               <Button
                 render={<Link href="/patient-care/consultation" />}
-                className="bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-3.5 h-8.5 text-xs font-bold shadow-xs whitespace-nowrap"
+                variant="default"
+                size="sm"
+                className="shadow-sm"
               >
                 Book
               </Button>
@@ -414,21 +417,22 @@ export function Header() {
                     <Button 
                       render={<Link href="/patient-care/consultation" />} 
                       onClick={() => setIsOpen(false)}
-                      className="w-full bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full font-bold h-11 text-sm shadow-md"
+                      variant="default"
+                      className="w-full justify-center"
                     >
                       Book a Consultation
                     </Button>
                     <Button 
                       render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} 
                       variant="outline" 
-                      className="w-full border-[#517B32] text-[#517B32] hover:bg-[#E3D8C1] rounded-full h-11 font-semibold text-sm"
+                      className="w-full justify-center text-[#25D366] border-[#25D366] hover:bg-[#25D366]/10"
                     >
-                      <MessageCircle className="h-4 w-4 mr-2 text-[#25D366]" /> Chat on WhatsApp
+                      <MessageCircle className="h-4 w-4 mr-2" /> Chat on WhatsApp
                     </Button>
                     <Button 
                       render={<a href="tel:+914822229434" />} 
                       variant="outline" 
-                      className="w-full border-[#DBCFA8] text-[#66371B] hover:bg-[#E3D8C1] rounded-full h-11 font-medium text-sm"
+                      className="w-full justify-center"
                     >
                       <Phone className="h-4 w-4 mr-2 text-[#517B32]" /> Call Hospital (+91 4822229434)
                     </Button>

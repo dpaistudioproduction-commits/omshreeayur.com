@@ -1,0 +1,59 @@
+{
+  "slug": "liver-disease",
+  "name": "Liver Disease & Hepatic Care",
+  "category": "gastrointestinal",
+  "seoTitle": "Ayurvedic Treatment for Liver Disease | Omshree Sidha Hospital",
+  "seoDescription": "Discover Omshree Sidha Hospital's authentic Ayurvedic protocols for the supportive management of various liver diseases and hepatic conditions.",
+  "hero": {
+    "title": "Liver Disease & Hepatic Care",
+    "subtitle": "Comprehensive clinical management focusing on restoring hepatic function and cellular health through integrated Ayurvedic protocols.",
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000"
+  },
+  "quickAnswer": "The liver is a vital organ responsible for detoxification, metabolism, and digestion. In Ayurveda, liver conditions are fundamentally viewed as imbalances of the Pitta dosha and Rakta dhatu (blood). Our specialized approach aims to cool hepatic inflammation, promote liver cell regeneration, and clear metabolic toxins (Ama).",
+  "whatItMeans": "When liver function declines—whether due to fatty deposits, viral infections, or chronic injury—patients often experience extreme fatigue, jaundice, fluid retention, and digestive distress. Our clinical goal is to halt the progression of hepatic damage, reduce the toxic burden on the body, and support the natural regenerative capacity of the liver.",
+  "ayurvedicContext": "According to Ayurvedic science, the liver (Yakrit) is the chief site of Pitta dosha and Agni (digestive fire). Liver diseases occur when excessive heat (Pitta) and toxins (Ama) vitiate the blood (Rakta). Treatment requires potent hepatoprotective (Yakrit Pliha rogahara) herbs and careful dietary management to restore equilibrium.",
+  "howTreatmentIsPlanned": "Following a comprehensive Nadi Pariksha (pulse diagnosis) and review of your liver function tests (LFTs) and scans, we design a customized protocol. This includes internal administration of classic hepatoprotective herbs (like Kutki, Bhumyamalaki, and Kalmegh), specific Panchakarma therapies (if patient strength permits), and a strict, cooling, easy-to-digest diet.",
+  "therapies": [
+    {
+      "name": "Virechana",
+      "slug": "virechana",
+      "description": "A medically supervised purgation therapy designed to eliminate excess Pitta and toxins from the liver and gallbladder."
+    },
+    {
+      "name": "Takradhara",
+      "slug": "takradhara",
+      "description": "Continuous pouring of medicated buttermilk over the forehead to cool the system, reduce systemic inflammation, and relieve stress."
+    }
+  ],
+  "whoShouldSeek": "Consider our Ayurvedic protocols if you are diagnosed with fatty liver, chronic hepatitis, or general hepatic dysfunction, and are seeking a natural, supportive approach to improve your liver enzymes and overall vitality. Please bring all recent diagnostic reports to your consultation.",
+  "patientJourney": "Patients typically experience improved digestion, increased energy levels, and a reduction in systemic heat within the first few weeks. Objective improvements in liver function tests (such as reduced SGOT, SGPT, and Bilirubin) are closely monitored throughout the treatment course.",
+  "faqs": [
+    {
+      "q": "Can Ayurveda help with Fatty Liver?",
+      "a": "Yes, Ayurveda offers highly effective protocols for managing both alcoholic and non-alcoholic fatty liver disease (NAFLD) by improving fat metabolism and clearing hepatic congestion."
+    },
+    {
+      "q": "Are the treatments safe if my liver is already weak?",
+      "a": "Absolutely. Our physicians carefully assess your liver's current capacity. In advanced cases, we rely primarily on gentle internal medicines rather than rigorous detoxification therapies."
+    }
+  ],
+  "relatedConditions": [
+    {
+      "name": "Liver Cirrhosis",
+      "slug": "liver-cirrhosis",
+      "categorySlug": "hepatic"
+    },
+    {
+      "name": "Fatty Liver",
+      "slug": "fatty-liver",
+      "categorySlug": "liver"
+    }
+  ],
+  "relatedTherapies": [
+    {
+      "name": "Virechana",
+      "slug": "virechana"
+    }
+  ],
+  "needsVerification": false
+}

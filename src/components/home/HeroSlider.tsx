@@ -280,8 +280,9 @@ export function HeroSlider() {
               >
                 <Button
                   render={<Link href={activeSlide.primaryCtaLink} />}
+                  variant="default"
                   size="lg"
-                  className="bg-[#517B32] hover:bg-[#6F9940] text-white rounded-full px-8 h-14 text-base font-semibold shadow-[0_0_20px_rgba(81,123,50,0.4)] border border-[#6F9940]/50 transition-all hover:-translate-y-0.5"
+                  className="px-8 shadow-[0_0_20px_rgba(81,123,50,0.4)] hover:-translate-y-0.5"
                 >
                   {activeSlide.primaryCtaText}
                 </Button>
@@ -290,7 +291,7 @@ export function HeroSlider() {
                   render={<Link href={activeSlide.secondaryCtaLink} />}
                   variant="outline"
                   size="lg"
-                  className="border-[#E3D8C1]/30 text-[#F7F1E1] bg-[#402816]/40 hover:bg-white/10 backdrop-blur-md rounded-full px-8 h-14 text-base font-medium transition-all hover:border-[#E3D8C1]/60"
+                  className="px-8 bg-black/20 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
                 >
                   {activeSlide.secondaryCtaText}
                 </Button>

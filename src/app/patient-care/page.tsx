@@ -37,7 +37,7 @@ export default function PatientCareHubPage() {
                 <p className="text-slate-600 mb-6 flex-1 text-base">
                   Understand the step-by-step process of receiving care, from the initial online enquiry to your discharge and follow-up.
                 </p>
-                <Button render={<Link href="/patient-care/journey" />} variant="link" className="text-emerald-700 px-0 self-start flex items-center group text-base">
+                <Button render={<Link href="/patient-care/journey" />} variant="link" className="self-start">
                   View Journey <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
@@ -52,7 +52,7 @@ export default function PatientCareHubPage() {
                 <p className="text-slate-600 mb-6 flex-1 text-base">
                   Transparent estimates for accommodation (Non-A/C, A/C, Suites) and standard Ayurvedic therapies.
                 </p>
-                <Button render={<Link href="/patient-care/tariff" />} variant="link" className="text-emerald-700 px-0 self-start flex items-center group text-base">
+                <Button render={<Link href="/patient-care/tariff" />} variant="link" className="self-start">
                   View Pricing <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
@@ -67,7 +67,7 @@ export default function PatientCareHubPage() {
                 <p className="text-slate-600 mb-6 flex-1 text-base">
                   Details of our unique, results-oriented financial agreement for specific chronic conditions like Asthma and Arthritis.
                 </p>
-                <Button render={<Link href="/patient-care/challenging-offer" />} variant="link" className="text-emerald-700 px-0 self-start flex items-center group text-base">
+                <Button render={<Link href="/patient-care/challenging-offer" />} variant="link" className="self-start">
                   Read the Offer <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
