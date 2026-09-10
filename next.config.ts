@@ -55,11 +55,6 @@ const nextConfig: NextConfig = {
         destination: '/treatments/heart-disease',
         permanent: true,
       },
-      {
-        source: '/testimonials/suja-sabu',
-        destination: '/testimonials',
-        permanent: true,
-      },
     ]
   },
 };
