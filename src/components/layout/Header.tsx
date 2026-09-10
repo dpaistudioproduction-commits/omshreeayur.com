@@ -182,6 +182,13 @@ export function Header() {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
+                {/* 4.5. Products */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink render={<Link href="/products" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                    Products
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
                 {/* 5. Patient Care */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-9 px-2.5 2xl:px-3.5 transition-colors cursor-pointer">
@@ -381,6 +388,15 @@ export function Header() {
                       className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
                     >
                       <span>Health Conditions</span>
+                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                    </Link>
+
+                    <Link 
+                      href="/products" 
+                      onClick={() => setIsOpen(false)}
+                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                    >
+                      <span>Medicines & Products</span>
                       <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
                     </Link>
 
