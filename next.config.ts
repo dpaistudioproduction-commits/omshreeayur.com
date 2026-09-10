@@ -45,6 +45,21 @@ const nextConfig: NextConfig = {
         destination: '/treatments/ulcerative-colitis',
         permanent: true,
       },
+      {
+        source: '/our-challenging-offer',
+        destination: '/patient-care/challenging-offer',
+        permanent: true,
+      },
+      {
+        source: '/offers/heart-disease',
+        destination: '/treatments/heart-disease',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/suja-sabu',
+        destination: '/testimonials',
+        permanent: true,
+      },
     ]
   },
 };
