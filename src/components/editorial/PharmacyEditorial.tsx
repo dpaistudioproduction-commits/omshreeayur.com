@@ -132,12 +132,15 @@ export function PharmacyEditorial() {
                     <span className="text-[9px] text-[#81754B]/60 font-mono italic">
                       * Physician Prescribed
                     </span>
-                    <Link
-                      href="/patient-care/consultation"
+                    <a
+                      href={`https://wa.me/919846992789?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20Ayurvedic%20medicine%20${encodeURIComponent(product.name)}`}
+                      target="_blank"
+                      rel="noreferrer"
                       className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors"
+                      title="Enquire on WhatsApp"
                     >
                       <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
