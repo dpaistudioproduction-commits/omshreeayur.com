@@ -45,11 +45,6 @@ const nextConfig: NextConfig = {
         destination: '/treatments/ulcerative-colitis',
         permanent: true,
       },
-      {
-        source: '/testimonials/low-ef-treatment-at-omshree-sidha-hospital',
-        destination: '/conditions/cardiovascular/low-ejection-fraction',
-        permanent: true,
-      },
     ]
   },
 };
