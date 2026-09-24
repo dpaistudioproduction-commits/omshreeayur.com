@@ -98,7 +98,7 @@ export default function WellnessTreatmentsPage() {
                   </ol>
                   <p>The treatment helps in reducing stress &amp; provides a good sleep with the calmness of mind and soul. Even though you are not getting  sleep for very long time, our treatment will give you very good sleep.</p>
                   <p>Duration:-7-28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our Stress removing package starts from INR 2800.00 per day (Which includes full body massage, steam bath and shirodhara total 90 minutes)  Better packages for INR 3550 (120 minutes), INR 4050 (150 minutes), INR 4750 (180 minutes).  Details of room rent and food is available in our website</p>
                   
@@ -114,10 +114,10 @@ export default function WellnessTreatmentsPage() {
                     <li>Therapeutic vomiting(<em>vamana</em> ), purgation (<em>virechana</em> ), and internal medicines are optional</li>
                   </ol>
                   <p>This treatment helps in prevention of diseases and long-term maintenance of health by Panchakarma treatments and it helps in balancing body,  mind and soul. It also helps to correct metabolism and also helps in the evacuation of toxins.</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our Detoxification  package starts from INR 3500.00 per day.<br/>Duration:- 7 &#8211; 28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>Our Toxin removing package starts from INR 3500.00 per day.</p>
                   
                   <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6">3. <strong>Wellness to remove Psoriasis, Eczema, Black spots, other skin problems, and general skin care.</strong></h2>
@@ -131,7 +131,7 @@ export default function WellnessTreatmentsPage() {
                   </ol>
                   <p>This treatment helps in removing itching, scaling plaques, patches, roughness,  inflammation, cracks, bleeding,  oozing or crustingsoreness, burning, psoriatic arthritis etc…and makes the skin glossy and removes the marks caused by psoriasis or eczema. If you continue at least external medicines you will regain original skin color in 3 months and prevents further attacks.</p>
                   <p>Duration:-21-28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our psoriasis or eczema removing package starts from INR 3500.00 per day.</p>
                   
@@ -146,7 +146,7 @@ export default function WellnessTreatmentsPage() {
                     <li>Therapeutic  purgation (<em>virechana</em>),  Nasal cleansing (<em>nasya</em> )and internal medicines are optional</li>
                   </ol>
                   <p>This treatment helps in removing pain, swelling, stiffness etc…and makes the body flexible and healthy. You will be able to bend forward and backward, climb steps easily etc… It helps in preventing further degeneration.<br/>Duration:-21-28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our pain and swelling removing package starts from INR 3500.00 per day.</p>
                   
@@ -159,7 +159,7 @@ export default function WellnessTreatmentsPage() {
                     <li>Therapeutic vomiting(<em>vamana</em> ), purgation (<em>virechana</em> ), and internal medicines are optional</li>
                   </ol>
                   <p>This treatment helps in removing cough, breathing difficulty, sneezing, running nose, head ache etc…and you will be able to breath easily, tiredness will come down and you will be able to perform all activities much better than before. If you use internal medicines and continue it for some time as per direction, it will cure you.<br/>Duration:-21-28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our Asthma/Allergy/Sneezing/ running nose/Migraine/Sinusitis</p>
                   <p>package starts from INR 3500.00 per day.</p>
@@ -174,7 +174,7 @@ export default function WellnessTreatmentsPage() {
                     <li>Therapeutic vomiting(<em>vamana</em> ), purgation (<em>virechana</em> ), and internal medicines are optional</li>
                   </ol>
                   <p>In case of men this treatment helps in better blood flow, removes erection problems, gets much more mental and physical satisfaction, makes you healthy and energetic.  In case of woman this treatment helps in removing pain, PCOD/PCOS, normalize menstrual cycle, gives better shape to the body, removes fat deposits in and around stomach, vaginal  itching etc…<br/>Duration:-21-28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Sexual disorder removing package starts from INR 3500.00 per day.</p>
                   
@@ -189,7 +189,7 @@ export default function WellnessTreatmentsPage() {
                   </ol>
                   <p>The treatment helps in keeping body young and agile, increases the longevity of life and immunity, enhances one&#8217;s energy and also helps in preventing/curing diseases.</p>
                   <p>Duration:-21-28 days</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our Rejuvenation therapy package starts from INR 3500.00 per day.</p>
                   
@@ -215,7 +215,7 @@ export default function WellnessTreatmentsPage() {
                   </ol>
                   <p>This treatment helps in removing diabetic neuropathy, numbness, toxins, fat deposits and pain, improves blood circulation, fat deposits and gives your body better shape and attractive  You may feel much younger than before.</p>
                   <p>Duration:-21-28 days treatment</p>
-                  <p>Location: You can choose a calm and quite village area called Vayala or you can choose a city Kochi (Cochin) as per your preference.</p>
+                  <p>Location: You can choose our calm and quite village area called Vayala as per your preference.</p>
                   <p>We have different packages to suite your budget.</p>
                   <p>Our Diabetics/diabetic neuropathy package starts from INR 3500.00 per day.</p>
                   

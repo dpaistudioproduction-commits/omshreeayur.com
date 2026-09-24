@@ -433,7 +433,7 @@ export default function ContactPage() {
                               name="state"
                               value={formData.state}
                               onChange={handleInputChange}
-                              placeholder="e.g. Kochi, Kerala / Mumbai" 
+                              placeholder="e.g. Kottayam, Kerala / Mumbai" 
                               className="bg-white border-slate-200 h-12" 
                             />
                           </div>

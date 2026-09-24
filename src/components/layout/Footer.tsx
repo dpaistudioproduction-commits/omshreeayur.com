@@ -8,7 +8,7 @@ export function Footer() {
       <div className="w-full px-[4%]">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-x-12 gap-y-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-12 gap-y-16 mb-16">
           
           {/* Column 1 & 2: Brand & Intro */}
           <div className="lg:col-span-2 space-y-8 pr-4">
@@ -79,30 +79,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 6: Kochi Branch */}
-          <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1] flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-[#B4833D]" /> Kochi
-            </h3>
-            <div className="space-y-4 text-sm text-[#E3D8C1]/70">
-              <p className="leading-relaxed">
-                <strong className="text-[#E3D8C1] font-medium block mb-1">City Branch</strong>
-                K.P Vallon Road, Pavana Homes<br />
-                Kadavanthra, Kochi
-              </p>
-              <div className="pt-2 space-y-2">
-                <a href="tel:+916282553899" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 6282553899
-                </a>
-                <a href="tel:+914842324899" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4842324899
-                </a>
-                <a href="tel:+914842324789" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4842324789
-                </a>
-              </div>
-            </div>
-          </div>
 
         </div>
 

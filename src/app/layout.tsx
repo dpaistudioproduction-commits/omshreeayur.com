@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     default: "Omshree Sidha Hospital | Premium Ayurvedic Cardiac Care",
   },
   description: "Specialized Ayurvedic treatments for Heart Diseases, Low EF, Heart Failure, Respiratory, and Gastrointestinal Disorders in Kerala, India.",
+  verification: {
+    google: "EW7BB0HEjCQ2ynYA5Fo-oCIdlP1bKY0Ta2apXBpH0fY",
+  },
 };
 
 export default function RootLayout({
