@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, ArrowRight, CheckCircle2, Activity, HeartPulse, AlertTriangle, HelpCircle } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
@@ -123,877 +123,324 @@ export default function EjectionFractionBlogPage() {
         <div className="grid lg:grid-cols-12 gap-12">
           
           {/* Main Content Column */}
-          <div className="lg:col-span-8 space-y-16">
-
-            {/* Intro Highlight Section */}
-            <section className="bg-white p-8 rounded-2xl border-l-4 border-[#517B32] shadow-sm">
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>You may be told that you have a “heart blockage” after an angiogram. Someone else may be told they have a “heart block” after an ECG.</p>
-                <p>Although the words sound similar, they can refer to two very different problems.</p>
-                <div className="grid md:grid-cols-2 gap-4 mt-6">
-                  <div className="bg-[#F7F1E1] p-4 rounded-xl border border-[#DBCFA8]">
-                    <Activity className="h-6 w-6 text-[#66371B] mb-2" />
-                    <p className="font-medium text-[#66371B]">A coronary artery blockage involves blood flow to the heart muscle.</p>
-                  </div>
-                  <div className="bg-[#F7F1E1] p-4 rounded-xl border border-[#DBCFA8]">
-                    <HeartPulse className="h-6 w-6 text-[#66371B] mb-2" />
-                    <p className="font-medium text-[#66371B]">An electrical heart block involves the signals that control the heartbeat.</p>
-                  </div>
-                </div>
-                <p className="mt-6">Understanding exactly what your doctor means by “block” is an important first step toward understanding your condition.</p>
-                <p>At Omshree Sidha Hospital in Kerala, cardiovascular care is one of the areas in which the hospital provides Ayurvedic consultation and treatment. Omshree's practice is rooted in a 140+ year Ayurvedic healing legacy, with patients from India and abroad seeking care for a range of chronic health conditions.</p>
-              </div>
-            </section>
+          <div className="lg:col-span-8 space-y-12">
             
+            <div className="my-8 rounded-2xl overflow-hidden border border-[#DBCFA8]">
+              <Image 
+                src="/images/blog/ef-featured-image.png" 
+                alt="Medical illustration showing a healthy heart with focus on the left ventricle pumping blood" 
+                width={800} 
+                height={500} 
+                className="w-full h-auto object-cover" 
+                priority
+              />
+            </div>
+
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6 flex items-center gap-3">
-                <span className="bg-[#66371B] text-[#F7F1E1] rounded-full h-10 w-10 flex items-center justify-center text-xl">1</span> 
-                What Is a Heart Blockage?
-              </h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Classification</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <div className="my-8 rounded-2xl overflow-hidden border border-[#DBCFA8] bg-white">
-                  <Image src="/images/conditions/heart-disease-and-blocks/coronary_blockage.png" alt="Coronary Artery Blockage Illustration" width={800} height={500} className="w-full h-auto object-cover" />
-                </div>
-                <p>A coronary artery blockage usually refers to narrowing or obstruction in one or more of the arteries that supply blood to the heart muscle.</p>
-                <p>The coronary arteries can become narrowed when plaque builds up inside their walls. This process is known as atherosclerosis.</p>
-                <p>As the artery becomes narrower, the amount of blood and oxygen reaching the heart muscle may be reduced.</p>
-                <p>A complete blockage of a coronary artery can result in a heart attack.</p>
-                
-                <Card className="bg-[#F7F1E1]/50 border-[#DBCFA8] shadow-none mt-6">
-                  <CardContent className="p-6">
-                    <p className="font-bold text-[#66371B] mb-4">However, the significance of a coronary blockage cannot be determined by the percentage alone. Doctors may consider:</p>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>Which artery is affected</span></li>
-                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>Where the narrowing is located</span></li>
-                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>How severe the narrowing is</span></li>
-                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>Whether blood flow is affected</span></li>
-                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>Whether symptoms are present</span></li>
-                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>Whether there is evidence of heart muscle damage</span></li>
-                      <li className="flex items-start gap-2 md:col-span-2"><CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0 mt-0.5"/> <span>Other cardiovascular conditions and risk factors</span></li>
-                    </ul>
-                  </CardContent>
-                </Card>
-                <p className="mt-4">This is why a percentage written on an angiography report needs to be understood in its clinical context.</p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6 flex items-center gap-3">
-                <span className="bg-[#66371B] text-[#F7F1E1] rounded-full h-10 w-10 flex items-center justify-center text-xl">2</span> 
-                What Is Heart Block?
-              </h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <div className="my-8 rounded-2xl overflow-hidden border border-[#DBCFA8] bg-white">
-                  <Image src="/images/conditions/heart-disease-and-blocks/electrical_heart_block.png" alt="Electrical Heart Block Illustration" width={800} height={500} className="w-full h-auto object-cover" />
-                </div>
-                <p>Heart block is different from a blocked coronary artery.</p>
-                <p>Heart block refers to a problem with the electrical signals that tell the heart when to beat.</p>
-                <p>Normally, electrical signals travel through the heart in an organized pattern.</p>
-                <p>With atrioventricular, or AV, heart block, these signals may be delayed or may not pass normally from the upper chambers to the lower chambers.</p>
-                <p>There are different types of heart block, and their significance can vary.</p>
-                
-                <div className="grid md:grid-cols-3 gap-6 mt-8">
-                  <Card className="border-[#DBCFA8] shadow-sm">
-                    <CardContent className="p-6">
-                      <h3 className="font-heading text-xl font-bold text-[#66371B] mb-3">First-Degree AV Block</h3>
-                      <p className="text-sm">In first-degree AV block, every electrical signal reaches the lower chambers, but it takes longer than usual.</p>
-                      <p className="text-sm mt-2">Some people have no symptoms and may not require specific treatment.</p>
-                      <p className="text-sm mt-2 font-medium">The finding still needs to be interpreted in the context of the person's overall heart health.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="border-[#DBCFA8] shadow-sm">
-                    <CardContent className="p-6">
-                      <h3 className="font-heading text-xl font-bold text-[#66371B] mb-3">Second-Degree AV Block</h3>
-                      <p className="text-sm">In second-degree AV block, some electrical signals from the upper chambers do not reach the lower chambers.</p>
-                      <p className="text-sm mt-2">There are different patterns, including:</p>
-                      <ul className="list-disc pl-5 text-sm mt-1 mb-2">
-                        <li>Mobitz type I</li>
-                        <li>Mobitz type II</li>
-                      </ul>
-                      <p className="text-sm font-medium">These forms do not have the same clinical significance, which is why identifying the exact type matters.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-[#DBCFA8] shadow-sm bg-[#FFFBF0]">
-                    <CardContent className="p-6">
-                      <h3 className="font-heading text-xl font-bold text-[#66371B] mb-3">Third-Degree AV Block</h3>
-                      <p className="text-sm">Third-degree AV block is also called complete heart block.</p>
-                      <p className="text-sm mt-2">In this condition, electrical signals from the upper chambers do not normally reach the lower chambers.</p>
-                      <p className="text-sm mt-2">The upper and lower chambers can then beat independently.</p>
-                      <p className="text-sm mt-2 font-medium text-red-700">This can result in a very slow heartbeat and reduced blood flow and requires urgent medical evaluation.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Coronary Blockage and Heart Block Are Not the Same</h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>This distinction is particularly important if you are researching your diagnosis online.</p>
-                
-                <div className="overflow-x-auto my-8">
-                  <table className="w-full text-left border-collapse rounded-xl overflow-hidden shadow-md border border-[#DBCFA8]">
-                    <thead>
-                      <tr className="bg-[#66371B] text-[#F7F1E1]">
-                        <th className="p-5 font-heading text-xl font-bold border-r border-[#8A5A3C]">Coronary artery blockage</th>
-                        <th className="p-5 font-heading text-xl font-bold">Electrical heart block</th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white">
-                      <tr className="border-b border-[#E3D8C1] hover:bg-[#F7F1E1]/50 transition-colors">
-                        <td className="p-5 border-r border-[#E3D8C1]"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Involves the blood vessels supplying the heart</span></td>
-                        <td className="p-5"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Involves the electrical conduction system</span></td>
-                      </tr>
-                      <tr className="border-b border-[#E3D8C1] hover:bg-[#F7F1E1]/50 transition-colors">
-                        <td className="p-5 border-r border-[#E3D8C1]"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Can reduce blood flow to heart muscle</span></td>
-                        <td className="p-5"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Can interfere with the timing of the heartbeat</span></td>
-                      </tr>
-                      <tr className="border-b border-[#E3D8C1] hover:bg-[#F7F1E1]/50 transition-colors">
-                        <td className="p-5 border-r border-[#E3D8C1]"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Often associated with coronary artery disease</span></td>
-                        <td className="p-5"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Can involve AV conduction abnormalities</span></td>
-                      </tr>
-                      <tr className="border-b border-[#E3D8C1] hover:bg-[#F7F1E1]/50 transition-colors">
-                        <td className="p-5 border-r border-[#E3D8C1]"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> May be evaluated using coronary imaging and other cardiac tests</span></td>
-                        <td className="p-5"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> ECG is a key diagnostic test</span></td>
-                      </tr>
-                      <tr className="hover:bg-[#F7F1E1]/50 transition-colors">
-                        <td className="p-5 border-r border-[#E3D8C1]"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Treatment depends on severity and clinical situation</span></td>
-                        <td className="p-5"><span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#517B32]" /> Treatment depends on type, cause and symptoms</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div className="bg-[#402816] text-[#F7F1E1] p-6 rounded-xl shadow-md text-center">
-                  <p className="text-[#E3D8C1] mb-2">So if you have been told that you have a “heart block” or “heart blockage,” the first question should be:</p>
-                  <p className="font-heading text-2xl font-bold text-white">Which condition has actually been diagnosed?</p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Classification of Coronary Artery Disease</h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>Coronary artery disease can involve one or more coronary arteries. Patients may hear terms such as:</p>
-                <div className="flex flex-wrap gap-3 my-6">
-                  {["Coronary artery disease", "Coronary artery narrowing", "Coronary artery blockage", "Coronary stenosis", "Single-vessel disease", "Multi-vessel disease", "Angina"].map((term) => (
-                    <span key={term} className="bg-[#F7F1E1] text-[#66371B] border border-[#DBCFA8] px-4 py-2 rounded-full text-sm font-medium shadow-sm">
-                      {term}
-                    </span>
-                  ))}
-                </div>
-                <p>The number or percentage of a blockage does not provide the complete picture by itself.</p>
-                <p>The location of the narrowing, its effect on blood flow, symptoms and other findings all matter.</p>
-                <p className="font-medium p-4 bg-[#E3D8C1]/30 rounded-lg border-l-4 border-[#66371B]">This is why a report saying “70% blockage”, for example, should not be interpreted without understanding which artery is affected and what the rest of the cardiac assessment shows.</p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-8">Causes</h2>
-              <div className="grid md:grid-cols-2 gap-12">
-                <div>
-                  <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4 border-b border-[#DBCFA8] pb-2">Causes of Coronary Artery Blockage</h3>
-                  <div className="text-[#81754B] text-base leading-relaxed font-light space-y-4">
-                    <p>Coronary artery disease most commonly develops through atherosclerosis.</p>
-                    <p>Atherosclerosis occurs when fats, cholesterol and other substances accumulate in the walls of arteries and form plaque.</p>
-                    <p>As plaque builds up, the arteries can become narrower and blood flow can be reduced. Factors associated with coronary artery disease include:</p>
-
-                    <div className="space-y-4 mt-6">
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">High Blood Pressure</h4>
-                        <p className="text-sm">Long-standing high blood pressure can contribute to damage within the arteries and increase cardiovascular risk.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">High Cholesterol</h4>
-                        <p className="text-sm">Higher levels of certain blood lipids can contribute to plaque formation.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">Diabetes</h4>
-                        <p className="text-sm">Diabetes and insulin resistance are associated with increased cardiovascular risk.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">Smoking and Tobacco Use</h4>
-                        <p className="text-sm">Smoking can damage blood vessels and increase cardiovascular risk.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">Physical Inactivity</h4>
-                        <p className="text-sm">Low levels of physical activity are associated with increased cardiovascular risk.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">Excess Body Weight</h4>
-                        <p className="text-sm">Excess body weight can contribute to several cardiovascular risk factors.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">Increasing Age</h4>
-                        <p className="text-sm">The risk of coronary artery disease generally increases with age.</p>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#66371B]">Family History</h4>
-                        <p className="text-sm">A family history of heart disease can contribute to an individual's cardiovascular risk.</p>
-                      </div>
-                    </div>
-                    <p className="italic bg-[#F7F1E1] p-3 rounded text-sm mt-4">Having one or more of these risk factors does not mean that a person definitely has a coronary blockage.</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4 border-b border-[#DBCFA8] pb-2">Causes of Heart Block</h3>
-                  <div className="text-[#81754B] text-base leading-relaxed font-light space-y-4">
-                    <p>Electrical heart block can have several different causes. These may include:</p>
-                    <ul className="space-y-3 mt-4">
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Previous heart attack</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Heart disease or damage affecting the conduction system</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Certain infections</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Thyroid disorders</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Electrolyte abnormalities</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Inflammatory conditions</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Certain medicines that slow heart rate or electrical conduction</span></li>
-                      <li className="flex items-start gap-2"><ArrowRight className="h-4 w-4 text-[#517B32] shrink-0 mt-1"/> <span>Changes associated with the heart's electrical conduction system</span></li>
-                    </ul>
-                    <div className="bg-[#E3D8C1]/30 p-4 rounded-lg mt-6">
-                      <p className="mb-2">Some causes may be reversible, while others may represent an ongoing problem with the heart's conduction system.</p>
-                      <p className="font-medium text-[#66371B]">A healthcare professional needs to determine the underlying cause rather than assuming that every heart block has the same explanation.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Symptoms of Heart Disease & Blockages</h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-6">
-                <p>Symptoms vary depending on the type of condition and its severity.</p>
-                <p>Some people may have significant cardiovascular disease with few noticeable symptoms, while others may experience symptoms during everyday activities.</p>
-
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <Card className="border-[#DBCFA8] bg-white shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-8">
-                      <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-6 text-center border-b border-[#E3D8C1] pb-4">Symptoms Associated With Coronary Artery Disease</h3>
-                      <p className="text-sm mb-6 text-center">Possible symptoms include:</p>
-                      
-                      <div className="space-y-6">
-                        <div>
-                          <h4 className="font-bold text-[#66371B] flex items-center gap-2"><AlertTriangle className="h-4 w-4 text-[#B4833D]"/> Chest Discomfort</h4>
-                          <p className="text-sm mt-1">You may experience pressure, squeezing, heaviness, tightness or pain in the chest. This is commonly referred to as angina.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-[#66371B] flex items-center gap-2"><AlertTriangle className="h-4 w-4 text-[#B4833D]"/> Shortness of Breath</h4>
-                          <p className="text-sm mt-1">Reduced blood flow to the heart can be associated with breathlessness, particularly during exertion.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-[#66371B] flex items-center gap-2"><AlertTriangle className="h-4 w-4 text-[#B4833D]"/> Fatigue</h4>
-                          <p className="text-sm mt-1">Some people experience unusual tiredness or reduced ability to perform activities that were previously comfortable.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-[#66371B] flex items-center gap-2"><AlertTriangle className="h-4 w-4 text-[#B4833D]"/> Reduced Exercise Tolerance</h4>
-                          <p className="text-sm mt-1">Physical activity may become more difficult when the heart is not receiving adequate blood supply.</p>
-                        </div>
-                      </div>
-                      <p className="italic text-sm mt-6 pt-4 border-t border-[#E3D8C1]">Coronary artery disease can also remain unnoticed until symptoms become apparent.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-[#DBCFA8] bg-white shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-8">
-                      <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-6 text-center border-b border-[#E3D8C1] pb-4">Symptoms Associated With Heart Block</h3>
-                      <p className="text-sm mb-6 text-center">Symptoms depend on the type of electrical block and how much it affects the heart rate and blood flow.</p>
-                      <p className="text-sm mb-4 font-bold text-[#66371B]">Possible symptoms include:</p>
-                      
-                      <ul className="space-y-3 text-sm">
-                        <li className="flex items-center gap-3 p-2 bg-[#F7F1E1]/50 rounded"><span className="h-2 w-2 rounded-full bg-[#517B32]"></span> Fatigue</li>
-                        <li className="flex items-center gap-3 p-2 bg-[#F7F1E1]/50 rounded"><span className="h-2 w-2 rounded-full bg-[#517B32]"></span> Dizziness</li>
-                        <li className="flex items-center gap-3 p-2 bg-[#F7F1E1]/50 rounded"><span className="h-2 w-2 rounded-full bg-[#517B32]"></span> Lightheadedness</li>
-                        <li className="flex items-center gap-3 p-2 bg-[#F7F1E1]/50 rounded"><span className="h-2 w-2 rounded-full bg-[#517B32]"></span> Feeling faint</li>
-                        <li className="flex items-center gap-3 p-2 bg-[#F7F1E1]/50 rounded"><span className="h-2 w-2 rounded-full bg-[#517B32]"></span> Fainting</li>
-                        <li className="flex items-center gap-3 p-2 bg-[#F7F1E1]/50 rounded"><span className="h-2 w-2 rounded-full bg-[#517B32]"></span> Reduced ability to exercise</li>
-                      </ul>
-                      
-                      <div className="mt-8 p-4 bg-[#E3D8C1]/20 rounded-lg">
-                        <p className="text-sm mb-2 font-medium">Some people with heart block may have no symptoms.</p>
-                        <p className="text-sm">This is one reason an ECG and appropriate cardiac evaluation are important when a conduction abnormality is suspected.</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </section>
-
-            <section className="bg-red-50 p-8 rounded-2xl border border-red-200 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-2 h-full bg-red-600"></div>
-              <h2 className="font-heading text-3xl font-bold text-red-900 mb-4">What Happens When a Coronary Artery Becomes Completely Blocked?</h2>
-              <div className="text-red-800 text-lg leading-relaxed font-light space-y-4">
-                <p>A complete blockage of a coronary artery can interrupt blood flow to part of the heart muscle. If blood flow is not restored, the affected heart muscle can become damaged.</p>
-                <p className="font-bold text-red-700">This can result in a heart attack, which is a medical emergency.</p>
-                
-                <p className="mt-6 mb-2 font-medium">Possible symptoms can include:</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
-                  <li className="flex items-center gap-2"><span className="h-2 w-2 bg-red-500 rounded-full"></span> Chest pressure or pain</li>
-                  <li className="flex items-center gap-2"><span className="h-2 w-2 bg-red-500 rounded-full"></span> Shortness of breath</li>
-                  <li className="flex items-center gap-2"><span className="h-2 w-2 bg-red-500 rounded-full"></span> Cold sweating</li>
-                  <li className="flex items-center gap-2"><span className="h-2 w-2 bg-red-500 rounded-full"></span> Nausea</li>
-                  <li className="flex items-center gap-2"><span className="h-2 w-2 bg-red-500 rounded-full"></span> Dizziness</li>
-                  <li className="flex items-center gap-2"><span className="h-2 w-2 bg-red-500 rounded-full"></span> Pain or discomfort spreading to the arm, shoulder, back, neck or jaw</li>
+                <p>Understanding Your Heart’s Functional Stage: The NYHA classification. To help track how your heart condition affects your daily life, healthcare providers use a standard four-stage system called the New York Heart Association (NYHA) Classification.</p>
+                <p>This system looks at how much physical activity you can do before feeling symptoms like shortness of breath or fatigue. Understanding your class helps us tailor your care and measure your steady progress.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Class I (No Symptoms):</strong> Your heart is working well enough that you do not experience any heart failure symptoms during regular, everyday activities. You can move around and go about your day normally.</li>
+                  <li><strong>Class II (Mild Symptoms):</strong> You feel perfectly comfortable while resting and can handle simple everyday tasks. However, pushing yourself—such as climbing a steep hill or lifting heavy groceries—causes mild shortness of breath or fatigue.</li>
+                  <li><strong>Class III (Moderate Symptoms):</strong> Your physical activity is noticeably limited. While you still feel completely fine while sitting or resting, even basic, light household chores or walking short distances make you feel tired or short of breath.</li>
+                  <li><strong>Class IV (Severe Symptoms):</strong> This is the most advanced stage, where you are unable to carry out any physical activity without discomfort. Symptoms like shortness of breath, fatigue, or chest tightness occur even while you are sitting still or resting in bed.</li>
                 </ul>
-                
-                <p className="mt-4 text-sm">Symptoms can vary, and some people may experience less typical symptoms or very few symptoms.</p>
-                
-                <div className="mt-6 pt-4 border-t border-red-200">
-                  <p className="font-bold text-lg text-red-700 flex items-center gap-2 uppercase tracking-wide"><AlertTriangle className="h-6 w-6"/> If you suspect a heart attack, seek emergency medical care immediately.</p>
-                </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Treating the Underlying Cause</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">How can I improve my Ejection Fraction (EF)</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>Treatment depends on the actual condition, its severity and the individual's clinical situation. A coronary artery blockage and an electrical heart block require different approaches.</p>
-
-                <div className="grid md:grid-cols-2 gap-8 mt-8">
-                  <div className="bg-[#F7F1E1] p-6 rounded-xl shadow-sm border border-[#DBCFA8]">
-                    <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4">Coronary Artery Disease</h3>
-                    <p className="text-sm mb-4">Depending on the individual situation, treatment may include:</p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Lifestyle changes</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Medicines</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Coronary angioplasty and stent placement</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Coronary artery bypass surgery</li>
-                    </ul>
-                    <p className="text-sm font-medium">Not every patient requires a procedure.</p>
-                    <p className="text-sm mt-2">The appropriate approach depends on factors such as symptoms, anatomy, disease severity, blood flow and overall clinical assessment.</p>
-                  </div>
-
-                  <div className="bg-[#F7F1E1] p-6 rounded-xl shadow-sm border border-[#DBCFA8]">
-                    <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4">Electrical Heart Block</h3>
-                    <p className="text-sm mb-4">Treatment depends on:</p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Type of heart block</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Symptoms</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Underlying cause</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Heart rate</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Whether the cause can be reversed</li>
-                      <li className="flex items-center gap-2 text-sm"><CheckCircle2 className="h-4 w-4 text-[#517B32]"/> Other cardiac findings</li>
-                    </ul>
-                    <p className="text-sm">Some patients may only need monitoring, while certain forms of heart block may require pacing or a permanent pacemaker.</p>
-                  </div>
-                </div>
+                <p>Improving Ejection Fraction (EF) depends on how you are treating the underlying cause of the weakened heart. EF can improve with proper treatment, lifestyle changes, and regular monitoring. At Omshree Sidha Hospital, we improve EF in short time. We can improve EF considerably in a month or two. If you have only low EF and there is no other health issues, EF will improve faster. If you have other health issues, the progress is bit slower. We have the Best Ayurvedic Treatment for Low Ejection Fraction (EF). We can do Echo after 7 or 14 days and ensure the EF is improving. Patients have to continue their current modern medicine until they fully recover.</p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Managing Heart Disease & Blocks</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Treatment</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>Managing cardiovascular health is usually not about one treatment or one number. It may involve several areas of care.</p>
-
-                <div className="space-y-8 mt-8">
-                  <div>
-                    <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-2 flex items-center gap-2"><ArrowRight className="text-[#B4833D] h-5 w-5"/> Medical Management</h3>
-                    <p>Depending on the diagnosis, a healthcare professional may prescribe medicines to address issues such as:</p>
-                    <div className="flex flex-wrap gap-2 mt-3 mb-4">
-                      {["High blood pressure", "High cholesterol", "Blood clot risk", "Heart rhythm", "Other cardiovascular conditions"].map((item) => (
-                        <span key={item} className="px-3 py-1 bg-white border border-[#DBCFA8] rounded-full text-sm">{item}</span>
-                      ))}
-                    </div>
-                    <p className="font-bold text-[#66371B] bg-[#E3D8C1]/30 p-3 rounded">If you are already taking cardiac medication, do not stop or change it without discussing the decision with your treating healthcare professional.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-2 flex items-center gap-2"><ArrowRight className="text-[#B4833D] h-5 w-5"/> Healthy Lifestyle Changes</h3>
-                    <p>Heart-healthy lifestyle measures can support cardiovascular health. These may include:</p>
-                    <ul className="grid grid-cols-2 md:grid-cols-3 gap-y-2 mt-3 mb-4">
-                      <li>Avoiding tobacco</li>
-                      <li>Eating a balanced diet</li>
-                      <li>Maintaining a healthy body weight</li>
-                      <li>Managing blood pressure</li>
-                      <li>Managing cholesterol</li>
-                      <li>Managing diabetes</li>
-                      <li>Appropriate physical activity</li>
-                      <li>Managing stress</li>
-                      <li>Maintaining adequate sleep</li>
-                    </ul>
-                    <p className="italic">The right lifestyle plan depends on the individual's medical condition.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-2 flex items-center gap-2"><ArrowRight className="text-[#B4833D] h-5 w-5"/> Physical Activity</h3>
-                    <p>Regular physical activity can be part of cardiovascular health management. However, the appropriate level of exercise is different for every patient.</p>
-                    <p className="mt-2">People with significant coronary disease, active symptoms, severe heart dysfunction or certain rhythm and conduction problems may require medical assessment before increasing physical activity.</p>
-                    <p className="mt-2 font-medium">Exercise recommendations should therefore be individualized.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-2 flex items-center gap-2"><ArrowRight className="text-[#B4833D] h-5 w-5"/> Regular Monitoring</h3>
-                    <p>Depending on the diagnosis, monitoring may involve:</p>
-                    <div className="flex flex-wrap gap-2 mt-3 mb-4">
-                      {["ECG/EKG", "Echocardiogram", "Blood tests", "Blood pressure monitoring", "Holter monitoring", "Stress testing", "Cardiac imaging", "Coronary imaging"].map((test) => (
-                        <span key={test} className="px-3 py-1 bg-white border border-[#DBCFA8] rounded-full text-sm text-[#66371B] font-medium">{test}</span>
-                      ))}
-                    </div>
-                    <p>Regular monitoring helps healthcare professionals understand whether the condition is stable and whether additional evaluation or treatment is required.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section className="bg-[#402816] text-[#F7F1E1] p-8 md:p-12 rounded-3xl shadow-lg mt-12">
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-6">Ayurvedic Care at Omshree</h2>
-              <div className="text-[#E3D8C1] text-lg leading-relaxed font-light space-y-6">
-                <p>If you are exploring Ayurveda for a cardiovascular condition, the first step should be understanding your diagnosis and reviewing your available medical information.</p>
-                <p>At Omshree Sidha Hospital, the consultation process can begin with the patient's medical history and relevant cardiac reports.</p>
-                <p>This may include:</p>
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4">What happens to you in the first one to three months</h3>
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mb-4">Reclaiming Your Heart Health: What to Expect from Your Treatment</h4>
+                <p>Once you begin your low Ejection Fraction (EF) treatment at Omshree Sidha Hospital, our primary focus is to naturally revitalize your heart muscle and restore its pumping power. As your heart becomes stronger, blood circulation and oxygen levels throughout your entire body will improve, allowing your symptoms to lift gradually.</p>
+                <p>Here is what most patients experience as their heart heals:</p>
                 
-                <div className="bg-white/5 rounded-xl p-6 border border-white/10 my-6">
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> The diagnosis</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> Current symptoms</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> Previous cardiac treatment</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> Current medicines</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> ECG and echocardiogram reports</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> Coronary imaging, where applicable</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> Other relevant investigations</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[#B4833D]"/> Other health conditions</li>
-                  </ul>
-                </div>
-                
-                <p>This information helps the clinical team understand the individual situation before discussing whether Ayurvedic care is appropriate.</p>
-
-                <div className="mt-8">
-                  <h3 className="font-heading text-2xl font-bold text-white mb-3 text-[#B4833D]">An important distinction</h3>
-                  <p className="mb-2">A treatment approach for coronary artery disease should not automatically be presented as the same treatment approach for electrical heart block. They are different medical conditions.</p>
-                  <p className="font-medium text-white p-4 border-l-4 border-[#B4833D] bg-white/5">Any Omshree-specific treatment protocol, medicine, therapy or expected outcome for Heart Disease & Blocks should therefore be based on the hospital's clinically validated protocol.</p>
-                </div>
-
-                <div className="mt-8 border-t border-white/10 pt-8">
-                  <h3 className="font-heading text-2xl font-bold text-white mb-3">Ayurvedic Medicines</h3>
-                  <p>Ayurvedic medicines should be considered according to the individual patient's diagnosis, health condition and existing treatment.</p>
-                  <p className="mt-4 mb-2">For cardiovascular patients, the clinical team should determine:</p>
-                  <ul className="list-disc pl-6 space-y-1 mb-4">
-                    <li>Which medicines are appropriate</li>
-                    <li>Which condition they are intended for</li>
-                    <li>How they are incorporated into care</li>
-                    <li>Relevant precautions</li>
-                    <li>How they are considered alongside conventional cardiac medication</li>
-                  </ul>
-                  <p>Patients should provide the clinical team with a complete list of their current medicines.</p>
-                  <p className="font-bold text-[#B4833D]">Do not stop or replace prescribed cardiac medicines without appropriate medical advice.</p>
-                </div>
-
-                <div className="mt-8 border-t border-white/10 pt-8">
-                  <h3 className="font-heading text-2xl font-bold text-white mb-3">Panchakarma & Ayurvedic Therapies</h3>
-                  <p>Ayurvedic therapies may form part of an individualized treatment plan for some patients.</p>
-                  <p className="mt-2 mb-2">The specific therapy should depend on:</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {["The patient's diagnosis", "Overall health", "Symptoms", "Other medical conditions", "Current treatment", "Clinical assessment"].map(t => (
-                      <span key={t} className="px-3 py-1 bg-white/10 rounded-full text-sm">{t}</span>
-                    ))}
-                  </div>
-                  <p className="mb-4">Omshree's existing cardiovascular material discusses therapies such as Abhyanga, Kizhi and Hrudaya Basti in relation to its Low EF treatment approach. These should not automatically be described as treatments for every form of coronary blockage or electrical heart block.</p>
-                  <p className="mb-2 font-medium">For Heart Disease & Blocks, the hospital's clinical team should confirm:</p>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Which therapies are used</li>
-                    <li>Why they are used</li>
-                    <li>Which patients may be considered</li>
-                    <li>How they fit into the overall treatment plan</li>
-                    <li>Relevant precautions</li>
-                    <li>How progress is monitored</li>
-                  </ul>
-                </div>
-
-                <div className="mt-8 border-t border-white/10 pt-8">
-                  <h3 className="font-heading text-2xl font-bold text-white mb-3">Yoga & Supportive Practices</h3>
-                  <p>Yoga, breathing practices and stress-management approaches may form part of an individualized wellness plan for some cardiovascular patients.</p>
-                  <p className="mt-2">However, the specific practices should be selected according to the patient's medical condition and clinical guidance.</p>
-                  <p className="mt-2 font-medium text-[#B4833D]">Patients with significant cardiac disease should not begin strenuous exercise or breath-holding practices without appropriate professional guidance.</p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Diagnosis & Tests</h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-6">
-                <p>The diagnostic process begins with understanding the patient's symptoms, medical history and cardiovascular risk factors.</p>
-                <p>Depending on the suspected condition, healthcare professionals may evaluate:</p>
-                <div className="flex flex-wrap gap-2 my-4">
-                  {["Blood pressure", "Heart rate", "Symptoms", "Medical history", "Family history", "Current medication", "Previous cardiac conditions", "Previous investigations"].map(x => (
-                    <span key={x} className="bg-white border border-[#DBCFA8] px-3 py-1 rounded shadow-sm text-sm font-medium">{x}</span>
-                  ))}
-                </div>
-                <p>The appropriate tests depend on the suspected diagnosis.</p>
-
-                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4 border-b border-[#DBCFA8] pb-2">Tests for Heart Disease & Blocks</h3>
-                
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="bg-[#F7F1E1] p-5 rounded-xl border border-[#DBCFA8]">
-                    <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">1. Electrocardiogram — ECG/EKG</h4>
-                    <p className="text-sm">An ECG records the electrical activity of the heart.</p>
-                    <p className="text-sm mt-1">It is a key test for identifying electrical conduction problems such as AV heart block.</p>
-                  </div>
-
-                  <div className="bg-[#F7F1E1] p-5 rounded-xl border border-[#DBCFA8]">
-                    <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">2. Echocardiogram</h4>
-                    <p className="text-sm mb-2">An echocardiogram uses sound waves to create images of the heart. It can provide information about:</p>
-                    <ul className="text-sm space-y-1 list-disc pl-4">
-                      <li>Heart chambers & Heart muscle</li>
-                      <li>Heart valves & Blood flow</li>
-                      <li>Overall heart function & Ejection fraction</li>
-                    </ul>
-                    <p className="text-sm mt-2">It may be used when evaluating different types of heart disease.</p>
-                  </div>
-
-                  <div className="bg-[#F7F1E1] p-5 rounded-xl border border-[#DBCFA8]">
-                    <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">3. Holter Monitoring</h4>
-                    <p className="text-sm">A Holter monitor records heart rhythm over a longer period.</p>
-                    <p className="text-sm mt-1">It can be useful when an electrical abnormality occurs intermittently and is not captured during a short ECG.</p>
-                  </div>
-
-                  <div className="bg-[#F7F1E1] p-5 rounded-xl border border-[#DBCFA8]">
-                    <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">4. Blood Tests</h4>
-                    <p className="text-sm mb-2">Blood tests may be used to assess factors such as:</p>
-                    <ul className="text-sm space-y-1 list-disc pl-4">
-                      <li>Cholesterol & Blood sugar</li>
-                      <li>Other cardiovascular risk factors</li>
-                      <li>Possible causes of electrical conduction problems</li>
-                    </ul>
-                    <p className="text-sm mt-2">The specific tests depend on the clinical situation.</p>
-                  </div>
-
-                  <div className="bg-[#F7F1E1] p-5 rounded-xl border border-[#DBCFA8]">
-                    <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">5. Stress Testing</h4>
-                    <p className="text-sm">A stress test evaluates how the heart responds during physical activity.</p>
-                    <p className="text-sm mt-1">It may be considered when symptoms occur with exertion or when additional assessment of blood flow and heart function is appropriate.</p>
-                  </div>
-
-                  <div className="bg-[#F7F1E1] p-5 rounded-xl border border-[#DBCFA8]">
-                    <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">6. Coronary Imaging</h4>
-                    <p className="text-sm mb-2">Depending on the situation, coronary artery disease may be evaluated using tests such as:</p>
-                    <ul className="text-sm space-y-1 list-disc pl-4">
-                      <li>Cardiac CT</li>
-                      <li>Coronary angiography</li>
-                      <li>Cardiac catheterization</li>
-                      <li>Other cardiac imaging</li>
-                    </ul>
-                    <p className="text-sm mt-2">The appropriate test depends on the patient's symptoms and clinical findings.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">How Long Does Treatment Take?</h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>There is no single treatment timeline for every patient with heart disease or a blockage.</p>
-                <p>The duration of care depends on:</p>
-                <ul className="grid grid-cols-2 gap-2 mt-2 mb-4">
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Type of condition</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Severity</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Underlying cause</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Symptoms</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Existing treatment</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Other health conditions</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Response to treatment</li>
-                  <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Monitoring requirements</li>
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mt-6 mb-2">Within the First Month:</h4>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Comfortable Breathing & Better Sleep:</strong> Shortness of breath begins to lift, allowing you to breathe easily and rest peacefully throughout the night without discomfort.</li>
+                  <li>Most cases EF will improve approximately 25% to 50% of your existing EF within a month (if it is 30% it becomes 37.5% to 45% approximately), exceptional cases it may take more time for e.g. if ICD is inserted, it takes more time. Percentage of improvement vary from patient to patient.</li>
+                  <li><strong>Relief from Coughing:</strong> Persistent coughing or chest congestion typically resolves within these first few weeks.</li>
+                  <li><strong>Fluid Reduction:</strong> Swelling in your legs, ankles, or abdomen will start to disappear entirely, making you feel much lighter and more comfortable.</li>
+                  <li><strong>Improved Digestion:</strong> Your appetite will be better and digestive discomfort will significantly ease.</li>
                 </ul>
-                <div className="bg-[#E3D8C1]/30 border-l-4 border-[#66371B] p-4 rounded-r-lg">
-                  <p className="font-medium text-[#66371B]">For this reason, Omshree-specific treatment duration should be discussed after individual clinical assessment.</p>
-                  <p className="mt-2">A fixed number of days or months should not be assumed for every patient.</p>
-                </div>
+
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mt-6 mb-2">Over the Next 3 to 6 Months:</h4>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Restored Energy & Stamina:</strong> Your fatigue will give way to lasting energy. Most patients find themselves comfortably walking 5 to 6 kilometres and climbing stairs without struggling.</li>
+                  <li><strong>Heart Rhythm & BP Stabilization:</strong> Your blood pressure will naturally balance out, and uncomfortable heart palpitations will steadily fade away.</li>
+                  <li><strong>Freedom from Fluid Restrictions:</strong> As your heart's efficiency is fully restored, you will be able to drink plenty of water safely and comfortably without any daily limits.</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4">How We Track Your Success</h3>
+                <p>A complete recovery is typically achieved within 3 to 6 months. Your physical healing will be matched by clinical proof; we will closely monitor your steady heart improvement through regular echocardiograms (Echo) and supportive blood tests so you can see your heart is getting stronger every single month.</p>
               </div>
             </section>
 
+            <div className="my-8 rounded-2xl overflow-hidden border border-[#DBCFA8] bg-white">
+              <Image 
+                src="/images/blog/ef-measurement.png" 
+                alt="Educational illustration showing the heart's pumping function and how ejection fraction is measured in the left ventricle" 
+                width={800} 
+                height={500} 
+                className="w-full h-auto object-contain" 
+              />
+            </div>
+
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Heart Disease, Heart Block, Low EF & Heart Failure</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Causes of low EF</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>These terms are sometimes used interchangeably by patients, but they describe different things.</p>
+                <p>A low ejection fraction (EF) is caused by conditions that weaken, stretch, or permanently damage the heart muscle, hindering its ability to contract powerfully. The most frequent underlying causes of a low EF include:</p>
                 
-                <div className="grid md:grid-cols-2 gap-4 my-8">
-                  <div className="p-4 bg-white border border-[#DBCFA8] rounded-xl shadow-sm">
-                    <h3 className="font-heading text-lg font-bold text-[#66371B] mb-1">Coronary Artery Disease</h3>
-                    <p className="text-sm">A disease affecting the arteries supplying blood to the heart.</p>
-                  </div>
-                  <div className="p-4 bg-white border border-[#DBCFA8] rounded-xl shadow-sm">
-                    <h3 className="font-heading text-lg font-bold text-[#66371B] mb-1">Coronary Artery Blockage</h3>
-                    <p className="text-sm">Describes narrowing or obstruction within a coronary artery.</p>
-                  </div>
-                  <div className="p-4 bg-white border border-[#DBCFA8] rounded-xl shadow-sm">
-                    <h3 className="font-heading text-lg font-bold text-[#66371B] mb-1">Heart Block</h3>
-                    <p className="text-sm">Refers to a problem with the electrical conduction system.</p>
-                  </div>
-                  <div className="p-4 bg-white border border-[#DBCFA8] rounded-xl shadow-sm">
-                    <h3 className="font-heading text-lg font-bold text-[#66371B] mb-1">Cardiomyopathy</h3>
-                    <p className="text-sm">Refers to disease affecting the heart muscle.</p>
-                  </div>
-                  <div className="p-4 bg-white border border-[#DBCFA8] rounded-xl shadow-sm">
-                    <h3 className="font-heading text-lg font-bold text-[#66371B] mb-1">Low Ejection Fraction</h3>
-                    <p className="text-sm">Describes reduced pumping function of the left ventricle.</p>
-                  </div>
-                  <div className="p-4 bg-white border border-[#DBCFA8] rounded-xl shadow-sm">
-                    <h3 className="font-heading text-lg font-bold text-[#66371B] mb-1">Heart Failure</h3>
-                    <p className="text-sm">Describes a clinical syndrome in which the heart cannot adequately meet the body's needs.</p>
-                  </div>
-                </div>
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Damage to the Heart Muscle</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Coronary Artery Disease (CAD):</strong> Narrowed arteries restrict oxygen-rich blood flow to the heart, gradually starving and weakening the muscle tissue over time.</li>
+                  <li><strong>Heart Attack (Myocardial Infarction):</strong> A sudden blockage completely cuts off blood supply to a portion of the heart, replacing healthy muscle tissue with non-pumping scar tissue.</li>
+                  <li><strong>Cardiomyopathy:</strong> A disease of the heart muscle itself that causes it to become stretched out and enlarged (dilated cardiomyopathy), preventing efficient contractions.</li>
+                  <li><strong>Myocarditis:</strong> Inflammation of the heart muscle, typically triggered by a viral infection, which temporarily or permanently reduces pumping strength.</li>
+                </ul>
 
-                <p>These conditions can occur together, but one term should not automatically be used to diagnose another.</p>
-                <p>For example, coronary artery disease can damage heart muscle and contribute to reduced heart function, while some heart conditions can also affect the electrical conduction system.</p>
-                <p className="font-bold text-[#66371B] text-xl mt-4">Understanding which condition you actually have is therefore essential.</p>
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Structural and Mechanical Strain</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Chronic High Blood Pressure (Hypertension):</strong> Forces the heart to work much harder to push blood out to the body, eventually causing the muscle to stiffen or wear out.</li>
+                  <li><strong>Heart Valve Disease:</strong> Leaky or narrowed valves disrupt smooth blood flow, causing blood to back up or forcing the heart to pump against intense resistance.</li>
+                  <li><strong>Congenital Heart Defects:</strong> Structural heart abnormalities present since birth can cause abnormal wear and tear on the ventricles over time.</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Other Contributing Factors</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Severe Arrhythmias:</strong> An abnormally fast or chaotic heart rate over a prolonged period does not allow the heart chambers to fill or contract effectively, exhausting the muscle.</li>
+                  <li><strong>Cardiotoxicity:</strong> Certain heavy medical interventions, such as specific chemotherapy drugs or radiation therapy to the chest, can damage cardiac cells.</li>
+                  <li><strong>Substance Abuse:</strong> Long-term excessive consumption of alcohol or illegal drugs directly damages heart tissue (toxic cardiomyopathy).</li>
+                </ul>
               </div>
             </section>
 
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Why Omshree?</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Symptoms of low EF</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>When considering Ayurvedic care for a chronic cardiovascular condition, patients often want to know more than just the treatment.</p>
-                <p>They want to know who they are placing their care with.</p>
-                <p>Omshree Sidha Hospital's Ayurvedic practice is built around a 140+ year healing legacy, carried through a lineage of Vaidyars. The hospital currently states that it has treated 5,000+ patients overall, offers 50+ specialized treatments, and has 5+ government patents.</p>
-                <p>The hospital also provides care for patients from India and abroad, with online video consultations, email follow-ups and personal consultations available.</p>
-                
-                <div className="bg-[#F7F1E1] p-6 rounded-xl border border-[#DBCFA8] mt-6">
-                  <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-3">A 140+ Year Ayurvedic Legacy</h3>
-                  <p className="mb-4">Omshree's history is part of what shapes its approach to Ayurvedic care today.</p>
-                  <p className="mb-4">The hospital traces its tradition through a lineage of Vaidyars and describes its practice as being rooted in more than 140 years of Ayurvedic healing.</p>
-                  <p className="mb-4">For a patient dealing with a heart condition, however, heritage is only one part of the decision.</p>
-                  <p className="mb-2">The other part is understanding:</p>
-                  <ul className="space-y-1 font-bold text-[#66371B] list-inside list-disc">
-                    <li>What is my diagnosis?</li>
-                    <li>What do my reports show?</li>
-                    <li>What treatment am I already receiving?</li>
-                    <li>Is Ayurvedic care appropriate for my situation?</li>
-                    <li>What should happen next?</li>
-                  </ul>
-                  <p className="mt-4 italic">Those questions should form the basis of the consultation.</p>
-                </div>
+                <p>Symptoms of a low ejection fraction (EF) occur because the weakened heart muscle cannot pump enough oxygen-rich blood to meet the body's needs, causing blood and fluid to back up into the lungs and tissues.</p>
+                <p>The primary symptoms are grouped by how they affect the body:</p>
 
-                <div className="mt-8">
-                  <p>For cardiovascular patients, this experience should begin with understanding the individual diagnosis—not with assuming that every patient requires the same Ayurvedic approach.</p>
-                  <p className="font-medium mt-2">That is why medical reports and existing treatment are an important part of the consultation process.</p>
-                </div>
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Breathing Difficulties (Fluid Dynamics)</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Shortness of Breath (Dyspnea):</strong> Feeling winded during everyday activities, like walking or climbing stairs.</li>
+                  <li><strong>Orthopnea:</strong> Difficulty breathing when lying flat, often requiring extra pillows to sleep comfortably.</li>
+                  <li><strong>Paroxysmal Nocturnal Dyspnea:</strong> Waking up suddenly in the middle of the night gasping for air.</li>
+                  <li><strong>Chronic Cough or Wheezing:</strong> A persistent cough that may produce white or pink-tinged phlegm, caused by fluid building up in the lungs.</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Systemic Fluid Retention (Congestion)</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Peripheral Edema:</strong> Obvious swelling in the legs, ankles, and feet.</li>
+                  <li><strong>Abdominal Swelling (Ascites):</strong> Bloating, tightness, or swelling in the stomach area.</li>
+                  <li><strong>Sudden Weight Gain:</strong> Gaining 1 to 1.5 kg (2 to 3 pounds) in a single day or over 2 kg in a week, which indicates rapid water retention rather than fat.</li>
+                  <li><strong>Gastrointestinal Distress:</strong> A constant feeling of fullness, nausea, or a total loss of appetite due to fluid backing up into the digestive organs.</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Low Blood Flow (Perfusion Issues)</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Severe Fatigue:</strong> Feeling profoundly exhausted or weak because muscles are starved of oxygenated blood.</li>
+                  <li><strong>Exercise Intolerance:</strong> Finding it physically impossible to complete exercises or chores that used to be easy.</li>
+                  <li><strong>Cognitive Changes:</strong> Dizziness, lightheadedness, confusion, or difficulty concentrating caused by reduced blood flow to the brain.</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Cardiac Compensation</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Palpitations:</strong> A sensation of a racing, pounding, fluttering, or skipping heartbeat as the heart attempts to beat faster to make up for its low pumping power.</li>
+                </ul>
               </div>
             </section>
 
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Hospital Stay & Online Consultation</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Treat the Underlying Causes of low EF</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>The appropriate treatment setting depends on the patient's condition and the clinical plan.</p>
-                <p>Patients can begin by discussing their condition with the Omshree team and providing relevant medical reports.</p>
-                <p>For patients who cannot immediately travel to Kerala, an online consultation can be an initial step for discussing the available information.</p>
-                <p>For international patients, this can also help them understand the next steps before making travel arrangements.</p>
-                <p>Omshree currently provides online video consultations, email-based follow-ups and personal in-clinic consultations.</p>
+                <p>Low Ejection Fraction treatment at Omshree Sidha Hospital, with proper medication, Panchakarma, and proper physical exercise, we improve the EF in short time. We treat it from the root cause level. Low EF often occurs due to conditions such as coronary artery blockage (plaque build-up, clot or calcification), cardiomyopathy, high blood pressure, heart valve disease, or previous heart attack. Treating these root causes can improve heart function in a short time.</p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">International Patients</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Management of low EF</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
-                <p>If you are considering travelling to Kerala for Ayurvedic care, you can begin with an online consultation before planning your journey. It can be useful to prepare:</p>
-                
-                <div className="grid sm:grid-cols-2 gap-3 my-6">
-                  {["Recent ECG/EKG reports", "Echocardiogram reports", "Coronary angiography or cardiac imaging", "Blood-test results", "Previous cardiac reports", "Current medication list", "Previous diagnoses", "A brief description of current symptoms"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 p-3 bg-white border border-[#DBCFA8] rounded-lg shadow-sm">
-                      <CheckCircle2 className="h-5 w-5 text-[#517B32] shrink-0" />
-                      <span className="text-sm font-medium">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <p>Sharing these reports can help the clinical team understand your medical history before discussing the next step.</p>
-                <p>For an international patient, this also gives you an opportunity to understand the consultation process before committing to travel.</p>
-              </div>
-            </section>
+                <p>At Omshree Sidha Hospital manage the low EF in the following ways:</p>
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">Medications for low Ejection Fraction</h3>
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mb-2">Our Advanced Ayurvedic Approach to Low Ejection Fraction</h4>
+                <p>At Omshree Sidha Hospital, we specialize in providing advanced, non-surgical treatment to restore your heart's natural pumping power. Every patient’s heart is unique, which is why we customize your treatment plan using a precise combination of classical Ayurvedic formulations, proprietary blends, and specialized medicines tailored entirely to your specific condition.</p>
+                <p>Our targeted treatments are designed to heal and revitalize your heart at the root level by:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Healing the Heart Muscle:</strong> Our natural formulations help reduce swelling, soften stiffness, and minimize scar tissue within the heart walls.</li>
+                  <li><strong>Boosting Pumping Power:</strong> By strengthening the heart muscle and improving blood circulation directly to the heart, your left ventricle is naturally able to pump blood more effectively and efficiently.</li>
+                  <li><strong>Stabilizing Vital Signs:</strong> Our therapies help bring your pulse rate and blood pressure back into a healthy, balanced range.</li>
+                </ul>
 
-            <section className="bg-[#66371B] text-[#F7F1E1] p-8 rounded-2xl shadow-lg mt-12">
-              <h2 className="font-heading text-3xl font-bold text-white mb-6">What Should You Understand Before Considering Treatment?</h2>
-              <div className="text-[#E3D8C1] text-lg leading-relaxed font-light space-y-4">
-                <p>If you have been told that you have a heart blockage or heart block, start with these questions:</p>
-                <ol className="grid gap-3 mt-6 pl-4 font-bold text-white list-decimal list-inside">
-                  <li className="bg-white/5 p-3 rounded">What exactly has been diagnosed?</li>
-                  <li className="bg-white/5 p-3 rounded">Is it a coronary artery blockage or an electrical heart block?</li>
-                  <li className="bg-white/5 p-3 rounded">Which test identified it?</li>
-                  <li className="bg-white/5 p-3 rounded">How significant is the finding?</li>
-                  <li className="bg-white/5 p-3 rounded">What symptoms are present?</li>
-                  <li className="bg-white/5 p-3 rounded">What is the underlying cause?</li>
-                  <li className="bg-white/5 p-3 rounded">What treatment has already been recommended?</li>
-                  <li className="bg-white/5 p-3 rounded">What medicines are you currently taking?</li>
-                  <li className="bg-white/5 p-3 rounded">What monitoring is required?</li>
-                  <li className="bg-white/5 p-3 rounded">Is the condition stable, or does it require urgent treatment?</li>
-                </ol>
-                <p className="mt-6">Understanding these questions can help you make sense of your reports and have a more informed discussion with your healthcare team.</p>
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mt-6 mb-2">Premium Quality & Comprehensive Care</h4>
+                <p>To ensure the absolute highest standards of safety and efficacy, all of our internal and external Ayurvedic medicines are meticulously prepared right here in our own state-of-the-art, GMP-certified manufacturing unit.</p>
+                <p>Depending on your overall health and needs, our comprehensive low EF care plans also integrate specialized Panchakarma therapies—gentle, deep-acting detox and rejuvenation treatments that help lower stress on your cardiac system and accelerate your path to recovery.</p>
+                <p>Experience the pinnacle of natural cardiac healing at our world-class center for Ayurvedic cardiomyopathy treatment in Kerala, India.</p>
+                <p>We have best medicines to treat low EF. We use pure Ayurveda medicines for the treatment of low E F. We use classical medicines, Patent/Proprietary medicines and Special medicines according to your condition. Medicines for low Ejection Fraction, that we use help to remove swelling in the heart muscles, remove scars and stiffness in the heart muscles. Our medicines Improves blood circulation in the heart muscles and strengthen the heart muscles. These in turn results in improving heart’s ability to pump more effectively and efficiently. These Ayurveda medicines will help in stabilising pulse rate and Blood pressure etc. We have the best cardiomyopathy treatment in India, Kerala. There are internal and External Ayurvedic medicines for the treatment of low Ejection Fraction (EF), which we are preparing at our own GMP certified manufacturing unit. Our Ayurvedic treatment for low ejection fraction includes Panchakarma.</p>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4">2. Panchakarma therapy to improve EF</h3>
+                <p>It includes Ayurvedic oil massage (Abhyanga), Elakizhi or Podikizhi and Hrudaya Basti.</p>
+
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mt-6 mb-2">Ayurvedic oil massage (Abhyanga)</h4>
+                <p>Massage using specially prepared Ayurvedic herbal oils, helps to nourish the tissues, improve circulation, remove swelling, toxins, and restore the natural balance in the body.</p>
+                <h5 className="font-heading text-lg font-bold text-[#66371B] mt-4 mb-2">Main Benefits of Abhyanga</h5>
+                <ul className="space-y-4">
+                  <li><strong>1. Improves Blood Circulation in the Heart</strong><br/>Massage with specially prepared warm herbal oils improves blood flow, helping oxygen and nutrients reach tissues more effectively.</li>
+                  <li><strong>2. Strengthen Heart Muscles</strong><br/>Oil massage nourishes muscles and joints, reducing stiffness, pain, and fatigue.</li>
+                  <li><strong>3. Relieves Stress and Promotes Relaxation</strong><br/>The soothing effect of our special herbal oils calms the nervous system, reduces stress, and improves sleep quality.</li>
+                  <li><strong>4. Improves Skin Health</strong><br/>Herbal oils deeply moisturize the skin, improve texture, and maintain skin elasticity.</li>
+                  <li><strong>5. Helps in Detoxification of Heart and body</strong><br/>Massage using our special herbal oil stimulates lymphatic circulation and helps the body remove metabolic wastes and toxins.</li>
+                  <li><strong>6. Improves Heart and Nervous System Function</strong><br/>Gentle oil massage over the chest and body with our specially prepared Ayurvedic oils helps relax the heart area, removes swelling, improves circulation, and supports overall cardiovascular health.</li>
+                  <li><strong>7. Increases Energy and Vitality</strong><br/>Regular Abhyanga (oil message) improves strength, flexibility, and overall well-being</li>
+                </ul>
+
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mt-10 mb-2">Elakizhi and Podikizhi</h4>
+                <p>Elakizhi and Podikizhi are specialized Ayurvedic therapies (Kizhi) involving medicinal boluses applied to the body. Elakizhi uses medicated leaves, offering a soothing, nourishing effect for muscle. Podikizhi uses dried herbal powders, providing a dry, stimulating, and invigorating treatment for stiffness and inflammation.</p>
+                
+                <h5 className="font-heading text-lg font-bold text-[#66371B] mt-4 mb-2">Main Benefits Kizhi</h5>
+                <ul className="space-y-4">
+                  <li><strong>Reduces Pain and Inflammation of Heart Muscles.</strong> It is very effective for heart muscle stiffness, and inflammatory conditions like cardiomyopathy.</li>
+                  <li><strong>Improves Blood Circulation</strong><br/>Enhance circulation and nourish muscles.</li>
+                  <li><strong>Relieves Heart Muscle Stiffness</strong><br/>Helps loosen tight/stiff heart muscles and improves flexibility.</li>
+                  <li><strong>Useful in Neurological Disorders</strong><br/>Beneficial in nerve-related weakness.</li>
+                  <li><strong>Detoxifies the Heart and Body</strong><br/>The sweating effect helps remove toxins from tissues.</li>
+                  <li><strong>Reduces Swelling of Heart muscles and Edema</strong><br/>Particularly useful in inflammatory swellings of heart muscles.</li>
+                </ul>
+
+                <h4 className="font-heading text-xl font-bold text-[#66371B] mt-10 mb-2">Hrudaya Basti</h4>
+                <p>Hrudaya Basti is a special Ayurvedic therapy in which warm medicated oil is retained over the heart region (chest) using a dough ring for a specific period (30 to 45 minutes). This treatment nourishes the heart muscles, improves blood circulation, and strengthens the cardiac muscles.</p>
+                
+                <h5 className="font-heading text-lg font-bold text-[#66371B] mt-4 mb-2">Main Benefits Hrudaya Basti</h5>
+                <ul className="space-y-4">
+                  <li><strong>1. Strengthens the Heart Muscles</strong><br/>The warm medicated oil nourishes the heart tissues and helps improve cardiac function.</li>
+                  <li><strong>2. Improves Blood Circulation</strong><br/>Enhances blood flow around the heart and chest region, improving oxygen supply to tissues.</li>
+                  <li><strong>3. Helps in Low Ejection Fraction (Low EF)</strong><br/>Supports heart muscle strength and may help improve pumping efficiency.</li>
+                  <li><strong>4. Relieves Chest Tightness and Discomfort</strong><br/>Reduces heaviness, tightness, and discomfort in the chest area, which in turn improves the pumping.</li>
+                  <li><strong>5. Beneficial for Heart Diseases</strong><br/>Useful in conditions like heart weakness, cardiomyopathy, and post-cardiac illness recovery.</li>
+                  <li><strong>6. Reduces Stress and Anxiety</strong><br/>The warmth and herbal oils calm the nervous system and reduce emotional stress affecting the heart.</li>
+                  <li><strong>7. Improves Lung Function</strong><br/>Helps relieve breathing discomfort and improves chest expansion.</li>
+                  <li><strong>8. Strengthens Nerves Around the Heart</strong><br/>Supports the nervous system and improves coordination between the heart and nerves.</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-10 mb-4">3. Healthy Lifestyle Changes</h3>
+                <p>We always advise our patients to adopting heart-healthy habits, which can significantly support EF improvement:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Eat a low-salt, heart-healthy diet</li>
+                  <li>Stop smoking and alcohol</li>
+                  <li>Maintain healthy body weight</li>
+                  <li>Control diabetes, cholesterol, and blood pressure</li>
+                  <li>Manage stress and sleep well</li>
+                </ul>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4">4. Regular Physical Activity</h3>
+                <p>Doctor-approved moderate exercise can strengthen the heart muscle and improve circulation. We recommend our patients go for a walk in the morning and evening. They will be able to walk 5 - 6 Km without any difficulty within one to three months.</p>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4">5. Yoga</h3>
+                <p>Yoga can help improve overall heart function, circulation, breathing efficiency, stress control, and exercise tolerance in patients with Low Ejection Fraction (Low EF), cardiomyopathy, and heart failure — when practiced gently and under proper supervision and guidance.</p>
+                <p>Patients with severe Low EF should avoid forceful, strenuous, or breath-holding exercises.</p>
+
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-8 mb-4">6. Regular Monitoring</h3>
+                <p>We conduct Periodic tests such as echocardiography, which help to monitor EF and treatment progress.</p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-8">Frequently Asked Questions</h2>
-              <div className="grid gap-4">
-                
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Is a heart blockage the same as heart block?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p className="font-bold text-[#66371B]">No.</p>
-                      <p>A coronary artery blockage involves narrowing or obstruction of a blood vessel supplying the heart.</p>
-                      <p>Heart block refers to a problem with the electrical signals controlling the heartbeat.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> What does a heart blockage mean?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p>The term usually refers to narrowing or obstruction in a coronary artery.</p>
-                      <p>Its significance depends on the location and severity of the narrowing, its effect on blood flow, symptoms and other cardiac findings.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> What does a 70% heart blockage mean?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p>A percentage such as 70% generally describes the estimated degree of narrowing in a particular coronary artery.</p>
-                      <p>The percentage alone does not determine the appropriate treatment. The artery involved, symptoms, blood flow and other clinical findings also matter.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Can a heart blockage cause a heart attack?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p className="font-bold text-[#66371B]">Yes.</p>
-                      <p>A complete blockage of a coronary artery can interrupt blood flow to the heart muscle and cause a heart attack.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> What is first-degree heart block?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p>First-degree AV block means that electrical signals still reach the lower chambers of the heart, but conduction takes longer than usual.</p>
-                      <p>Some people have no symptoms and may not need specific treatment.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> What is second-degree heart block?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p>In second-degree AV block, some electrical signals from the upper chambers do not reach the lower chambers.</p>
-                      <p>There are different forms, including Mobitz type I and Mobitz type II.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> What is third-degree heart block?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p>Third-degree AV block, also called complete heart block, occurs when electrical signals from the upper chambers do not normally reach the lower chambers.</p>
-                      <p>It can result in a very slow heartbeat and reduced blood flow and requires urgent medical attention.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Does every heart blockage require a stent?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p className="font-bold text-[#66371B]">No.</p>
-                      <p>Treatment for coronary artery disease depends on the severity and location of the disease, symptoms, heart function and other clinical factors.</p>
-                      <p>Some patients may be managed with medicines and lifestyle changes, while others may require a procedure such as angioplasty and stent placement or bypass surgery.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Does every heart block require a pacemaker?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p className="font-bold text-[#66371B]">No.</p>
-                      <p>Treatment depends on the type of heart block, symptoms, cause and whether the cause can be reversed.</p>
-                      <p>Certain higher-grade forms, including some Mobitz type II, high-grade and third-degree AV blocks, may require a pacemaker.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Can I take Ayurvedic treatment along with cardiac medicines?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p className="font-bold text-[#66371B]">Do not stop or change prescribed cardiac medicines on your own.</p>
-                      <p>If you are considering Ayurvedic care, provide the clinical team with your complete list of current medicines so the overall treatment plan can be properly considered.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Can Omshree treat heart blockage?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p>If you are considering Ayurvedic care at Omshree, the appropriate first step is a clinical consultation with your relevant medical reports.</p>
-                      <p>Any specific treatment claim regarding coronary blockage or electrical heart block should be based on Omshree's documented clinical protocol and appropriate clinical validation.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-[#DBCFA8] shadow-sm hover:shadow transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2 flex items-start gap-2"><HelpCircle className="h-6 w-6 text-[#B4833D] shrink-0" /> Can international patients consult Omshree before travelling to Kerala?</h3>
-                    <div className="ml-8 text-[#81754B] space-y-2">
-                      <p className="font-bold text-[#66371B]">Yes.</p>
-                      <p>An online consultation can be used as an initial step to discuss your condition and available medical reports before planning travel.</p>
-                    </div>
-                  </CardContent>
-                </Card>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">How long low EF patients have to stay in the Hospital</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
+                <p>If you have only low EF and there is no other disease conditions, recovery will be faster, If there are other diseases it may require comparatively more time. If your EF is less, accordingly it may take more time. Duration depends on the condition of the patient, and how fast they are recovering. It is better to start the treatment as an inpatient, which will help in fast recovery. If your condition is not allowing you come and start the treatment, we can have online consultation. You have to send the test reports.</p>
               </div>
             </section>
 
-            <section className="bg-[#E3D8C1]/30 p-8 md:p-12 rounded-3xl border border-[#DBCFA8] mt-12 text-center">
-              <h2 className="font-heading text-3xl font-bold text-[#66371B] mb-6">Discuss Your Condition With Omshree</h2>
-              <div className="text-[#81754B] text-lg leading-relaxed font-light max-w-3xl mx-auto space-y-6">
-                <p>If you have been diagnosed with coronary artery disease, a coronary artery blockage or an electrical heart block and would like to explore Ayurvedic care, you can begin by sharing your medical history and relevant cardiac reports with the Omshree clinical team.</p>
+            <section>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Relation between Low Ejection Fraction (Low EF), Cardiomyopathy and Heart failure.</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
+                <p>Low Ejection Fraction (Low EF) and Cardiomyopathy are interconnected heart conditions, where the heart muscle is weakened, thickened, or enlarged, causing it to pump less than 40% of its blood capacity. Cardiomyopathy leads to reduced blood circulation, resulting in symptoms such as fatigue, swelling, and breathlessness. Heart failure, often a final stage, occurs when the weakened heart cannot meet the body's oxygen needs, leading to fluid accumulation and potential lung congestion. Omshree Sidha Hospital offers Ayurvedic treatment aimed at reversing these conditions, specifically focusing on strengthening the heart muscle, treating enlarged hearts, and improving ejection fraction naturally without surgery or transplantation. This approach aims to address the root causes of the disease rather than just managing symptoms.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Congestive heart failure (CHF)</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
+                <p>Congestive heart failure (CHF) is a chronic, progressive condition where the heart cannot pump blood efficiently, causing fluid buildup (congestion) in the lungs, legs, and body. We are providing the best treatment for Congestive Heart Failure. Only in Ayurveda you can get such an effective treatment for Congestive Heart Failure. In modern medicine, there is only control, not a cure for Congestive Heart Failure. You can confirm it from your cardiologist. We are doing low heart function treatment for years.</p>
+                <p>Heart Failure is a condition where the heart cannot pump enough oxygenated blood to meet the body’s requirements.</p>
+                <p>Symptoms of Heart failure include Breathlessness, Fatigue, Swelling (legs, abdomen) Fluid retention in the lungs.</p>
+                <p>Heart failure is the result (final stage) of poor heart function. Cardiomyopathy leads to Low EF, low EF leads to Heart Failure. Not all cardiomyopathy leads to immediate heart failure, but risk is high. Low EF is a warning sign before severe symptoms starts. Some patients can have heart failure even with normal EF (HFpEF). Cardiomyopathy is the disease → Low EF shows how weak the heart is → Heart failure is the condition that develops when pumping becomes insufficient.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Diagnosis</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
+                <p>To diagnose heart failure, your healthcare professional will perform a thorough physical examination and evaluate your full medical history and current symptoms. They will also screen for major risk factors, such as chronic high blood pressure, coronary artery disease, and diabetes.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Tests</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">1. Primary Imaging (To Measure EF)</h3>
+                <p>Echocardiogram (Echo), Cardiac MRI (Magnetic Resonance Imaging), MUGA Scan (Multiple-Gated Acquisition Scan), Cardiac CT Scan:</p>
                 
-                <div className="bg-white p-6 rounded-2xl border border-[#DBCFA8] shadow-sm mt-8 inline-block">
-                  <h3 className="font-heading text-xl font-bold text-[#66371B] mb-2">International patients:</h3>
-                  <Link href="/international-patients" className="inline-flex items-center justify-center h-12 px-6 bg-[#517B32] text-white rounded-full font-medium hover:bg-[#6F9940] transition-colors shadow-md hover:shadow-lg mt-2">
-                    Start With an Online Consultation <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </div>
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">2. Investigating the Underlying Cause</h3>
+                <p>Once a low EF is confirmed, doctors run additional tests to see why the heart muscle is weak:</p>
+                <p>Coronary Angiogram, Electrocardiogram (ECG/EKG, and Exercise Stress Test.</p>
+                
+                <h3 className="font-heading text-2xl font-bold text-[#66371B] mt-6 mb-2">3. Supportive Lab and Baseline Tests</h3>
+                <p>BNP or NT-proBNP Blood Tests, and Chest X-ray.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">About this Invention</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
+                <p>I Jose Vaidhyan developed these new treatment techniques and medicines during 1998 – 2000. My own Father had heart attacks in December 1997, again in 1998 December, and in 1999 December. His condition was very bad and he was unable to walk even 100 Meters. The whole family was very upset about his health. I discussed the possibilities with him, and we decided to start our own medicines and panchakarma therapy, initially, there was some improvement, and we tried a few formulations from the texts. Then we were trying our own preparations, and finally, in nine months, he was completely cured. He was not using any more medicines thereafter. On 23rd Dec. 2004 he expired, after a fall, on that day too his heart was working perfectly. He was 84 years old at that time.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">Important herbs used in low EF treatment</h2>
+              <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4 mb-8">
+                <p>Arjuna, Ashwagandha, Bala, Guduchi, Amalaki, Punarnava, Gokshura, and Varuna.</p>
               </div>
             </section>
 
           </div>
 
           {/* Sidebar / Sticky Navigation */}
-          <div className="lg:col-span-4 hidden lg:block">
+          <div className="lg:col-span-4">
             <div className="sticky top-32 space-y-8">
               
-              <Card className="border-[#DBCFA8] shadow-sm bg-[#E3D8C1]/30 rounded-2xl">
+              <Card className="border-[#DBCFA8] shadow-xs bg-[#E3D8C1]/30 rounded-2xl">
                 <CardContent className="p-6">
                   <h3 className="font-heading font-bold text-xl text-[#66371B] mb-4">The Patient Journey</h3>
-                  <ul className="space-y-4 text-sm text-[#81754B] font-medium">
-                    <li className="flex items-center gap-3"><span className="flex items-center justify-center bg-[#517B32] text-white rounded-full h-6 w-6 text-xs shrink-0">1</span> Enquire & Consult</li>
-                    <li className="flex items-center gap-3"><span className="flex items-center justify-center bg-[#517B32] text-white rounded-full h-6 w-6 text-xs shrink-0">2</span> Clinical Assessment</li>
-                    <li className="flex items-center gap-3"><span className="flex items-center justify-center bg-[#517B32] text-white rounded-full h-6 w-6 text-xs shrink-0">3</span> Personalized Plan</li>
-                    <li className="flex items-center gap-3"><span className="flex items-center justify-center bg-[#517B32] text-white rounded-full h-6 w-6 text-xs shrink-0">4</span> Treatment / Therapy</li>
-                    <li className="flex items-center gap-3"><span className="flex items-center justify-center bg-[#517B32] text-white rounded-full h-6 w-6 text-xs shrink-0">5</span> Monitoring & Follow-Up</li>
+                  <ul className="space-y-3 text-sm text-[#81754B] font-light">
+                    <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Enquire & Consult</li>
+                    <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Clinical Assessment</li>
+                    <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Personalized Plan</li>
+                    <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Therapy Administration</li>
+                    <li className="flex items-center gap-2"><ArrowRight className="h-4 w-4 text-[#517B32]"/> Recovery & Follow-up</li>
                   </ul>
-                  <p className="mt-4 text-xs italic text-[#81754B]">The exact clinical pathway should be confirmed by Omshree after assessment.</p>
                 </CardContent>
               </Card>
 
               {/* Sidebar CTA */}
-              <Card className="border-none shadow-md bg-[#402816] text-[#F7F1E1] rounded-2xl overflow-hidden relative">
-                <div className="absolute top-0 right-0 p-4 opacity-10">
-                  <Activity className="h-24 w-24" />
-                </div>
-                <CardContent className="p-8 text-center space-y-6 relative z-10">
-                  <h3 className="font-heading font-bold text-2xl text-white">International Patients</h3>
+              <Card className="border-none shadow-md bg-[#402816] text-[#F7F1E1] rounded-2xl">
+                <CardContent className="p-8 text-center space-y-4">
+                  <h3 className="font-heading font-bold text-2xl text-[#F7F1E1]">International Patients</h3>
                   <p className="text-[#E3D8C1]/90 text-sm font-light leading-relaxed">
                     Travelling to Kerala for Ayurvedic care? Begin with an online consultation before planning your travel.
                   </p>
-                  <Button render={<Link href="/international-patients" />} variant="glass" className="w-full bg-white/10 hover:bg-white/20 border-white/20">
+                  <Button render={<Link href="/international-patients" />} variant="glass" className="w-full">
                     International Enquiry
                   </Button>
                 </CardContent>
