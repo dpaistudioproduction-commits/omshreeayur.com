@@ -6,13 +6,73 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, ArrowRight, CheckCircle2, Activity, HeartPulse, AlertTriangle, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Heart Disease & Blocks | Omshree Sidha Hospital",
-  description: "Understanding the difference between coronary artery blockage and electrical heart block. Learn about causes, symptoms, and diagnosis.",
+  title: "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
+  description: "Learn what ejection fraction means for your heart function. Discover the NYHA classification, causes, symptoms, and natural ways to improve low EF.",
+  alternates: {
+    canonical: "https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function",
+  },
 };
 
-export default function HeartDiseaseAndBlocksPage() {
+export default function EjectionFractionBlogPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
+        "description": "Learn what ejection fraction means for your heart function. Discover the NYHA classification, causes, symptoms, and natural ways to improve low EF.",
+        "image": "https://omshreeayur.com/images/blog/ef-featured-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Omshree Sidha Hospital"
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "Omshree Sidha Hospital",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://omshreeayur.com/icon.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://omshreeayur.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://omshreeayur.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
+            "item": "https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="flex flex-col w-full font-sans overflow-hidden">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* SECTION 1: HERO */}
       <section className="bg-[#402816] text-[#F7F1E1] py-16 md:py-24 relative overflow-hidden">
         <div className="w-full px-[4%] relative z-20">
@@ -24,27 +84,27 @@ export default function HeartDiseaseAndBlocksPage() {
               <li>
                 <div className="flex items-center">
                   <span className="mx-2">/</span>
-                  <Link href="/conditions" className="hover:text-white transition-colors">Conditions</Link>
+                  <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
                 </div>
               </li>
-              <li>
+              <li aria-current="page">
                 <div className="flex items-center">
                   <span className="mx-2">/</span>
-                  <Link href="/conditions/cardiovascular" className="hover:text-white transition-colors">Cardiovascular</Link>
+                  <span className="text-white">Ejection Fraction</span>
                 </div>
               </li>
             </ol>
           </nav>
 
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <span className="inline-block py-1 px-3.5 rounded-full bg-[#517B32]/40 text-[#E3D8C1] border border-[#6F9940]/40 text-xs font-bold uppercase tracking-wider mb-6">
-              Understanding
+              Heart Health
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-[#F7F1E1]">
-              Heart Disease & Blocks
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-[#F7F1E1] leading-tight">
+              What Is Ejection Fraction and What Does It Tell You About Heart Function?
             </h1>
             <p className="text-xl md:text-2xl text-[#E3D8C1] font-light leading-relaxed mb-10">
-              Heart disease is a broad term covering conditions that affect the heart muscle, heart valves, coronary arteries and the electrical system that controls the heartbeat. For patients, however, the terminology can become confusing.
+              Low EF means that your heart muscle is not pumping out enough blood to the body with each beat. Ejection fraction is a measurement calculated as a percentage. It represents the amount of blood the lower left chamber (left ventricle) of your heart pumps out each time it contracts.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">
