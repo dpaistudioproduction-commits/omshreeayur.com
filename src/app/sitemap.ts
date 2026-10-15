@@ -74,5 +74,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...categoryRoutes, ...conditionRoutes, ...therapyRoutes, ...treatmentRoutes];
+  // Map Blog Articles
+  const blogRoutes = [
+    {
+      url: `${baseUrl}/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/what-is-an-echocardiogram`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-stop-snoring-naturally-without-surgery`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/can-liver-cirrhosis-be-managed-with-ayurveda`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+  ];
+
+  return [...staticRoutes, ...categoryRoutes, ...conditionRoutes, ...therapyRoutes, ...treatmentRoutes, ...blogRoutes];
 }

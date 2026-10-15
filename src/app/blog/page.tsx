@@ -48,6 +48,84 @@ export default function BlogIndexPage() {
               </div>
             </div>
           </Link>
+
+          {/* Article Card: What Is an Echocardiogram */}
+          <Link href="/blog/what-is-an-echocardiogram" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
+            <div className="relative h-64 w-full overflow-hidden">
+              <Image 
+                src="/images/blog/echo-procedure-photo.jpg"
+                alt="Clinical echocardiogram examination with ultrasound monitor and probe"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#517B32] mb-3">
+                Cardiology Diagnostics
+              </span>
+              <h2 className="font-heading text-2xl font-bold text-[#66371B] mb-3 group-hover:text-[#517B32] transition-colors">
+                What Is an Echocardiogram? A Patient-Friendly Guide to Your Echo Report
+              </h2>
+              <p className="text-[#81754B] text-sm leading-relaxed mb-6 flex-grow">
+                Understand how a 2D echocardiogram works, how ejection fraction (EF) is measured, what chamber dimensions mean, and key questions to ask your doctor.
+              </p>
+              <div className="mt-auto flex items-center text-[#517B32] font-semibold text-sm">
+                Read Article <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Article Card: How to Stop Snoring Naturally */}
+          <Link href="/blog/how-to-stop-snoring-naturally-without-surgery" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
+            <div className="relative h-64 w-full overflow-hidden">
+              <Image 
+                src="/images/blog/snoring-remedies-hero.jpg"
+                alt="How to stop snoring naturally without surgery with lifestyle and Ayurvedic remedies"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#517B32] mb-3">
+                Sleep Health &amp; Ayurveda
+              </span>
+              <h2 className="font-heading text-2xl font-bold text-[#66371B] mb-3 group-hover:text-[#517B32] transition-colors">
+                How to Stop Snoring Naturally Without Surgery: Causes, Remedies and Ayurvedic Relief?
+              </h2>
+              <p className="text-[#81754B] text-sm leading-relaxed mb-6 flex-grow">
+                Explore common causes of snoring, simple non-surgical lifestyle remedies, and how personalized Ayurvedic care supports clearer breathing during sleep.
+              </p>
+              <div className="mt-auto flex items-center text-[#517B32] font-semibold text-sm">
+                Read Article <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Article Card: Can Liver Cirrhosis Be Managed with Ayurveda? */}
+          <Link href="/blog/can-liver-cirrhosis-be-managed-with-ayurveda" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
+            <div className="relative h-64 w-full overflow-hidden">
+              <Image 
+                src="/images/blog/liver-cirrhosis-ayurveda-hero.jpg"
+                alt="Can liver cirrhosis be managed with Ayurveda - holistic liver support"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#517B32] mb-3">
+                Liver Health &amp; Ayurveda
+              </span>
+              <h2 className="font-heading text-2xl font-bold text-[#66371B] mb-3 group-hover:text-[#517B32] transition-colors">
+                Can Liver Cirrhosis Be Managed with Ayurveda? Understanding the Approach
+              </h2>
+              <p className="text-[#81754B] text-sm leading-relaxed mb-6 flex-grow">
+                Learn how Ayurveda may support liver cirrhosis management through personalized diet, metabolic regulation, and traditional therapies alongside medical care.
+              </p>
+              <div className="mt-auto flex items-center text-[#517B32] font-semibold text-sm">
+                Read Article <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
     </div>
