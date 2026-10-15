@@ -156,7 +156,7 @@ export default async function ConditionPage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
+              <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
                 Book a Consultation
               </Button>
               <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto backdrop-blur-xs">
@@ -253,7 +253,7 @@ export default async function ConditionPage({ params }: Props) {
               <p className="text-[#E3D8C1]/90 text-lg leading-relaxed font-light">
                 {condition.whoShouldSeek}
               </p>
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" >
+              <Button render={<Link href="/contact" />} size="lg" >
                 Speak with our Care Team
               </Button>
             </section>

@@ -534,7 +534,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               <Button
-                render={<Link href="/patient-care/consultation" />}
+                render={<Link href="/contact" />}
                 variant="default"
                 size="lg"
                 className="w-full sm:w-auto px-10 shadow-xl hover:-translate-y-1"

@@ -218,7 +218,7 @@ export default function CrohnsDiseaseTreatmentPage() {
                       <p className="text-[#E3D8C1] font-light text-sm">Get a clinical assessment by our expert physicians.</p>
                     </div>
                     <div className="p-8 space-y-4">
-                      <Button render={<Link href="/patient-care/consultation" />} className="w-full">
+                      <Button render={<Link href="/contact" />} className="w-full">
                         Start Assessment
                       </Button>
                       <Button render={<Link href="https://wa.me/919846992789" target="_blank" />} variant="outline" className="w-full">

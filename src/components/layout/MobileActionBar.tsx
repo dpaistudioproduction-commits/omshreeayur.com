@@ -40,7 +40,7 @@ export function MobileActionBar() {
 
       {/* 3. Book Consultation */}
       <Link
-        href="/patient-care/consultation"
+        href="/contact"
         onClick={() => analytics.consultationClick("mobile_action_bar")}
         className="flex-1 flex flex-col items-center justify-center py-1 px-1 text-[#517B32] active:scale-95 transition-all text-center"
         aria-label="Book a Consultation"

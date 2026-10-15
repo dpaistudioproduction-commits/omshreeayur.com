@@ -108,7 +108,7 @@ export default function EjectionFractionBlogPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
+              <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
                 Book a Consultation
               </Button>
               <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="glass" size="lg" className="w-full sm:w-auto">

@@ -269,7 +269,7 @@ export function Header() {
 
             {/* Primary CTA: Book Consultation */}
             <Button
-              render={<Link href="/patient-care/consultation" />}
+              render={<Link href="/contact" />}
               variant="default"
               className="px-6 shadow-md shadow-[#517B32]/20 hover:-translate-y-0.5"
             >
@@ -302,7 +302,7 @@ export function Header() {
             {/* Book Consultation button on medium screens (640px to 1199px) */}
             <div className="hidden sm:block">
               <Button
-                render={<Link href="/patient-care/consultation" />}
+                render={<Link href="/contact" />}
                 variant="default"
                 size="sm"
                 className="shadow-sm"
@@ -447,7 +447,7 @@ export function Header() {
                   {/* Actions in Mobile Drawer */}
                   <div className="flex flex-col gap-3 mt-2 pt-4 border-t border-[#DBCFA8]">
                     <Button 
-                      render={<Link href="/patient-care/consultation" />} 
+                      render={<Link href="/contact" />} 
                       onClick={() => setIsOpen(false)}
                       variant="default"
                       className="w-full justify-center"

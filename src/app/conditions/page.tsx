@@ -185,7 +185,7 @@ export default function ConditionsHubPage() {
               Every body is different. Speak with our clinical team to find out if Ayurvedic treatment is right for your condition.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
+              <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
                 Book a Consultation
               </Button>
               <Button render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />} variant="outline" size="lg" className="w-full sm:w-auto">

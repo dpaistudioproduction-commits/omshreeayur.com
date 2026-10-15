@@ -122,7 +122,7 @@ export default function LowEFTestimonialPage() {
               <Button render={<Link href="/conditions/cardiovascular/low-ejection-fraction" />} variant="outline" size="lg" className="border-[#66371B] text-[#66371B] hover:bg-[#66371B] hover:text-white w-full sm:w-auto">
                 Learn More About Low EF Treatment
               </Button>
-              <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
+              <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
                 Book a Consultation
               </Button>
             </div>

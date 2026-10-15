@@ -232,7 +232,7 @@ export default function SnoringBlogPage() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
               <Button
-                render={<Link href="/patient-care/consultation" />}
+                render={<Link href="/contact" />}
                 size="lg"
                 className="w-full sm:w-auto"
               >
@@ -687,7 +687,7 @@ export default function SnoringBlogPage() {
                   </p>
                   <div className="pt-2 space-y-3">
                     <Button
-                      render={<Link href="/patient-care/consultation" />}
+                      render={<Link href="/contact" />}
                       className="w-full justify-center"
                     >
                       Book an Appointment

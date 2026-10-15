@@ -36,7 +36,7 @@ const HERO_SLIDES: SlideData[] = [
     imageSrc: BRAND_ASSETS.therapies.shirodhara,
     imageAlt: "Authentic Shirodhara Ayurvedic Therapy at Omshree Sidha Hospital Kerala",
     primaryCtaText: "Book a Consultation",
-    primaryCtaLink: "/patient-care/consultation",
+    primaryCtaLink: "/contact",
     secondaryCtaText: "Explore Therapies",
     secondaryCtaLink: "/treatments/therapies",
   },

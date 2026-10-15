@@ -20,7 +20,7 @@ export default function NotFound() {
           <Button render={<Link href="/" />} size="lg" className="w-full sm:w-auto gap-2">
             <Home className="h-4 w-4" /> Return Home
           </Button>
-          <Button render={<Link href="/patient-care/consultation" />} variant="outline" size="lg" className="w-full sm:w-auto gap-2">
+          <Button render={<Link href="/contact" />} variant="outline" size="lg" className="w-full sm:w-auto gap-2">
             <HeartHandshake className="h-4 w-4" /> Book Consultation
           </Button>
         </div>

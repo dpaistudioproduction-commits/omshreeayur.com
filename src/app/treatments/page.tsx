@@ -43,7 +43,7 @@ export default function TreatmentsHubPage() {
             At Omshree Sidha Hospital, treatment is not a menu of services. It is a structured, medical process of restoring health through individualized assessment and traditional Ayurvedic protocols.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button render={<Link href="/patient-care/consultation" />} size="lg" className="w-full sm:w-auto">
+            <Button render={<Link href="/contact" />} size="lg" className="w-full sm:w-auto">
               Book a Consultation
             </Button>
             <Button render={<Link href="/international-patients" />} variant="outline" size="lg" className="w-full sm:w-auto">

@@ -173,7 +173,7 @@ export function PharmacyEditorial() {
 
             <div className="relative z-10 mt-auto">
               <Link
-                href="/patient-care/consultation"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2D1B10] bg-[#DBCFA8] hover:bg-white transition-colors px-6 py-3.5 rounded-full"
               >
                 <span>Book Consultation</span>

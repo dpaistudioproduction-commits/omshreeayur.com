@@ -400,7 +400,7 @@ export default async function TreatmentPage({ params }: Props) {
                     </div>
                     <div className="p-8 space-y-4">
                       <Button
-                        render={<Link href="/patient-care/consultation" />}
+                        render={<Link href="/contact" />}
                         className="w-full"
                       >
                         Start Assessment
