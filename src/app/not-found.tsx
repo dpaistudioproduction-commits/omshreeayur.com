@@ -26,9 +26,9 @@ export default function NotFound() {
         </div>
 
         <div className="pt-8 border-t border-slate-200 text-xs text-slate-500">
-          Need immediate assistance? Call our reception at{" "}
-          <a href="tel:+914822229434" className="text-emerald-700 font-bold hover:underline">
-            +91 4822 229434
+          Need immediate assistance? Call our hospital at{" "}
+          <a href="tel:+919846992789" className="text-emerald-700 font-bold hover:underline">
+            +91 98469 92789
           </a>
         </div>
       </div>

@@ -55,6 +55,56 @@ const nextConfig: NextConfig = {
         destination: '/treatments/heart-disease',
         permanent: true,
       },
+      {
+        source: '/terms',
+        destination: '/terms-and-conditions',
+        permanent: true,
+      },
+      {
+        source: '/conditions/hepatic',
+        destination: '/conditions/liver',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/jemini',
+        destination: '/treatments/varicose-veins',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/santhosh-kumar',
+        destination: '/treatments/varicose-veins',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/sini-jomon',
+        destination: '/treatments/varicose-veins',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/vijayamma-vijayan',
+        destination: '/treatments/osteoarthritis-knee-pain',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/elizabeth-mathew',
+        destination: '/treatments/cervical-lumbar-spondylosis',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/molly-joseph',
+        destination: '/treatments/cervical-lumbar-spondylosis',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/mr-rajumon-p-c',
+        destination: '/treatments/heart-disease-and-blocks',
+        permanent: true,
+      },
+      {
+        source: '/testimonials/n-chandrashekar',
+        destination: '/treatments/psoriasis',
+        permanent: true,
+      },
     ]
   },
 };

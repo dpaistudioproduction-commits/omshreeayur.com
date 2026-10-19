@@ -27,7 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/patient-care/facilities',
     '/patient-care/journey',
     '/patient-care/tariff',
-    '/patient-care/challenging-offer'
+    '/patient-care/challenging-offer',
+    '/terms-and-conditions'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

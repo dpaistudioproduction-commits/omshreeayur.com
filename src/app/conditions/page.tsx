@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Activity, Brain, Leaf, Wind, Sparkles, Move, ArrowRight, ActivitySquare, ShieldCheck, Microscope, MessageCircle } from "lucide-react";
-import { cardiovascularCategory } from "@/data/conditions";
 
 export const metadata: Metadata = {
   title: "Health Conditions & Ayurvedic Treatments | Omshree Sidha Hospital",
@@ -37,28 +36,28 @@ const CATEGORIES = [
     slug: "neurological",
     icon: Brain,
     description: "Ayurvedic care for MND, Stroke, Paralysis, Migraine, and Vertigo.",
-    hasContent: true,
+    hasContent: false,
   },
   {
     name: "Musculoskeletal",
     slug: "musculoskeletal",
     icon: Move,
     description: "Treatments for Arthritis, Spondylosis, Sciatica, and joint mobility.",
-    hasContent: true,
+    hasContent: false,
   },
   {
     name: "Respiratory",
     slug: "respiratory",
     icon: Wind,
     description: "Management of Asthma, COPD, Sinusitis, and breathing difficulties.",
-    hasContent: true,
+    hasContent: false,
   },
   {
     name: "Skin",
     slug: "skin",
     icon: Sparkles,
     description: "Ayurvedic therapies for Psoriasis, Eczema, Vitiligo, and skin health.",
-    hasContent: true,
+    hasContent: false,
   },
 ];
 
@@ -200,7 +199,7 @@ export default function ConditionsHubPage() {
       <section className="py-12 bg-[#FDFBF7] text-[#81754B] border-t border-[#DBCFA8]/30">
         <div className="w-full px-[4%] text-center">
           <p className="text-xs sm:text-sm font-light leading-relaxed max-w-4xl mx-auto">
-            <strong className="text-[#66371B]">Important Medical Notice:</strong> The information provided is for educational purposes regarding Ayurvedic approaches. Treatment is individualized after consultation and assessment. Suitability depends on the individual's condition. Patients should discuss changes to prescribed medication with their treating physician.
+            <strong className="text-[#66371B]">Important Medical Notice:</strong> The information provided is for educational purposes regarding Ayurvedic approaches. Treatment is individualized after consultation and assessment. Suitability depends on the individual&apos;s condition. Patients should discuss changes to prescribed medication with their treating physician.
           </p>
         </div>
       </section>

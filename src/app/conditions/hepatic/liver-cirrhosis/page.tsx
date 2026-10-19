@@ -29,7 +29,7 @@ export default function LiverCirrhosisPage() {
               <li>
                 <div className="flex items-center">
                   <span className="mx-2">/</span>
-                  <Link href="/conditions/hepatic" className="hover:text-white transition-colors">Hepatic</Link>
+                  <Link href="/conditions/liver" className="hover:text-white transition-colors">Liver</Link>
                 </div>
               </li>
             </ol>
@@ -43,7 +43,7 @@ export default function LiverCirrhosisPage() {
               Liver cirrhosis is a long-term condition in which healthy liver tissue gradually becomes scarred due to ongoing liver damage. As the scarring increases, the liver may find it harder to carry out some of its important functions, such as processing nutrients, filtering substances from the blood, and supporting digestion. Cirrhosis can develop for different reasons, including chronic liver disease, viral hepatitis, alcohol-related liver damage, or fatty liver disease. As the extensive scarring gradually blocks the flow of blood through the organ, the liver loses its ability to perform critical life-sustaining functions—including filtering environmental toxins, synthesizing vital blood-clotting proteins, and processing crucial nutrients.
             </p>
             <p className="text-xl md:text-2xl text-[#E3D8C1] font-light leading-relaxed mb-10">
-              While early-stage cirrhosis typically shows no symptoms, advanced or "decompensated" stages manifest in severe complications like severe abdominal fluid buildup (ascites), yellowing of the eyes and skin (jaundice), easy bruising, and mental confusion caused by toxin
+              While early-stage cirrhosis typically shows no symptoms, advanced or &quot;decompensated&quot; stages manifest in severe complications like severe abdominal fluid buildup (ascites), yellowing of the eyes and skin (jaundice), easy bruising, and mental confusion caused by toxin
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -95,8 +95,8 @@ export default function LiverCirrhosisPage() {
                       <p><strong>A Safe, Integrative Care Pathway:</strong> For your absolute peace of mind, you do not have to stop your current treatments. You can safely continue your modern medications in parallel with our natural remedies until your liver functions have fully recovered.</p>
                       <p><strong>The Risk of Delay:</strong> Once liver damage becomes severe and requires physical tapping (draining), the window for a fast, straightforward recovery becomes smaller and more complex by the day. Take a Wise Step for Your Health Today.</p>
                     </div>
-                    <p>Our sole intention is to help you heal completely before your liver faces severe, irreversible complications. We encourage you to make a proactive, wise decision for your health and your family. Reach out to our expert doctors today and let our family's multi-generational medical heritage guide you safely back to health.</p>
-                    <p>From an Ayurvedic perspective, liver health is closely connected with digestion, metabolism and the body's natural balance. Liver cirrhosis is a serious condition in which prolonged liver injury can lead to progressive scarring and reduced liver function Ayurvedic care may focus on supporting digestion, maintaining nourishment and promoting overall well-being through appropriate diet, lifestyle guidance and carefully selected therapies under qualified professional supervision. Since cirrhosis can be a complex and serious condition, Ayurvedic care should be individualized and used alongside appropriate medical evaluation and monitoring, which can be done through blood tests and Fibro scan tests.</p>
+                    <p>Our sole intention is to help you heal completely before your liver faces severe, irreversible complications. We encourage you to make a proactive, wise decision for your health and your family. Reach out to our expert doctors today and let our family&apos;s multi-generational medical heritage guide you safely back to health.</p>
+                    <p>From an Ayurvedic perspective, liver health is closely connected with digestion, metabolism and the body&apos;s natural balance. Liver cirrhosis is a serious condition in which prolonged liver injury can lead to progressive scarring and reduced liver function Ayurvedic care may focus on supporting digestion, maintaining nourishment and promoting overall well-being through appropriate diet, lifestyle guidance and carefully selected therapies under qualified professional supervision. Since cirrhosis can be a complex and serious condition, Ayurvedic care should be individualized and used alongside appropriate medical evaluation and monitoring, which can be done through blood tests and Fibro scan tests.</p>
                   </div>
                 </div>
               </div>
@@ -111,8 +111,8 @@ export default function LiverCirrhosisPage() {
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-[#66371B] mb-4">Generations of Wisdom, Working for Your Health</h3>
                   <div className="text-[#402816] text-lg leading-relaxed font-light space-y-4">
-                    <p>Deep healing often relies on time-tested wisdom. At Omshree Sidha Hospital. the accumulated knowledge of generations is carefully and consciously passed down, allowing us to treat complex conditions like liver cirrhosis with remarkable depth and efficiency. Today, our third-generation Vaidyas and fourth-generation doctors work together. By blending ancient Ayurvedic mastery with modern medical expertise, we ensure that you receive the absolute best care possible, rooted in a legacy of true healing. We choose medicines and panchakarma therapies according to patient's condition.</p>
-                    <p><strong>Tailored Therapies for Optimal Recovery</strong><br/>To ensure the highest standard of care, we customize our prescriptions based entirely on each patient's unique health profile. Our treatments utilize a precise combination of classical Ayurvedic remedies, certified patent medicines, our own proprietary medicines and special formulations, ensuring a highly targeted approach to your recovery.</p>
+                    <p>Deep healing often relies on time-tested wisdom. At Omshree Sidha Hospital. the accumulated knowledge of generations is carefully and consciously passed down, allowing us to treat complex conditions like liver cirrhosis with remarkable depth and efficiency. Today, our third-generation Vaidyas and fourth-generation doctors work together. By blending ancient Ayurvedic mastery with modern medical expertise, we ensure that you receive the absolute best care possible, rooted in a legacy of true healing. We choose medicines and panchakarma therapies according to patient&apos;s condition.</p>
+                    <p><strong>Tailored Therapies for Optimal Recovery</strong><br/>To ensure the highest standard of care, we customize our prescriptions based entirely on each patient&apos;s unique health profile. Our treatments utilize a precise combination of classical Ayurvedic remedies, certified patent medicines, our own proprietary medicines and special formulations, ensuring a highly targeted approach to your recovery.</p>
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function LiverCirrhosisPage() {
                   </div>
                   <div className="p-6 bg-white rounded-xl border border-[#DBCFA8] shadow-sm">
                     <h4 className="font-bold text-[#517B32] text-xl mb-2">Rasayana Chikitsa (Tissue Regeneration)</h4>
-                    <p>Once channels are clear, specialized tissue-rejuvenating therapies are introduced to speed up the liver's natural ability to regenerate and replace hardened scar tissue with healthy cells.</p>
+                    <p>Once channels are clear, specialized tissue-rejuvenating therapies are introduced to speed up the liver&apos;s natural ability to regenerate and replace hardened scar tissue with healthy cells.</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ export default function LiverCirrhosisPage() {
                     It works alongside <strong className="text-[#66371B]">Katuki (Picrorhiza kurroa)</strong>, known as Kadugurohini, a potent bitter herb that stimulates natural bile flow, clears deep channel obstructions, and helps safely regulate declining platelet counts.
                   </li>
                   <li className="pl-6 border-l-2 border-[#517B32]">
-                    To combat fluid retention, practitioners introduce <strong className="text-[#66371B]">Punarnava (Boerhavia diffusa)</strong>, or Thazhuthama, which literally translates to "that which renews the body" and acts as an exceptional natural diuretic to safely reverse mild to moderate ascites.
+                    To combat fluid retention, practitioners introduce <strong className="text-[#66371B]">Punarnava (Boerhavia diffusa)</strong>, or Thazhuthama, which literally translates to &quot;that which renews the body&quot; and acts as an exceptional natural diuretic to safely reverse mild to moderate ascites.
                   </li>
                   <li className="pl-6 border-l-2 border-[#517B32]">
                     Finally, the formulation is enhanced with <strong className="text-[#66371B]">Sharapunkha (Tephrosia purpurea)</strong>, known regionally as Kozhunjil, an ingredient highly valued for its unique clinical ability to regenerate damaged liver cells and systematically reduce the density of fibrous scar tissue.
@@ -210,7 +210,7 @@ export default function LiverCirrhosisPage() {
               </h2>
               
               <div className="text-[#402816] text-lg leading-relaxed font-light space-y-6">
-                <p>Depending on the patient's exact stage and symptoms, clinicians typically utilize established classic formulations. These concentrated herbal medicines are the first line of defines to cleanse the channels and normalize elevated liver markers, few of them are given below:</p>
+                <p>Depending on the patient&apos;s exact stage and symptoms, clinicians typically utilize established classic formulations. These concentrated herbal medicines are the first line of defines to cleanse the channels and normalize elevated liver markers, few of them are given below:</p>
                 
                 <div className="space-y-4">
                   <div className="bg-[#E3D8C1]/30 p-5 rounded-lg">
@@ -263,7 +263,7 @@ export default function LiverCirrhosisPage() {
 
                   <div className="border border-[#B4833D]/30 p-6 rounded-xl bg-white shadow-sm">
                     <h3 className="font-heading text-2xl font-bold text-[#517B32] mb-3">2. Abhyanga (therapeutic oil massage):</h3>
-                    <p>Gentle Abhyanga may be used as a supportive therapy depending on the patient's strength. Its main intended role is improving comfort, relaxation and general well-being.</p>
+                    <p>Gentle Abhyanga may be used as a supportive therapy depending on the patient&apos;s strength. Its main intended role is improving comfort, relaxation and general well-being.</p>
                   </div>
 
                   <div className="border border-[#B4833D]/30 p-6 rounded-xl bg-white shadow-sm">
@@ -286,7 +286,7 @@ export default function LiverCirrhosisPage() {
               
               <div className="text-[#402816] text-lg leading-relaxed font-light space-y-6">
                 <p><strong className="text-[#66371B]">Primary Causes:</strong> The vast majority of cases are caused by three main conditions: chronic alcohol misuse (long-term cellular damage), MASH (severe fat accumulation linked to diabetes and obesity), and chronic viral Hepatitis B or C infections.</p>
-                <p><strong className="text-[#66371B]">Secondary Causes:</strong> Rarer causes include autoimmune hepatitis (the body attacking its own liver cells), biliary diseases like PBC or PSC (trapped bile causing tissue destruction), and genetic mutations like Hemochromatosis or Wilson's disease.</p>
+                <p><strong className="text-[#66371B]">Secondary Causes:</strong> Rarer causes include autoimmune hepatitis (the body attacking its own liver cells), biliary diseases like PBC or PSC (trapped bile causing tissue destruction), and genetic mutations like Hemochromatosis or Wilson&apos;s disease.</p>
                 <div className="bg-[#402816] text-[#F7F1E1] p-6 rounded-xl mt-6">
                   <strong className="text-[#E3D8C1] block text-xl mb-2">Differential Diagnoses:</strong> 
                   <p className="text-sm font-light leading-relaxed">When diagnosing liver scarring, a physician must explicitly rule out at least three distinct alternative conditions that mimic these symptoms: Budd-Chiari syndrome (hepatic vein blood clots), chronic right-sided heart failure (backward blood backup causing liver congestion), and hepatic schistosomiasis (a parasitic tropical infection causing focal scarring).</p>
