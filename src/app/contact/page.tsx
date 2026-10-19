@@ -127,7 +127,7 @@ export default function ContactPage() {
     } catch (err) {
       console.error("[FORM SUBMISSION ERROR]:", err);
       setStatus("error");
-      setErrorMessage("Network connection error. Please check your internet connection or call our hospital reception at +91 4822 229434.");
+      setErrorMessage("Network connection error. Please check your internet connection or call our hospital at +91 98469 92789.");
     }
   };
 
@@ -175,7 +175,7 @@ export default function ContactPage() {
                 <h2 className="font-heading text-3xl font-bold text-slate-900 mb-4">Omshree Sidha Hospital</h2>
                 <p className="text-emerald-700 font-bold uppercase tracking-wider text-sm mb-6">Ayurvedic Hospital • Est. 1880</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
-                  For direct assistance or to speak with our hospital reception, please call our primary telephone line or connect via WhatsApp.
+                  For direct assistance or to speak with our hospital, please call our primary telephone line or connect via WhatsApp.
                 </p>
               </div>
               
@@ -188,11 +188,11 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-lg text-slate-900 mb-1">Phone & WhatsApp</h3>
                       <a 
-                        href="tel:+914822229434" 
+                        href="tel:+919846992789" 
                         onClick={() => analytics.phoneClick("contact_page")}
                         className="text-slate-700 hover:text-emerald-700 block mb-1 font-medium transition-colors"
                       >
-                        Call: +91 4822 229434
+                        Call Hospital: +91 98469 92789
                       </a>
                       <a 
                         href="https://wa.me/919846992789" 
@@ -296,13 +296,34 @@ export default function ContactPage() {
                         aria-hidden="true" 
                       />
 
-                      {/* Error Alert Box */}
+                      {/* Error Alert Box with Direct Phone and WhatsApp Fallback */}
                       {status === "error" && errorMessage && (
-                        <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-800 flex items-start gap-3" role="alert">
-                          <AlertCircle className="h-5 w-5 text-red-600 shrink-0 mt-0.5" />
-                          <div className="text-sm">
-                            <p className="font-bold">Submission Error</p>
-                            <p>{errorMessage}</p>
+                        <div className="p-5 rounded-lg bg-red-50 border border-red-200 text-red-900 space-y-3" role="alert">
+                          <div className="flex items-start gap-3">
+                            <AlertCircle className="h-5 w-5 text-red-600 shrink-0 mt-0.5" />
+                            <div className="text-sm">
+                              <p className="font-bold text-red-800">Unable to Dispatch Online Enquiry</p>
+                              <p className="text-red-700 mt-1">{errorMessage}</p>
+                            </div>
+                          </div>
+                          <div className="pt-2 flex flex-wrap gap-3 border-t border-red-200/60">
+                            <a
+                              href="tel:+919846992789"
+                              onClick={() => analytics.phoneClick("enquiry_error_fallback")}
+                              className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold px-3 py-2 rounded-md transition-colors"
+                            >
+                              <Phone className="h-3.5 w-3.5" />
+                              Call Hospital: +91 98469 92789
+                            </a>
+                            <a
+                              href="https://wa.me/919846992789"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => analytics.whatsappClick("enquiry_error_fallback")}
+                              className="inline-flex items-center gap-2 bg-emerald-100 hover:bg-emerald-200 text-emerald-900 text-xs font-semibold px-3 py-2 rounded-md transition-colors"
+                            >
+                              Connect via WhatsApp
+                            </a>
                           </div>
                         </div>
                       )}

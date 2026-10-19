@@ -1,6 +1,12 @@
 import Script from "next/script";
 
 export function AnalyticsScripts() {
+  // In development, do not load third-party ad/marketing trackers to prevent
+  // browser ad-blockers from throwing ERR_BLOCKED_BY_CLIENT console noise.
+  if (process.env.NODE_ENV === "development") {
+    return null;
+  }
+
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-4GFE7SYQPF";
   const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
