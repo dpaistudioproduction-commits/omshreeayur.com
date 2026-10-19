@@ -34,7 +34,7 @@ export function generateMedicalOrganizationSchema() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-4822-229434",
+      "telephone": "+91-9846992789",
       "contactType": "Customer Service"
     }
   };

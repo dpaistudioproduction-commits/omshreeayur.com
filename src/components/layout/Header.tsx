@@ -247,7 +247,7 @@ export function Header() {
           <div className="hidden min-[1200px]:flex items-center justify-end gap-2 xl:gap-2.5 shrink-0">
             {/* Phone Button */}
             <a
-              href="tel:+914822229434"
+              href="tel:+919846992789"
               className="inline-flex items-center gap-1.5 px-2.5 py-1.5 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#517B32] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap"
               title="Call Omshree Sidha Hospital"
             >
@@ -280,7 +280,7 @@ export function Header() {
           {/* Mobile / Tablet Action Suite (< 1200px) */}
           <div className="min-[1200px]:hidden flex items-center justify-end gap-2 sm:gap-3">
             <a
-              href="tel:+914822229434"
+              href="tel:+919846992789"
               aria-label="Call Hospital"
               className="p-2 sm:px-3 sm:py-2 rounded-xl sm:rounded-full text-[#66371B] bg-white border border-[#DBCFA8] hover:bg-[#E3D8C1] flex items-center gap-1.5 transition-colors"
             >
@@ -462,11 +462,11 @@ export function Header() {
                       <MessageCircle className="h-4 w-4 mr-2" /> Chat on WhatsApp
                     </Button>
                     <Button 
-                      render={<a href="tel:+914822229434" />} 
+                      render={<a href="tel:+919846992789" />} 
                       variant="outline" 
                       className="w-full justify-center"
                     >
-                      <Phone className="h-4 w-4 mr-2 text-[#517B32]" /> Call Hospital (+91 4822229434)
+                      <Phone className="h-4 w-4 mr-2 text-[#517B32]" /> Call Hospital (+91 98469 92789)
                     </Button>
                   </div>
                 </nav>

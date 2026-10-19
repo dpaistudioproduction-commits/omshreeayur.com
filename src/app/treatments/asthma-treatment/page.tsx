@@ -257,7 +257,7 @@ export default function AsthmaTreatmentPage() {
                         WhatsApp Us
                       </Button>
                       <p className="text-center text-xs text-[#81754B] font-light mt-4">
-                        Or call us directly at <br/><strong className="text-[#66371B] font-medium">+91 4822229434</strong>
+                        Or call us directly at <br/><strong className="text-[#66371B] font-medium"><a href="tel:+919846992789" className="hover:underline">+91 98469 92789</a></strong>
                       </p>
                     </div>
                   </div>

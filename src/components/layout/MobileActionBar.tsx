@@ -12,15 +12,15 @@ export function MobileActionBar() {
     >
       {/* 1. Phone Call */}
       <a
-        href="tel:+914822229434"
+        href="tel:+919846992789"
         onClick={() => analytics.phoneClick("mobile_action_bar")}
         className="flex-1 flex flex-col items-center justify-center py-1 px-1 text-[#66371B] hover:text-[#517B32] active:scale-95 transition-all text-center"
-        aria-label="Call Hospital at +91 4822 229434"
+        aria-label="Call Hospital at +91 98469 92789"
       >
         <div className="h-8 w-8 rounded-full bg-[#E3D8C1] flex items-center justify-center mb-1 text-[#517B32]">
           <Phone className="h-4 w-4" />
         </div>
-        <span className="text-[11px] font-bold tracking-tight">Call Reception</span>
+        <span className="text-[11px] font-bold tracking-tight">Call Hospital</span>
       </a>
 
       {/* 2. WhatsApp Chat */}

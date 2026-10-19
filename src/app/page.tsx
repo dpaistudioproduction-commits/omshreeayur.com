@@ -50,7 +50,7 @@ export default function HomePage() {
           "postalCode": "686587",
           "addressCountry": "IN"
         },
-        "telephone": "+914822229434",
+        "telephone": "+919846992789",
         "medicalSpecialty": [
           "Ayurvedic Cardiovascular Medicine",
           "Hepatic and Liver Care",

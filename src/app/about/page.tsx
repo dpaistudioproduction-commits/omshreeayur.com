@@ -28,7 +28,7 @@ export default function AboutMasterPage() {
         "postalCode": "686587",
         "addressCountry": "IN"
       },
-      "telephone": "+91-4822229434"
+      "telephone": "+91-9846992789"
     }
   };
 

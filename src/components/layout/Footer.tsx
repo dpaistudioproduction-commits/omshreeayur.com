@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Leaf, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 
 export function Footer() {
@@ -64,17 +64,17 @@ export function Footer() {
                 Kerala 686587, India
               </p>
               <div className="pt-2 space-y-2">
-                <a href="tel:+914822229434" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4822229434
-                </a>
                 <a href="tel:+919846992789" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 9846992789
+                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 98469 92789
+                </a>
+                <a href="tel:+914822229434" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4822 229434
                 </a>
                 <a href="tel:+914822229435" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4822229435
+                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4822 229435
                 </a>
                 <a href="tel:+918086662789" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 8086662789
+                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 8086 662789
                 </a>
               </div>
             </div>
@@ -92,7 +92,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-[#E3D8C1] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[#E3D8C1] transition-colors">Terms of Service</Link>
+            <Link href="/terms-and-conditions" className="hover:text-[#E3D8C1] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
