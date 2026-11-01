@@ -5,8 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Understanding Liver Cirrhosis and Advanced Hepatic Function | Omshree Sidha Hospital",
+  title: "Understanding Liver Cirrhosis and Advanced Hepatic Function",
   description: "Advanced Ayurvedic Approach to Liver Cirrhosis at Omshree Sidha Hospital.",
+  alternates: {
+    canonical: "https://omshreeayur.com/conditions/hepatic/liver-cirrhosis",
+  },
 };
 
 export default function LiverCirrhosisPage() {
@@ -43,7 +46,7 @@ export default function LiverCirrhosisPage() {
               Liver cirrhosis is a long-term condition in which healthy liver tissue gradually becomes scarred due to ongoing liver damage. As the scarring increases, the liver may find it harder to carry out some of its important functions, such as processing nutrients, filtering substances from the blood, and supporting digestion. Cirrhosis can develop for different reasons, including chronic liver disease, viral hepatitis, alcohol-related liver damage, or fatty liver disease. As the extensive scarring gradually blocks the flow of blood through the organ, the liver loses its ability to perform critical life-sustaining functions—including filtering environmental toxins, synthesizing vital blood-clotting proteins, and processing crucial nutrients.
             </p>
             <p className="text-xl md:text-2xl text-[#E3D8C1] font-light leading-relaxed mb-10">
-              While early-stage cirrhosis typically shows no symptoms, advanced or &quot;decompensated&quot; stages manifest in severe complications like severe abdominal fluid buildup (ascites), yellowing of the eyes and skin (jaundice), easy bruising, and mental confusion caused by toxin
+              While early-stage cirrhosis typically shows no symptoms, advanced or &quot;decompensated&quot; stages manifest in severe complications like severe abdominal fluid buildup (ascites), yellowing of the eyes and skin (jaundice), easy bruising, and mental confusion caused by toxic ammonia buildup in the brain (hepatic encephalopathy).
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">

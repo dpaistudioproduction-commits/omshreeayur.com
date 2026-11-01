@@ -232,6 +232,13 @@ export function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
+                {/* 5.5. Blog */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink render={<Link href="/blog" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                    Blog
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
                 {/* 6. Contact */}
                 <NavigationMenuItem>
                   <NavigationMenuLink render={<Link href="/contact" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
@@ -432,6 +439,15 @@ export function Header() {
                     >
                       <span>International Patients</span>
                       <ChevronRight className="h-4 w-4 text-[#517B32]" />
+                    </Link>
+
+                    <Link 
+                      href="/blog" 
+                      onClick={() => setIsOpen(false)}
+                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                    >
+                      <span>Blog & Health Insights</span>
+                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
                     </Link>
 
                     <Link 

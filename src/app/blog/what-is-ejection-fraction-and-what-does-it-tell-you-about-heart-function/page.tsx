@@ -154,6 +154,7 @@ export default function EjectionFractionBlogPage() {
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">How can I improve my Ejection Fraction (EF)</h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4">
                 <p>Improving Ejection Fraction (EF) depends on how you are treating the underlying cause of the weakened heart. EF can improve with proper treatment, lifestyle changes, and regular monitoring. At Omshree Sidha Hospital, we improve EF in short time. We can improve EF considerably in a month or two. If you have only low EF and there is no other health issues, EF will improve faster. If you have other health issues, the progress is bit slower. We have the Best Ayurvedic Treatment for Low Ejection Fraction (EF). We can do Echo after 7 or 14 days and ensure the EF is improving. Patients have to continue their current modern medicine until they fully recover.</p>
+                <p>For comprehensive details on our hospital protocols, inpatient admissions, and therapies in Kerala, <Link href="/conditions/cardiovascular/low-ejection-fraction" className="text-[#517B32] font-medium underline hover:text-[#6F9940] transition-colors">learn about our low ejection fraction care</Link>.</p>
               </div>
             </section>
 

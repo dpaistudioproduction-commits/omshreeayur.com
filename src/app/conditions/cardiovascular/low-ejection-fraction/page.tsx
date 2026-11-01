@@ -6,8 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, AlertCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Low Ejection Fraction (EF) | Omshree Sidha Hospital",
+  title: "Low Ejection Fraction (EF)",
   description: "Advanced Ayurvedic Approach to Low Ejection Fraction at Omshree Sidha Hospital.",
+  alternates: {
+    canonical: "https://omshreeayur.com/conditions/cardiovascular/low-ejection-fraction",
+  },
 };
 
 export default function LowEjectionFractionPage() {
@@ -76,6 +79,7 @@ export default function LowEjectionFractionPage() {
                   <li><strong>Class III (Moderate Symptoms):</strong> Your physical activity is noticeably limited. While you still feel completely fine while sitting or resting, even basic, light household chores or walking short distances make you feel tired or short of breath.</li>
                   <li><strong>Class IV (Severe Symptoms):</strong> This is the most advanced stage, where you are unable to carry out any physical activity without discomfort. Symptoms like shortness of breath, fatigue, or chest tightness occur even while you are sitting still or resting in bed.</li>
                 </ul>
+                <p>For patients and families seeking an educational guide to <Link href="/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function" className="text-[#517B32] font-medium underline hover:text-[#6F9940] transition-colors">understand what ejection fraction means</Link> and how echocardiogram measurements are calculated, read our detailed article.</p>
               </div>
             </section>
 

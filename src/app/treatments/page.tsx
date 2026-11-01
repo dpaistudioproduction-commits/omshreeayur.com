@@ -7,8 +7,11 @@ import fs from 'fs';
 import path from 'path';
 
 export const metadata: Metadata = {
-  title: "Clinical Ayurvedic Treatments & Care | Omshree Sidha Hospital",
+  title: "Clinical Ayurvedic Treatments & Care",
   description: "Explore Omshree Sidha Hospital's clinical Ayurvedic treatment protocols, designed around individualized assessment, targeted therapies, and long-term care.",
+  alternates: {
+    canonical: "https://omshreeayur.com/treatments",
+  },
 };
 
 export default function TreatmentsHubPage() {

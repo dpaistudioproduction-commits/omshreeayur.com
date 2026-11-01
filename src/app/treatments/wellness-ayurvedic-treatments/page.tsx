@@ -72,7 +72,7 @@ export default function WellnessTreatmentsPage() {
               <FadeIn>
                 <div className="prose prose-lg max-w-none text-[#81754B] font-light leading-relaxed">
                   
-                  <h1 className="text-4xl text-center font-heading font-normal text-[#66371B] mt-12 mb-6">Wellness Treatments</h1>
+                  <h2 className="text-4xl text-center font-heading font-normal text-[#66371B] mt-12 mb-6">Our Wellness Programs</h2>
                   
                   <ol className="list-decimal pl-6 space-y-2">
                     <li className="text-left"><strong>Wellness to remove stress</strong></li>
@@ -219,36 +219,6 @@ export default function WellnessTreatmentsPage() {
                   <p>We have different packages to suite your budget.</p>
                   <p>Our Diabetics/diabetic neuropathy package starts from INR 3500.00 per day.</p>
                   
-                  <p>&nbsp;</p>
-                  
-                  <h1 className="text-4xl text-center font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>Wellness Treatments</strong></h1>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>1. Wellness to remove stress/sleeplessness</strong></h2>
-                  <p>The treatment helps in reducing stress &amp; provides a good sleep with the calmness of mind and soul. Duration:-7-21 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>2. Wellness to remove toxins</strong>(De toxification programme)</h2>
-                  <p>This treatment helps in prevention of diseases and long-term maintenance of health by Panchakarma treatments and it helps in balancing body, mind and soul. It also helps to correct metabolism and also helps in the evacuation of toxins. Duration:-21-28 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>3. Wellness to remove Psoriasis, Eczema and other skin problems</strong></h2>
-                  <p>This treatment helps in removing itching, scaling plaques, patches, roughness,  inflammation, cracks, bleeding,  oozing or crustingsoreness, burning, psoriatic arthritis etc…and makes the skin glossy and removes the marks caused by psoriasis or eczema. If you continue at least external medicines you will regain original skin color in 3 months and prevents further attacks.   Duration:- 21-28 daysW</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>4. Wellness to remove pain &amp; swelling and regain flexibility</strong>.</h2>
-                  <p>This treatment helps in removing swelling, stiffness etc…and makes the body flexible and healthy. You will be able to bend forward and backward, climb steps easily etc… It helps in preventing further degeneration. Duration:- 21-28 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>5. Wellness to remove Asthma/Allergy/ Sneezing/ Running nose/Migraine/Sinusitis</strong></h2>
-                  <p>This treatment helps in removing cough, breathing difficulty, sneezing, running nose, head ache etc…and you will be able to breath easily, tiredness will come down and you will be able to perform all activities much better than before. If you use internal medicines and continue it for some time as per direction, it will cure you. Duration:- 21-28 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>6. Wellness to remove sexual disorders</strong></h2>
-                  <p>In case of men this treatment helps in better blood flow, removes erection problems, gets much more mental and physical satisfaction, makes you healthy and energetic.  In case of woman this treatment helps in removing pain, PCOD/PCOS, normalize menstrual cycle, gives better shape to the body, removes fat deposits in and around stomach etc… Duration:- 21-28 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>7. Rejuvenation therapy</strong></h2>
-                  <p>Rejuvenation is like a treasure where everybody quenches to achieve it. It helps in keeping body young and agile, increases longevity of life &amp; immunity, enhances one&#8217;s energy, helps in preventing/curing diseases. Duration:- 21-28 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>8. Wellness to remove Obesity/Over weight</strong></h2>
-                  <p>This treatment helps in melting and removing fat deposits and gives your body better shape and makes more attractive.  Body weight will come down daily.  This treatment is also helpful in removing toxins, improving immune power and helps in preventing a number of diseases.  You may feel much younger than before. Duration:- 21-28 days</p>
-                  
-                  <h2 className="text-3xl font-heading font-normal text-[#66371B] mt-12 mb-6"><strong>9. Wellness for Diabetics/Diabetic neuropathy</strong></h2>
-                  <p>This treatment helps in removing diabetic neuropathy, numbness, toxins, fat deposits and pain, swelling. It improves blood circulation, and gives your body better shape and become more attractive  You may feel much younger than before. Duration:- 21-28 days</p>
                   
                 </div>
               </FadeIn>

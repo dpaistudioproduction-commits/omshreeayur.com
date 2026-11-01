@@ -5,8 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Activity, Brain, Leaf, Wind, Sparkles, Move, ArrowRight, ActivitySquare, ShieldCheck, Microscope, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Health Conditions & Ayurvedic Treatments | Omshree Sidha Hospital",
+  title: "Health Conditions & Ayurvedic Treatments",
   description: "Explore the health conditions treated at Omshree Sidha Hospital using authentic Ayurvedic therapies and personalized care plans.",
+  alternates: {
+    canonical: "https://omshreeayur.com/conditions",
+  },
 };
 
 const CATEGORIES = [
