@@ -79,6 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Map Blog Articles
   const blogRoutes = [
     {
+      url: `${baseUrl}/blog/why-do-i-get-migraines`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,

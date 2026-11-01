@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Blog | Omshree Sidha Hospital",
-  description: "Read our latest articles and insights on Ayurveda, heart health, and holistic treatments at Omshree Sidha Hospital.",
+  description: "Read our latest articles and insights on Ayurveda, heart health, migraines, and holistic treatments at Omshree Sidha Hospital.",
 };
 
 export default function BlogIndexPage() {
@@ -23,7 +23,33 @@ export default function BlogIndexPage() {
 
       <section className="w-full px-[4%] py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {/* Article Card */}
+          {/* Article Card: Why Do I Get Migraines? */}
+          <Link href="/blog/why-do-i-get-migraines" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
+            <div className="relative h-64 w-full overflow-hidden">
+              <Image 
+                src="/images/blog/why-do-i-get-migraines-hero.jpg"
+                alt="Why Do I Get Migraines? Common Triggers and Ayurvedic Solutions"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#517B32] mb-3">
+                Neurological Health &amp; Ayurveda
+              </span>
+              <h2 className="font-heading text-2xl font-bold text-[#66371B] mb-3 group-hover:text-[#517B32] transition-colors">
+                Why Do I Get Migraines? Common Triggers and Ayurvedic Solutions
+              </h2>
+              <p className="text-[#81754B] text-sm leading-relaxed mb-6 flex-grow">
+                Discover common migraine triggers, symptoms, and lifestyle tips, and learn how Ayurveda may offer complementary support for migraine management.
+              </p>
+              <div className="mt-auto flex items-center text-[#517B32] font-semibold text-sm">
+                Read Article <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Article Card: What Is Ejection Fraction */}
           <Link href="/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
               <Image 
