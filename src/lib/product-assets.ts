@@ -16,6 +16,8 @@ export interface ProductItem {
   patentStatus?: string;
   isAuthenticAsset: boolean;
   prescriptionOnly: boolean;
+  /** Optional route to a dedicated product page */
+  detailPath?: string;
 }
 
 export const AUTHENTIC_PRODUCTS: ProductItem[] = [
@@ -49,6 +51,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     category: "Respiratory",
     categoryLabel: "Kapha-Pacifying Formulation",
     image: "/images/products/kafastha.png",
+    detailPath: "/products/kafastha",
     description: "Targeted Ayurvedic compound formulated under Sri M.J. Jose to alleviate stubborn mucus accumulation and balance respiratory Agni.",
     therapeuticFocus: "Kapha dosha pacification, chest congestion, and airway clearance.",
     patentStatus: "Proprietary In-House Clinical Regimen",

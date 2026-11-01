@@ -115,7 +115,13 @@ export function PharmacyEditorial() {
                     {product.categoryLabel}
                   </div>
                   <h3 className="font-heading font-medium text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-tight mb-2">
-                    {product.name}
+                    {product.detailPath ? (
+                      <Link href={product.detailPath} className="hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B4833D] rounded">
+                        {product.name}
+                      </Link>
+                    ) : (
+                      product.name
+                    )}
                   </h3>
                   <p className="text-xs text-[#81754B] leading-relaxed font-light line-clamp-2">
                     {product.description}

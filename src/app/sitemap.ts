@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/patient-care/journey',
     '/patient-care/tariff',
     '/patient-care/challenging-offer',
+    '/blog',
+    '/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function',
+    '/conditions/hepatic/liver-cirrhosis',
+    '/testimonials',
+    '/products',
+    '/products/kafastha',
     '/terms-and-conditions',
     '/privacy-policy'
   ].map((route) => ({
