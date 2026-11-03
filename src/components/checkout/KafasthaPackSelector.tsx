@@ -16,20 +16,20 @@ export const KAFASTHA_PACKS: PackOption[] = [
   {
     id: "75g",
     size: "75g Bottle",
-    price: 90,
+    price: 160,
     badge: "Trial Size",
   },
   {
     id: "150g",
     size: "150g Bottle",
-    price: 178,
+    price: 310,
     badge: "Most Popular",
     popular: true,
   },
   {
     id: "300g",
     size: "300g Bottle",
-    price: 350,
+    price: 610,
     badge: "Best Value",
   },
 ];

@@ -16,7 +16,7 @@ import {
 import RazorpayCheckoutButton from "@/components/checkout/RazorpayCheckoutButton";
 
 export default function CheckoutPage() {
-  const [selectedAmountRupees, setSelectedAmountRupees] = useState<number>(178);
+  const [selectedAmountRupees, setSelectedAmountRupees] = useState<number>(310);
   const [customRupees, setCustomRupees] = useState<string>("");
   const [customerName, setCustomerName] = useState<string>("Rajesh Kumar");
   const [customerEmail, setCustomerEmail] = useState<string>("rajesh@example.com");
@@ -29,9 +29,9 @@ export default function CheckoutPage() {
     : selectedAmountRupees * 100;
 
   const presetAmounts = [
-    { label: "75g Bottle", rupees: 90, badge: "Trial Size" },
-    { label: "150g Bottle", rupees: 178, badge: "Most Popular" },
-    { label: "300g Bottle", rupees: 350, badge: "Best Value" },
+    { label: "75g Bottle", rupees: 160, badge: "Trial Size" },
+    { label: "150g Bottle", rupees: 310, badge: "Most Popular" },
+    { label: "300g Bottle", rupees: 610, badge: "Best Value" },
   ];
 
   return (

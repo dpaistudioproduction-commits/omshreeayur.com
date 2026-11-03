@@ -390,13 +390,13 @@ const JSON_LD = {
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "INR",
-        lowPrice: 90,
-        highPrice: 350,
+        lowPrice: 160,
+        highPrice: 610,
         offerCount: 3,
         availability: "https://schema.org/InStock",
         url: PAGE_URL,
         description:
-          "Available in 75g (₹90), 150g (₹178), and 300g (₹350) packs. Dispatched directly from Omshree Sidha Hospital Pharmacy. Contact on WhatsApp or pay online with Razorpay.",
+          "Available in 75g (₹160), 150g (₹310), and 300g (₹610) packs. Dispatched directly from Omshree Sidha Hospital Pharmacy. Contact on WhatsApp or pay online with Razorpay.",
         seller: {
           "@type": "MedicalOrganization",
           name: "Omshree Sidha Hospital Pharmacy",
@@ -593,7 +593,7 @@ export default function KafasthaProductLandingPage() {
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-[#5C4A36] leading-relaxed">
-                Kafastha is freshly prepared and dispatched directly from our hospital pharmacy in 3 convenient sizes: <strong>75g (₹90)</strong>, <strong>150g (₹178)</strong>, and <strong>300g (₹350)</strong>. Order online with Razorpay or via WhatsApp.
+                Kafastha is freshly prepared and dispatched directly from our hospital pharmacy in 3 convenient sizes: <strong>75g (MRP ₹160)</strong>, <strong>150g (₹310)</strong>, and <strong>300g (₹610)</strong>. Order online with Razorpay or via WhatsApp.
               </p>
 
               {/* Pack Size Selector with Instant Razorpay & WhatsApp Checkout */}
@@ -1448,7 +1448,7 @@ export default function KafasthaProductLandingPage() {
                 Order Kafastha Granules Today
               </h2>
               <p className="text-base sm:text-lg text-[#E3D8C1] leading-relaxed max-w-2xl font-light">
-                Available in <strong>75g (₹90)</strong>, <strong>150g (₹178)</strong>, and <strong>300g (₹350)</strong> bottles with fresh hospital pharmacy dispatch across India.
+                Available in <strong>75g (MRP ₹160)</strong>, <strong>150g (₹310)</strong>, and <strong>300g (₹610)</strong> bottles with fresh hospital pharmacy dispatch across India.
               </p>
               
               <div className="flex flex-wrap gap-4 pt-2">
