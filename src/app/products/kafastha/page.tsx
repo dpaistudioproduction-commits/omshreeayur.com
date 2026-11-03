@@ -763,7 +763,7 @@ export default function KafasthaProductLandingPage() {
             </h2>
             <div className="space-y-4 text-base sm:text-lg leading-relaxed text-[#5C4A36]">
               <p>
-                <strong>Kafastha Granules</strong> is a specialized proprietary formulation developed and manufactured according to strict <strong>Good Manufacturing Practice (GMP) standards</strong> by <strong>Omshree Sidha Pharma</strong>, an esteemed Ayurvedic pharmacy based in Kaduthuruthy, Kottayam, Kerala.
+                <strong>Kafastha Granules</strong> is a specialized proprietary formulation developed and manufactured according to strict <strong>Good Manufacturing Practice (GMP) standards</strong> by <strong>Omshree Sidha Pharma</strong>, an esteemed Ayurvedic pharmacy based in Vayala, Kottayam, Kerala.
               </p>
               <p>
                 Formulated from more than 10 classical herbs, warming spices, and natural mineral alkali, Kafastha forms an integral part of our daily clinical practice at <strong>Omshree Sidha Hospital</strong>. Our multigenerational team of Ayurvedic physicians utilizes it extensively in supervised treatment regimens for cough, bronchial asthma, bronchitis, allergic rhinitis, and chronic obstructive airway conditions.
