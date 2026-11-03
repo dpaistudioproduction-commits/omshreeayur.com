@@ -26,8 +26,11 @@ import {
   Globe,
   FileCheck2,
   Activity,
-  HeartHandshake
+  HeartHandshake,
+  CreditCard
 } from "lucide-react";
+import RazorpayCheckoutButton from "@/components/checkout/RazorpayCheckoutButton";
+import KafasthaPackSelector from "@/components/checkout/KafasthaPackSelector";
 import { AUTHENTIC_PRODUCTS } from "@/lib/product-assets";
 
 /* ------------------------------------------------------------------ */
@@ -385,12 +388,15 @@ const JSON_LD = {
         },
       },
       offers: {
-        "@type": "Offer",
+        "@type": "AggregateOffer",
         priceCurrency: "INR",
+        lowPrice: 90,
+        highPrice: 350,
+        offerCount: 3,
         availability: "https://schema.org/InStock",
         url: PAGE_URL,
         description:
-          "Supplied directly from Omshree Sidha Hospital Pharmacy. Contact our pharmacy team on WhatsApp or phone for current batch pack size, pricing, and fast dispatch across India.",
+          "Available in 75g (₹90), 150g (₹178), and 300g (₹350) packs. Dispatched directly from Omshree Sidha Hospital Pharmacy. Contact on WhatsApp or pay online with Razorpay.",
         seller: {
           "@type": "MedicalOrganization",
           name: "Omshree Sidha Hospital Pharmacy",
@@ -587,30 +593,11 @@ export default function KafasthaProductLandingPage() {
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-[#5C4A36] leading-relaxed">
-                Kafastha is dispatched directly from our hospital pharmacy. Contact our pharmacy team on WhatsApp to confirm current batch pack sizes, pricing, and fast door delivery across India.
+                Kafastha is freshly prepared and dispatched directly from our hospital pharmacy in 3 convenient sizes: <strong>75g (₹90)</strong>, <strong>150g (₹178)</strong>, and <strong>300g (₹350)</strong>. Order online with Razorpay or via WhatsApp.
               </p>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a
-                  href={BUY_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#1EBE5D] px-7 py-4 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>Buy Now via WhatsApp</span>
-                </a>
-                <a
-                  href={CONSULT_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#2F4A1E] text-[#2F4A1E] hover:bg-[#2F4A1E] hover:text-white px-6 py-4 text-sm font-bold transition-all"
-                >
-                  <Stethoscope className="w-4 h-4" />
-                  <span>Doctor Consultation</span>
-                </a>
-              </div>
+              {/* Pack Size Selector with Instant Razorpay & WhatsApp Checkout */}
+              <KafasthaPackSelector consultUrl={CONSULT_URL} />
               <p className="text-center text-[11px] text-[#81754B]">
                 Prefer to speak directly with our clinic? Call us at{" "}
                 <a href={PHONE_TEL} className="font-bold underline text-[#2B1A0E]">
@@ -1461,27 +1448,34 @@ export default function KafasthaProductLandingPage() {
                 Order Kafastha Granules Today
               </h2>
               <p className="text-base sm:text-lg text-[#E3D8C1] leading-relaxed max-w-2xl font-light">
-                Experience time-tested Ayurvedic respiratory care formulated by Omshree Sidha Pharma. Get direct pharmacy dispatch to your doorstep or consult our Kerala hospital team.
+                Available in <strong>75g (₹90)</strong>, <strong>150g (₹178)</strong>, and <strong>300g (₹350)</strong> bottles with fresh hospital pharmacy dispatch across India.
               </p>
               
               <div className="flex flex-wrap gap-4 pt-2">
+                <Link
+                  href="/checkout"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-[#D9B872] text-[#213714] hover:bg-white px-8 py-4 text-sm sm:text-base font-bold shadow-lg transition-transform hover:scale-105"
+                >
+                  <CreditCard className="w-5 h-5" />
+                  <span>Pay Online via Razorpay</span>
+                </Link>
                 <a
                   href={BUY_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#1EBE5D] px-8 py-4 text-sm sm:text-base font-bold shadow-lg transition-transform hover:scale-105"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#1EBE5D] px-7 py-4 text-sm sm:text-base font-bold shadow-lg transition-transform hover:scale-105"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>Buy Now via WhatsApp</span>
+                  <span>Order via WhatsApp</span>
                 </a>
                 <a
                   href={CONSULT_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-white text-white hover:bg-white hover:text-[#213714] px-7 py-4 text-sm sm:text-base font-bold transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-white text-white hover:bg-white hover:text-[#213714] px-6 py-4 text-sm sm:text-base font-bold transition-colors"
                 >
                   <Stethoscope className="w-5 h-5" />
-                  <span>Consult Hospital Physician</span>
+                  <span>Consult Doctor</span>
                 </a>
               </div>
 
@@ -1497,6 +1491,7 @@ export default function KafasthaProductLandingPage() {
                   src="/images/products/kafastha.png"
                   alt="Kafastha Ayurvedic Granules packaging - Omshree Sidha Hospital"
                   fill
+                  sizes="(max-width: 640px) 192px, 240px"
                   className="object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]"
                 />
               </div>
@@ -1560,23 +1555,30 @@ export default function KafasthaProductLandingPage() {
       {/* MOBILE STICKY BOTTOM ACTION BAR                              */}
       {/* ============================================================ */}
       <div className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-[#E3D8C1] p-3 z-50 sm:hidden shadow-lg">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           <a
             href={PHONE_TEL}
-            className="flex-none p-3 rounded-full border border-[#2F4A1E]/30 text-[#2F4A1E] hover:bg-[#F3EAD3]"
+            className="flex-none p-2.5 rounded-full border border-[#2F4A1E]/30 text-[#2F4A1E] hover:bg-[#F3EAD3]"
             aria-label="Call Hospital Pharmacy"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-4 h-4" />
           </a>
           <a
             href={BUY_URL}
             target="_blank"
             rel="noreferrer"
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-white py-3 px-4 text-sm font-bold shadow-md"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-[#25D366] text-white py-2.5 px-3 text-xs font-bold shadow-md"
           >
-            <MessageCircle className="w-4 h-4" />
-            <span>Buy via WhatsApp</span>
+            <MessageCircle className="w-3.5 h-3.5" />
+            <span>WhatsApp</span>
           </a>
+          <Link
+            href="/checkout"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-[#213714] text-white py-2.5 px-3 text-xs font-bold shadow-md"
+          >
+            <CreditCard className="w-3.5 h-3.5 text-[#D9B872]" />
+            <span>Pay Online</span>
+          </Link>
         </div>
       </div>
 
