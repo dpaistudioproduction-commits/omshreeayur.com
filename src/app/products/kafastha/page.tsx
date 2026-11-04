@@ -508,13 +508,13 @@ export default function KafasthaProductLandingPage() {
               </div>
 
               {/* Genuine Product Container Packshot */}
-              <div className="relative aspect-square w-full max-w-md mx-auto flex items-center justify-center pt-6">
+              <div className="relative aspect-[16/10] w-full max-w-md mx-auto overflow-hidden rounded-2xl shadow-md border border-[#DBCFA8]/80 mt-8 mb-2">
                 <Image
-                  src="/images/products/kafastha.png"
-                  alt="Kafastha Ayurvedic Respiratory Care Granules packaging with Malayalam and Hindi text"
+                  src="/images/products/kafastha-showcase.jpg"
+                  alt="Kafastha Ayurvedic Respiratory Care Granules packaging surrounded by authentic botanicals"
                   fill
                   priority
-                  className="object-contain drop-shadow-2xl"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 90vw, 45vw"
                 />
               </div>
@@ -1486,13 +1486,13 @@ export default function KafasthaProductLandingPage() {
             </div>
 
             <div className="lg:col-span-4 flex justify-center">
-              <div className="relative w-48 sm:w-60 aspect-square">
+              <div className="relative w-48 sm:w-60 aspect-[16/10] overflow-hidden rounded-2xl shadow-lg border border-white/20">
                 <Image
-                  src="/images/products/kafastha.png"
+                  src="/images/products/kafastha-showcase.jpg"
                   alt="Kafastha Ayurvedic Granules packaging - Omshree Sidha Hospital"
                   fill
                   sizes="(max-width: 640px) 192px, 240px"
-                  className="object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]"
+                  className="object-cover"
                 />
               </div>
             </div>
