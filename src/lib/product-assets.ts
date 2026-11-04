@@ -74,7 +74,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     id: "nirmal",
     name: "Nirmal",
     category: "Proprietary",
-    categoryLabel: "Metabolic & Hepatic Cleanser",
+    categoryLabel: "Lungs Cleaner",
     image: "/images/products/nirmal.png",
     description: "Hepatoprotective and blood-cleansing herbal elixir developed to eliminate Ama (accumulated toxins) and support liver enzyme balance.",
     therapeuticFocus: "Liver detoxification, lipid metabolic balance, and digestive regulation.",
