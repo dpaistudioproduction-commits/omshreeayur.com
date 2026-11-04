@@ -38,7 +38,7 @@ export function Header() {
           TIER 1: TOP UTILITY BAR (Slim Dark Natural-Green Bar)
           ========================================================================= */}
       <div className="w-full h-9 bg-[#517B32] text-[#F7F1E1] text-[11px] font-medium tracking-wider py-1.5 border-b border-[#6F9940]/40">
-        <div className="w-full px-[4%] flex justify-between sm:justify-end items-center h-full gap-3 sm:gap-6 lg:gap-8">
+        <div className="w-full px-4 sm:px-6 xl:px-8 max-w-[1720px] mx-auto flex justify-between sm:justify-end items-center h-full gap-3 sm:gap-6 lg:gap-8">
           {/* Location & Hours */}
           <div className="flex items-center gap-3 sm:gap-6">
             <span className="flex items-center gap-1.5 text-[#F7F1E1] font-medium truncate">
@@ -70,21 +70,21 @@ export function Header() {
           TIER 2: MAIN NAVIGATION (Full-width Warm Ivory / Global Content Container)
           ========================================================================= */}
       <div className="w-full bg-[#F7F1E1] transition-all duration-300 h-18 lg:h-20 flex items-center">
-        <div className="w-full px-[4%] h-full flex items-center justify-between gap-3 lg:gap-4 xl:gap-6">
+        <div className="w-full px-4 sm:px-6 xl:px-8 max-w-[1720px] mx-auto h-full flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
           
           {/* Left: Authentic Hospital Brand Logo */}
-          <div className="shrink-0 flex items-center">
+          <div className="shrink-0 flex items-center pr-1 xl:pr-2">
             <BrandLogo variant="header" />
           </div>
 
           {/* Center: Desktop Navigation Menu (Active from 1200px and above) */}
-          <div className="hidden min-[1200px]:flex items-center justify-center flex-1 min-w-0 px-2">
+          <div className="hidden min-[1200px]:flex items-center justify-center flex-1 min-w-0 px-1 xl:px-2">
             <NavigationMenu className="max-w-full">
-              <NavigationMenuList className="gap-1 2xl:gap-2">
+              <NavigationMenuList className="gap-0 xl:gap-0.5 2xl:gap-1.5 flex-nowrap">
                 
                 {/* 1. About */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-9 px-2.5 2xl:px-3.5 transition-colors cursor-pointer">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     About
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -115,7 +115,7 @@ export function Header() {
 
                 {/* 2. Ayurveda */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-9 px-2.5 2xl:px-3.5 transition-colors cursor-pointer">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     Ayurveda
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -146,7 +146,7 @@ export function Header() {
                 
                 {/* 3. Treatments */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-9 px-2.5 2xl:px-3.5 transition-colors cursor-pointer">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     Treatments
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -177,28 +177,28 @@ export function Header() {
 
                 {/* 4. Conditions */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/conditions" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/conditions" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Conditions
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 4.5. Products */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/products" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/products" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Products
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 4.6. Testimonials */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/testimonials" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/testimonials" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Testimonials
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 5. Patient Care */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-9 px-2.5 2xl:px-3.5 transition-colors cursor-pointer">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     Patient Care
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -234,14 +234,14 @@ export function Header() {
 
                 {/* 5.5. Blog */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/blog" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/blog" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Blog
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 6. Contact */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/contact" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-[13px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-9 px-2.5 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/contact" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Contact
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -251,15 +251,15 @@ export function Header() {
           </div>
 
           {/* Right: Contact Buttons & Primary CTA (Desktop from 1200px+) */}
-          <div className="hidden min-[1200px]:flex items-center justify-end gap-2 xl:gap-2.5 shrink-0">
+          <div className="hidden min-[1200px]:flex items-center justify-end gap-1.5 xl:gap-2 2xl:gap-2.5 shrink-0 pl-1 xl:pl-2">
             {/* Phone Button */}
             <a
               href="tel:+919846992789"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#517B32] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap"
+              className="inline-flex items-center justify-center size-8.5 2xl:size-auto 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#517B32] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap shrink-0"
               title="Call Omshree Sidha Hospital"
             >
               <Phone className="h-3.5 w-3.5 text-[#517B32]" />
-              <span className="hidden 2xl:inline">Call</span>
+              <span className="hidden 2xl:inline ml-1.5">Call</span>
             </a>
 
             {/* WhatsApp Button */}
@@ -267,18 +267,18 @@ export function Header() {
               href="https://wa.me/919846992789"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#25D366] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap"
+              className="inline-flex items-center justify-center size-8.5 2xl:size-auto 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#25D366] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap shrink-0"
               title="WhatsApp Enquiry"
             >
               <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" />
-              <span className="hidden 2xl:inline">WhatsApp</span>
+              <span className="hidden 2xl:inline ml-1.5">WhatsApp</span>
             </a>
 
             {/* Primary CTA: Book Consultation */}
             <Button
               render={<Link href="/contact" />}
               variant="default"
-              className="px-6 shadow-md shadow-[#517B32]/20 hover:-translate-y-0.5"
+              className="h-8.5 2xl:h-9 px-3 xl:px-4 2xl:px-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold shadow-md shadow-[#517B32]/20 hover:-translate-y-0.5 whitespace-nowrap shrink-0"
             >
               Book Consultation
             </Button>
