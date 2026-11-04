@@ -445,7 +445,7 @@ export default function KafasthaProductLandingPage() {
       {/* ============================================================ */}
       {/* 0. PHARMACY VERIFICATION BANNER                              */}
       {/* ============================================================ */}
-      <div className="bg-[#213714] text-[#E7DEC8] text-xs sm:text-sm border-b border-[#3D5C26]/40 sticky top-0 z-40">
+      <div className="bg-[#213714] text-[#E7DEC8] text-xs sm:text-sm border-b border-[#3D5C26]/40 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 text-center sm:text-left">
           <div className="flex items-center gap-2 mx-auto sm:mx-0">
             <span className="flex h-2 w-2 rounded-full bg-[#8BC34A] animate-pulse" />
@@ -492,13 +492,36 @@ export default function KafasthaProductLandingPage() {
       {/* SECTION 1 — PREMIUM HERO SECTION                             */}
       {/* ============================================================ */}
       <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 pt-4 pb-16 md:pb-24">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Product Page Header */}
+        <div className="mb-8 space-y-3">
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#B4833D] bg-[#B4833D]/10 px-3 py-1 rounded-full border border-[#B4833D]/25">
+              Omshree Sidha Pharma • Respiratory Care
+            </span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#517B32] bg-[#517B32]/10 px-3 py-1 rounded-full border border-[#517B32]/20">
+              Hospital In-House Formulation
+            </span>
+          </div>
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#2B1A0E] font-bold tracking-tight">
+            Kafastha Ayurvedic Granules
+          </h1>
+          <p className="text-lg sm:text-xl font-serif text-[#517B32] font-semibold max-w-4xl">
+            Time-Tested Ayurvedic Care for Troublesome Cough, Persistent Phlegm, Wheezing &amp; Bronchial Comfort
+          </p>
+          <p className="text-sm sm:text-base text-[#5C4A36] max-w-4xl leading-relaxed">
+            Formulated by <strong>Omshree Sidha Pharma</strong> and relied upon in hospital practice at{" "}
+            <strong>Omshree Sidha Hospital</strong>, Kerala. Handcrafted using traditional herbal granules that melt easily with a warm spiced flavor.
+          </p>
+        </div>
+
+        {/* Clean Balanced Two-Column Shopping Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Authentic Packshot Display */}
-          <div className="lg:col-span-6 space-y-4">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#FAF4E5] to-[#EDE3C8] border border-[#DBCFA8] p-6 sm:p-10 shadow-[0_25px_60px_-15px_rgba(43,26,14,0.18)]">
-              {/* Product Badge Pill */}
-              <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
+          {/* Left Column: Product Image Showcase */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="flex-1 rounded-3xl border border-[#DBCFA8] bg-gradient-to-b from-[#FAF4E5] to-[#EDE3C8] p-6 sm:p-8 flex flex-col justify-between shadow-[0_15px_35px_-10px_rgba(43,26,14,0.12)]">
+              {/* Card Header: Product Badges */}
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                 <span className="bg-[#2F4A1E] text-[#F3EAD3] text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-sm">
                   Ayurvedic Proprietary Medicine
                 </span>
@@ -507,116 +530,111 @@ export default function KafasthaProductLandingPage() {
                 </span>
               </div>
 
-              {/* Genuine Product Container Packshot */}
-              <div className="relative aspect-[16/10] w-full max-w-md mx-auto overflow-hidden rounded-2xl shadow-md border border-[#DBCFA8]/80 mt-8 mb-2">
+              {/* Product Image Frame */}
+              <div className="relative aspect-[16/10] sm:aspect-[16/11] w-full max-w-md mx-auto overflow-hidden rounded-2xl shadow-md border border-[#DBCFA8]/80 bg-white/60 my-auto">
                 <Image
                   src="/images/products/kafastha-showcase.jpg"
                   alt="Kafastha Ayurvedic Respiratory Care Granules packaging surrounded by authentic botanicals"
                   fill
                   priority
                   className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 90vw, 45vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
 
-              {/* Packaging Authenticity Signals */}
-              <div className="grid grid-cols-3 gap-2 pt-6 border-t border-[#DBCFA8]/70 text-center">
-                <div className="p-2.5 rounded-2xl bg-white/80">
-                  <p className="text-[11px] font-bold text-[#2B1A0E]">10+ Botanicals</p>
-                  <p className="text-[10px] text-[#81754B]">Pure Herbal Blend</p>
+              {/* Product Key Metadata Grid & Signals */}
+              <div className="mt-6 pt-5 border-t border-[#DBCFA8]/70 space-y-3">
+                <div className="grid grid-cols-2 gap-2.5 text-xs">
+                  <div className="p-3 rounded-xl bg-white/90 border border-[#E3D8C1]/80 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+                    <span className="text-[#81754B] block text-[10px] uppercase tracking-wider font-bold">Form</span>
+                    <span className="font-bold text-[#2B1A0E] text-xs sm:text-sm">Chewable Herbal Granules</span>
+                  </div>
+                  <div className="p-3 rounded-xl bg-white/90 border border-[#E3D8C1]/80 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+                    <span className="text-[#81754B] block text-[10px] uppercase tracking-wider font-bold">Taste Profile</span>
+                    <span className="font-bold text-[#2B1A0E] text-xs sm:text-sm">Sweet &amp; Warming Spiced</span>
+                  </div>
+                  <div className="p-3 rounded-xl bg-white/90 border border-[#E3D8C1]/80 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+                    <span className="text-[#81754B] block text-[10px] uppercase tracking-wider font-bold">Manufacturer</span>
+                    <span className="font-bold text-[#2B1A0E] text-xs sm:text-sm">Omshree Sidha Pharma (GMP)</span>
+                  </div>
+                  <div className="p-3 rounded-xl bg-white/90 border border-[#E3D8C1]/80 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+                    <span className="text-[#81754B] block text-[10px] uppercase tracking-wider font-bold">Clinical Setting</span>
+                    <span className="font-bold text-[#2B1A0E] text-xs sm:text-sm">Omshree Sidha Hospital, Kerala</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded-2xl bg-white/80">
-                  <p className="text-[11px] font-bold text-[#2B1A0E]">Sweet &amp; Spicy</p>
-                  <p className="text-[10px] text-[#81754B]">Melt-in-Mouth</p>
-                </div>
-                <div className="p-2.5 rounded-2xl bg-white/80">
-                  <p className="text-[11px] font-bold text-[#2B1A0E]">Hospital Heritage</p>
-                  <p className="text-[10px] text-[#81754B]">Kerala Clinical Regimen</p>
+
+                {/* Packaging Authenticity Signals */}
+                <div className="grid grid-cols-3 gap-2 text-center pt-1">
+                  <div className="py-2 px-1.5 rounded-xl bg-white/70 border border-[#DBCFA8]/50">
+                    <p className="text-[11px] font-bold text-[#2B1A0E]">10+ Botanicals</p>
+                    <p className="text-[10px] text-[#81754B]">Pure Herbal Blend</p>
+                  </div>
+                  <div className="py-2 px-1.5 rounded-xl bg-white/70 border border-[#DBCFA8]/50">
+                    <p className="text-[11px] font-bold text-[#2B1A0E]">Sweet &amp; Spicy</p>
+                    <p className="text-[10px] text-[#81754B]">Melt-in-Mouth</p>
+                  </div>
+                  <div className="py-2 px-1.5 rounded-xl bg-white/70 border border-[#DBCFA8]/50">
+                    <p className="text-[11px] font-bold text-[#2B1A0E]">Hospital Heritage</p>
+                    <p className="text-[10px] text-[#81754B]">Kerala Clinical Regimen</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Hero Storefront Information & Order Actions */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="space-y-2">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#B4833D] block">
-                Omshree Sidha Pharma • Respiratory Wellness
-              </span>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-[#2B1A0E] font-bold leading-[1.08] tracking-tight">
-                Kafastha
-              </h1>
-              <p className="text-xl sm:text-2xl font-serif text-[#517B32] font-semibold leading-snug">
-                Time-Tested Ayurvedic Care for Cough and Respiratory Health
-              </p>
-            </div>
-
-            <p className="text-base sm:text-lg text-[#5C4A36] leading-relaxed">
-              Kafastha is an authentic Ayurvedic proprietary medicine formulated by{" "}
-              <strong>Omshree Sidha Pharma</strong> and relied upon in our hospital practice at{" "}
-              <strong>Omshree Sidha Hospital</strong> in Kerala for troublesome cough, persistent phlegm, wheezing, and chest congestion.
-            </p>
-
-            {/* Product Key Metadata Table */}
-            <div className="grid grid-cols-2 gap-3 text-xs sm:text-sm">
-              <div className="p-3.5 rounded-2xl bg-white border border-[#E3D8C1]">
-                <span className="text-[#81754B] block text-[11px] uppercase tracking-wider font-semibold">Form</span>
-                <span className="font-bold text-[#2B1A0E]">Chewable Herbal Granules</span>
-              </div>
-              <div className="p-3.5 rounded-2xl bg-white border border-[#E3D8C1]">
-                <span className="text-[#81754B] block text-[11px] uppercase tracking-wider font-semibold">Taste Profile</span>
-                <span className="font-bold text-[#2B1A0E]">Sweet &amp; Warming Spiced</span>
-              </div>
-              <div className="p-3.5 rounded-2xl bg-white border border-[#E3D8C1]">
-                <span className="text-[#81754B] block text-[11px] uppercase tracking-wider font-semibold">Manufacturer</span>
-                <span className="font-bold text-[#2B1A0E]">Omshree Sidha Pharma (GMP)</span>
-              </div>
-              <div className="p-3.5 rounded-2xl bg-white border border-[#E3D8C1]">
-                <span className="text-[#81754B] block text-[11px] uppercase tracking-wider font-semibold">Clinical Setting</span>
-                <span className="font-bold text-[#2B1A0E]">Omshree Sidha Hospital, Kerala</span>
-              </div>
-            </div>
-
-            {/* Direct Order Dispatch Box */}
-            <div className="rounded-3xl border-2 border-[#517B32]/30 bg-gradient-to-br from-[#FAF7F0] to-[#EFE7D2] p-6 space-y-4 shadow-sm">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#517B32]">
+          {/* Right Column: Product Purchase Module */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="flex-1 rounded-3xl border-2 border-[#517B32]/30 bg-gradient-to-br from-[#FAF7F0] to-[#EFE7D2] p-6 sm:p-8 flex flex-col justify-between shadow-[0_15px_35px_-10px_rgba(43,26,14,0.12)]">
+              {/* Purchase Card Header */}
+              <div className="space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#517B32] bg-[#517B32]/10 px-3 py-1 rounded-full border border-[#517B32]/20">
                     Direct Pharmacy Dispatch
                   </span>
-                  <p className="text-2xl sm:text-3xl font-heading font-bold text-[#2B1A0E]">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#517B32]/10 text-[#517B32] text-xs font-semibold">
+                    <CheckCircle2 className="w-3.5 h-3.5" /> Genuine In-House Preparation
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-heading font-bold text-[#2B1A0E]">
                     Fresh Hospital Batch
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#5C4A36] leading-relaxed mt-1.5">
+                    Kafastha is freshly prepared and dispatched directly from our hospital pharmacy in 3 convenient sizes:{" "}
+                    <strong className="text-[#2B1A0E]">75g (MRP ₹160)</strong>,{" "}
+                    <strong className="text-[#2B1A0E]">150g (₹310)</strong>, and{" "}
+                    <strong className="text-[#2B1A0E]">300g (₹610)</strong>. Order online with instant Razorpay checkout or via WhatsApp.
                   </p>
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#517B32]/10 text-[#517B32] text-xs font-semibold">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> Genuine In-House Preparation
-                </span>
               </div>
-              <p className="text-xs sm:text-sm text-[#5C4A36] leading-relaxed">
-                Kafastha is freshly prepared and dispatched directly from our hospital pharmacy in 3 convenient sizes: <strong>75g (MRP ₹160)</strong>, <strong>150g (₹310)</strong>, and <strong>300g (₹610)</strong>. Order online with Razorpay or via WhatsApp.
-              </p>
 
               {/* Pack Size Selector with Instant Razorpay & WhatsApp Checkout */}
-              <KafasthaPackSelector consultUrl={CONSULT_URL} />
-              <p className="text-center text-[11px] text-[#81754B]">
-                Prefer to speak directly with our clinic? Call us at{" "}
-                <a href={PHONE_TEL} className="font-bold underline text-[#2B1A0E]">
-                  {PHONE_DISPLAY}
-                </a>
-              </p>
-            </div>
+              <div className="my-4">
+                <KafasthaPackSelector consultUrl={CONSULT_URL} />
+              </div>
 
-            {/* Trust Signals */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-2 text-xs text-[#5C4A36]">
-              <span className="flex items-center gap-1.5">
-                <Leaf className="w-4 h-4 text-[#517B32]" /> 100% Herbal Botanicals
-              </span>
-              <span className="flex items-center gap-1.5">
-                <FlaskConical className="w-4 h-4 text-[#517B32]" /> No Chemical Additives
-              </span>
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#517B32]" /> Suitable for All Ages (Above 1 Year)
-              </span>
+              {/* Purchase Module Footer: Trust Signals & Helpline */}
+              <div className="space-y-3 pt-3 border-t border-[#DBCFA8]/70">
+                <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-[#5C4A36]">
+                  <span className="flex items-center gap-1.5">
+                    <Leaf className="w-4 h-4 text-[#517B32]" /> 100% Herbal Botanicals
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <FlaskConical className="w-4 h-4 text-[#517B32]" /> No Chemical Additives
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-[#517B32]" /> All Ages (Above 1 Year)
+                  </span>
+                </div>
+
+                <p className="text-center text-xs text-[#81754B]">
+                  Prefer to speak directly with our clinic? Call us at{" "}
+                  <a href={PHONE_TEL} className="font-bold underline text-[#2B1A0E] hover:text-[#517B32] transition-colors">
+                    {PHONE_DISPLAY}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 
