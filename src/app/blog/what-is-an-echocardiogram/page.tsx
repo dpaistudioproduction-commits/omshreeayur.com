@@ -769,7 +769,7 @@ export default function EchocardiogramBlogPage() {
               </h2>
               <div className="text-[#81754B] text-base sm:text-lg leading-relaxed font-light space-y-4">
                 <p>
-                  At <strong>Omshree Sidha Hospital</strong>, located in Vayala P.O., Kaduthuruthy, Kottayam, Kerala, India, we specialize in authentic, classical Ayurvedic approaches to support individuals diagnosed with cardiovascular conditions, including low ejection fraction, heart weakness, and cardiomyopathy.
+                  At <strong>Omshree Sidha Hospital</strong>, located in Vayala P.O., Kottayam, Kerala, India, we specialize in authentic, classical Ayurvedic approaches to support individuals diagnosed with cardiovascular conditions, including low ejection fraction, heart weakness, and cardiomyopathy.
                 </p>
                 <p>
                   We rely on rigorous diagnostic records. When patients consult with our Ayurvedic physicians—whether in person at our Kerala hospital or through an initial online case evaluation—we request and review their latest modern cardiology records, including 2D Echocardiograms, ECGs, and blood panels. These objective tests establish your clinical baseline.
@@ -977,7 +977,7 @@ export default function EchocardiogramBlogPage() {
               {/* Hospital Location & Entity Stamp */}
               <div className="p-5 rounded-2xl bg-white border border-[#DBCFA8] text-xs text-[#81754B] space-y-1.5">
                 <p className="font-bold text-[#66371B]">Omshree Sidha Hospital</p>
-                <p>Vayala P.O., Kaduthuruthy, Kottayam, Kerala 686587, India</p>
+                <p>Vayala P.O., Kottayam, Kerala 686587, India</p>
                 <p>NABH-compliant Ayurvedic Hospital Facility</p>
                 <p className="pt-1">
                   <Link href="/contact" className="text-[#517B32] font-semibold underline">

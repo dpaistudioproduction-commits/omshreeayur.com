@@ -559,7 +559,7 @@ export default function LiverCirrhosisBlogPage() {
               </h2>
               <div className="text-[#81754B] text-base sm:text-lg leading-relaxed font-light space-y-4">
                 <p>
-                  At <strong>Omshree Sidha Hospital</strong>, located in Vayala P.O., Kaduthuruthy, Kottayam, Kerala, India, we offer authentic classical Ayurvedic care for patients managing chronic liver and metabolic health concerns.
+                  At <strong>Omshree Sidha Hospital</strong>, located in Vayala P.O., Kottayam, Kerala, India, we offer authentic classical Ayurvedic care for patients managing chronic liver and metabolic health concerns.
                 </p>
                 <p>
                   Our experienced medical team begins by thoroughly reviewing your existing conventional clinical records—including Liver Function Tests (LFT), ultrasound scans, FibroScan stiffness scores, and viral markers. This ensures that every herbal prescription and dietary intervention is clinically safe and complementary to your conventional gastroenterologist’s treatment plan.
@@ -769,7 +769,7 @@ export default function LiverCirrhosisBlogPage() {
               {/* Hospital Location & Entity Stamp */}
               <div className="p-5 rounded-2xl bg-white border border-[#DBCFA8] text-xs text-[#81754B] space-y-1.5">
                 <p className="font-bold text-[#66371B]">Omshree Sidha Hospital</p>
-                <p>Vayala P.O., Kaduthuruthy, Kottayam, Kerala 686587, India</p>
+                <p>Vayala P.O., Kottayam, Kerala 686587, India</p>
                 <p>Authentic Classical Ayurvedic Care</p>
                 <p className="pt-1">
                   <Link href="/contact" className="text-[#517B32] font-semibold underline">

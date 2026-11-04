@@ -566,7 +566,7 @@ export default function SnoringBlogPage() {
               </h2>
               <div className="text-[#81754B] text-base sm:text-lg leading-relaxed font-light space-y-4">
                 <p>
-                  At <strong>Omshree Sidha Hospital</strong>, located in Vayala P.O., Kaduthuruthy, Kottayam, Kerala, India, we offer authentic classical Ayurvedic care for patients seeking sustainable relief from chronic sleep and respiratory discomforts.
+                  At <strong>Omshree Sidha Hospital</strong>, located in Vayala P.O., Kottayam, Kerala, India, we offer authentic classical Ayurvedic care for patients seeking sustainable relief from chronic sleep and respiratory discomforts.
                 </p>
                 <p>
                   Our physicians review your health history, sinus condition, lifestyle factors, and existing diagnostic records to create an individualized regimen. By combining classical internal formulations prepared in our GMP-certified facility with targeted external therapies (such as specialized Nasya, face and throat steam, and detoxifying therapies), we address airway health at its root.
@@ -773,7 +773,7 @@ export default function SnoringBlogPage() {
               {/* Hospital Location & Entity Stamp */}
               <div className="p-5 rounded-2xl bg-white border border-[#DBCFA8] text-xs text-[#81754B] space-y-1.5">
                 <p className="font-bold text-[#66371B]">Omshree Sidha Hospital</p>
-                <p>Vayala P.O., Kaduthuruthy, Kottayam, Kerala 686587, India</p>
+                <p>Vayala P.O., Kottayam, Kerala 686587, India</p>
                 <p>Authentic Classical Ayurvedic Care</p>
                 <p className="pt-1">
                   <Link href="/contact" className="text-[#517B32] font-semibold underline">

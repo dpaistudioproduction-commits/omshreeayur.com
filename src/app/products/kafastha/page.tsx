@@ -380,7 +380,7 @@ const JSON_LD = {
         url: SITE,
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Vayala P.O., Kaduthuruthy",
+          streetAddress: "Vayala P.O.",
           addressLocality: "Kottayam",
           addressRegion: "Kerala",
           postalCode: "686587",
@@ -1276,7 +1276,7 @@ export default function KafasthaProductLandingPage() {
                 <div className="space-y-3 text-xs sm:text-sm text-[#E3D8C1]/90 leading-relaxed border-t border-white/10 pt-4">
                   <p className="flex items-start gap-2">
                     <MapPin className="w-4 h-4 text-[#D9B872] shrink-0 mt-0.5" />
-                    <span>Vayala P.O., Kaduthuruthy, Kottayam, Kerala 686587</span>
+                    <span>Vayala P.O., Kottayam, Kerala 686587</span>
                   </p>
                   <p className="flex items-start gap-2">
                     <Mail className="w-4 h-4 text-[#D9B872] shrink-0 mt-0.5" />

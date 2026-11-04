@@ -44,7 +44,7 @@ export default function HomePage() {
         "foundingDate": "1880",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Vayala P.O., Kaduthuruthy",
+          "streetAddress": "Vayala P.O.",
           "addressLocality": "Kottayam",
           "addressRegion": "Kerala",
           "postalCode": "686587",

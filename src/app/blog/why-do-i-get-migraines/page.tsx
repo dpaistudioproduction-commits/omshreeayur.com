@@ -1013,7 +1013,7 @@ export default function MigrainesBlogPage() {
               {/* Hospital Location & Entity Stamp */}
               <div className="p-5 rounded-2xl bg-white border border-[#DBCFA8] text-xs text-[#81754B] space-y-1.5">
                 <p className="font-bold text-[#66371B]">Omshree Sidha Hospital</p>
-                <p>Vayala P.O., Kaduthuruthy, Kottayam, Kerala 686587, India</p>
+                <p>Vayala P.O., Kottayam, Kerala 686587, India</p>
                 <p>Authentic Classical Ayurvedic Care</p>
                 <p className="pt-1">
                   <Link href="/contact" className="text-[#517B32] font-semibold underline">

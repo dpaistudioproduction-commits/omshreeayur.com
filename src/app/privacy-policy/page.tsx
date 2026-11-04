@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="font-heading text-2xl font-bold text-[#66371B] mb-4">1. Overview & Scope</h2>
               <p>
-                Omshree Sidha Hospital (&ldquo;the Hospital&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), established in 1880 and situated at Vayala P.O., Kaduthuruthy, Kottayam, Kerala 686587, is committed to safeguarding the privacy and confidentiality of individuals who visit our website ([https://omshreeayur.com](https://omshreeayur.com)) or communicate with us regarding medical consultations and hospital care.
+                Omshree Sidha Hospital (&ldquo;the Hospital&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), established in 1880 and situated at Vayala P.O., Kottayam, Kerala 686587, is committed to safeguarding the privacy and confidentiality of individuals who visit our website ([https://omshreeayur.com](https://omshreeayur.com)) or communicate with us regarding medical consultations and hospital care.
               </p>
               <p className="mt-3">
                 This Privacy Policy outlines how we collect, process, manage, and protect personal and sensitive medical data in accordance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong> and the <strong>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong>.
@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
               <div className="bg-[#FAF8F3] p-6 rounded-2xl border border-[#DBCFA8]/60 mt-4 space-y-2 text-[#66371B]">
                 <p><strong>Designation:</strong> Patient Grievance & Data Protection Officer</p>
                 <p><strong>Hospital:</strong> Omshree Sidha Hospital & Research Centre</p>
-                <p><strong>Address:</strong> Vayala P.O., Kaduthuruthy, Kottayam District, Kerala 686587, India</p>
+                <p><strong>Address:</strong> Vayala P.O., Kottayam District, Kerala 686587, India</p>
                 <p><strong>Email:</strong> <a href="mailto:info@omshreeayur.com" className="text-[#517B32] font-semibold underline">info@omshreeayur.com</a></p>
                 <p><strong>Direct Telephone:</strong> <a href="tel:+919846992789" className="text-[#517B32] font-semibold underline">+91 98469 92789</a></p>
               </div>
