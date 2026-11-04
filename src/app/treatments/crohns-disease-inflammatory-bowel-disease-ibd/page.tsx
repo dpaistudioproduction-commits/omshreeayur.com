@@ -225,7 +225,7 @@ export default function CrohnsDiseaseTreatmentPage() {
                         WhatsApp Us
                       </Button>
                       <p className="text-center text-xs text-[#81754B] font-light mt-4">
-                        Or call us directly at <br/><strong className="text-[#66371B] font-medium"><a href="tel:+919846992789" className="hover:underline">+91 98469 92789</a></strong>
+                        Or call us directly at <br/><strong className="text-[#66371B] font-medium block"><a href="tel:+919846992789" className="hover:underline">+91 98469 92789</a></strong><span className="text-[11px] text-[#81754B] block mt-0.5">Landlines: <a href="tel:+914822229434" className="hover:underline">+91 4822 229434</a> / <a href="tel:+914822229435" className="hover:underline">+91 4822 229435</a></span>
                       </p>
                     </div>
                   </div>

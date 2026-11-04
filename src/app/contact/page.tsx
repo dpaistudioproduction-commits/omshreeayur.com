@@ -192,7 +192,21 @@ export default function ContactPage() {
                         onClick={() => analytics.phoneClick("contact_page")}
                         className="text-slate-700 hover:text-emerald-700 block mb-1 font-medium transition-colors"
                       >
-                        Call Hospital: +91 98469 92789
+                        Mobile / Helpline: +91 98469 92789
+                      </a>
+                      <a 
+                        href="tel:+914822229434" 
+                        onClick={() => analytics.phoneClick("contact_page_landline1")}
+                        className="text-slate-700 hover:text-emerald-700 block mb-1 font-medium transition-colors"
+                      >
+                        Hospital Landline 1: +91 4822 229434
+                      </a>
+                      <a 
+                        href="tel:+914822229435" 
+                        onClick={() => analytics.phoneClick("contact_page_landline2")}
+                        className="text-slate-700 hover:text-emerald-700 block mb-1 font-medium transition-colors"
+                      >
+                        Hospital Landline 2: +91 4822 229435
                       </a>
                       <a 
                         href="https://wa.me/919846992789" 
@@ -313,7 +327,7 @@ export default function ContactPage() {
                               className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold px-3 py-2 rounded-md transition-colors"
                             >
                               <Phone className="h-3.5 w-3.5" />
-                              Call Hospital: +91 98469 92789
+                              Mobile / Helpline: +91 98469 92789
                             </a>
                             <a
                               href="https://wa.me/919846992789"

@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
                 <p><strong>Hospital:</strong> Omshree Sidha Hospital & Research Centre</p>
                 <p><strong>Address:</strong> Vayala P.O., Kottayam District, Kerala 686587, India</p>
                 <p><strong>Email:</strong> <a href="mailto:info@omshreeayur.com" className="text-[#517B32] font-semibold underline">info@omshreeayur.com</a></p>
-                <p><strong>Direct Telephone:</strong> <a href="tel:+919846992789" className="text-[#517B32] font-semibold underline">+91 98469 92789</a></p>
+                <p><strong>Direct Telephone:</strong> <a href="tel:+919846992789" className="text-[#517B32] font-semibold underline">+91 98469 92789</a> / <a href="tel:+914822229434" className="text-[#517B32] font-semibold underline">+91 4822 229434</a> / <a href="tel:+914822229435" className="text-[#517B32] font-semibold underline">+91 4822 229435</a></p>
               </div>
             </section>
 

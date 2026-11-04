@@ -482,8 +482,16 @@ export function Header() {
                       variant="outline" 
                       className="w-full justify-center"
                     >
-                      <Phone className="h-4 w-4 mr-2 text-[#517B32]" /> Call Hospital (+91 98469 92789)
+                      <Phone className="h-4 w-4 mr-2 text-[#517B32]" /> Call Mobile (+91 98469 92789)
                     </Button>
+                    <div className="grid grid-cols-2 gap-2 text-center text-xs pt-1">
+                      <a href="tel:+914822229434" className="py-2 px-1 bg-white border border-[#DBCFA8] rounded-xl text-[#66371B] font-medium hover:border-[#517B32] transition-colors">
+                        Landline: 04822 229434
+                      </a>
+                      <a href="tel:+914822229435" className="py-2 px-1 bg-white border border-[#DBCFA8] rounded-xl text-[#66371B] font-medium hover:border-[#517B32] transition-colors">
+                        Landline: 04822 229435
+                      </a>
+                    </div>
                   </div>
                 </nav>
               </SheetContent>

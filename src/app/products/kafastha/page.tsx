@@ -1284,7 +1284,7 @@ export default function KafasthaProductLandingPage() {
                   </p>
                   <p className="flex items-start gap-2">
                     <Phone className="w-4 h-4 text-[#D9B872] shrink-0 mt-0.5" />
-                    <span>+91 98469 92789</span>
+                    <span>+91 98469 92789 / +91 4822 229434 / +91 4822 229435</span>
                   </p>
                 </div>
                 <div className="pt-2">

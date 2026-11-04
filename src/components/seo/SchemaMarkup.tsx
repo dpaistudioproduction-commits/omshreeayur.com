@@ -32,11 +32,23 @@ export function generateMedicalOrganizationSchema() {
       "postalCode": "686587",
       "addressCountry": "IN"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-9846992789",
-      "contactType": "Customer Service"
-    }
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-9846992789",
+        "contactType": "Mobile Helpline"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-4822-229434",
+        "contactType": "Hospital Landline 1"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-4822-229435",
+        "contactType": "Hospital Landline 2"
+      }
+    ]
   };
 }
 

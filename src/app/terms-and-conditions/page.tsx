@@ -90,7 +90,7 @@ export default function TermsAndConditionsPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-[#517B32]" />
-                  <span>Phone: +91 98469 92789</span>
+                  <span>Phone: +91 98469 92789 / +91 4822 229434 / +91 4822 229435</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-[#517B32]" />

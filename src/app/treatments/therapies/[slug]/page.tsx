@@ -198,7 +198,7 @@ export default async function TherapyPage({ params }: Props) {
                         WhatsApp Us
                       </Button>
                       <p className="text-center text-xs text-[#81754B] mt-4 font-light">
-                        Or call directly: <strong className="text-[#66371B] font-bold"><a href="tel:+919846992789" className="hover:underline">+91 98469 92789</a></strong>
+                        Or call directly: <strong className="text-[#66371B] font-bold block"><a href="tel:+919846992789" className="hover:underline">+91 98469 92789</a></strong><span className="text-[11px] text-[#81754B] block mt-0.5">Landlines: <a href="tel:+914822229434" className="hover:underline">+91 4822 229434</a> / <a href="tel:+914822229435" className="hover:underline">+91 4822 229435</a></span>
                       </p>
                     </CardContent>
                   </Card>
