@@ -337,7 +337,7 @@ export function Header() {
                     Omshree Sidha Hospital
                   </SheetTitle>
                   <p className="text-xs text-[#81754B] font-medium uppercase tracking-wider">
-                    Ayurvedic Hospital • Est. 1880
+                    Ayurvedic Hospital • Healing Since 1880
                   </p>
                 </SheetHeader>
 
@@ -375,7 +375,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                       className="py-2.5 hover:text-[#517B32] flex items-center justify-between pl-3 text-sm text-[#66371B]/80"
                     >
-                      <span>— Heritage (Est. 1880)</span>
+                      <span>— Heritage (Healing Since 1880)</span>
                     </Link>
 
                     <Link 

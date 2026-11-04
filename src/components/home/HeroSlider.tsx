@@ -44,7 +44,7 @@ const HERO_SLIDES: SlideData[] = [
     id: "slide-ayurveda",
     number: "02",
     theme: "Ayurveda",
-    tag: "140+ Years Lineage • Est. 1880",
+    tag: "140+ Years Lineage • Healing Since 1880",
     title: "Ancient Kerala Healing Heritage for Modern Chronic Care",
     subtitle: "Preserving unbroken clinical wisdom from Sri Kochukutty Vaidhyar's lineage to provide individualized therapeutic care.",
     imageSrc: BRAND_ASSETS.therapies.kizhi,

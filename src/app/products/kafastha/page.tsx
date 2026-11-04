@@ -1270,7 +1270,7 @@ export default function KafasthaProductLandingPage() {
                   <Stethoscope className="w-8 h-8" />
                   <div>
                     <h3 className="font-heading font-bold text-xl text-white">Omshree Sidha Hospital</h3>
-                    <p className="text-xs text-[#E3D8C1]">Ayurvedic Hospital • Est. 1880 • Kerala, India</p>
+                    <p className="text-xs text-[#E3D8C1]">Ayurvedic Hospital • Healing Since 1880 • Kerala, India</p>
                   </div>
                 </div>
                 <div className="space-y-3 text-xs sm:text-sm text-[#E3D8C1]/90 leading-relaxed border-t border-white/10 pt-4">

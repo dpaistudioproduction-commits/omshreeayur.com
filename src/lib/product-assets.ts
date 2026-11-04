@@ -1,6 +1,6 @@
 /**
  * Centralized Product & Medicine Asset Registry
- * Omshree Sidha Hospital (Ayurvedic Hospital • Est. 1880)
+ * Omshree Sidha Hospital (Ayurvedic Hospital • Healing Since 1880)
  * 
  * Maps all authentic GMP in-house formulation assets to verified institutional information.
  */

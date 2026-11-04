@@ -1,6 +1,6 @@
 /**
  * Centralized Brand & Asset Registry
- * Omshree Sidha Hospital (Ayurvedic Hospital • Est. 1880)
+ * Omshree Sidha Hospital (Ayurvedic Hospital • Healing Since 1880)
  * 
  * Provides single source of truth for all brand logos, doctor portraits,
  * facility imagery, therapy hero visuals, and product assets.
@@ -12,7 +12,7 @@ export const BRAND_ASSETS = {
     brandName: "Omshree Sidha",
     properEntity: "Ayurvedic Hospital",
     founded: "1880",
-    tagline: "Ayurvedic Hospital • Est. 1880",
+    tagline: "Ayurvedic Hospital • Healing Since 1880",
     shortTagline: "Ayurvedic Hospital",
   },
   logo: {
@@ -21,7 +21,7 @@ export const BRAND_ASSETS = {
     primaryPng: "/images/logo/logo.png",
     canonicalUrl: "https://omshreeayur.com/images/logo/logo.webp",
     monogram: "OS",
-    alt: "Omshree Sidha Hospital - Ayurvedic Hospital Est. 1880 Logo",
+    alt: "Omshree Sidha Hospital - Ayurvedic Hospital Healing Since 1880 Logo",
   },
   favicon: "/favicon.ico",
   doctors: [

@@ -173,7 +173,7 @@ export default function ContactPage() {
             <FadeIn className="lg:col-span-2 space-y-8">
               <div>
                 <h2 className="font-heading text-3xl font-bold text-slate-900 mb-4">Omshree Sidha Hospital</h2>
-                <p className="text-emerald-700 font-bold uppercase tracking-wider text-sm mb-6">Ayurvedic Hospital • Est. 1880</p>
+                <p className="text-emerald-700 font-bold uppercase tracking-wider text-sm mb-6">Ayurvedic Hospital • Healing Since 1880</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
                   For direct assistance or to speak with our hospital, please call our primary telephone line or connect via WhatsApp.
                 </p>

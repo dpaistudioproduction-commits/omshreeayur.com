@@ -88,7 +88,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
             <p>© {new Date().getFullYear()} Omshree Sidha Hospital. All rights reserved.</p>
             <span className="hidden md:inline px-1 text-[#E3D8C1]/20">|</span>
-            <span>Ayurvedic Hospital • Est. 1880</span>
+            <span>Ayurvedic Hospital • Healing Since 1880</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-[#E3D8C1] transition-colors">Privacy Policy</Link>
