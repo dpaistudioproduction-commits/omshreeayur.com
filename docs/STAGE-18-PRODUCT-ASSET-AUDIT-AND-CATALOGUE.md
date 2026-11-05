@@ -14,7 +14,7 @@ A complete inspection of `d:\Workstation DP-2\DP Clients\WEB DEVELOPMENT\omshree
 | **`gandha.png`** | 1.17 MB | **Gandha Rasayana** | Medicated Rasayana jar | Clean / Transparent |
 | **`kafastha.png`** | 1.17 MB | **Kafastha** | Bronchial herbal bottle | Clean / Transparent |
 | **`maha.png`** | 1.35 MB | **Maha Rasayana** | Classical preparation jar | Clean / Transparent |
-| **`nirmal.png`** | 1.81 MB | **Nirmal** | Premium hepatic/detox bottle | Clean / Transparent |
+| **`nirmal.png`** | 1.81 MB | **Nirmal** | Premium lungs cleaner bottle | Clean / Transparent |
 | **`skinpro.png`** | 1.20 MB | **SkinPro** | Dermatological bottle | Clean / Transparent |
 
 ---
@@ -43,7 +43,7 @@ export interface ProductItem {
 2. **Gandha Rasayana (`/images/products/gandha.png`)** — Classical mineral-herbal purified formulation processed through traditional Bhavana techniques for cellular rejuvenation and metabolic correction.
 3. **Kafastha (`/images/products/kafastha.png`)** — Targeted Ayurvedic compound formulated to alleviate stubborn mucus accumulation and balance respiratory Agni.
 4. **Maha Rasayana (`/images/products/maha.png`)** — Classical deep-tissue lipid and herbal decoction formulated to promote Dhatu Poshana (tissue nourishment).
-5. **Nirmal (`/images/products/nirmal.png`)** — Government of India Patented hepatoprotective and blood-cleansing herbal elixir developed to eliminate Ama (accumulated toxins).
+5. **Nirmal (`/images/products/nirmal.png`)** — Government of India Patented lungs cleaner and herbal formulation developed for respiratory purification and wellbeing.
 6. **SkinPro (`/images/products/skinpro.png`)** — Herbal dermatological formulation designed to pacify Rakta and Pitta doshas in chronic skin conditions.
 
 ---
