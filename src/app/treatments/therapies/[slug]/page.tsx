@@ -20,9 +20,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Therapy Not Found" };
   }
 
+  const cleanTitle = (data.seoTitle || data.name || '')
+    .replace(/\s*\|\s*omshree\s+sidha\s+hospital\s*$/i, '')
+    .trim();
+
   return {
-    title: data.seoTitle,
+    title: cleanTitle,
     description: data.seoDescription,
+    alternates: {
+      canonical: `/treatments/therapies/${data.slug}`,
+    },
+    openGraph: {
+      title: `${cleanTitle} | Omshree Sidha Hospital`,
+      description: data.seoDescription,
+      url: `https://www.omshreeayur.com/treatments/therapies/${data.slug}`,
+      ...(data.heroImage
+        ? {
+            images: [
+              {
+                url: data.heroImage,
+                width: 1200,
+                height: 630,
+                alt: data.name,
+              },
+            ],
+          }
+        : {}),
+    },
   };
 }
 
@@ -108,7 +132,7 @@ export default async function TherapyPage({ params }: Props) {
               <FadeIn delay={0.2}>
                 <div className="grid sm:grid-cols-2 gap-8">
                   <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#DBCFA8]">
-                    <h3 className="font-heading text-xl font-bold mb-3 text-[#66371B]">Why It's Included</h3>
+                    <h3 className="font-heading text-xl font-bold mb-3 text-[#66371B]">Why It&apos;s Included</h3>
                     <p className="text-[#81754B] leading-relaxed text-sm font-light">
                       {data.whyIncluded}
                     </p>

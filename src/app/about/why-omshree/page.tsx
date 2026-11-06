@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ShieldCheck, Leaf, Clock, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Why Choose Omshree | Ayurvedic Hospital in Kerala",
+  title: "Why Choose Us",
   description: "Discover the Omshree difference: GMP certified in-house pharmacy, 140+ years of clinical heritage, and dedicated 24-hour in-patient care in Kerala.",
 };
 
@@ -59,7 +59,7 @@ export default function WhyOmshreePage() {
               </div>
               <h3 className="font-heading text-3xl md:text-4xl font-normal text-[#66371B] mb-5">ISO 9001:2015 Certified</h3>
               <p className="text-[#81754B] text-base md:text-lg leading-relaxed font-light">
-                Our hospital operations are officially ISO 9001:2015 certified for "Providing Healing, Detox, Rejuvenation Treatments and Ayurvedic Products." This reflects our commitment to maintaining rigorous hygiene, quality control, and procedural standards in a traditional medical setting.
+                Our hospital operations are officially ISO 9001:2015 certified for &ldquo;Providing Healing, Detox, Rejuvenation Treatments and Ayurvedic Products.&rdquo; This reflects our commitment to maintaining rigorous hygiene, quality control, and procedural standards in a traditional medical setting.
               </p>
             </div>
 

@@ -20,9 +20,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getCategoryBySlug(categorySlug);
   if (!category) return { title: "Category Not Found" };
   
+  const cleanTitle = (category.metaTitle || category.name || '')
+    .replace(/\s*\|\s*omshree\s*$/i, '')
+    .trim();
+
   return {
-    title: category.metaTitle,
+    title: cleanTitle,
     description: category.metaDescription,
+    alternates: {
+      canonical: `/conditions/${category.slug}`,
+    },
+    openGraph: {
+      title: `${cleanTitle} | Omshree Sidha Hospital`,
+      description: category.metaDescription,
+      url: `https://www.omshreeayur.com/conditions/${category.slug}`,
+    },
   };
 }
 

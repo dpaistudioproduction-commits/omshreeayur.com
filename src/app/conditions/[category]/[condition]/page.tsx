@@ -24,7 +24,7 @@ const getConditionData = (categorySlug: string, conditionSlug: string): { condit
     slug: condSummary.slug,
     name: condSummary.name,
     categoryId: category.slug,
-    metaTitle: `Ayurvedic Treatment for ${condSummary.name} in Kerala | Omshree`,
+    metaTitle: `Ayurvedic Treatment for ${condSummary.name}`,
     metaDescription: `Discover Omshree Sidha Hospital's authentic Ayurvedic approach to managing ${condSummary.name} in Kerala, India.`,
     heroDescription: condSummary.heroDescription,
     quickAnswer: `${condSummary.name} is managed in Ayurveda by identifying the root Dosha and Agni imbalances. At Omshree Sidha Hospital, clinical care is tailored to the individual's constitution after a detailed physical assessment.`,
@@ -59,10 +59,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category: categorySlug, condition: conditionSlug } = await params;
   const { condition } = getConditionData(categorySlug, conditionSlug);
   if (!condition) return { title: "Condition Not Found" };
+
+  const cleanTitle = (condition.metaTitle || condition.name || '')
+    .replace(/\s*\|\s*omshree\s*$/i, '')
+    .trim();
   
   return {
-    title: condition.metaTitle,
+    title: cleanTitle,
     description: condition.metaDescription,
+    alternates: {
+      canonical: `/conditions/${categorySlug}/${conditionSlug}`,
+    },
+    openGraph: {
+      title: `${cleanTitle} | Omshree Sidha Hospital`,
+      description: condition.metaDescription,
+      url: `https://www.omshreeayur.com/conditions/${categorySlug}/${conditionSlug}`,
+    },
   };
 }
 
@@ -211,7 +223,7 @@ export default async function ConditionPage({ params }: Props) {
             {/* SECTION 5: OMSHREE'S APPROACH */}
             <section id="approach">
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#66371B] mb-6">
-                Omshree's Approach to Care
+                Omshree&apos;s Approach to Care
               </h2>
               <div className="text-[#81754B] text-lg leading-relaxed font-light space-y-4 mb-8">
                 <p>{condition.omshreeApproach}</p>

@@ -6,7 +6,7 @@ export const cardiovascularCategory: ConditionCategory = {
   name: "Cardiovascular Health",
   description: "Traditional Ayurvedic management for heart health, circulation, and vascular function. We focus on identifying root imbalances in Dosha and Agni to support cardiovascular vitality.",
   ayurvedicPerspective: "In Ayurveda, the heart (Hridaya) is the seat of Ojas (vitality) and Prana (life force). Cardiovascular conditions are often viewed as a result of Vata and Pitta imbalances, accompanied by the accumulation of Ama (toxins) in the Rasa (plasma) and Rakta (blood) dhatus. Treatment focuses on clearing the channels (Srotas), strengthening the heart muscle, and restoring digestive fire (Agni).",
-  metaTitle: "Ayurvedic Treatment for Cardiovascular Conditions in Kerala | Omshree",
+  metaTitle: "Cardiovascular Health & Ayurvedic Care",
   metaDescription: "Explore Omshree Sidha Hospital's authentic Ayurvedic approach to cardiovascular health, including Low Ejection Fraction, Heart Blocks, and Blood Pressure.",
   conditions: [
     {
@@ -56,7 +56,7 @@ export const liverCategory: ConditionCategory = {
   name: "Liver Health",
   description: "Ayurvedic care for liver conditions, focusing on detoxification, metabolic balance, and restoring healthy liver function naturally.",
   ayurvedicPerspective: "The liver (Yakrit) is the seat of Pitta dosha and Agni (metabolic fire). Liver disorders often stem from excess Pitta and accumulation of Ama (toxins), leading to inflammation and impaired digestion. Ayurvedic treatment focuses on cooling and pacifying Pitta, clearing Ama, and rejuvenating the liver tissues (Yakrit Poshana).",
-  metaTitle: "Ayurvedic Treatment for Liver Conditions in Kerala | Omshree",
+  metaTitle: "Liver Health & Ayurvedic Treatments",
   metaDescription: "Discover Omshree Sidha Hospital's Ayurvedic approach to managing Liver conditions such as Fatty Liver, Hepatitis, and Liver Cirrhosis.",
   conditions: [
     {
@@ -96,7 +96,7 @@ export const gastrointestinalCategory: ConditionCategory = {
   name: "Gastrointestinal Health",
   description: "Comprehensive Ayurvedic management for digestive disorders, from acidity and IBS to complex conditions like Crohn's and Colitis.",
   ayurvedicPerspective: "In Ayurveda, digestion is understood through the concept of Agni, or digestive function. When Agni is imbalanced (Manda, Tikshna, or Vishama), it leads to the formation of Ama (toxins), causing gastrointestinal pathology. During consultation, the practitioner considers digestion, appetite, bowel habits and other individual factors while developing a care plan.",
-  metaTitle: "Ayurvedic Treatment for Gastrointestinal Issues in Kerala | Omshree",
+  metaTitle: "Gastrointestinal Health & Ayurvedic Care",
   metaDescription: "Omshree Sidha Hospital provides traditional Ayurvedic treatment for IBS, Crohn's Disease, Ulcerative Colitis, Acidity, Piles, and Fistula in Kerala, India.",
   conditions: [
     {

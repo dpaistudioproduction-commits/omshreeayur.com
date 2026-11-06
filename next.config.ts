@@ -20,6 +20,17 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'omshreeayur.com',
+          },
+        ],
+        destination: 'https://www.omshreeayur.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/about-our-hospital',
         destination: '/about',
         permanent: true,
@@ -62,6 +73,11 @@ const nextConfig: NextConfig = {
       {
         source: '/terms',
         destination: '/terms-and-conditions',
+        permanent: true,
+      },
+      {
+        source: '/conditions/hepatic/liver-cirrhosis',
+        destination: '/conditions/liver/liver-cirrhosis',
         permanent: true,
       },
       {
