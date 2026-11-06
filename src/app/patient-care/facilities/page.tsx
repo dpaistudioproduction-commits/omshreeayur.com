@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CheckCircle2, HeartPulse, Building2, LeafyGreen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hospital Facilities | Omshree Sidha Hospital",
+  title: "Hospital Facilities",
   description: "View the in-patient facilities, treatment rooms, and infrastructure at Omshree Sidha Hospital in Kerala.",
 };
 

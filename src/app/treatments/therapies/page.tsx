@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { therapies } from "@/data/therapies";
 
 export const metadata: Metadata = {
-  title: "Ayurvedic Therapies Directory | Omshree Sidha Hospital",
+  title: "Ayurvedic Therapies Directory",
   description: "A comprehensive guide to the traditional Ayurvedic therapies administered at Omshree Sidha Hospital, including Abhyanga, Kizhi, and Basti.",
 };
 

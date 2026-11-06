@@ -5,7 +5,7 @@ import { DoctorAvatar } from "@/components/brand/DoctorAvatar";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 
 export const metadata: Metadata = {
-  title: "Our Doctors & Specialists | Omshree Sidha Hospital",
+  title: "Our Doctors & Specialists",
   description: "Meet the verified Ayurvedic physicians at Omshree Sidha Hospital, combining traditional lineage with rigorous modern Ayurvedic (BAMS) qualifications.",
 };
 

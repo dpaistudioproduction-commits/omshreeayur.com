@@ -29,19 +29,19 @@ export const metadata: Metadata = {
   description:
     "Discover common migraine triggers, symptoms, and lifestyle tips, and learn how Ayurveda may offer complementary support for migraine management.",
   alternates: {
-    canonical: "https://omshreeayur.com/blog/why-do-i-get-migraines",
+    canonical: "https://www.omshreeayur.com/blog/why-do-i-get-migraines",
   },
   openGraph: {
     title: "Why Do I Get Migraines? Common Triggers and Ayurvedic Solutions",
     description:
       "Discover common migraine triggers, symptoms, and lifestyle tips, and learn how Ayurveda may offer complementary support for migraine management.",
-    url: "https://omshreeayur.com/blog/why-do-i-get-migraines",
+    url: "https://www.omshreeayur.com/blog/why-do-i-get-migraines",
     siteName: "Omshree Sidha Hospital",
     locale: "en_IN",
     type: "article",
     images: [
       {
-        url: "https://omshreeayur.com/images/blog/why-do-i-get-migraines-hero.jpg",
+        url: "https://www.omshreeayur.com/images/blog/why-do-i-get-migraines-hero.jpg",
         width: 1200,
         height: 675,
         alt: "Why Do I Get Migraines? Common Triggers and Ayurvedic Solutions - Omshree Sidha Hospital",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Why Do I Get Migraines? Triggers & Ayurvedic Care",
     description:
       "Discover common migraine triggers, symptoms, and lifestyle tips, and learn how Ayurveda offers personalized, non-invasive support for chronic migraines.",
-    images: ["https://omshreeayur.com/images/blog/why-do-i-get-migraines-hero.jpg"],
+    images: ["https://www.omshreeayur.com/images/blog/why-do-i-get-migraines-hero.jpg"],
   },
 };
 
@@ -63,30 +63,30 @@ export default function MigrainesBlogPage() {
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": "https://omshreeayur.com/blog/why-do-i-get-migraines#article",
+        "@id": "https://www.omshreeayur.com/blog/why-do-i-get-migraines#article",
         "isPartOf": {
           "@type": "WebPage",
-          "@id": "https://omshreeayur.com/blog/why-do-i-get-migraines"
+          "@id": "https://www.omshreeayur.com/blog/why-do-i-get-migraines"
         },
         "headline": "Why Do I Get Migraines? Common Triggers and Ayurvedic Solutions",
         "description": "Discover common migraine triggers, symptoms, and lifestyle tips, and learn how Ayurveda may offer complementary support for migraine management.",
-        "image": "https://omshreeayur.com/images/blog/why-do-i-get-migraines-hero.jpg",
+        "image": "https://www.omshreeayur.com/images/blog/why-do-i-get-migraines-hero.jpg",
         "inLanguage": "en-US",
-        "mainEntityOfPage": "https://omshreeayur.com/blog/why-do-i-get-migraines",
+        "mainEntityOfPage": "https://www.omshreeayur.com/blog/why-do-i-get-migraines",
         "datePublished": "2026-10-25T00:00:00+05:30",
         "dateModified": "2026-10-25T00:00:00+05:30",
         "author": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com"
+          "url": "https://www.omshreeayur.com"
         },
         "publisher": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com",
+          "url": "https://www.omshreeayur.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://omshreeayur.com/icon.png"
+            "url": "https://www.omshreeayur.com/icon.png"
           }
         },
         "about": [
@@ -117,31 +117,31 @@ export default function MigrainesBlogPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://omshreeayur.com/blog/why-do-i-get-migraines#breadcrumb",
+        "@id": "https://www.omshreeayur.com/blog/why-do-i-get-migraines#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://omshreeayur.com/"
+            "item": "https://www.omshreeayur.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://omshreeayur.com/blog"
+            "item": "https://www.omshreeayur.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Why Do I Get Migraines?",
-            "item": "https://omshreeayur.com/blog/why-do-i-get-migraines"
+            "item": "https://www.omshreeayur.com/blog/why-do-i-get-migraines"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://omshreeayur.com/blog/why-do-i-get-migraines#faq",
+        "@id": "https://www.omshreeayur.com/blog/why-do-i-get-migraines#faq",
         "mainEntity": [
           {
             "@type": "Question",

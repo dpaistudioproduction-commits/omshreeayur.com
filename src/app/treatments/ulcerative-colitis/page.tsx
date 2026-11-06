@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "No. 1 Ayurvedic Treatments for Ulcerative Colitis & Acidity in Kerala, India",
     description: "OmShree Sidha Hospital in Kerala offers proven Ayurvedic treatments for ulcerative colitis, acidity, and ulcers. Heal naturally with personalized care and therapies.",
-    url: "https://omshreeayur.com/treatments/ulcerative-colitis",
+    url: "https://www.omshreeayur.com/treatments/ulcerative-colitis",
     images: [
       {
         url: "/images/treatments/ulcerative-colitis.jpg",

@@ -20,12 +20,31 @@ const philosopher = Philosopher({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://omshreeayur.com'),
+  metadataBase: new URL('https://www.omshreeayur.com'),
   title: {
     template: '%s | Omshree Sidha Hospital',
-    default: "Omshree Sidha Hospital | Premium Ayurvedic Cardiac Care",
+    default: "Omshree Sidha Hospital | Multi-Speciality Ayurveda Hospital in Kerala",
   },
-  description: "Specialized Ayurvedic treatments for Heart Diseases, Low EF, Heart Failure, Respiratory, and Gastrointestinal Disorders in Kerala, India.",
+  description: "Authentic multi-speciality Ayurvedic hospital in Vayala, Kottayam, Kerala. Established in 1880, offering specialized inpatient clinical care for cardiovascular, hepatic, gastrointestinal, and chronic ailments.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Omshree Sidha Hospital | Multi-Speciality Ayurveda Hospital in Kerala",
+    description: "Authentic multi-speciality Ayurvedic hospital in Vayala, Kottayam, Kerala. Established in 1880, offering specialized inpatient clinical care for cardiovascular, hepatic, gastrointestinal, and chronic ailments.",
+    url: "https://www.omshreeayur.com",
+    siteName: "Omshree Sidha Hospital",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://www.omshreeayur.com/images/campus/campus-exterior-omshree.webp",
+        width: 1200,
+        height: 630,
+        alt: "Omshree Sidha Hospital Campus Exterior",
+      },
+    ],
+  },
   verification: {
     google: "EW7BB0HEjCQ2ynYA5Fo-oCIdlP1bKY0Ta2apXBpH0fY",
   },

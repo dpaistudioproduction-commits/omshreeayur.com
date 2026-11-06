@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, ArrowRight, CheckCircle2, Activity, HeartPulse, AlertTriangle, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Heart Disease & Blocks | Omshree Sidha Hospital",
+  title: "Heart Disease & Blocks",
   description: "Understanding the difference between coronary artery blockage and electrical heart block. Learn about causes, symptoms, and diagnosis.",
 };
 

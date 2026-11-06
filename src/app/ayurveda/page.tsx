@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Leaf, MapPin, Phone, MessageCircle, AlertCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ayurveda at Omshree Sidha Hospital | Authentic Healing",
+  title: "Traditional Ayurveda & Classical Healing",
   description: "Understand the traditional Ayurvedic approach to health, disease management, and holistic healing at Omshree Sidha Hospital.",
 };
 

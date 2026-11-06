@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://omshreeayur.com';
+  const baseUrl = 'https://www.omshreeayur.com';
 
   const staticRoutes = [
     '', 
@@ -29,8 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/patient-care/tariff',
     '/patient-care/challenging-offer',
     '/blog',
-    '/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function',
-    '/conditions/hepatic/liver-cirrhosis',
     '/testimonials',
     '/products',
     '/products/kafastha',
@@ -110,6 +108,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/can-liver-cirrhosis-be-managed-with-ayurveda`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/low-blood-pressure-treatment`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,

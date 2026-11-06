@@ -19,7 +19,7 @@ export const BRAND_ASSETS = {
     primaryWebp: "/images/logo/logo.webp",
     primarySvg: "/images/logo/logo.svg",
     primaryPng: "/images/logo/logo.png",
-    canonicalUrl: "https://omshreeayur.com/images/logo/logo.webp",
+    canonicalUrl: "https://www.omshreeayur.com/images/logo/logo.webp",
     monogram: "OS",
     alt: "Omshree Sidha Hospital - Ayurvedic Hospital Healing Since 1880 Logo",
   },

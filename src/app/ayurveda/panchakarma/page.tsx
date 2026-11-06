@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Understanding Panchakarma | Omshree Sidha Hospital",
+  title: "Understanding Panchakarma",
   description: "Learn about Panchakarma, the traditional Ayurvedic detoxification therapies, and how they are administered under strict clinical supervision.",
 };
 

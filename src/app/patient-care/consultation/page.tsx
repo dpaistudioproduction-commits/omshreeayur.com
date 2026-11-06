@@ -10,7 +10,7 @@ import {
 import { Stethoscope, FileText, Activity, ClipboardList, ArrowRight, Video, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Book an Ayurvedic Consultation | Omshree Sidha Hospital",
+  title: "Book an Ayurvedic Consultation",
   description: "Begin your healing journey with a professional Ayurvedic consultation at Omshree Sidha Hospital. Available in-person in Kerala or online.",
 };
 

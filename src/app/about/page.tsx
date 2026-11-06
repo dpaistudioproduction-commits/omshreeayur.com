@@ -6,7 +6,7 @@ import { TrustSignals } from "@/components/ui/TrustSignals";
 import { MapPin, ArrowRight, Info, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Omshree Sidha Hospital",
+  title: "About Us",
   description: "Learn about Omshree Sidha Hospital, a premier Ayurvedic institution in Kottayam, Kerala, offering clinical disease management and traditional healing.",
 };
 
@@ -17,8 +17,8 @@ export default function AboutMasterPage() {
     "mainEntity": {
       "@type": "MedicalOrganization",
       "name": "Omshree Sidha Hospital",
-      "url": "https://omshreeayur.com",
-      "logo": "https://omshreeayur.com/images/logo/logo.webp",
+      "url": "https://www.omshreeayur.com",
+      "logo": "https://www.omshreeayur.com/images/logo/logo.webp",
       "description": "An Ayurvedic Hospital providing healing, detox, rejuvenation treatments and Ayurvedic products.",
       "address": {
         "@type": "PostalAddress",

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Info } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hospital History & Heritage | Omshree Sidha Hospital",
+  title: "Hospital History & Heritage",
   description: "Discover the 140+ year heritage of Omshree Sidha Hospital, founded in the 1880s by Sri Kochukutty Vaidhyar in Vayala, Kerala.",
 };
 

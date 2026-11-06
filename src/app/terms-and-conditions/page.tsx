@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Omshree Sidha Hospital",
+  title: "Terms and Conditions",
   description: "Terms and conditions for Omshree Sidha Hospital's website and services.",
 };
 

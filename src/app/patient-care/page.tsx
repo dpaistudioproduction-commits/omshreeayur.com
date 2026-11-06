@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, ClipboardList, Stethoscope, BedDouble, ShieldCheck, CreditCard } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Patient Care Overview | Omshree Sidha Hospital",
+  title: "Patient Care Overview",
   description: "Explore the patient care facilities, treatment journeys, and tariff details at Omshree Sidha Hospital.",
 };
 

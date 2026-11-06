@@ -1,15 +1,12 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Heart,
   Activity,
   ShieldAlert,
   CheckCircle2,
   HelpCircle,
-  ArrowRight,
   Stethoscope,
   Info,
   Clock,
@@ -41,7 +38,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://omshreeayur.com/images/blog/low-blood-pressure-ayurveda-hero.jpg",
+        url: "https://www.omshreeayur.com/images/blog/low-blood-pressure-ayurveda-hero.jpg",
         width: 1200,
         height: 675,
         alt: "Ayurvedic physician checking patient pulse and discussing blood pressure in a traditional Kerala hospital consultation",
@@ -53,7 +50,7 @@ export const metadata: Metadata = {
     title: "Low Blood Pressure: Causes, Symptoms & Ayurvedic Approach",
     description:
       "Explore the causes and symptoms of low blood pressure and understand how Ayurveda approaches personalised care through diet, lifestyle and wellness guidance.",
-    images: ["https://omshreeayur.com/images/blog/low-blood-pressure-ayurveda-hero.jpg"],
+    images: ["https://www.omshreeayur.com/images/blog/low-blood-pressure-ayurveda-hero.jpg"],
   },
 };
 
@@ -858,3 +855,4 @@ export default function LowBloodPressureBlogPage() {
     </div>
   );
 }
+

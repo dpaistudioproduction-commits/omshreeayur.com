@@ -36,7 +36,7 @@ import { AUTHENTIC_PRODUCTS } from "@/lib/product-assets";
 /* ------------------------------------------------------------------ */
 /*  SITE & CONTACT INFORMATION                                        */
 /* ------------------------------------------------------------------ */
-const SITE = "https://omshreeayur.com";
+const SITE = "https://www.omshreeayur.com";
 const PAGE_URL = `${SITE}/products/kafastha`;
 const PHONE_DISPLAY = "+91 98469 92789";
 const PHONE_TEL = "tel:+919846992789";

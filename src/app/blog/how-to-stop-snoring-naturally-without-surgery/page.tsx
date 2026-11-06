@@ -22,19 +22,19 @@ export const metadata: Metadata = {
   description:
     "Learn how to stop snoring naturally without surgery. Explore common snoring causes, natural remedies, lifestyle tips and Ayurvedic approaches for better sleep.",
   alternates: {
-    canonical: "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery",
+    canonical: "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery",
   },
   openGraph: {
     title: "How to Stop Snoring Naturally Without Surgery: Causes, Remedies and Ayurvedic Relief",
     description:
       "Explore non-surgical remedies for snoring: position adjustments, nasal clearance, lifestyle habits, and personalized Ayurvedic therapies like Nasya and Panchakarma.",
-    url: "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery",
+    url: "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery",
     siteName: "Omshree Sidha Hospital",
     locale: "en_IN",
     type: "article",
     images: [
       {
-        url: "https://omshreeayur.com/images/blog/snoring-remedies-hero.jpg",
+        url: "https://www.omshreeayur.com/images/blog/snoring-remedies-hero.jpg",
         width: 1200,
         height: 800,
         alt: "Restful sleep in a tranquil bedroom representing natural relief from snoring",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "How to Stop Snoring Naturally Without Surgery | Ayurveda",
     description:
       "Causes, natural lifestyle remedies, and traditional Ayurvedic perspectives on managing snoring and supporting clearer breathing during sleep.",
-    images: ["https://omshreeayur.com/images/blog/snoring-remedies-hero.jpg"],
+    images: ["https://www.omshreeayur.com/images/blog/snoring-remedies-hero.jpg"],
   },
 };
 
@@ -56,30 +56,30 @@ export default function SnoringBlogPage() {
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery#article",
+        "@id": "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery#article",
         "isPartOf": {
           "@type": "WebPage",
-          "@id": "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery"
+          "@id": "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery"
         },
         "headline": "How to Stop Snoring Naturally Without Surgery: Causes, Remedies and Ayurvedic Relief?",
         "description": "Learn about snoring causes, lifestyle changes, natural remedies and Ayurvedic approaches. Understand when persistent snoring needs medical evaluation.",
-        "image": "https://omshreeayur.com/images/blog/snoring-remedies-hero.jpg",
+        "image": "https://www.omshreeayur.com/images/blog/snoring-remedies-hero.jpg",
         "inLanguage": "en-US",
-        "mainEntityOfPage": "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery",
+        "mainEntityOfPage": "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery",
         "datePublished": "2026-10-15T00:00:00+05:30",
         "dateModified": "2026-10-15T00:00:00+05:30",
         "author": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com"
+          "url": "https://www.omshreeayur.com"
         },
         "publisher": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com",
+          "url": "https://www.omshreeayur.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://omshreeayur.com/icon.png"
+            "url": "https://www.omshreeayur.com/icon.png"
           }
         },
         "about": [
@@ -102,31 +102,31 @@ export default function SnoringBlogPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery#breadcrumb",
+        "@id": "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://omshreeayur.com/"
+            "item": "https://www.omshreeayur.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://omshreeayur.com/blog"
+            "item": "https://www.omshreeayur.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "How to Stop Snoring Naturally Without Surgery",
-            "item": "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery"
+            "item": "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery#faq",
+        "@id": "https://www.omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery#faq",
         "mainEntity": [
           {
             "@type": "Question",

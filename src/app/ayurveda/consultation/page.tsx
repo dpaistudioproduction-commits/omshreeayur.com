@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle, ClipboardList, Stethoscope, FileText, UserCheck, Activity, HeartPulse } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "The Ayurvedic Consultation | Omshree Sidha Hospital",
+  title: "The Ayurvedic Consultation",
   description: "Understand the detailed Ayurvedic consultation process at Omshree Sidha Hospital, from initial enquiry to personalized treatment planning.",
 };
 

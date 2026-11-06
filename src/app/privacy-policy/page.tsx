@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Omshree Sidha Hospital",
+  title: "Privacy Policy",
   description: "Privacy policy and patient data protection disclosures for Omshree Sidha Hospital.",
 };
 
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="font-heading text-2xl font-bold text-[#66371B] mb-4">1. Overview & Scope</h2>
               <p>
-                Omshree Sidha Hospital (&ldquo;the Hospital&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), established in 1880 and situated at Vayala P.O., Kottayam, Kerala 686587, is committed to safeguarding the privacy and confidentiality of individuals who visit our website ([https://omshreeayur.com](https://omshreeayur.com)) or communicate with us regarding medical consultations and hospital care.
+                Omshree Sidha Hospital (&ldquo;the Hospital&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), established in 1880 and situated at Vayala P.O., Kottayam, Kerala 686587, is committed to safeguarding the privacy and confidentiality of individuals who visit our website ([https://www.omshreeayur.com](https://www.omshreeayur.com)) or communicate with us regarding medical consultations and hospital care.
               </p>
               <p className="mt-3">
                 This Privacy Policy outlines how we collect, process, manage, and protect personal and sensitive medical data in accordance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong> and the <strong>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong>.

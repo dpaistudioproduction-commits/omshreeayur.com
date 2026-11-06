@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Low Ejection Fraction (EF)",
   description: "Advanced Ayurvedic Approach to Low Ejection Fraction at Omshree Sidha Hospital.",
   alternates: {
-    canonical: "https://omshreeayur.com/conditions/cardiovascular/low-ejection-fraction",
+    canonical: "https://www.omshreeayur.com/conditions/cardiovascular/low-ejection-fraction",
   },
 };
 

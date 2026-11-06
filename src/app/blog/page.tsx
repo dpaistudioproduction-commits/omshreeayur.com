@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog | Omshree Sidha Hospital",
+  title: "Blog",
   description: "Read our latest articles and insights on Ayurveda, heart health, migraines, and holistic treatments at Omshree Sidha Hospital.",
 };
 

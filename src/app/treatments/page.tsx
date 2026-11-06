@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Clinical Ayurvedic Treatments & Care",
   description: "Explore Omshree Sidha Hospital's clinical Ayurvedic treatment protocols, designed around individualized assessment, targeted therapies, and long-term care.",
   alternates: {
-    canonical: "https://omshreeayur.com/treatments",
+    canonical: "https://www.omshreeayur.com/treatments",
   },
 };
 

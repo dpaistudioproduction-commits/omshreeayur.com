@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Pause, Play, MessageCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,22 +27,36 @@ interface SlideData {
 
 const HERO_SLIDES: SlideData[] = [
   {
-    id: "slide-dhara",
+    id: "slide-hospital",
     number: "01",
+    theme: "The Hospital",
+    tag: "A Multi Speciality Ayurveda Hospital & Research Centre",
+    title: "Omshree Sidha Hospital: Multi-Speciality Clinical Ayurveda in Kerala",
+    subtitle: "A licensed, clinical Ayurvedic institution in Vayala, Kerala with 24-hour resident doctor supervision, GMP-certified pharmacy, and dedicated departments for cardiovascular, hepatic, gastrointestinal, and chronic diseases.",
+    imageSrc: "/images/hospital/banner.png",
+    imageAlt: "Omshree Sidha Hospital Campus and Clinical Environment in Kerala",
+    primaryCtaText: "Book Consultation",
+    primaryCtaLink: "/contact",
+    secondaryCtaText: "Explore Specialities",
+    secondaryCtaLink: "/treatments",
+  },
+  {
+    id: "slide-dhara",
+    number: "02",
     theme: "Dhara",
     tag: "Classical Panchakarma Therapy",
     title: "Traditional Shirodhara & Deep Nervous Rejuvenation",
     subtitle: "Rooted in authentic Kerala Ayurvedic protocols to restore mental calm, regulate Vata dosha, and support cardiovascular stability.",
     imageSrc: BRAND_ASSETS.therapies.shirodhara,
     imageAlt: "Authentic Shirodhara Ayurvedic Therapy at Omshree Sidha Hospital Kerala",
-    primaryCtaText: "Book a Consultation",
-    primaryCtaLink: "/contact",
-    secondaryCtaText: "Explore Therapies",
-    secondaryCtaLink: "/treatments/therapies",
+    primaryCtaText: "Explore Therapies",
+    primaryCtaLink: "/treatments/therapies",
+    secondaryCtaText: "Book Consultation",
+    secondaryCtaLink: "/contact",
   },
   {
     id: "slide-ayurveda",
-    number: "02",
+    number: "03",
     theme: "Ayurveda",
     tag: "140+ Years Lineage • Healing Since 1880",
     title: "Ancient Kerala Healing Heritage for Modern Chronic Care",
@@ -53,20 +67,6 @@ const HERO_SLIDES: SlideData[] = [
     primaryCtaLink: "/about/history",
     secondaryCtaText: "Why Choose Us",
     secondaryCtaLink: "/about/why-omshree",
-  },
-  {
-    id: "slide-hospital",
-    number: "03",
-    theme: "The Hospital",
-    tag: "A Multi Speciality Ayurveda Hospital & Research Centre",
-    title: "Omshree Sidha Hospital: Clinical Care, Inpatient Comfort",
-    subtitle: "A dedicated hospital in Vayala, Kerala with 24-hour resident doctor supervision, GMP-certified pharmacy, and tailored Panchakarma regimens.",
-    imageSrc: "/images/hospital/banner.png",
-    imageAlt: "Omshree Sidha Hospital Campus and Clinical Environment",
-    primaryCtaText: "About Our Hospital",
-    primaryCtaLink: "/about",
-    secondaryCtaText: "In-Patient Facilities",
-    secondaryCtaLink: "/patient-care/facilities",
   },
   {
     id: "slide-heart",
@@ -144,9 +144,11 @@ export function HeroSlider() {
       });
     }, stepMs);
 
+    const timer = timerRef.current;
+    const progressInterval = progressIntervalRef.current;
     return () => {
-      if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
-      if (timerRef.current) clearTimeout(timerRef.current);
+      if (progressInterval) clearInterval(progressInterval);
+      if (timer) clearTimeout(timer);
     };
   }, [isPlaying, nextSlide, currentSlide]);
 

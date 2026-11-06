@@ -80,7 +80,7 @@ export default async function ConditionPage({ params }: Props) {
     "@graph": [
       {
         "@type": "MedicalWebPage",
-        "@id": `https://omshreeayur.com/conditions/${category.slug}/${condition.slug}#webpage`,
+        "@id": `https://www.omshreeayur.com/conditions/${category.slug}/${condition.slug}#webpage`,
         "name": condition.metaTitle,
         "description": condition.metaDescription,
         "about": {
@@ -88,16 +88,16 @@ export default async function ConditionPage({ params }: Props) {
           "name": condition.name
         },
         "publisher": {
-          "@id": "https://omshreeayur.com/#organization"
+          "@id": "https://www.omshreeayur.com/#organization"
         }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://omshreeayur.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Health Conditions", "item": "https://omshreeayur.com/conditions" },
-          { "@type": "ListItem", "position": 3, "name": category.name, "item": `https://omshreeayur.com/conditions/${category.slug}` },
-          { "@type": "ListItem", "position": 4, "name": condition.name, "item": `https://omshreeayur.com/conditions/${category.slug}/${condition.slug}` }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.omshreeayur.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Health Conditions", "item": "https://www.omshreeayur.com/conditions" },
+          { "@type": "ListItem", "position": 3, "name": category.name, "item": `https://www.omshreeayur.com/conditions/${category.slug}` },
+          { "@type": "ListItem", "position": 4, "name": condition.name, "item": `https://www.omshreeayur.com/conditions/${category.slug}/${condition.slug}` }
         ]
       },
       ...(condition.faqs && condition.faqs.length > 0 ? [{

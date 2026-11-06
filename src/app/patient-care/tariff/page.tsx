@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Tariff & Pricing | Omshree Sidha Hospital",
+  title: "Tariff & Pricing",
   description: "View the transparent pricing and tariff structure for Ayurvedic hospital accommodation and standard treatments at Omshree Sidha Hospital, Kerala.",
 };
 

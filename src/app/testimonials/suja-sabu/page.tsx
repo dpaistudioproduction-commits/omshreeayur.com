@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Migraine Treatment Success Story | Suja Sabu | Omshree Sidha Hospital",
+  title: "Migraine Treatment Success Story | Suja Sabu",
   description: "Watch Suja Sabu's inspiring video testimonial about her successful Ayurvedic treatment for migraine at Omshree Sidha Hospital.",
 };
 

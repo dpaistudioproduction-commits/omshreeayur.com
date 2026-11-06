@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { HeartHandshake, FileText, CheckCircle2 } from "lucide-react";
+import { HeartHandshake, CheckCircle2 } from "lucide-react";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
-  title: "Asthma Treatment - Money Back Guarantee | Omshree Sidha Hospital",
+  title: "Asthma Treatment - Money Back Guarantee",
   description: "We are the only one hospital in the world providing money back guaranteed treatment for Asthma. More than 80% patients can leave the inhaler in the very first day.",
   alternates: {
     canonical: "/treatments/asthma-treatment",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Asthma Treatment - Money Back Guarantee | Omshree Sidha Hospital",
     description: "We are the only one hospital in the world providing money back guaranteed treatment for Asthma.",
-    url: "https://omshreeayur.com/treatments/asthma-treatment",
+    url: "https://www.omshreeayur.com/treatments/asthma-treatment",
     images: [
       {
         url: "/images/treatments/asthma/lungs1.jpg",

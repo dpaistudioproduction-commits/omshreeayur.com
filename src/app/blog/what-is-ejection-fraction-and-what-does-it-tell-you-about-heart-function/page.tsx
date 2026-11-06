@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
   description: "Learn what ejection fraction means for your heart function. Discover the NYHA classification, causes, symptoms, and natural ways to improve low EF.",
   alternates: {
-    canonical: "https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function",
+    canonical: "https://www.omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function",
   },
 };
 
@@ -21,7 +21,7 @@ export default function EjectionFractionBlogPage() {
         "@type": "BlogPosting",
         "headline": "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
         "description": "Learn what ejection fraction means for your heart function. Discover the NYHA classification, causes, symptoms, and natural ways to improve low EF.",
-        "image": "https://omshreeayur.com/images/blog/ef-featured-image.png",
+        "image": "https://www.omshreeayur.com/images/blog/ef-featured-image.png",
         "author": {
           "@type": "Organization",
           "name": "Omshree Sidha Hospital"
@@ -31,12 +31,12 @@ export default function EjectionFractionBlogPage() {
           "name": "Omshree Sidha Hospital",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://omshreeayur.com/icon.png"
+            "url": "https://www.omshreeayur.com/icon.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function"
+          "@id": "https://www.omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function"
         }
       },
       {
@@ -46,19 +46,19 @@ export default function EjectionFractionBlogPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://omshreeayur.com/"
+            "item": "https://www.omshreeayur.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://omshreeayur.com/blog"
+            "item": "https://www.omshreeayur.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "What Is Ejection Fraction and What Does It Tell You About Heart Function?",
-            "item": "https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function"
+            "item": "https://www.omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function"
           }
         ]
       }

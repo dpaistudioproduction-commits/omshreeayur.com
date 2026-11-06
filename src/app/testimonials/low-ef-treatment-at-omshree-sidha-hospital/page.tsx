@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Quote, UserCircle, PlayCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Patient Testimonial: Low Ejection Fraction | Omshree Sidha Hospital",
+  title: "Patient Testimonial: Low Ejection Fraction",
   description: "Read about our patient's journey and successful recovery from Low Ejection Fraction (Low EF) with our Ayurvedic treatments.",
 };
 

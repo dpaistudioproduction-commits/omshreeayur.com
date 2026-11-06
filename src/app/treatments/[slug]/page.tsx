@@ -17,7 +17,7 @@ async function getTreatmentData(slug: string): Promise<TreatmentData | null> {
     const filePath = path.join(process.cwd(), 'src', 'data', 'treatments', `${slug}.json`);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(fileContents);
-  } catch (error) {
+  } catch {
     return null;
   }
 }
@@ -34,16 +34,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Treatment Not Found" };
   }
 
+  const cleanTitle = (data.seoTitle || data.name || '')
+    .replace(/\s*\|\s*omshree\s+sidha\s+hospital\s*$/i, '')
+    .trim();
+
   return {
-    title: data.seoTitle,
+    title: cleanTitle,
     description: data.seoDescription,
     alternates: {
       canonical: `/treatments/${data.slug}`,
     },
     openGraph: {
-      title: data.seoTitle,
+      title: `${cleanTitle} | Omshree Sidha Hospital`,
       description: data.seoDescription,
-      url: `https://omshreeayur.com/treatments/${data.slug}`,
+      url: `https://www.omshreeayur.com/treatments/${data.slug}`,
       ...(data.hero?.backgroundImageUrl
         ? {
             images: [
@@ -80,7 +84,7 @@ export default async function TreatmentPage({ params }: Props) {
 
   return (
     <div className="flex flex-col w-full bg-[#FDFBF7] font-sans">
-      <SchemaMarkup schema={generateTreatmentSchema(data as any)} />
+      <SchemaMarkup schema={generateTreatmentSchema(data)} />
 
       {/* ── 1. Hero Section ── matches Asthma master template exactly ── */}
       <section className="bg-[#FDFBF7] pt-32 pb-16 md:pb-24">

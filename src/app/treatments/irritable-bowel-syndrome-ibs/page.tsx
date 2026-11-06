@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { HeartHandshake, FileText, CheckCircle2 } from "lucide-react";
+import { HeartHandshake, CheckCircle2 } from "lucide-react";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
-  title: "Irritable bowel syndrome (IBS) - Money Back Guarantee | Omshree Sidha Hospital",
+  title: "Irritable bowel syndrome (IBS) - Money Back Guarantee",
   description: "We are the only one hospital in the world, providing money back guaranteed treatment for IBS.",
   alternates: {
     canonical: "/treatments/irritable-bowel-syndrome-ibs",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Irritable bowel syndrome (IBS) | Omshree Sidha Hospital",
     description: "We are the only one hospital in the world, providing money back guaranteed treatment for IBS.",
-    url: "https://omshreeayur.com/treatments/irritable-bowel-syndrome-ibs",
+    url: "https://www.omshreeayur.com/treatments/irritable-bowel-syndrome-ibs",
     images: [
       {
         url: "/images/treatments/ibs.jpg",

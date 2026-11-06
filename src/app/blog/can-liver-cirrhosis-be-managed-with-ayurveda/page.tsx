@@ -22,19 +22,19 @@ export const metadata: Metadata = {
   description:
     "Learn how Ayurveda may support liver cirrhosis management through personalised diet, lifestyle and traditional therapies alongside medical care.",
   alternates: {
-    canonical: "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda",
+    canonical: "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda",
   },
   openGraph: {
     title: "Can Liver Cirrhosis Be Managed with Ayurveda? Understanding the Approach",
     description:
       "Explore how Ayurveda approaches liver health: dietary adjustments, hepatoprotective therapies, lifestyle support, and essential medical co-management.",
-    url: "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda",
+    url: "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda",
     siteName: "Omshree Sidha Hospital",
     locale: "en_IN",
     type: "article",
     images: [
       {
-        url: "https://omshreeayur.com/images/blog/liver-cirrhosis-ayurveda-hero.jpg",
+        url: "https://www.omshreeayur.com/images/blog/liver-cirrhosis-ayurveda-hero.jpg",
         width: 1200,
         height: 800,
         alt: "Ayurvedic treatment for liver cirrhosis with traditional medicinal herbs and hepatoprotective care",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Ayurvedic Treatment for Liver Cirrhosis | Omshree Ayurveda",
     description:
       "Learn how Ayurveda approaches liver cirrhosis through individualized diet, lifestyle modifications, and traditional therapies alongside medical care.",
-    images: ["https://omshreeayur.com/images/blog/liver-cirrhosis-ayurveda-hero.jpg"],
+    images: ["https://www.omshreeayur.com/images/blog/liver-cirrhosis-ayurveda-hero.jpg"],
   },
 };
 
@@ -56,30 +56,30 @@ export default function LiverCirrhosisBlogPage() {
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda#article",
+        "@id": "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda#article",
         "isPartOf": {
           "@type": "WebPage",
-          "@id": "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda"
+          "@id": "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda"
         },
         "headline": "Can Liver Cirrhosis Be Managed with Ayurveda? Understanding the Approach",
         "description": "Learn how Ayurveda may support liver cirrhosis management through personalised diet, lifestyle and traditional therapies alongside medical care.",
-        "image": "https://omshreeayur.com/images/blog/liver-cirrhosis-ayurveda-hero.jpg",
+        "image": "https://www.omshreeayur.com/images/blog/liver-cirrhosis-ayurveda-hero.jpg",
         "inLanguage": "en-US",
-        "mainEntityOfPage": "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda",
+        "mainEntityOfPage": "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda",
         "datePublished": "2026-10-15T00:00:00+05:30",
         "dateModified": "2026-10-15T00:00:00+05:30",
         "author": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com"
+          "url": "https://www.omshreeayur.com"
         },
         "publisher": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com",
+          "url": "https://www.omshreeayur.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://omshreeayur.com/icon.png"
+            "url": "https://www.omshreeayur.com/icon.png"
           }
         },
         "about": [
@@ -102,31 +102,31 @@ export default function LiverCirrhosisBlogPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda#breadcrumb",
+        "@id": "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://omshreeayur.com/"
+            "item": "https://www.omshreeayur.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://omshreeayur.com/blog"
+            "item": "https://www.omshreeayur.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Can Liver Cirrhosis Be Managed with Ayurveda?",
-            "item": "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda"
+            "item": "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda#faq",
+        "@id": "https://www.omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda#faq",
         "mainEntity": [
           {
             "@type": "Question",

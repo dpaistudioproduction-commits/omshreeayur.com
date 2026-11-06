@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { HeartHandshake, FileText, CheckCircle2 } from "lucide-react";
+import { HeartHandshake, CheckCircle2 } from "lucide-react";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
-  title: "Liver Cirrhosis | OmShree Sidha Hospital",
+  title: "Liver Cirrhosis",
   description: "Liver Cirrhosis is the result of advanced Liver disease, characterized by replacement of liver tissues by fibrosis and regenerative nodules.",
   alternates: {
     canonical: "/treatments/liver-cirrhosis",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Liver Cirrhosis | OmShree Sidha Hospital",
     description: "Liver Cirrhosis is the result of advanced Liver disease, characterized by replacement of liver tissues by fibrosis and regenerative nodules.",
-    url: "https://omshreeayur.com/treatments/liver-cirrhosis",
+    url: "https://www.omshreeayur.com/treatments/liver-cirrhosis",
     images: [
       {
         url: "/images/treatments/liver-cirrhosis.jpg",

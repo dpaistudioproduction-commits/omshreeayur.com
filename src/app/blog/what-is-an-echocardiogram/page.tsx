@@ -22,19 +22,19 @@ export const metadata: Metadata = {
   description:
     "Confused by your 2D echo report? Learn how an echocardiogram works, what EF and chamber dimensions mean, and key questions to ask your doctor.",
   alternates: {
-    canonical: "https://omshreeayur.com/blog/what-is-an-echocardiogram",
+    canonical: "https://www.omshreeayur.com/blog/what-is-an-echocardiogram",
   },
   openGraph: {
     title: "What Is an Echocardiogram? A Patient-Friendly Guide to Your Echo Report",
     description:
       "Understand what an echocardiogram is, how it measures ejection fraction (EF), what chamber dimensions mean, and how to read your cardiac ultrasound report.",
-    url: "https://omshreeayur.com/blog/what-is-an-echocardiogram",
+    url: "https://www.omshreeayur.com/blog/what-is-an-echocardiogram",
     siteName: "Omshree Sidha Hospital",
     locale: "en_IN",
     type: "article",
     images: [
       {
-        url: "https://omshreeayur.com/images/blog/echo-procedure-photo.jpg",
+        url: "https://www.omshreeayur.com/images/blog/echo-procedure-photo.jpg",
         width: 1200,
         height: 675,
         alt: "Medical professional performing an echocardiogram ultrasound examination on a patient",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "What Is an Echocardiogram? How to Read Your Echo Report",
     description:
       "A complete patient guide to 2D echocardiography, ejection fraction measurements, heart chamber dimensions, and understanding your test results.",
-    images: ["https://omshreeayur.com/images/blog/echo-procedure-photo.jpg"],
+    images: ["https://www.omshreeayur.com/images/blog/echo-procedure-photo.jpg"],
   },
 };
 
@@ -56,30 +56,30 @@ export default function EchocardiogramBlogPage() {
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": "https://omshreeayur.com/blog/what-is-an-echocardiogram#article",
+        "@id": "https://www.omshreeayur.com/blog/what-is-an-echocardiogram#article",
         "isPartOf": {
           "@type": "WebPage",
-          "@id": "https://omshreeayur.com/blog/what-is-an-echocardiogram"
+          "@id": "https://www.omshreeayur.com/blog/what-is-an-echocardiogram"
         },
         "headline": "What Is an Echocardiogram? A Patient-Friendly Guide to EF, Heart Function and Your Echo Report",
         "description": "A comprehensive patient guide explaining what an echocardiogram is, how cardiac ultrasound works, how ejection fraction (EF) is calculated, and how to understand your echo report findings.",
-        "image": "https://omshreeayur.com/images/blog/echo-procedure-photo.jpg",
+        "image": "https://www.omshreeayur.com/images/blog/echo-procedure-photo.jpg",
         "inLanguage": "en-US",
-        "mainEntityOfPage": "https://omshreeayur.com/blog/what-is-an-echocardiogram",
+        "mainEntityOfPage": "https://www.omshreeayur.com/blog/what-is-an-echocardiogram",
         "datePublished": "2026-10-14T00:00:00+05:30",
         "dateModified": "2026-10-14T00:00:00+05:30",
         "author": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com"
+          "url": "https://www.omshreeayur.com"
         },
         "publisher": {
           "@type": "MedicalOrganization",
           "name": "Omshree Sidha Hospital",
-          "url": "https://omshreeayur.com",
+          "url": "https://www.omshreeayur.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://omshreeayur.com/icon.png"
+            "url": "https://www.omshreeayur.com/icon.png"
           }
         },
         "about": [
@@ -97,31 +97,31 @@ export default function EchocardiogramBlogPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://omshreeayur.com/blog/what-is-an-echocardiogram#breadcrumb",
+        "@id": "https://www.omshreeayur.com/blog/what-is-an-echocardiogram#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://omshreeayur.com/"
+            "item": "https://www.omshreeayur.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://omshreeayur.com/blog"
+            "item": "https://www.omshreeayur.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "What Is an Echocardiogram?",
-            "item": "https://omshreeayur.com/blog/what-is-an-echocardiogram"
+            "item": "https://www.omshreeayur.com/blog/what-is-an-echocardiogram"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://omshreeayur.com/blog/what-is-an-echocardiogram#faq",
+        "@id": "https://www.omshreeayur.com/blog/what-is-an-echocardiogram#faq",
         "mainEntity": [
           {
             "@type": "Question",

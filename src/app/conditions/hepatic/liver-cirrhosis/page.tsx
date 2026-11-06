@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Understanding Liver Cirrhosis and Advanced Hepatic Function",
   description: "Advanced Ayurvedic Approach to Liver Cirrhosis at Omshree Sidha Hospital.",
   alternates: {
-    canonical: "https://omshreeayur.com/conditions/hepatic/liver-cirrhosis",
+    canonical: "https://www.omshreeayur.com/conditions/hepatic/liver-cirrhosis",
   },
 };
 

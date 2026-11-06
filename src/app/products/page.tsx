@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { PharmacyEditorial } from "@/components/editorial/PharmacyEditorial";
 
 export const metadata: Metadata = {
-  title: "Ayurvedic Medicines & Products | Omshree Sidha Hospital",
+  title: "Ayurvedic Medicines & Products",
   description: "Explore our GMP Certified Classical & Patented Ayurvedic Formulations manufactured exclusively in our in-house pharmacy.",
   alternates: {
     canonical: "/products",

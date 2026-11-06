@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Kerala Ayurveda | Omshree Sidha Hospital",
+  title: "Kerala Ayurveda",
   description: "Understand the rich tradition of Kerala Ayurveda, its clinical environment, and why patients travel to Kottayam for authentic healing.",
 };
 

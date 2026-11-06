@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Plane, Calendar, Stethoscope, BedDouble, ArrowRight, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "International Patients | Omshree Sidha Hospital",
+  title: "International Patients",
   description: "A complete guide for international patients seeking authentic Ayurvedic treatment at Omshree Sidha Hospital in Kerala, India.",
 };
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { HeartHandshake, FileText, CheckCircle2 } from "lucide-react";
+import { HeartHandshake, CheckCircle2 } from "lucide-react";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Effective Ayurvedic Medicine & Treatment for Crohn’s Disease in Kerala, India",
     description: "OmShree Sidha Hospital offers specialized Ayurvedic treatment and medicine for Crohn’s disease, focusing on holistic care and long-term relief from digestive issues.",
-    url: "https://omshreeayur.com/treatments/crohns-disease-inflammatory-bowel-disease-ibd",
+    url: "https://www.omshreeayur.com/treatments/crohns-disease-inflammatory-bowel-disease-ibd",
     images: [
       {
         url: "/images/treatments/crohns-disease.jpg",

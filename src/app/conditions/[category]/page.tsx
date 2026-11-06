@@ -39,9 +39,9 @@ export default async function CategoryPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://omshreeayur.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Health Conditions", "item": "https://omshreeayur.com/conditions" },
-      { "@type": "ListItem", "position": 3, "name": category.name, "item": `https://omshreeayur.com/conditions/${category.slug}` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.omshreeayur.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Health Conditions", "item": "https://www.omshreeayur.com/conditions" },
+      { "@type": "ListItem", "position": 3, "name": category.name, "item": `https://www.omshreeayur.com/conditions/${category.slug}` }
     ]
   };
 

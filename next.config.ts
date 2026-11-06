@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'omshreeayur.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.omshreeayur.com',
       }
     ],
   },

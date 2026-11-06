@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { HeartHandshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Wellness Ayurvedic Treatments - OmShree Sidha Hospital",
+  title: "Wellness Ayurvedic Treatments",
   description: "Omshree Sidha Hospital offers wellness Ayurvedic treatments including detoxification, rejuvenation, stress relief, skin care, and programs for obesity and diabetes.",
   alternates: {
     canonical: "/treatments/wellness-ayurvedic-treatments",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wellness Ayurvedic Treatments - OmShree Sidha Hospital",
     description: "Omshree Sidha Hospital offers wellness Ayurvedic treatments including detoxification, rejuvenation, stress relief, skin care, and programs for obesity and diabetes.",
-    url: "https://omshreeayur.com/treatments/wellness-ayurvedic-treatments",
+    url: "https://www.omshreeayur.com/treatments/wellness-ayurvedic-treatments",
     images: [
       {
         url: "/images/treatments/wellness-ayurvedic-treatments.jpg",

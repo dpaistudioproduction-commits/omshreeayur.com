@@ -1,71 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  ShieldCheck, 
-  MapPin, 
-  Clock, 
-  Award, 
-  ArrowRight, 
-  Phone, 
-  MessageCircle, 
-  Sparkles, 
-  CheckCircle2, 
-  HeartHandshake, 
-  Building2, 
-  Stethoscope, 
-  FlaskConical, 
-  FileCheck, 
-  Plane, 
-  HelpCircle,
-  CalendarCheck
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HeroSlider } from "@/components/home/HeroSlider";
 import { TrustSignals } from "@/components/ui/TrustSignals";
 import { SectionHeading } from "@/components/editorial/SectionHeading";
 import { SpecialityList } from "@/components/editorial/SpecialityList";
-import { DoctorEditorialCard } from "@/components/editorial/DoctorEditorialCard";
 import { PharmacyEditorial } from "@/components/editorial/PharmacyEditorial";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 
 export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalOrganization",
-        "@id": "https://omshreeayur.com/#organization",
-        "name": "Omshree Sidha Hospital",
-        "alternateName": "Omshree Ayurvedic Hospital",
-        "url": "https://omshreeayur.com",
-        "logo": "https://omshreeayur.com/images/logo/logo.webp",
-        "description": "Multi-speciality Ayurvedic Hospital & Research Centre in Vayala, Kottayam, Kerala. Established in 1880, specializing in cardiovascular, hepatic, gastrointestinal, and chronic disease management.",
-        "foundingDate": "1880",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Vayala P.O.",
-          "addressLocality": "Kottayam",
-          "addressRegion": "Kerala",
-          "postalCode": "686587",
-          "addressCountry": "IN"
-        },
-        "telephone": ["+919846992789", "+914822229434", "+914822229435"],
-        "medicalSpecialty": [
-          "Ayurvedic Cardiovascular Medicine",
-          "Hepatic and Liver Care",
-          "Gastrointestinal Medicine",
-          "Panchakarma Shodhana"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://omshreeayur.com/#website",
-        "url": "https://omshreeayur.com",
-        "name": "Omshree Sidha Hospital",
-        "publisher": { "@id": "https://omshreeayur.com/#organization" }
-      }
-    ]
+    "@type": "WebSite",
+    "@id": "https://www.omshreeayur.com/#website",
+    "url": "https://www.omshreeayur.com",
+    "name": "Omshree Sidha Hospital",
+    "description": "Multi-speciality Ayurvedic Hospital in Vayala, Kottayam, Kerala. Specialized in cardiac care, liver disorders, gastrointestinal conditions, and classical Panchakarma.",
+    "publisher": { "@id": "https://www.omshreeayur.com/#organization" }
   };
 
   return (
@@ -137,7 +90,7 @@ export default function HomePage() {
               <div className="bg-[#E3D8C1]/40 border-l-4 border-[#B4833D] p-5 sm:p-6 rounded-r-2xl">
                 <p className="text-sm sm:text-base text-[#66371B] leading-relaxed italic">
                   <span className="font-bold mr-1">Note on terminology:</span> 
-                  While our heritage institution bears the proper family brand name "Sidha", we practice exclusively the classical medical system of Kerala Ayurveda.
+                  While our heritage institution bears the proper family brand name &ldquo;Sidha&rdquo;, we practice exclusively the classical medical system of Kerala Ayurveda.
                 </p>
               </div>
 
@@ -417,7 +370,7 @@ export default function HomePage() {
                   title: "Discharge & Follow-Up",
                   description: "Post-discharge medicine regimen, lifestyle guidelines, and ongoing tele-consultation support.",
                 },
-              ].map((item, index) => (
+              ].map((item) => (
                 <div key={item.step} className="relative flex flex-col items-center text-center group">
                   {/* Step Node */}
                   <div className="w-20 h-20 rounded-full bg-white border border-[#DBCFA8] text-[#B4833D] font-heading text-2xl font-light flex items-center justify-center shadow-sm mb-8 relative z-10 group-hover:bg-[#66371B] group-hover:text-white group-hover:border-[#66371B] transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PlayCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Patient Testimonials & Videos | Omshree Sidha Hospital",
+  title: "Patient Testimonials & Videos",
   description: "Watch video testimonials and learn about our Ayurvedic treatments at Omshree Sidha Hospital.",
 };
 

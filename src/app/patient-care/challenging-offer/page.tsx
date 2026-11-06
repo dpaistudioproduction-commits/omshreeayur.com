@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ShieldAlert, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "The Challenging Offer | Omshree Sidha Hospital",
+  title: "The Challenging Offer",
   description: "Read the terms and conditions of Omshree Sidha Hospital's results-based 'Challenging Offer' for select chronic conditions.",
 };
 
