@@ -32,6 +32,8 @@ export interface RazorpayCheckoutButtonProps {
   }) => void;
   onError?: (errorMessage: string) => void;
   onCancel?: () => void;
+  onBeforePayment?: () => boolean | Promise<boolean>;
+  disabled?: boolean;
 }
 
 export function loadRazorpayScript(): Promise<boolean> {
@@ -67,6 +69,8 @@ export default function RazorpayCheckoutButton({
   onSuccess,
   onError,
   onCancel,
+  onBeforePayment,
+  disabled = false,
 }: RazorpayCheckoutButtonProps) {
   const [loading, setLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -81,6 +85,13 @@ export default function RazorpayCheckoutButton({
 
   const handlePayment = async () => {
     try {
+      if (onBeforePayment) {
+        const canProceed = await onBeforePayment();
+        if (!canProceed) {
+          return;
+        }
+      }
+
       setLoading(true);
       setErrorMessage(null);
       setStatusMessage("Preparing secure checkout...");
@@ -170,6 +181,12 @@ export default function RazorpayCheckoutButton({
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
+                customerDetails: {
+                  ...notes,
+                  name: prefill?.name,
+                  email: prefill?.email,
+                  contact: prefill?.contact,
+                },
               }),
             });
 
@@ -251,7 +268,7 @@ export default function RazorpayCheckoutButton({
       <button
         type="button"
         onClick={handlePayment}
-        disabled={loading}
+        disabled={loading || disabled}
         className={
           className ||
           "w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#517B32] hover:bg-[#3D5C26] text-white px-7 py-4 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"

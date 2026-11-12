@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, Stethoscope, CheckCircle2, Sparkles, ShieldCheck } from "lucide-react";
-import RazorpayCheckoutButton from "./RazorpayCheckoutButton";
+import Link from "next/link";
+import { MessageCircle, Stethoscope, CheckCircle2, Sparkles, ShieldCheck, CreditCard } from "lucide-react";
+
 
 export interface PackOption {
   id: string;
@@ -116,14 +117,20 @@ export default function KafasthaPackSelector({
 
       {/* Payment & Order CTAs */}
       <div className="space-y-3">
-        {/* Razorpay Online Instant Checkout */}
-        <RazorpayCheckoutButton
-          amount={selectedPack.price * 100} // paise
-          productName={`Kafastha Granules (${selectedPack.size})`}
-          productDescription={`Omshree Sidha Hospital Pharmacy Direct Dispatch (${selectedPack.size})`}
-          buttonText={`Pay ₹${selectedPack.price} Online via Razorpay`}
-          className="w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#213714] text-white hover:bg-[#3D5C26] px-6 py-4 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all"
-        />
+        {/* Razorpay Online Instant Checkout -> Secure Checkout with Address */}
+        <div>
+          <Link
+            href={`/checkout?pack=${selectedPack.id}`}
+            className="w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#213714] text-white hover:bg-[#3D5C26] px-6 py-4 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all"
+          >
+            <CreditCard className="w-5 h-5 text-[#B4833D]" />
+            <span>Pay ₹{selectedPack.price} Online via Razorpay</span>
+          </Link>
+          <p className="text-[11px] text-center text-[#81754B] flex items-center justify-center gap-1.5 pt-1.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#517B32]" />
+            <span>Secure Checkout • Enter Name, Phone &amp; Delivery Address on next step</span>
+          </p>
+        </div>
 
         {/* WhatsApp Buy & Doctor Consultation */}
         <div className="flex flex-col sm:flex-row gap-2.5">

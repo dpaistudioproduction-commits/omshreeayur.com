@@ -14,6 +14,7 @@ export interface ProductItem {
   description: string;
   therapeuticFocus: string;
   patentStatus?: string;
+  badge?: "Patented" | "Classic" | "Proprietary" | string;
   isAuthenticAsset: boolean;
   prescriptionOnly: boolean;
   /** Optional route to a dedicated product page */
@@ -30,18 +31,20 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     description: "Specialized Ayurvedic bronchial herbal formulation prepared from fresh botanicals in our Vayala medicinal gardens to support respiratory function.",
     therapeuticFocus: "Bronchial soothing, chronic cough management, and Pranavaha Srotas balance.",
     patentStatus: "Government of India Patented Innovation",
+    badge: "Patented",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },
   {
     id: "gandha",
-    name: "Gandha Rasayana",
-    category: "Rasayana",
-    categoryLabel: "Cellular Rejuvenation & Rasayana",
+    name: "Gandha Thailam",
+    category: "Classical",
+    categoryLabel: "Classical Medicated Oil & Bone Care",
     image: "/images/products/gandha.png",
-    description: "Classical mineral-herbal purified formulation processed through traditional Bhavana techniques for metabolic correction and deep tissue recovery.",
-    therapeuticFocus: "Cellular vitality, chronic inflammation management, and tissue purification.",
-    patentStatus: "Classical GMP Certified Preparation",
+    description: "Time-tested classical Ayurvedic medicated oil formulation renowned for bone fracture recovery, joint strength, and ligament rejuvenation.",
+    therapeuticFocus: "Bone healing, joint strength, ligament support, and Vata-pacifying rehabilitation.",
+    patentStatus: "Classical Lineage Formulation",
+    badge: "Classic",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },
@@ -55,6 +58,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     description: "Targeted Ayurvedic compound formulated under Sri M.J. Jose to alleviate stubborn mucus accumulation and balance respiratory Agni.",
     therapeuticFocus: "Kapha dosha pacification, chest congestion, and airway clearance.",
     patentStatus: "Proprietary In-House Clinical Regimen",
+    badge: "Patented",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },
@@ -67,6 +71,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     description: "Nutrient-dense lipid and herbal decoction formulated to promote Dhatu Poshana (tissue nourishment) during in-patient chronic recovery.",
     therapeuticFocus: "Systemic rejuvenation, chronic fatigue, and post-illness convalescence.",
     patentStatus: "Classical Lineage Formulation",
+    badge: "Classic",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },
@@ -79,6 +84,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     description: "Hepatoprotective and blood-cleansing herbal elixir developed to eliminate Ama (accumulated toxins) and support liver enzyme balance.",
     therapeuticFocus: "Liver detoxification, lipid metabolic balance, and digestive regulation.",
     patentStatus: "Government of India Patented Innovation",
+    badge: "Patented",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },
@@ -91,6 +97,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     description: "Herbal dermatological formulation designed to pacify Rakta and Pitta doshas in chronic skin conditions like psoriasis and eczema.",
     therapeuticFocus: "Rakta Dhatu purification, skin barrier restoration, and Pitta alleviation.",
     patentStatus: "Proprietary In-House Clinical Regimen",
+    badge: "Proprietary",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },

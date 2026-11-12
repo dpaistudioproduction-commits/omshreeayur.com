@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal drafts & session audits
+clinical-review/
+legal-review/
+remaining_audit_approval_items.md
+

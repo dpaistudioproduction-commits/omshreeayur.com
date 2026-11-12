@@ -86,8 +86,20 @@ export function PharmacyEditorial() {
           {filteredProducts.map((product, idx) => (
             <div
               key={product.id}
-              className="group bg-white rounded-3xl border border-[#DBCFA8] hover:border-[#B4833D] transition-all duration-500 overflow-hidden shadow-sm hover:shadow-md relative flex flex-col"
+              className={cn(
+                "group bg-white rounded-3xl border border-[#DBCFA8] hover:border-[#B4833D] transition-all duration-500 overflow-hidden shadow-sm hover:shadow-lg relative flex flex-col",
+                product.detailPath && "cursor-pointer"
+              )}
             >
+              {/* Full Card Stretched Link for dedicated product pages (e.g. Kafastha) */}
+              {product.detailPath && (
+                <Link
+                  href={product.detailPath}
+                  className="absolute inset-0 z-10"
+                  aria-label={`View ${product.name} details and order`}
+                />
+              )}
+
               {/* Visual Container */}
               <div className="relative flex items-center justify-center bg-[#FDFBF7] w-full h-48 sm:h-52 border-b border-[#DBCFA8]/50 overflow-hidden">
                 <Image
@@ -99,11 +111,18 @@ export function PharmacyEditorial() {
                   className="object-contain p-6 group-hover:scale-110 transition-transform duration-700 ease-out mix-blend-multiply"
                 />
                 
-                {/* Patent Tag */}
-                {product.patentStatus && (
-                  <div className="absolute top-3 right-3 bg-[#517B32] text-white text-[8px] font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-sm flex items-center gap-1 z-10">
+                {/* Badge Tag */}
+                {(product.badge || product.patentStatus) && (
+                  <div
+                    className={cn(
+                      "absolute top-3 right-3 text-white text-[8px] font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-sm flex items-center gap-1 z-10",
+                      product.badge?.toLowerCase() === "classic"
+                        ? "bg-[#B4833D] text-white"
+                        : "bg-[#517B32] text-white"
+                    )}
+                  >
                     <Award className="h-2.5 w-2.5" />
-                    <span>Patented</span>
+                    <span>{product.badge || "Patented"}</span>
                   </div>
                 )}
               </div>
@@ -115,13 +134,7 @@ export function PharmacyEditorial() {
                     {product.categoryLabel}
                   </div>
                   <h3 className="font-heading font-medium text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-tight mb-2">
-                    {product.detailPath ? (
-                      <Link href={product.detailPath} className="hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B4833D] rounded">
-                        {product.name}
-                      </Link>
-                    ) : (
-                      product.name
-                    )}
+                    {product.name}
                   </h3>
                   <p className="text-xs text-[#81754B] leading-relaxed font-light line-clamp-2">
                     {product.description}
@@ -136,13 +149,13 @@ export function PharmacyEditorial() {
 
                   <div className="flex items-center justify-between pt-1">
                     <span className="text-[9px] text-[#81754B]/60 font-mono italic">
-                      * Physician Prescribed
+                      {product.detailPath ? "Tap to view & order" : "* Physician Prescribed"}
                     </span>
                     <a
                       href={`https://wa.me/919846992789?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20Ayurvedic%20medicine%20${encodeURIComponent(product.name)}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors"
+                      className="relative z-20 inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors"
                       title="Enquire on WhatsApp"
                     >
                       <ArrowRight className="h-3.5 w-3.5" />
