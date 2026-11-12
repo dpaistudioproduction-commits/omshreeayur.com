@@ -356,7 +356,7 @@ const INGREDIENTS_LIST: IngredientInfo[] = [
 /* ------------------------------------------------------------------ */
 /*  VERIFIED PATIENT & CUSTOMER REVIEWS (CLINICAL & HOME CARE)         */
 /* ------------------------------------------------------------------ */
-export interface CustomerReview {
+interface CustomerReview {
   id: number;
   author: string;
   initials: string;
@@ -373,7 +373,7 @@ export interface CustomerReview {
   helpfulCount: number;
 }
 
-export const PATIENT_REVIEWS: CustomerReview[] = [
+const PATIENT_REVIEWS: CustomerReview[] = [
   {
     id: 1,
     author: "Anand K. Menon",
