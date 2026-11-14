@@ -15,7 +15,7 @@ export default function ProductsPage() {
     <div className="flex flex-col w-full bg-[#F7F1E1] min-h-screen">
       {/* Spacer for fixed header */}
       <div className="pt-32">
-        <PharmacyEditorial />
+        <PharmacyEditorial headingAs="h1" />
       </div>
     </div>
   );

@@ -134,7 +134,9 @@ export async function POST(request: NextRequest) {
                 <tr><td style="padding: 4px 0; width: 140px; font-weight: bold;">Product:</td><td>${customerDetails.product || 'Kafastha Ayurvedic Respiratory Granules'}</td></tr>
                 <tr><td style="padding: 4px 0; font-weight: bold;">Pack Size:</td><td><strong>${customerDetails.packSize || customerDetails.pack_size || '150g Bottle'}</strong></td></tr>
                 <tr><td style="padding: 4px 0; font-weight: bold;">Quantity:</td><td>${customerDetails.quantity || 1}</td></tr>
-                <tr><td style="padding: 4px 0; font-weight: bold;">Amount Paid:</td><td><strong style="color: #166534; font-size: 16px;">${customerDetails.total_amount_inr || '₹310'}</strong></td></tr>
+                ${customerDetails.subtotal_amount ? `<tr><td style="padding: 4px 0; font-weight: bold;">Items Subtotal:</td><td>${customerDetails.subtotal_amount}</td></tr>` : ''}
+                ${customerDetails.delivery_charge ? `<tr><td style="padding: 4px 0; font-weight: bold;">Delivery Fee:</td><td>${customerDetails.delivery_charge}</td></tr>` : ''}
+                <tr><td style="padding: 4px 0; font-weight: bold;">Total Amount Paid:</td><td><strong style="color: #166534; font-size: 16px;">${customerDetails.total_amount_inr || '₹310'}</strong></td></tr>
               </table>
 
               <p style="font-size: 12px; color: #64748b; margin-top: 24px; border-top: 1px solid #e2e8f0; padding-top: 12px;">

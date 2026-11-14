@@ -1,0 +1,56 @@
+Route URL,Page Purpose,Source File,Observed Status,Intended Canonical,Indexability,Key Issues,Evidence Status
+/,Homepage & Hero Presentation,src/app/page.tsx,200 OK,https://omshreeayur.com/,Indexable,None,VERIFIED
+/about,Hospital Overview & Legacy,src/app/about/page.tsx,200 OK,https://omshreeayur.com/about,Indexable,None,VERIFIED
+/about/doctors,Physicians & Clinical Staff,src/app/about/doctors/page.tsx,200 OK,https://omshreeayur.com/about/doctors,Indexable,Doctor credentials need verified registration numbers,VERIFIED
+/about/history,140-year Heritage & Tradition,src/app/about/history/page.tsx,200 OK,https://omshreeayur.com/about/history,Indexable,None,VERIFIED
+/about/why-omshree,Value Proposition & Differentiators,src/app/about/why-omshree/page.tsx,200 OK,https://omshreeayur.com/about/why-omshree,Indexable,None,VERIFIED
+/ayurveda,Ayurvedic Principles & Philosophy,src/app/ayurveda/page.tsx,200 OK,https://omshreeayur.com/ayurveda,Indexable,None,VERIFIED
+/ayurveda/consultation,Clinical Consultation Process,src/app/ayurveda/consultation/page.tsx,200 OK,https://omshreeayur.com/ayurveda/consultation,Indexable,Buttons updated to navigate to /contact,VERIFIED
+/ayurveda/kerala,Kerala Ayurvedic Traditions,src/app/ayurveda/kerala/page.tsx,200 OK,https://omshreeayur.com/ayurveda/kerala,Indexable,None,VERIFIED
+/ayurveda/panchakarma,Detoxification Therapies Overview,src/app/ayurveda/panchakarma/page.tsx,200 OK,https://omshreeayur.com/ayurveda/panchakarma,Indexable,None,VERIFIED
+/blog,Articles & Educational Hub,src/app/blog/page.tsx,200 OK,https://omshreeayur.com/blog,Indexable,Omitted from sitemap.ts XML generation,VERIFIED
+/blog/can-liver-cirrhosis-be-managed-with-ayurveda,Educational Article on Liver Cirrhosis,src/app/blog/can-liver-cirrhosis-be-managed-with-ayurveda/page.tsx,200 OK,https://omshreeayur.com/blog/can-liver-cirrhosis-be-managed-with-ayurveda,Indexable,None,VERIFIED
+/blog/how-to-stop-snoring-naturally-without-surgery,Educational Article on Snoring,src/app/blog/how-to-stop-snoring-naturally-without-surgery/page.tsx,200 OK,https://omshreeayur.com/blog/how-to-stop-snoring-naturally-without-surgery,Indexable,None,VERIFIED
+/blog/what-is-an-echocardiogram,Diagnostic Guide on Echocardiograms,src/app/blog/what-is-an-echocardiogram/page.tsx,200 OK,https://omshreeayur.com/blog/what-is-an-echocardiogram,Indexable,None,VERIFIED
+/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function,Cardiac Function Educational Article,src/app/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function/page.tsx,200 OK,https://omshreeayur.com/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function,Indexable,P0 Clinical Risk: Advises unrestricted fluid intake in low EF,VERIFIED
+/conditions,Health Conditions Directory,src/app/conditions/page.tsx,200 OK,https://omshreeayur.com/conditions,Indexable,Unescaped HTML entities in text (ESLint defect),VERIFIED
+/conditions/cardiovascular,Cardiovascular Category Hub,src/app/conditions/[category]/page.tsx,200 OK,https://omshreeayur.com/conditions/cardiovascular,Indexable,None,VERIFIED
+/conditions/cardiovascular/heart-disease-and-blocks,Cardiovascular Condition Landing,src/app/conditions/cardiovascular/heart-disease-and-blocks/page.tsx,200 OK,https://omshreeayur.com/conditions/cardiovascular/heart-disease-and-blocks,Indexable,Content duplication with /treatments/heart-disease-and-blocks,VERIFIED
+/conditions/cardiovascular/low-ejection-fraction,Low EF Condition Landing,src/app/conditions/cardiovascular/low-ejection-fraction/page.tsx,200 OK,https://omshreeayur.com/conditions/cardiovascular/low-ejection-fraction,Indexable,Keyword cannibalization with EF blog article,VERIFIED
+/conditions/hepatic/liver-cirrhosis,Cirrhosis Condition Landing,src/app/conditions/hepatic/liver-cirrhosis/page.tsx,200 OK,https://omshreeayur.com/conditions/hepatic/liver-cirrhosis,Indexable,Cannibalizes /treatments/liver-cirrhosis and blog,VERIFIED
+/contact,Patient Inquiries & Appointment Form,src/app/contact/page.tsx,200 OK,https://omshreeayur.com/contact,Indexable,Lead capture data loss on API email failure; no DB,VERIFIED
+/international-patients,Services for Overseas Patients,src/app/international-patients/page.tsx,200 OK,https://omshreeayur.com/international-patients,Indexable,None,VERIFIED
+/patient-care,Patient Care & Inpatient Services,src/app/patient-care/page.tsx,200 OK,https://omshreeayur.com/patient-care,Indexable,None,VERIFIED
+/patient-care/challenging-offer,Contingent Financial Billing Scheme,src/app/patient-care/challenging-offer/page.tsx,200 OK,https://omshreeayur.com/patient-care/challenging-offer,Indexable,P0 Legal Risk: Violates NMC Medical Ethics on contingent fees,VERIFIED
+/patient-care/consultation,Consultation Booking Information,src/app/patient-care/consultation/page.tsx,200 OK,https://omshreeayur.com/patient-care/consultation,Indexable,None,VERIFIED
+/patient-care/facilities,Inpatient Campus Facilities,src/app/patient-care/facilities/page.tsx,200 OK,https://omshreeayur.com/patient-care/facilities,Indexable,None,VERIFIED
+/patient-care/journey,Patient Treatment Roadmap,src/app/patient-care/journey/page.tsx,200 OK,https://omshreeayur.com/patient-care/journey,Indexable,None,VERIFIED
+/patient-care/tariff,Inpatient Accommodation Rates,src/app/patient-care/tariff/page.tsx,200 OK,https://omshreeayur.com/patient-care/tariff,Indexable,None,VERIFIED
+/products,Ayurvedic Medicines & Formulations,src/app/products/page.tsx,200 OK,https://omshreeayur.com/products,Indexable,Omitted from sitemap.ts XML generation,VERIFIED
+/terms-and-conditions,Terms & Legal Conditions,src/app/terms-and-conditions/page.tsx,200 OK,https://omshreeayur.com/terms-and-conditions,Indexable,Omitted from sitemap; global footer links to /terms (404),VERIFIED
+/testimonials,Patient Testimonial Directory,src/app/testimonials/page.tsx,200 OK,https://omshreeayur.com/testimonials,Indexable,Omitted from sitemap.ts XML generation,VERIFIED
+/testimonials/low-ef-treatment-at-omshree-sidha-hospital,Low EF Testimonial Case,src/app/testimonials/low-ef-treatment-at-omshree-sidha-hospital/page.tsx,200 OK,https://omshreeayur.com/testimonials/low-ef-treatment-at-omshree-sidha-hospital,Indexable,Omitted from sitemap.ts; clinical review needed,VERIFIED
+/testimonials/suja-sabu,Patient Recovery Testimonial,src/app/testimonials/suja-sabu/page.tsx,200 OK,https://omshreeayur.com/testimonials/suja-sabu,Indexable,Omitted from sitemap.ts; written consent needed,VERIFIED
+/treatments,Treatments Directory,src/app/treatments/page.tsx,200 OK,https://omshreeayur.com/treatments,Indexable,Unescaped entities in text (ESLint defect),VERIFIED
+/treatments/asthma-treatment,Asthma Treatment Landing,src/app/treatments/asthma-treatment/page.tsx,200 OK,https://omshreeayur.com/treatments/asthma-treatment,Indexable,Hardcoded page takes precedence over asthma JSON,VERIFIED
+/treatments/crohns-disease-inflammatory-bowel-disease-ibd,Crohn's Disease Treatment Landing,src/app/treatments/crohns-disease-inflammatory-bowel-disease-ibd/page.tsx,200 OK,https://omshreeayur.com/treatments/crohns-disease-inflammatory-bowel-disease-ibd,Indexable,P0 Clinical Risk: 75% cure in 4 weeks guarantee,VERIFIED
+/treatments/irritable-bowel-syndrome-ibs,IBS Treatment Landing,src/app/treatments/irritable-bowel-syndrome-ibs/page.tsx,200 OK,https://omshreeayur.com/treatments/irritable-bowel-syndrome-ibs,Indexable,None,VERIFIED
+/treatments/liver-cirrhosis,Liver Cirrhosis Treatment,src/app/treatments/liver-cirrhosis/page.tsx,200 OK,https://omshreeayur.com/treatments/liver-cirrhosis,Indexable,Hardcoded page vs liver-cirrhosis.json conflict,VERIFIED
+/treatments/therapies,Ayurvedic Therapies Directory,src/app/treatments/therapies/page.tsx,200 OK,https://omshreeayur.com/treatments/therapies,Indexable,None,VERIFIED
+/treatments/therapies/panchakarma,Panchakarma Therapy Detail,src/app/treatments/therapies/[slug]/page.tsx,200 OK,https://omshreeayur.com/treatments/therapies/panchakarma,Indexable,None,VERIFIED
+/treatments/therapies/hrid-basti,Hrid Basti Cardiac Therapy,src/app/treatments/therapies/[slug]/page.tsx,200 OK,https://omshreeayur.com/treatments/therapies/hrid-basti,Indexable,None,VERIFIED
+/treatments/ulcerative-colitis,Ulcerative Colitis Treatment,src/app/treatments/ulcerative-colitis/page.tsx,200 OK,https://omshreeayur.com/treatments/ulcerative-colitis,Indexable,P0 Clinical Risk: 'Stop all other medicines',VERIFIED
+/treatments/wellness-ayurvedic-treatments,Rejuvenation Therapy,src/app/treatments/wellness-ayurvedic-treatments/page.tsx,200 OK,https://omshreeayur.com/treatments/wellness-ayurvedic-treatments,Indexable,None,VERIFIED
+/treatments/heart-disease-and-blocks,Dynamic Treatment Route,src/data/treatments/heart-disease-and-blocks.json,200 OK,https://omshreeayur.com/treatments/heart-disease-and-blocks,Indexable,P0 Clinical/Legal: 'Melt blocks', WP HTML, archive.org iframe,VERIFIED
+/treatments/heart-disease,Dynamic Treatment Route,src/data/treatments/heart-disease.json,200 OK,https://omshreeayur.com/treatments/heart-disease,Indexable,Editorial tag left in live data: '[VERIFY BEFORE PUBLICATION]',VERIFIED
+/privacy-policy,Legal Privacy Policy,MISSING,404 Not Found,N/A,Non-indexable,CRITICAL DEFECT: Linked in footer on all 45 pages; returns 404,VERIFIED
+/terms,Terms of Service Shortlink,MISSING,404 Not Found,N/A,Non-indexable,CRITICAL DEFECT: Linked in footer on all 45 pages; returns 404,VERIFIED
+/testimonials/mr-rajumon-p-c/,Individual Testimonial Link,MISSING,404 Not Found,N/A,Non-indexable,Dead link inside heart-disease-and-blocks.json HTML,VERIFIED
+/about-our-hospital,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/about,Redirect,Destination: /about,VERIFIED
+/our-treatments,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/treatments,Redirect,Destination: /treatments,VERIFIED
+/kerala-ayurveda,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/ayurveda/kerala,Redirect,Destination: /ayurveda/kerala,VERIFIED
+/facilities,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/patient-care/facilities,Redirect,Destination: /patient-care/facilities,VERIFIED
+/packages,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/treatments,Redirect,Destination: /treatments,VERIFIED
+/ulcerative-colitis-treatment-omshree-sidha-hospitals-ayurvedic-approach-vs-modern-medicine,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/treatments/ulcerative-colitis,Redirect,Destination: /treatments/ulcerative-colitis,VERIFIED
+/our-challenging-offer,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/patient-care/challenging-offer,Redirect,Destination: /patient-care/challenging-offer,VERIFIED
+/offers/heart-disease,Legacy Redirect,next.config.ts,308 Permanent Redirect,https://omshreeayur.com/treatments/heart-disease,Redirect,Destination: /treatments/heart-disease,VERIFIED

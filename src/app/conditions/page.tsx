@@ -12,7 +12,16 @@ export const metadata: Metadata = {
   },
 };
 
-const CATEGORIES = [
+interface CategoryItem {
+  name: string;
+  slug: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description: string;
+  hasContent: boolean;
+  ctaText?: string;
+}
+
+const CATEGORIES: CategoryItem[] = [
   {
     name: "Cardiovascular",
     slug: "cardiovascular",
@@ -39,28 +48,32 @@ const CATEGORIES = [
     slug: "neurological",
     icon: Brain,
     description: "Ayurvedic care for MND, Stroke, Paralysis, Migraine, and Vertigo.",
-    hasContent: false,
+    hasContent: true,
+    ctaText: "Explore Neurological Care",
   },
   {
     name: "Musculoskeletal",
     slug: "musculoskeletal",
     icon: Move,
-    description: "Treatments for Arthritis, Spondylosis, Sciatica, and joint mobility.",
-    hasContent: false,
+    description: "Ayurvedic treatments for Arthritis, Spondylosis, Sciatica, and joint mobility concerns.",
+    hasContent: true,
+    ctaText: "Explore Musculoskeletal Care",
   },
   {
     name: "Respiratory",
     slug: "respiratory",
     icon: Wind,
-    description: "Management of Asthma, COPD, Sinusitis, and breathing difficulties.",
-    hasContent: false,
+    description: "Ayurvedic care for Asthma, COPD, Sinusitis, and chronic breathing difficulties.",
+    hasContent: true,
+    ctaText: "Explore Respiratory Care",
   },
   {
     name: "Skin",
     slug: "skin",
     icon: Sparkles,
-    description: "Ayurvedic therapies for Psoriasis, Eczema, Vitiligo, and skin health.",
-    hasContent: false,
+    description: "Ayurvedic therapies for Psoriasis, Eczema, Vitiligo, and chronic skin concerns.",
+    hasContent: true,
+    ctaText: "Explore Skin Care",
   },
 ];
 
@@ -161,7 +174,7 @@ export default function ConditionsHubPage() {
                   <div>
                     {cat.hasContent ? (
                       <Button render={<Link href={`/conditions/${cat.slug}`} />} variant="link" className="self-start mt-auto hover:no-underline">
-                        Explore {cat.name} Conditions <ArrowRight className="ml-2 h-4 w-4" />
+                        {cat.ctaText || `Explore ${cat.name} Conditions`} <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     ) : (
                       <span className="text-xs font-bold text-[#81754B] uppercase tracking-wider block py-2">

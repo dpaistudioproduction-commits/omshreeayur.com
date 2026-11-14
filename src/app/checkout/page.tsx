@@ -136,9 +136,12 @@ function CheckoutContent() {
     paymentId: string;
   } | null>(null);
 
-  // Calculate pricing
+  // Calculate pricing & delivery charges (₹50 below ₹500, Free for ₹500 and above)
   const subtotalRupees = selectedPack.price * quantity;
-  const currentAmountPaise = subtotalRupees * 100;
+  const isFreeDelivery = subtotalRupees >= 500;
+  const deliveryCharge = isFreeDelivery ? 0 : 50;
+  const totalPayableRupees = subtotalRupees + deliveryCharge;
+  const currentAmountPaise = totalPayableRupees * 100;
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -210,8 +213,9 @@ function CheckoutContent() {
   // WhatsApp follow-up link after order confirmation
   const getConfirmationWhatsAppUrl = () => {
     if (!confirmedOrderData) return "https://wa.me/919846992789";
+    const deliveryText = isFreeDelivery ? "FREE" : "₹50";
     const text = encodeURIComponent(
-      `Hello Omshree Sidha Hospital Pharmacy,\n\nI have completed the online payment for my Kafastha order.\n• Order ID: ${confirmedOrderData.orderId}\n• Payment ID: ${confirmedOrderData.paymentId}\n• Name: ${formData.fullName}\n• Pack: ${selectedPack.size} (Qty: ${quantity})\n• Delivery PIN: ${formData.pincode}\n\nPlease confirm dispatch details.`
+      `Hello Omshree Sidha Hospital Pharmacy,\n\nI have completed the online payment for my Kafastha order.\n• Order ID: ${confirmedOrderData.orderId}\n• Payment ID: ${confirmedOrderData.paymentId}\n• Name: ${formData.fullName}\n• Pack: ${selectedPack.size} (Qty: ${quantity})\n• Total Paid: ₹${totalPayableRupees} (Subtotal: ₹${subtotalRupees}, Delivery: ${deliveryText})\n• Delivery PIN: ${formData.pincode}\n\nPlease confirm dispatch details.`
     );
     return `https://wa.me/919846992789?text=${text}`;
   };
@@ -246,6 +250,30 @@ function CheckoutContent() {
             <div>
               <span className="text-[#81754B] block">Payment ID</span>
               <strong className="font-mono text-sm text-[#517B32]">{confirmedOrderData.paymentId}</strong>
+            </div>
+          </div>
+
+          {/* Order Items & Payment Breakdown */}
+          <div className="text-left p-5 rounded-2xl bg-white border border-[#E3D8C1] space-y-3">
+            <h3 className="font-heading font-bold text-base text-[#2B1A0E] flex items-center justify-between">
+              <span>Order Summary</span>
+              <span className="text-sm font-bold text-[#517B32]">Paid: ₹{totalPayableRupees}</span>
+            </h3>
+            <div className="text-xs text-[#5C4A36] space-y-1.5 pt-1 border-t border-[#E3D8C1]/60">
+              <div className="flex justify-between">
+                <span>Kafastha Ayurvedic Granules ({selectedPack.size} × {quantity})</span>
+                <span className="text-[#2B1A0E] font-medium">₹{subtotalRupees}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Doorstep Delivery Charges</span>
+                <span className={isFreeDelivery ? "text-[#517B32] font-semibold" : "text-[#2B1A0E] font-medium"}>
+                  {isFreeDelivery ? "FREE (Orders ₹500+)" : "₹50"}
+                </span>
+              </div>
+              <div className="flex justify-between text-sm font-bold text-[#2B1A0E] pt-2 border-t border-[#E3D8C1]/60">
+                <span>Total Amount Paid</span>
+                <span className="text-[#517B32]">₹{totalPayableRupees}</span>
+              </div>
             </div>
           </div>
 
@@ -687,6 +715,9 @@ function CheckoutContent() {
                         <span className="text-sm font-bold text-[#517B32] mt-0.5">
                           ₹{pack.price}
                         </span>
+                        <span className="text-[9px] text-[#81754B] block mt-0.5">
+                          {pack.price >= 500 ? "Free Delivery" : "+₹50 Delivery"}
+                        </span>
                       </button>
                     );
                   })}
@@ -701,7 +732,7 @@ function CheckoutContent() {
                     type="button"
                     onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                     disabled={quantity <= 1}
-                    className="w-7 h-7 rounded-full bg-white border border-[#E3D8C1] flex items-center justify-center text-sm font-bold text-[#2B1A0E] hover:bg-[#FAF4E5] disabled:opacity-40 disabled:cursor-not-allowed"
+                    className="w-7 h-7 rounded-full bg-white border border-[#E3D8C1] flex items-center justify-center text-sm font-bold text-[#2B1A0E] hover:bg-[#FAF4E5] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <Minus className="w-3.5 h-3.5" />
                   </button>
@@ -710,12 +741,29 @@ function CheckoutContent() {
                     type="button"
                     onClick={() => setQuantity((q) => Math.min(10, q + 1))}
                     disabled={quantity >= 10}
-                    className="w-7 h-7 rounded-full bg-white border border-[#E3D8C1] flex items-center justify-center text-sm font-bold text-[#2B1A0E] hover:bg-[#FAF4E5] disabled:opacity-40 disabled:cursor-not-allowed"
+                    className="w-7 h-7 rounded-full bg-white border border-[#E3D8C1] flex items-center justify-center text-sm font-bold text-[#2B1A0E] hover:bg-[#FAF4E5] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <Plus className="w-3.5 h-3.5" />
                   </button>
                 </div>
               </div>
+
+              {/* Delivery Promotion Notice */}
+              {isFreeDelivery ? (
+                <div className="p-3 rounded-2xl bg-[#517B32]/10 border border-[#517B32]/25 flex items-center gap-2.5 text-xs text-[#2F4A1E]">
+                  <Truck className="w-4 h-4 text-[#517B32] shrink-0" />
+                  <span>
+                    🎉 Your order qualifies for <strong>FREE Doorstep Delivery</strong> (orders ₹500+).
+                  </span>
+                </div>
+              ) : (
+                <div className="p-3 rounded-2xl bg-[#FAF4E5] border border-[#B4833D]/30 flex items-center gap-2.5 text-xs text-[#81551D]">
+                  <Truck className="w-4 h-4 text-[#B4833D] shrink-0" />
+                  <span>
+                    Delivery is <strong>₹50</strong> for orders below ₹500. Add <strong>₹{500 - subtotalRupees} more</strong> to get <strong>FREE Delivery</strong>!
+                  </span>
+                </div>
+              )}
 
               {/* Price Breakdown Calculation */}
               <div className="space-y-2 text-xs sm:text-sm text-[#5C4A36] pt-3 border-t border-[#E3D8C1]">
@@ -730,8 +778,21 @@ function CheckoutContent() {
                   </div>
                 )}
                 <div className="flex justify-between">
-                  <span>Standard Express Shipping</span>
-                  <span className="text-[#517B32] font-semibold">FREE</span>
+                  <span>Items Subtotal</span>
+                  <span className="text-[#2B1A0E] font-medium">₹{subtotalRupees}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <span>Doorstep Delivery</span>
+                    <span className="block text-[10px] text-[#81754B]">
+                      {isFreeDelivery ? "Free for orders ₹500 and above" : "Standard courier charge (orders under ₹500)"}
+                    </span>
+                  </div>
+                  {isFreeDelivery ? (
+                    <span className="text-[#517B32] font-semibold">FREE</span>
+                  ) : (
+                    <span className="text-[#2B1A0E] font-semibold">₹50</span>
+                  )}
                 </div>
                 <div className="flex justify-between">
                   <span>Taxes &amp; Packaging</span>
@@ -740,7 +801,7 @@ function CheckoutContent() {
                 <div className="flex justify-between text-base sm:text-lg font-bold text-[#2B1A0E] pt-3 border-t border-[#E3D8C1]">
                   <span>Total Payable</span>
                   <span className="text-[#517B32] font-heading text-xl">
-                    ₹{subtotalRupees}
+                    ₹{totalPayableRupees}
                   </span>
                 </div>
               </div>
@@ -752,7 +813,7 @@ function CheckoutContent() {
                   currency="INR"
                   productName={`Kafastha Granules (${selectedPack.size})${quantity > 1 ? ` x ${quantity}` : ""}`}
                   productDescription={`Direct Hospital Pharmacy Dispatch to ${formData.city || "your address"}`}
-                  buttonText={`Pay ₹${subtotalRupees} Online via Razorpay`}
+                  buttonText={`Pay ₹${totalPayableRupees} Online via Razorpay`}
                   prefill={{
                     name: formData.fullName,
                     email: formData.email,
@@ -771,7 +832,9 @@ function CheckoutContent() {
                     product: "Kafastha Ayurvedic Respiratory Granules",
                     pack_size: selectedPack.size,
                     quantity: quantity.toString(),
-                    total_amount_inr: `₹${subtotalRupees}`,
+                    subtotal_amount: `₹${subtotalRupees}`,
+                    delivery_charge: isFreeDelivery ? "FREE" : "₹50",
+                    total_amount_inr: `₹${totalPayableRupees}`,
                   }}
                   onBeforePayment={validateForm}
                   onSuccess={(data) => {
@@ -801,7 +864,7 @@ function CheckoutContent() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Truck className="w-4 h-4 text-[#517B32] shrink-0" />
-                  <span>Doorstep Delivery Available</span>
+                  <span>Doorstep Delivery (Free for orders ₹500+)</span>
                 </div>
               </div>
 

@@ -16,8 +16,13 @@ const CATEGORIES = [
   { key: "Dermatology", label: "Dermatological" },
 ];
 
-export function PharmacyEditorial() {
+interface PharmacyEditorialProps {
+  headingAs?: "h1" | "h2";
+}
+
+export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps = {}) {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const HeadingTag = headingAs;
 
   const filteredProducts = selectedCategory === "all"
     ? AUTHENTIC_PRODUCTS
@@ -37,12 +42,12 @@ export function PharmacyEditorial() {
             <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#B4833D]"></span>
           </div>
           
-          <h2 className="font-heading font-normal text-4xl sm:text-5xl md:text-6xl text-[#66371B] leading-[1.1] mb-8 relative">
-            <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-[120px] text-[#E3D8C1]/30 z-0 select-none">
+          <HeadingTag className="font-heading font-normal text-4xl sm:text-5xl md:text-6xl text-[#66371B] leading-[1.1] mb-8 relative">
+            <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-[120px] text-[#E3D8C1]/30 z-0 select-none" aria-hidden="true">
               <FlaskConical className="w-24 h-24 stroke-1" />
             </span>
             <span className="relative z-10">GMP Certified Classical &amp; Patented Formulations</span>
-          </h2>
+          </HeadingTag>
           
           <p className="text-base sm:text-lg text-[#81754B] leading-relaxed font-light max-w-3xl mx-auto mb-10">
             Manufactured exclusively in our Vayala pharmacy under the direction of Sri M.J. Jose, holder of multiple Government of India Ayurvedic patents. Medicines are prepared from freshly harvested botanical extracts.
