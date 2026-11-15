@@ -83,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Map Blog Articles
   const blogRoutes = [
     {
+      url: `${baseUrl}/blog/osteoarthritis-and-knee-pain`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/asthma-and-ayurveda`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
