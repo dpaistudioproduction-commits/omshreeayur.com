@@ -83,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Map Blog Articles
   const blogRoutes = [
     {
+      url: `${baseUrl}/blog/ayurvedic-approach-to-asthma-management`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/osteoarthritis-and-knee-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
