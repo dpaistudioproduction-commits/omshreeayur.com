@@ -70,12 +70,12 @@ export default function HomePage() {
             {/* Right: Institutional Content */}
             <div className="lg:col-span-7 flex flex-col justify-center space-y-8 lg:pl-4 py-4">
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#517B32] block mb-4">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#3D5F26] block mb-4">
                   Institutional Definition
                 </span>
-                <h3 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#66371B] leading-[1.15]">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#66371B] leading-[1.15]">
                   An Authentic In-Patient Ayurvedic Hospital, <span className="text-[#B4833D] italic font-serif font-normal">Not a Wellness Resort</span>
-                </h3>
+                </h2>
               </div>
 
               <div className="space-y-6 text-base sm:text-lg text-[#81754B] leading-relaxed font-light">
@@ -379,9 +379,9 @@ export default function HomePage() {
                   
                   {/* Content */}
                   <div className="flex-1 px-2">
-                    <h4 className="font-heading font-medium text-lg text-[#66371B] mb-4 group-hover:text-[#517B32] transition-colors">
+                    <h3 className="font-heading font-medium text-lg text-[#66371B] mb-4 group-hover:text-[#517B32] transition-colors">
                       {item.title}
-                    </h4>
+                    </h3>
                     <p className="text-[13px] text-[#81754B] leading-relaxed font-light">
                       {item.description}
                     </p>

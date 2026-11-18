@@ -17,7 +17,11 @@ export function Footer() {
               An authentic Ayurvedic Hospital in Kerala, India. We bring over 140 years of traditional healing heritage, combining clinical rigor with personalized patient care.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <a href="mailto:info@omshreeayur.com" className="flex items-center justify-center h-10 w-10 rounded-full bg-white/5 border border-white/10 hover:bg-[#B4833D] hover:border-[#B4833D] hover:text-white transition-all text-[#E3D8C1]">
+              <a 
+                href="mailto:info@omshreeayur.com" 
+                aria-label="Send email to Omshree Sidha Hospital at info@omshreeayur.com"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-white/5 border border-white/10 hover:bg-[#B4833D] hover:border-[#B4833D] hover:text-white transition-all text-[#E3D8C1]"
+              >
                 <Mail className="h-4 w-4" />
               </a>
               <a href="/contact" className="text-xs font-bold uppercase tracking-widest text-[#B4833D] hover:text-[#E3D8C1] transition-colors border-b border-[#B4833D]/30 hover:border-[#E3D8C1] pb-1">
@@ -28,7 +32,7 @@ export function Footer() {
 
           {/* Column 3: Explore */}
           <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1]">Explore</h3>
+            <h2 className="font-heading font-normal text-xl text-[#F7F1E1]">Explore</h2>
             <ul className="space-y-4 text-sm text-[#E3D8C1]/70">
               <li><Link href="/about" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">About Us</Link></li>
               <li><Link href="/ayurveda" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Ayurveda</Link></li>
@@ -42,7 +46,7 @@ export function Footer() {
 
           {/* Column 4: Patient Care */}
           <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1]">Patient Care</h3>
+            <h2 className="font-heading font-normal text-xl text-[#F7F1E1]">Patient Care</h2>
             <ul className="space-y-4 text-sm text-[#E3D8C1]/70">
               <li><Link href="/patient-care/consultation" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Consultation</Link></li>
               <li><Link href="/patient-care/journey" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Patient Journey</Link></li>
@@ -54,9 +58,9 @@ export function Footer() {
 
           {/* Column 5: Kottayam Hospital */}
           <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1] flex items-center gap-2">
+            <h2 className="font-heading font-normal text-xl text-[#F7F1E1] flex items-center gap-2">
               <MapPin className="h-4 w-4 text-[#B4833D]" /> Kottayam
-            </h3>
+            </h2>
             <div className="space-y-4 text-sm text-[#E3D8C1]/70">
               <p className="leading-relaxed">
                 <strong className="text-[#E3D8C1] font-medium block mb-1">Main Hospital</strong>

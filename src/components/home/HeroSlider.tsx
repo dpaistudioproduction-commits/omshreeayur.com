@@ -33,7 +33,7 @@ const HERO_SLIDES: SlideData[] = [
     tag: "A Multi Speciality Ayurveda Hospital & Research Centre",
     title: "Omshree Sidha Hospital: Multi-Speciality Clinical Ayurveda in Kerala",
     subtitle: "A licensed, clinical Ayurvedic institution in Vayala, Kerala with 24-hour resident doctor supervision, GMP-certified pharmacy, and dedicated departments for cardiovascular, hepatic, gastrointestinal, and chronic diseases.",
-    imageSrc: "/images/hospital/banner.png",
+    imageSrc: "/images/hospital/banner.webp",
     imageAlt: "Omshree Sidha Hospital Campus and Clinical Environment in Kerala",
     primaryCtaText: "Book Consultation",
     primaryCtaLink: "/contact",
@@ -104,51 +104,38 @@ export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [progress, setProgress] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    isInitialMount.current = false;
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    setProgress(0);
   }, []);
 
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-    setProgress(0);
   }, []);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setProgress(0);
   };
 
-  // Autoplay & Progress Timer
+  // Autoplay Timer (Single timeout per slide, offloading progress animation to CSS)
   useEffect(() => {
     if (!isPlaying) {
-      if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
       if (timerRef.current) clearTimeout(timerRef.current);
       return;
     }
 
-    const stepMs = 50;
-    const increment = (stepMs / AUTOPLAY_DURATION) * 100;
+    timerRef.current = setTimeout(() => {
+      nextSlide();
+    }, AUTOPLAY_DURATION);
 
-    progressIntervalRef.current = setInterval(() => {
-      setProgress((p) => {
-        if (p >= 100) {
-          nextSlide();
-          return 0;
-        }
-        return p + increment;
-      });
-    }, stepMs);
-
-    const timer = timerRef.current;
-    const progressInterval = progressIntervalRef.current;
     return () => {
-      if (progressInterval) clearInterval(progressInterval);
-      if (timer) clearTimeout(timer);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, [isPlaying, nextSlide, currentSlide]);
 
@@ -196,7 +183,7 @@ export function HeroSlider() {
       <AnimatePresence initial={false}>
         <motion.div
           key={activeSlide.id}
-          initial={{ opacity: 0, scale: 1.05 }}
+          initial={isInitialMount.current ? false : { opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
@@ -208,6 +195,7 @@ export function HeroSlider() {
             fill
             sizes="100vw"
             priority={currentSlide === 0}
+            fetchPriority={currentSlide === 0 ? "high" : "auto"}
             className="object-cover object-center"
           />
         </motion.div>
@@ -223,7 +211,7 @@ export function HeroSlider() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSlide.id}
-              initial="hidden"
+              initial={isInitialMount.current ? false : "hidden"}
               animate="visible"
               exit="exit"
               variants={{
@@ -331,8 +319,11 @@ export function HeroSlider() {
               >
                 {idx === currentSlide && (
                   <div 
-                    className="absolute top-0 left-0 bottom-0 bg-[#B4833D] transition-all duration-75 ease-linear rounded-full"
-                    style={{ width: `${progress}%` }}
+                    key={`progress-${currentSlide}`}
+                    className="absolute top-0 left-0 bottom-0 bg-[#B4833D] rounded-full"
+                    style={{
+                      animation: isPlaying ? `heroProgress ${AUTOPLAY_DURATION}ms linear forwards` : "none",
+                    }}
                   />
                 )}
               </button>

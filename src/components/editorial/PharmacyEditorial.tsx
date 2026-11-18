@@ -112,7 +112,6 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                   alt={`${product.name} - Authentic Ayurvedic Formulation`}
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"
-                  priority={idx < 4}
                   className="object-contain p-6 group-hover:scale-110 transition-transform duration-700 ease-out mix-blend-multiply"
                 />
                 
@@ -181,9 +180,9 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                   <FileCheck className="h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-medium text-2xl text-[#FDFBF7]">
+                  <h3 className="font-heading font-medium text-2xl text-[#FDFBF7]">
                     Ethical Governance
-                  </h4>
+                  </h3>
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mt-1">
                     Prescription Only Policy
                   </span>

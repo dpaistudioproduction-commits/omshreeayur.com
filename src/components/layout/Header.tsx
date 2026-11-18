@@ -35,19 +35,19 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full flex flex-col antialiased shadow-sm bg-[#F7F1E1]">
       
       {/* =========================================================================
-          TIER 1: TOP UTILITY BAR (Slim Dark Natural-Green Bar)
+          TIER 1: TOP UTILITY BAR (Slim Dark Natural-Green Bar - Accessible Contrast)
           ========================================================================= */}
-      <div className="w-full h-9 bg-[#517B32] text-[#F7F1E1] text-[11px] font-medium tracking-wider py-1.5 border-b border-[#6F9940]/40">
+      <div className="w-full h-9 bg-[#3D5F26] text-white text-[11px] font-medium tracking-wider py-1.5 border-b border-[#6F9940]/40">
         <div className="w-full px-4 sm:px-6 xl:px-8 max-w-[1720px] mx-auto flex justify-between sm:justify-end items-center h-full gap-3 sm:gap-6 lg:gap-8">
           {/* Location & Hours */}
           <div className="flex items-center gap-3 sm:gap-6">
-            <span className="flex items-center gap-1.5 text-[#F7F1E1] font-medium truncate">
-              <MapPin className="h-3.5 w-3.5 text-[#B4833D] shrink-0" />
+            <span className="flex items-center gap-1.5 text-white font-medium truncate">
+              <MapPin className="h-3.5 w-3.5 text-[#E3D8C1] shrink-0" />
               <span className="hidden sm:inline">VAYALA P.O., KOTTAYAM, KERALA</span>
               <span className="sm:hidden">KOTTAYAM, KERALA</span>
             </span>
             <span className="hidden md:flex items-center gap-1.5 text-[#E3D8C1]">
-              <Clock className="h-3.5 w-3.5 text-[#B4833D] shrink-0" />
+              <Clock className="h-3.5 w-3.5 text-[#E3D8C1] shrink-0" />
               <span>MON–SUN (09:00 AM – 06:00 PM)</span>
             </span>
           </div>
@@ -56,9 +56,9 @@ export function Header() {
           <div className="flex items-center shrink-0">
             <Link
               href="/international-patients"
-              className="flex items-center gap-1.5 text-[#F7F1E1] hover:text-[#B4833D] transition-colors font-bold uppercase tracking-wider text-[10.5px] sm:text-[11px]"
+              className="flex items-center gap-1.5 text-white hover:text-[#E3D8C1] transition-colors font-bold uppercase tracking-wider text-[10.5px] sm:text-[11px]"
             >
-              <Globe className="h-3.5 w-3.5 text-[#B4833D] shrink-0" />
+              <Globe className="h-3.5 w-3.5 text-[#E3D8C1] shrink-0" />
               <span className="hidden xs:inline sm:inline">INTERNATIONAL PATIENT ENQUIRY</span>
               <span className="xs:hidden">INTERNATIONAL</span>
             </Link>

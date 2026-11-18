@@ -15,7 +15,7 @@ export function TrustSignals({ className = "" }: TrustSignalProps) {
               <Award className="h-6 w-6 text-[#B4833D]" strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">ISO 9001:2015</h4>
+              <p className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">ISO 9001:2015</p>
               <p className="text-xs text-[#E3D8C1]/70 font-light">Certified Hospital Quality</p>
             </div>
           </div>
@@ -25,7 +25,7 @@ export function TrustSignals({ className = "" }: TrustSignalProps) {
               <ShieldCheck className="h-6 w-6 text-[#B4833D]" strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">140+ Years Heritage</h4>
+              <p className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">140+ Years Heritage</p>
               <p className="text-xs text-[#E3D8C1]/70 font-light">Traditional Kerala Lineage</p>
             </div>
           </div>
@@ -35,7 +35,7 @@ export function TrustSignals({ className = "" }: TrustSignalProps) {
               <Leaf className="h-6 w-6 text-[#B4833D]" strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">GMP Pharmacy</h4>
+              <p className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">GMP Pharmacy</p>
               <p className="text-xs text-[#E3D8C1]/70 font-light">In-house Formulation Unit</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function TrustSignals({ className = "" }: TrustSignalProps) {
               <Heart className="h-6 w-6 text-[#B4833D]" strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">Clinical Ayurveda</h4>
+              <p className="font-bold text-[#F7F1E1] text-sm uppercase tracking-wider mb-0.5">Clinical Ayurveda</p>
               <p className="text-xs text-[#E3D8C1]/70 font-light">Targeted Chronic Disease Care</p>
             </div>
           </div>
