@@ -29,7 +29,7 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
     : AUTHENTIC_PRODUCTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <section className="py-24 md:py-32 bg-[#F7F1E1]">
+    <section className="py-24 md:py-32 bg-[#F7F1E1] overflow-hidden">
       <div className="w-full px-[4%]">
         
         {/* Premium Centered Header */}
@@ -69,7 +69,7 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
         </div>
 
         {/* Category Filters */}
-        <div className="flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-4 mb-16 scrollbar-none">
+        <div className="w-full max-w-full flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-4 mb-16 scrollbar-none">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.key}
@@ -120,13 +120,13 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                 {(product.badge || product.patentStatus) && (
                   <div
                     className={cn(
-                      "absolute top-3 right-3 text-white text-[8px] font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-sm flex items-center gap-1 z-10",
+                      "absolute top-3 right-3 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5 z-10",
                       product.badge?.toLowerCase() === "classic"
                         ? "bg-[#B4833D] text-white"
                         : "bg-[#517B32] text-white"
                     )}
                   >
-                    <Award className="h-2.5 w-2.5" />
+                    <Award className="h-3 w-3" />
                     <span>{product.badge || "Patented"}</span>
                   </div>
                 )}
@@ -135,33 +135,38 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
               {/* Content Details */}
               <div className="flex flex-col flex-1 p-5 sm:p-6">
                 <div className="mb-4">
-                  <div className="text-[#81754B] text-[8px] font-bold uppercase tracking-[0.2em] mb-2">
+                  <div className="text-[#81754B] text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] mb-2">
                     {product.categoryLabel}
                   </div>
-                  <h3 className="font-heading font-medium text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-tight mb-2">
+                  <h3 className="font-heading font-semibold text-lg sm:text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-snug mb-2.5">
                     {product.name}
                   </h3>
-                  <p className="text-xs text-[#81754B] leading-relaxed font-light line-clamp-2">
+                  <p className="text-sm sm:text-[15px] text-[#402816] leading-relaxed font-normal">
                     {product.description}
                   </p>
                 </div>
 
-                <div className="mt-auto space-y-3">
-                  <div className="text-[10px] text-[#81754B] font-medium bg-[#FDFBF7] p-3 rounded-xl border border-[#DBCFA8]/50">
-                    <strong className="text-[#B4833D] block mb-0.5 uppercase tracking-[0.2em] text-[8px]">Clinical Focus</strong>
-                    <span className="font-light line-clamp-1">{product.therapeuticFocus}</span>
+                <div className="mt-auto space-y-3 pt-1">
+                  <div className="bg-[#FDFBF7] p-3 sm:p-3.5 rounded-xl border border-[#DBCFA8]/60">
+                    <strong className="text-[#B4833D] block mb-1 uppercase tracking-[0.16em] text-[10px] sm:text-[11px] font-bold">
+                      Clinical Focus
+                    </strong>
+                    <p className="text-xs sm:text-[13px] text-[#402816] font-normal leading-relaxed">
+                      {product.therapeuticFocus}
+                    </p>
                   </div>
 
-                  <div className="flex items-center justify-between pt-1">
-                    <span className="text-[9px] text-[#81754B]/60 font-mono italic">
+                  <div className="flex items-center justify-between pt-2 border-t border-[#DBCFA8]/40">
+                    <span className="text-[11px] sm:text-xs text-[#66371B] font-medium">
                       {product.detailPath ? "Tap to view & order" : "* Physician Prescribed"}
                     </span>
                     <a
                       href={`https://wa.me/919846992789?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20Ayurvedic%20medicine%20${encodeURIComponent(product.name)}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="relative z-20 inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors"
+                      className="relative z-20 inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors shrink-0"
                       title="Enquire on WhatsApp"
+                      aria-label={`Enquire on WhatsApp about ${product.name}`}
                     >
                       <ArrowRight className="h-3.5 w-3.5" />
                     </a>
