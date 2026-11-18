@@ -146,6 +146,13 @@ export async function POST(request: NextRequest) {
           </div>
         `;
 
+        const rawCustomerEmail = String(
+          customerDetails.email || customerDetails.customer_email || ""
+        )
+          .trim()
+          .replace(/[\r\n]+/g, "");
+        const hasValidReplyTo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawCustomerEmail);
+
         await fetch(`${resendBaseUrl}/emails`, {
           method: "POST",
           headers: {
@@ -155,6 +162,7 @@ export async function POST(request: NextRequest) {
           body: JSON.stringify({
             from: emailFrom,
             to: [emailTo],
+            ...(hasValidReplyTo ? { reply_to: rawCustomerEmail } : {}),
             subject: `[NEW ORDER] Kafastha Granules — ${customerDetails.fullName || 'Customer'} (${customerDetails.city || 'India'}) [${payment_id}]`,
             html: orderEmailHtml,
           }),

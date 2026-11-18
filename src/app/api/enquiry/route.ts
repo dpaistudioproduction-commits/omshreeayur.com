@@ -216,6 +216,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
     `;
 
     try {
+      const safeReplyTo = body.email.trim().replace(/[\r\n]+/g, "");
+
       const resendResponse = await fetch(`${resendBaseUrl}/emails`, {
         method: "POST",
         headers: {
@@ -225,6 +227,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
         body: JSON.stringify({
           from: emailFrom,
           to: [emailTo],
+          reply_to: safeReplyTo,
           subject: emailSubject,
           html: emailHtml,
         }),

@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { ClarityScript } from "@/components/analytics/ClarityScript";
 
 export function AnalyticsScripts() {
   // In development, do not load third-party ad/marketing trackers to prevent
@@ -70,6 +71,9 @@ export function AnalyticsScripts() {
           `}
         </Script>
       )}
+
+      {/* Microsoft Clarity - Public marketing/content pages only (excludes /contact, /checkout, /odgi) */}
+      <ClarityScript />
     </>
   );
 }
