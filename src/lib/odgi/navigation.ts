@@ -123,7 +123,7 @@ export const ODGI_NAV_ITEMS: OdgiNavItem[] = [
 export interface OdgiDataSourceStatus {
   id: string;
   name: string;
-  status: "Not connected";
+  status: "Not connected" | "Active";
   detail: string;
 }
 
@@ -143,8 +143,8 @@ export const ODGI_DATA_SOURCES: OdgiDataSourceStatus[] = [
   {
     id: "behaviour",
     name: "Visitor Behaviour",
-    status: "Not connected",
-    detail: "No recording tool installed in Stage 1",
+    status: "Active",
+    detail: "First-party Heatmap Studio + Clarity (prod)",
   },
   {
     id: "conversions",

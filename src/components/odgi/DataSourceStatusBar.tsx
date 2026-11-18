@@ -30,8 +30,21 @@ export function DataSourceStatusBar() {
                   {source.detail}
                 </p>
               </div>
-              <span className="shrink-0 inline-flex items-center gap-1 rounded-full bg-white border border-[#D4DDD6] px-2 py-0.5 text-[10px] font-semibold text-[#5A6C5F]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#9BA99F]" aria-hidden="true" />
+              <span
+                className={
+                  source.status === "Active"
+                    ? "shrink-0 inline-flex items-center gap-1 rounded-full bg-[#EEF5EE] border border-[#CFE0D0] px-2 py-0.5 text-[10px] font-semibold text-[#213714]"
+                    : "shrink-0 inline-flex items-center gap-1 rounded-full bg-white border border-[#D4DDD6] px-2 py-0.5 text-[10px] font-semibold text-[#5A6C5F]"
+                }
+              >
+                <span
+                  className={
+                    source.status === "Active"
+                      ? "h-1.5 w-1.5 rounded-full bg-[#517B32]"
+                      : "h-1.5 w-1.5 rounded-full bg-[#9BA99F]"
+                  }
+                  aria-hidden="true"
+                />
                 {source.status}
               </span>
             </li>

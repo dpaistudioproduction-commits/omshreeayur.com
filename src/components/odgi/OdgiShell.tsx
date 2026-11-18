@@ -251,7 +251,10 @@ export function OdgiShell({ children }: OdgiShellProps) {
           <div className="flex items-center gap-2.5 shrink-0">
             <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-[#F2F5F2] border border-[#D8E1DA] px-2.5 py-1 text-xs font-medium text-[#46574B]">
               <Database className="h-3.5 w-3.5 text-[#7A8C7E]" />
-              <span>0 / {ODGI_DATA_SOURCES.length} Sources Connected</span>
+              <span>
+                {ODGI_DATA_SOURCES.filter((s) => s.status === "Active").length} /{" "}
+                {ODGI_DATA_SOURCES.length} Sources Active
+              </span>
             </span>
 
             <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FEF8EC] border border-[#E6D0A3] px-2.5 py-1 text-xs font-semibold text-[#7A541C]">

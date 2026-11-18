@@ -29,5 +29,5 @@ export function proxy() {
 }
 
 export const config = {
-  matcher: ["/odgi", "/odgi/:path*"],
+  matcher: ["/odgi", "/odgi/:path*", "/api/odgi/heatmap/data"],
 };

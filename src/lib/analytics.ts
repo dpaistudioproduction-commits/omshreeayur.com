@@ -8,42 +8,69 @@
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    fbq?: (...args: any[]) => void;
-    dataLayer?: any[];
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
-export function trackEvent(eventName: string, params: Record<string, any> = {}) {
-  if (typeof window === 'undefined') return;
+const BLOCKED_KEYS = new Set([
+  "name",
+  "fullName",
+  "email",
+  "phone",
+  "address",
+  "pincode",
+  "healthConcern",
+  "message",
+  "diagnosis",
+  "symptom",
+  "paymentId",
+  "orderId",
+]);
 
-  // Sanitize: strip any potential PII or medical data fields
-  const safeParams: Record<string, any> = {};
+export function trackEvent(eventName: string, params: Record<string, unknown> = {}) {
+  if (typeof window === "undefined") return;
+
+  // Sanitize: strip any potential PII, payment IDs, or medical data fields
+  const safeParams: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(params)) {
-    if (['name', 'email', 'phone', 'healthConcern', 'message', 'diagnosis', 'symptom'].includes(key)) {
+    if (BLOCKED_KEYS.has(key)) {
       continue;
     }
     safeParams[key] = value;
   }
 
   // Google Analytics 4
-  if (window.gtag && process.env.NEXT_PUBLIC_GA_ID) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-4GFE7SYQPF";
+  if (window.gtag && gaId) {
     try {
-      window.gtag('event', eventName, safeParams);
+      window.gtag("event", eventName, safeParams);
     } catch {
       // Ignore client-side tracking error
     }
   }
 
-  // Meta Pixel
-  if (window.fbq && process.env.NEXT_PUBLIC_META_PIXEL_ID) {
+  // Meta Pixel (Omshree pixel)
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1210872533263374";
+  if (window.fbq && metaPixelId) {
     try {
-      if (eventName === 'enquiry_form_success') {
-        window.fbq('track', 'Lead', { content_name: safeParams.patient_type || 'consultation' });
-      } else if (eventName === 'whatsapp_click' || eventName === 'phone_click') {
-        window.fbq('track', 'Contact');
+      if (eventName === "enquiry_form_success") {
+        window.fbq("track", "Lead", {
+          content_name: safeParams.patient_type || "consultation",
+        });
+      } else if (eventName === "whatsapp_click" || eventName === "phone_click") {
+        window.fbq("track", "Contact");
+      } else if (eventName === "purchase") {
+        window.fbq("track", "Purchase", {
+          value: safeParams.value,
+          currency: safeParams.currency || "INR",
+          content_type: "product",
+          content_name: safeParams.content_name || "Kafastha",
+          num_items: safeParams.num_items || 1,
+        });
       } else {
-        window.fbq('trackCustom', eventName, safeParams);
+        window.fbq("trackCustom", eventName, safeParams);
       }
     } catch {
       // Ignore client-side tracking error
@@ -52,27 +79,35 @@ export function trackEvent(eventName: string, params: Record<string, any> = {}) 
 }
 
 export const analytics = {
-  consultationClick: (label: string = 'general') => {
-    trackEvent('consultation_cta_click', { cta_label: label });
+  consultationClick: (label: string = "general") => {
+    trackEvent("consultation_cta_click", { cta_label: label });
   },
   whatsappClick: (sourcePage: string) => {
-    trackEvent('whatsapp_click', { source_page: sourcePage });
+    trackEvent("whatsapp_click", { source_page: sourcePage });
   },
   phoneClick: (sourcePage: string) => {
-    trackEvent('phone_click', { source_page: sourcePage });
+    trackEvent("phone_click", { source_page: sourcePage });
   },
-  enquiryFormStart: (patientType: 'domestic' | 'international') => {
-    trackEvent('enquiry_form_start', { patient_type: patientType });
+  enquiryFormStart: (patientType: "domestic" | "international") => {
+    trackEvent("enquiry_form_start", { patient_type: patientType });
   },
-  enquiryFormSubmit: (patientType: 'domestic' | 'international') => {
-    trackEvent('enquiry_form_submit', { patient_type: patientType });
+  enquiryFormSubmit: (patientType: "domestic" | "international") => {
+    trackEvent("enquiry_form_submit", { patient_type: patientType });
   },
-  enquiryFormSuccess: (patientType: 'domestic' | 'international') => {
-    trackEvent('enquiry_form_success', { patient_type: patientType });
-    if (patientType === 'domestic') {
-      trackEvent('india_enquiry', {});
+  enquiryFormSuccess: (patientType: "domestic" | "international") => {
+    trackEvent("enquiry_form_success", { patient_type: patientType });
+    if (patientType === "domestic") {
+      trackEvent("india_enquiry", {});
     } else {
-      trackEvent('international_enquiry', {});
+      trackEvent("international_enquiry", {});
     }
-  }
+  },
+  purchaseSuccess: (valueInr: number, packSize: string, quantity: number) => {
+    trackEvent("purchase", {
+      value: valueInr,
+      currency: "INR",
+      content_name: `Kafastha (${packSize})`,
+      num_items: quantity,
+    });
+  },
 };

@@ -45,3 +45,6 @@ clinical-review/
 legal-review/
 remaining_audit_approval_items.md
 
+# local ODGI heatmap telemetry storage (never commit)
+.odgi-data/
+

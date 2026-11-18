@@ -28,6 +28,7 @@ import {
   Minus
 } from "lucide-react";
 import RazorpayCheckoutButton from "@/components/checkout/RazorpayCheckoutButton";
+import { analytics } from "@/lib/analytics";
 
 interface PackOption {
   id: string;
@@ -838,6 +839,11 @@ function CheckoutContent() {
                   }}
                   onBeforePayment={validateForm}
                   onSuccess={(data) => {
+                    analytics.purchaseSuccess(
+                      totalPayableRupees,
+                      selectedPack.size,
+                      quantity
+                    );
                     setConfirmedOrderData({
                       orderId: data.order_id,
                       paymentId: data.payment_id,
