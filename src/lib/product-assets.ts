@@ -64,7 +64,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
   },
   {
     id: "maha",
-    name: "Maha Rasayana",
+    name: "Maharajaprasarini Thailam",
     category: "Classical",
     categoryLabel: "Classical Deep-Tissue Medicine",
     image: "/images/products/maha.png",
@@ -97,7 +97,7 @@ export const AUTHENTIC_PRODUCTS: ProductItem[] = [
     description: "Herbal dermatological formulation designed to pacify Rakta and Pitta doshas in chronic skin conditions like psoriasis and eczema.",
     therapeuticFocus: "Rakta Dhatu purification, skin barrier restoration, and Pitta alleviation.",
     patentStatus: "Proprietary In-House Clinical Regimen",
-    badge: "Proprietary",
+    badge: "Patented",
     isAuthenticAsset: true,
     prescriptionOnly: true,
   },
