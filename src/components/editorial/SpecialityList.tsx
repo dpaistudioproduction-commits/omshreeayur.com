@@ -83,17 +83,17 @@ export function SpecialityList() {
             <div className="relative z-10 flex flex-col h-full">
               {/* Header */}
               <div className="flex justify-between items-start mb-8">
-                <span className="text-xl md:text-2xl font-mono font-bold text-[#B4833D]">
+                <span className="text-xl md:text-2xl font-mono font-bold text-[#E8C485]">
                   {item.number}
                 </span>
                 <div className="h-10 w-10 rounded-full border border-white/10 bg-black/20 flex items-center justify-center group-hover:bg-[#B4833D] group-hover:border-[#B4833D] group-hover:text-white transition-all duration-300">
-                  <ArrowUpRight className="h-5 w-5 text-[#E3D8C1]/60 group-hover:text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="h-5 w-5 text-[#E3D8C1]/80 group-hover:text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </div>
 
               {/* Title & Category */}
               <div className="mb-6">
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B4833D] block mb-2">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#E8C485] block mb-2">
                   {item.category}
                 </span>
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#F7F1E1] leading-snug">
@@ -102,7 +102,7 @@ export function SpecialityList() {
               </div>
 
               {/* Description */}
-              <p className="text-sm sm:text-base text-[#E3D8C1]/70 leading-relaxed font-light mb-8 flex-1">
+              <p className="text-sm sm:text-base text-[#F7F1E1]/85 leading-relaxed font-light mb-8 flex-1">
                 {item.description}
               </p>
 

@@ -84,28 +84,28 @@ export function Header() {
                 
                 {/* 1. About */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] data-[state=open]:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     About
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[240px] gap-1 p-3 bg-[#F7F1E1] rounded-2xl shadow-xl border border-[#DBCFA8]">
                       <li>
-                        <Link href="/about" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/about" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Our Hospital
                         </Link>
                       </li>
                       <li>
-                        <Link href="/about/history" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/about/history" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Heritage & Legacy (1880)
                         </Link>
                       </li>
                       <li>
-                        <Link href="/about/doctors" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/about/doctors" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Our Doctors & Team
                         </Link>
                       </li>
                       <li>
-                        <Link href="/about/why-omshree" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/about/why-omshree" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Why Choose Us
                         </Link>
                       </li>
@@ -115,28 +115,28 @@ export function Header() {
 
                 {/* 2. Ayurveda */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] data-[state=open]:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     Ayurveda
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[240px] gap-1 p-3 bg-[#F7F1E1] rounded-2xl shadow-xl border border-[#DBCFA8]">
                       <li>
-                        <Link href="/ayurveda" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/ayurveda" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Understanding Ayurveda
                         </Link>
                       </li>
                       <li>
-                        <Link href="/ayurveda/kerala" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/ayurveda/kerala" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Kerala Ayurveda
                         </Link>
                       </li>
                       <li>
-                        <Link href="/ayurveda/panchakarma" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/ayurveda/panchakarma" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Panchakarma Therapies
                         </Link>
                       </li>
                       <li>
-                        <Link href="/ayurveda/consultation" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/ayurveda/consultation" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Consultation Process
                         </Link>
                       </li>
@@ -146,28 +146,28 @@ export function Header() {
                 
                 {/* 3. Treatments */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] data-[state=open]:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     Treatments
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[240px] gap-1 p-3 bg-[#F7F1E1] rounded-2xl shadow-xl border border-[#DBCFA8]">
                       <li>
-                        <Link href="/treatments" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/treatments" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Ayurvedic Treatments
                         </Link>
                       </li>
                       <li>
-                        <Link href="/treatments/therapies" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/treatments/therapies" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Signature Therapies
                         </Link>
                       </li>
                       <li>
-                        <Link href="/treatments/heart-disease" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/treatments/heart-disease" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Heart Disease
                         </Link>
                       </li>
                       <li>
-                        <Link href="/treatments/liver-disease" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/treatments/liver-disease" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Liver Disease
                         </Link>
                       </li>
@@ -177,54 +177,54 @@ export function Header() {
 
                 {/* 4. Conditions */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/conditions" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/conditions" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Conditions
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 4.5. Products */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/products" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/products" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Products
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 4.6. Testimonials */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/testimonials" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/testimonials" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Testimonials
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 5. Patient Care */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] data-[state=open]:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
+                  <NavigationMenuTrigger className="bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] data-[state=open]:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 transition-colors cursor-pointer whitespace-nowrap [&>svg]:size-2.5 [&>svg]:ml-0.5">
                     Patient Care
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[240px] gap-1 p-3 bg-[#F7F1E1] rounded-2xl shadow-xl border border-[#DBCFA8]">
                       <li>
-                        <Link href="/patient-care" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/patient-care" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Care Overview
                         </Link>
                       </li>
                       <li>
-                        <Link href="/patient-care/facilities" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/patient-care/facilities" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           In-Patient Facilities
                         </Link>
                       </li>
                       <li>
-                        <Link href="/patient-care/journey" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/patient-care/journey" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Patient Journey
                         </Link>
                       </li>
                       <li>
-                        <Link href="/patient-care/tariff" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/patient-care/tariff" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Tariff & Pricing
                         </Link>
                       </li>
                       <li>
-                        <Link href="/patient-care/challenging-offer" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#517B32] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
+                        <Link href="/patient-care/challenging-offer" className="block p-2.5 text-sm font-medium text-[#66371B] hover:text-[#3D5F26] hover:bg-[#E3D8C1]/60 rounded-xl transition-colors">
                           Challenging Offer
                         </Link>
                       </li>
@@ -234,14 +234,14 @@ export function Header() {
 
                 {/* 5.5. Blog */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/blog" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/blog" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Blog
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 {/* 6. Contact */}
                 <NavigationMenuItem>
-                  <NavigationMenuLink render={<Link href="/contact" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#517B32] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
+                  <NavigationMenuLink render={<Link href="/contact" />} className={cn(navigationMenuTriggerStyle(), "bg-transparent text-xs xl:text-[12.5px] 2xl:text-[14px] font-semibold text-[#66371B] hover:text-[#3D5F26] h-8 xl:h-8.5 2xl:h-9 px-1.5 xl:px-2 2xl:px-3.5 whitespace-nowrap cursor-pointer transition-colors")}>
                     Contact
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -255,10 +255,10 @@ export function Header() {
             {/* Phone Button */}
             <a
               href="tel:+919846992789"
-              className="inline-flex items-center justify-center size-8.5 2xl:size-auto 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#517B32] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap shrink-0"
+              className="inline-flex items-center justify-center size-8.5 2xl:size-auto 2xl:px-3 2xl:py-2 rounded-xl bg-white border border-[#DBCFA8] hover:border-[#3D5F26] hover:bg-[#E3D8C1]/40 text-[#66371B] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap shrink-0"
               title="Call Omshree Sidha Hospital"
             >
-              <Phone className="h-3.5 w-3.5 text-[#517B32]" />
+              <Phone className="h-3.5 w-3.5 text-[#3D5F26]" />
               <span className="hidden 2xl:inline ml-1.5">Call</span>
             </a>
 
@@ -278,7 +278,7 @@ export function Header() {
             <Button
               render={<Link href="/contact" />}
               variant="default"
-              className="h-8.5 2xl:h-9 px-3 xl:px-4 2xl:px-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold shadow-md shadow-[#517B32]/20 hover:-translate-y-0.5 whitespace-nowrap shrink-0"
+              className="h-8.5 2xl:h-9 px-3 xl:px-4 2xl:px-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold shadow-md shadow-[#3D5F26]/20 hover:-translate-y-0.5 whitespace-nowrap shrink-0"
             >
               Book Consultation
             </Button>
@@ -291,7 +291,7 @@ export function Header() {
               aria-label="Call Hospital"
               className="p-2 sm:px-3 sm:py-2 rounded-xl sm:rounded-full text-[#66371B] bg-white border border-[#DBCFA8] hover:bg-[#E3D8C1] flex items-center gap-1.5 transition-colors"
             >
-              <Phone className="h-4 w-4 text-[#517B32]" />
+              <Phone className="h-4 w-4 text-[#3D5F26]" />
               <span className="hidden sm:inline text-xs font-semibold">Call</span>
             </a>
             
@@ -333,10 +333,10 @@ export function Header() {
               } />
               <SheetContent side="right" className="bg-[#F7F1E1] w-[88vw] sm:w-[380px] overflow-y-auto border-l-[#DBCFA8] p-6">
                 <SheetHeader className="text-left border-b border-[#DBCFA8] pb-4 mb-4">
-                  <SheetTitle className="text-[#517B32] font-heading font-bold text-xl">
+                  <SheetTitle className="text-[#3D5F26] font-heading font-bold text-xl">
                     Omshree Sidha Hospital
                   </SheetTitle>
-                  <p className="text-xs text-[#81754B] font-medium uppercase tracking-wider">
+                  <p className="text-xs text-[#5C5232] font-medium uppercase tracking-wider">
                     Ayurvedic Hospital • Healing Since 1880
                   </p>
                 </SheetHeader>
@@ -347,25 +347,25 @@ export function Header() {
                     <Link 
                       href="/" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Home</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
                     
                     <Link 
                       href="/about" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>About Hospital</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/about/doctors" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between pl-3 text-sm text-[#66371B]/80"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between pl-3 text-sm text-[#66371B]/80"
                     >
                       <span>— Our Doctors & Vaidyans</span>
                     </Link>
@@ -373,7 +373,7 @@ export function Header() {
                     <Link 
                       href="/about/history" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between pl-3 text-sm text-[#66371B]/80"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between pl-3 text-sm text-[#66371B]/80"
                     >
                       <span>— Heritage (Healing Since 1880)</span>
                     </Link>
@@ -381,82 +381,82 @@ export function Header() {
                     <Link 
                       href="/ayurveda" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Ayurveda & Panchakarma</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/treatments" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Treatments & Therapies</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/conditions" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Health Conditions</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/products" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Medicines & Products</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/testimonials" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Testimonials</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/patient-care" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Patient Care & In-Patient Facilities</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/international-patients" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between text-[#517B32] font-semibold"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between text-[#3D5F26] font-semibold"
                     >
                       <span>International Patients</span>
-                      <ChevronRight className="h-4 w-4 text-[#517B32]" />
+                      <ChevronRight className="h-4 w-4 text-[#3D5F26]" />
                     </Link>
 
                     <Link 
                       href="/blog" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Blog & Health Insights</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
 
                     <Link 
                       href="/contact" 
                       onClick={() => setIsOpen(false)}
-                      className="py-2.5 hover:text-[#517B32] flex items-center justify-between"
+                      className="py-2.5 hover:text-[#3D5F26] flex items-center justify-between"
                     >
                       <span>Contact Hospital</span>
-                      <ChevronRight className="h-4 w-4 text-[#B4833D]/60" />
+                      <ChevronRight className="h-4 w-4 text-[#8F5E18]/70" />
                     </Link>
                   </div>
 
@@ -482,13 +482,13 @@ export function Header() {
                       variant="outline" 
                       className="w-full justify-center"
                     >
-                      <Phone className="h-4 w-4 mr-2 text-[#517B32]" /> Call Mobile (+91 98469 92789)
+                      <Phone className="h-4 w-4 mr-2 text-[#3D5F26]" /> Call Mobile (+91 98469 92789)
                     </Button>
                     <div className="grid grid-cols-2 gap-2 text-center text-xs pt-1">
-                      <a href="tel:+914822229434" className="py-2 px-1 bg-white border border-[#DBCFA8] rounded-xl text-[#66371B] font-medium hover:border-[#517B32] transition-colors">
+                      <a href="tel:+914822229434" className="py-2 px-1 bg-white border border-[#DBCFA8] rounded-xl text-[#66371B] font-medium hover:border-[#3D5F26] transition-colors">
                         Landline: 04822 229434
                       </a>
-                      <a href="tel:+914822229435" className="py-2 px-1 bg-white border border-[#DBCFA8] rounded-xl text-[#66371B] font-medium hover:border-[#517B32] transition-colors">
+                      <a href="tel:+914822229435" className="py-2 px-1 bg-white border border-[#DBCFA8] rounded-xl text-[#66371B] font-medium hover:border-[#3D5F26] transition-colors">
                         Landline: 04822 229435
                       </a>
                     </div>

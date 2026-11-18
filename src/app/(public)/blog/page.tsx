@@ -30,6 +30,8 @@ export default function BlogIndexPage() {
                 src="/images/blog/ayurvedic-approach-to-asthma-management-hero.jpg"
                 alt="Ayurvedic Approach to Asthma: Natural Remedies and Supportive Care"
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>

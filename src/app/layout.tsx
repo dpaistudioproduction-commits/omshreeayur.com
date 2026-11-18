@@ -8,6 +8,7 @@ const lato = Lato({
   weight: ["300", "400", "700"],
   display: "swap",
   preload: true,
+  adjustFontFallback: true,
 });
 
 const philosopher = Philosopher({
@@ -16,6 +17,7 @@ const philosopher = Philosopher({
   weight: ["400", "700"],
   display: "swap",
   preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

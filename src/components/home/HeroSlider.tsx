@@ -297,35 +297,39 @@ export function HeroSlider() {
           
           {/* Slide Indicator */}
           <div className="flex items-center gap-2 border-r border-[#E3D8C1]/20 pr-4">
-            <span className="font-mono text-sm md:text-base font-bold text-[#B4833D]">
+            <span className="font-mono text-sm md:text-base font-bold text-[#D4A760]">
               {activeSlide.number}
             </span>
-            <span className="font-mono text-sm md:text-base text-[#E3D8C1]/50">
+            <span className="font-mono text-sm md:text-base text-[#E3D8C1]/80">
               / 05
             </span>
           </div>
 
           {/* Jump Dots with internal progress */}
-          <div className="hidden sm:flex items-center gap-2 px-2">
+          <div className="hidden sm:flex items-center gap-1 px-1">
             {HERO_SLIDES.map((slide, idx) => (
               <button
                 key={slide.id}
                 onClick={() => goToSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={cn(
-                  "rounded-full transition-all duration-300 relative overflow-hidden",
-                  idx === currentSlide ? "w-10 h-1.5 bg-[#E3D8C1]/20" : "w-1.5 h-1.5 bg-[#E3D8C1]/40 hover:bg-[#E3D8C1]/70"
-                )}
+                className="min-h-[36px] min-w-[36px] p-1 flex items-center justify-center focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D4A760] rounded-full"
               >
-                {idx === currentSlide && (
-                  <div 
-                    key={`progress-${currentSlide}`}
-                    className="absolute top-0 left-0 bottom-0 bg-[#B4833D] rounded-full"
-                    style={{
-                      animation: isPlaying ? `heroProgress ${AUTOPLAY_DURATION}ms linear forwards` : "none",
-                    }}
-                  />
-                )}
+                <span
+                  className={cn(
+                    "rounded-full transition-all duration-300 relative overflow-hidden block",
+                    idx === currentSlide ? "w-10 h-1.5 bg-[#E3D8C1]/20" : "w-1.5 h-1.5 bg-[#E3D8C1]/40 hover:bg-[#E3D8C1]/70"
+                  )}
+                >
+                  {idx === currentSlide && (
+                    <span
+                      key={`progress-${currentSlide}`}
+                      className="absolute top-0 left-0 bottom-0 bg-[#D4A760] rounded-full block"
+                      style={{
+                        animation: isPlaying ? `heroProgress ${AUTOPLAY_DURATION}ms linear forwards` : "none",
+                      }}
+                    />
+                  )}
+                </span>
               </button>
             ))}
           </div>
@@ -335,7 +339,7 @@ export function HeroSlider() {
             <button
               onClick={() => setIsPlaying((p) => !p)}
               aria-label={isPlaying ? "Pause hero slider" : "Play hero slider"}
-              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-8 sm:w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
             </button>
@@ -343,7 +347,7 @@ export function HeroSlider() {
             <button
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-8 sm:w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -351,7 +355,7 @@ export function HeroSlider() {
             <button
               onClick={nextSlide}
               aria-label="Next slide"
-              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-8 sm:w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
