@@ -23,6 +23,7 @@ interface PharmacyEditorialProps {
 export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps = {}) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const HeadingTag = headingAs;
+  const SubHeadingTag = headingAs === "h1" ? "h2" : "h3";
 
   const filteredProducts = selectedCategory === "all"
     ? AUTHENTIC_PRODUCTS
@@ -49,7 +50,7 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
             <span className="relative z-10">GMP Certified Classical &amp; Patented Formulations</span>
           </HeadingTag>
           
-          <p className="text-base sm:text-lg text-[#81754B] leading-relaxed font-light max-w-3xl mx-auto mb-10">
+          <p className="text-base sm:text-lg text-[#5C5232] leading-relaxed font-normal max-w-3xl mx-auto mb-10">
             Manufactured exclusively in our Vayala pharmacy under the direction of Sri M.J. Jose, holder of multiple Government of India Ayurvedic patents. Medicines are prepared from freshly harvested botanical extracts.
           </p>
 
@@ -78,7 +79,7 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                 "px-6 py-2.5 rounded-full text-xs font-bold tracking-widest transition-all whitespace-nowrap cursor-pointer uppercase border",
                 selectedCategory === cat.key
                   ? "bg-[#66371B] text-white border-[#66371B] shadow-md"
-                  : "bg-white/60 text-[#81754B] border-[#DBCFA8] hover:bg-white hover:text-[#66371B]"
+                  : "bg-white/60 text-[#5C5232] border-[#DBCFA8] hover:bg-white hover:text-[#66371B]"
               )}
             >
               {cat.label}
@@ -121,7 +122,7 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                     className={cn(
                       "absolute top-3 right-3 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5 z-10",
                       product.badge?.toLowerCase() === "classic"
-                        ? "bg-[#B4833D] text-white"
+                        ? "bg-[#8B5C1B] text-white"
                         : "bg-[#517B32] text-white"
                     )}
                   >
@@ -134,12 +135,12 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
               {/* Content Details */}
               <div className="flex flex-col flex-1 p-5 sm:p-6">
                 <div className="mb-4">
-                  <div className="text-[#81754B] text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] mb-2">
+                  <div className="text-[#5C5232] text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] mb-2">
                     {product.categoryLabel}
                   </div>
-                  <h3 className="font-heading font-semibold text-lg sm:text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-snug mb-2.5">
+                  <SubHeadingTag className="font-heading font-semibold text-lg sm:text-xl text-[#66371B] group-hover:text-[#517B32] transition-colors leading-snug mb-2.5">
                     {product.name}
-                  </h3>
+                  </SubHeadingTag>
                   <p className="text-sm sm:text-[15px] text-[#402816] leading-relaxed font-normal">
                     {product.description}
                   </p>
@@ -147,7 +148,7 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
 
                 <div className="mt-auto space-y-3 pt-1">
                   <div className="bg-[#FDFBF7] p-3 sm:p-3.5 rounded-xl border border-[#DBCFA8]/60">
-                    <strong className="text-[#B4833D] block mb-1 uppercase tracking-[0.16em] text-[10px] sm:text-[11px] font-bold">
+                    <strong className="text-[#8B5C1B] block mb-1 uppercase tracking-[0.16em] text-[10px] sm:text-[11px] font-bold">
                       Clinical Focus
                     </strong>
                     <p className="text-xs sm:text-[13px] text-[#402816] font-normal leading-relaxed">
@@ -185,10 +186,10 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                   <FileCheck className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-medium text-2xl text-[#FDFBF7]">
+                  <SubHeadingTag className="font-heading font-medium text-2xl text-[#FDFBF7]">
                     Ethical Governance
-                  </h3>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mt-1">
+                  </SubHeadingTag>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8C485] block mt-1">
                     Prescription Only Policy
                   </span>
                 </div>

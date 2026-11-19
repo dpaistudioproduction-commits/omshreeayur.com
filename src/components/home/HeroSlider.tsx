@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface SlideData {
   id: string;
@@ -105,11 +104,6 @@ export function HeroSlider() {
   const [isPlaying, setIsPlaying] = useState(true);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const isInitialMount = useRef(true);
-
-  useEffect(() => {
-    isInitialMount.current = false;
-  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
@@ -148,6 +142,7 @@ export function HeroSlider() {
         nextSlide();
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [nextSlide, prevSlide]);
@@ -179,27 +174,36 @@ export function HeroSlider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Slides with Crossfade */}
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={activeSlide.id}
-          initial={isInitialMount.current ? false : { opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0 z-0 pointer-events-none"
-        >
-          <Image
-            src={activeSlide.imageSrc}
-            alt={activeSlide.imageAlt}
-            fill
-            sizes="100vw"
-            priority={currentSlide === 0}
-            fetchPriority={currentSlide === 0 ? "high" : "auto"}
-            className="object-cover object-center"
-          />
-        </motion.div>
-      </AnimatePresence>
+      {/* Background Slides with Native CSS Crossfade (eliminates JS animation render delay) */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {HERO_SLIDES.map((slide, idx) => {
+          const isActive = idx === currentSlide;
+          // Only render active slide (slide 0 on SSR) to prevent pre-fetching offscreen slides
+          const shouldRender = isActive;
+          return (
+            <div
+              key={slide.id}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-1000 ease-in-out",
+                isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+              )}
+            >
+              {shouldRender && (
+                <Image
+                  src={slide.imageSrc}
+                  alt={slide.imageAlt}
+                  fill
+                  sizes="100vw"
+                  priority={idx === 0}
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  className="object-cover object-center"
+                />
+              )}
+            </div>
+          );
+        })}
+      </div>
 
       {/* Refined Dark Vignette / Overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#2c1b0f]/90 via-[#402816]/50 to-transparent pointer-events-none" />
@@ -208,93 +212,58 @@ export function HeroSlider() {
       {/* Main Content Area */}
       <div className="w-full px-[4%] relative z-10 py-24">
         <div className="max-w-3xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeSlide.id}
-              initial={isInitialMount.current ? false : "hidden"}
-              animate="visible"
-              exit="exit"
-              variants={{
-                visible: { transition: { staggerChildren: 0.1 } },
-                exit: { transition: { staggerChildren: 0.05 } }
-              }}
-              className="flex flex-col items-start"
-            >
-              {/* Tag / Category Badge (Glassmorphism) */}
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-sm"
-              >
-                <span className="h-2 w-2 rounded-full bg-[#B4833D] animate-pulse shadow-[0_0_8px_rgba(180,131,61,0.8)]" />
-                <span className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#F7F1E1]">
-                  {activeSlide.tag}
-                </span>
-              </motion.div>
+          <div
+            key={activeSlide.id}
+            className={cn(
+              "flex flex-col items-start",
+              currentSlide !== 0 && "animate-fadeIn"
+            )}
+          >
+            {/* Tag / Category Badge (Glassmorphism) */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-[#B4833D] animate-pulse shadow-[0_0_8px_rgba(180,131,61,0.8)]" />
+              <span className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#F7F1E1]">
+                {activeSlide.tag}
+              </span>
+            </div>
 
-              {/* Heading */}
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F1E1] mb-6 leading-[1.12] tracking-tight drop-shadow-lg"
-              >
-                {activeSlide.title}
-              </motion.h1>
+            {/* Heading */}
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F1E1] mb-6 leading-[1.12] tracking-tight drop-shadow-lg">
+              {activeSlide.title}
+            </h1>
 
-              {/* Subtitle */}
-              <motion.p
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="text-base sm:text-lg md:text-xl text-[#E3D8C1] mb-10 leading-relaxed font-light max-w-2xl drop-shadow-md"
-              >
-                {activeSlide.subtitle}
-              </motion.p>
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg md:text-xl text-[#E3D8C1] mb-10 leading-relaxed font-light max-w-2xl drop-shadow-md">
+              {activeSlide.subtitle}
+            </p>
 
-              {/* CTAs */}
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <Button
+                render={<Link href={activeSlide.primaryCtaLink} />}
+                variant="default"
+                size="lg"
+                className="px-8 shadow-[0_0_20px_rgba(81,123,50,0.4)] hover:-translate-y-0.5"
               >
-                <Button
-                  render={<Link href={activeSlide.primaryCtaLink} />}
-                  variant="default"
-                  size="lg"
-                  className="px-8 shadow-[0_0_20px_rgba(81,123,50,0.4)] hover:-translate-y-0.5"
-                >
-                  {activeSlide.primaryCtaText}
-                </Button>
+                {activeSlide.primaryCtaText}
+              </Button>
 
-                <Button
-                  render={<Link href={activeSlide.secondaryCtaLink} />}
-                  variant="outline"
-                  size="lg"
-                  className="px-8 bg-black/20 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
-                >
-                  {activeSlide.secondaryCtaText}
-                </Button>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+              <Button
+                render={<Link href={activeSlide.secondaryCtaLink} />}
+                variant="outline"
+                size="lg"
+                className="px-8 bg-black/20 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
+              >
+                {activeSlide.secondaryCtaText}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Slider Controls - Unified Control Island at Bottom Right */}
       <div className="absolute bottom-8 right-[4%] z-20 pointer-events-auto">
         <div className="flex items-center gap-4 bg-[#2c1b0f]/60 backdrop-blur-xl border border-[#E3D8C1]/10 rounded-full px-6 py-3 shadow-2xl">
-          
           {/* Slide Indicator */}
           <div className="flex items-center gap-2 border-r border-[#E3D8C1]/20 pr-4">
             <span className="font-mono text-sm md:text-base font-bold text-[#D4A760]">
