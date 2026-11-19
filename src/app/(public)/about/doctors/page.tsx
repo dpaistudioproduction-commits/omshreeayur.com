@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Info, Award } from "lucide-react";
+import { Award } from "lucide-react";
 import { DoctorAvatar } from "@/components/brand/DoctorAvatar";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 
@@ -102,7 +102,7 @@ export default function DoctorsPage() {
                   <div className="w-12 h-px bg-[#DBCFA8] mb-8 mx-auto md:mx-0"></div>
                   <div className="text-[#81754B] text-base lg:text-lg leading-relaxed font-light space-y-6">
                     <p>
-                      As the third-generation custodian of the Marozhukayil family's healing heritage, Sri M.J. Jose leads Omshree Sidha Hospital. He brings decades of practical experience and deep knowledge of classical formulations inherited from his grandfather.
+                      As the third-generation custodian of the Marozhukayil family&apos;s healing heritage, Sri M.J. Jose leads Omshree Sidha Hospital. He brings decades of practical experience and deep knowledge of classical formulations inherited from his grandfather.
                     </p>
                     <p>
                       Sri Jose is particularly recognized for his ongoing research into Ayurvedic disease management for complex conditions such as asthma, diabetes, and arthritis. In recognition of his innovative formulations, he has been awarded multiple patents by the Government of India.
@@ -130,7 +130,7 @@ export default function DoctorsPage() {
                   <div className="w-12 h-px bg-[#DBCFA8] mb-8 mx-auto md:mx-0"></div>
                   <div className="text-[#81754B] text-base lg:text-lg leading-relaxed font-light space-y-6">
                     <p>
-                      Dr. Justin combines the rigorous academic training of a Bachelor of Ayurvedic Medicine and Surgery (BAMS) with the extensive clinical exposure provided by the hospital's heritage. He plays a vital role in daily patient diagnosis (Nadi Pariksha), treatment protocol design, and the direct supervision of Panchakarma therapies.
+                      Dr. Justin is a qualified Ayurvedic physician holding a Bachelor of Ayurvedic Medicine and Surgery (BAMS).
                     </p>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function DoctorsPage() {
                   <div className="w-12 h-px bg-[#DBCFA8] mb-8 mx-auto md:mx-0"></div>
                   <div className="text-[#81754B] text-base lg:text-lg leading-relaxed font-light space-y-6">
                     <p>
-                      Dr. Susme is a qualified Ayurvedic physician (BAMS) dedicated to holistic patient care. She is involved in detailed clinical assessments, managing in-patient recovery, and ensuring that all dietary and therapeutic protocols are strictly followed according to classical Ayurvedic principles.
+                      Dr. Susme is a qualified Ayurvedic physician holding a Bachelor of Ayurvedic Medicine and Surgery (BAMS).
                     </p>
                   </div>
                 </div>
