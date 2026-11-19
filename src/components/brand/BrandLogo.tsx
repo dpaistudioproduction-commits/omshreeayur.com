@@ -39,7 +39,7 @@ export function BrandLogo({
             width={320}
             height={64}
             className="h-9 sm:h-10 xl:h-[42px] 2xl:h-12 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
-            priority
+            loading="eager"
           />
         </div>
       )}

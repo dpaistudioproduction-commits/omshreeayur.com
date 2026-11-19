@@ -3,12 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   experimental: {
     turbopackPluginRuntimeStrategy: 'workerThreads',
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-slot'],
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-slot', '@base-ui/react'],
   },
   turbopack: {},
   compress: true,
   images: {
     formats: ['image/avif', 'image/webp'],
+    qualities: [70, 75],
     minimumCacheTTL: 31536000,
     remotePatterns: [
       {

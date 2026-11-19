@@ -26,13 +26,14 @@ export default function BlogIndexPage() {
           {/* Article Card: Ayurvedic Approach to Asthma Management */}
           <Link href="/blog/ayurvedic-approach-to-asthma-management" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/ayurvedic-approach-to-asthma-management-hero.jpg"
                 alt="Ayurvedic Approach to Asthma: Natural Remedies and Supportive Care"
                 fill
                 priority
                 loading="eager"
                 fetchPriority="high"
+                quality={70}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -56,7 +57,7 @@ export default function BlogIndexPage() {
           {/* Article Card: Osteoarthritis and Knee Pain */}
           <Link href="/blog/osteoarthritis-and-knee-pain" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/osteoarthritis-knee-pain-hero.jpg"
                 alt="Osteoarthritis and Knee Pain: Ayurvedic Assessment and Care in Kerala"
                 fill
@@ -82,7 +83,7 @@ export default function BlogIndexPage() {
           {/* Article Card: Asthma and Ayurveda */}
           <Link href="/blog/asthma-and-ayurveda" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/asthma-ayurveda-hero.jpg"
                 alt="Asthma and Ayurveda: Understanding Supportive Care Alongside Medical Treatment"
                 fill
@@ -108,7 +109,7 @@ export default function BlogIndexPage() {
           {/* Article Card: Low Blood Pressure Treatment */}
           <Link href="/blog/low-blood-pressure-treatment" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/low-blood-pressure-ayurveda-hero.jpg"
                 alt="Why Low Blood Pressure Is Often Ignored by Modern Treatment, and What Ayurveda Offers?"
                 fill
@@ -134,7 +135,7 @@ export default function BlogIndexPage() {
           {/* Article Card: Why Do I Get Migraines? */}
           <Link href="/blog/why-do-i-get-migraines" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/why-do-i-get-migraines-hero.jpg"
                 alt="Why Do I Get Migraines? Common Triggers and Ayurvedic Solutions"
                 fill
@@ -160,7 +161,7 @@ export default function BlogIndexPage() {
           {/* Article Card: What Is Ejection Fraction */}
           <Link href="/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/ef-featured-image.png"
                 alt="Heart anatomy illustration"
                 fill
@@ -186,7 +187,7 @@ export default function BlogIndexPage() {
           {/* Article Card: What Is an Echocardiogram */}
           <Link href="/blog/what-is-an-echocardiogram" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/echo-procedure-photo.jpg"
                 alt="Clinical echocardiogram examination with ultrasound monitor and probe"
                 fill
@@ -212,7 +213,7 @@ export default function BlogIndexPage() {
           {/* Article Card: How to Stop Snoring Naturally */}
           <Link href="/blog/how-to-stop-snoring-naturally-without-surgery" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/snoring-remedies-hero.jpg"
                 alt="How to stop snoring naturally without surgery with lifestyle and Ayurvedic remedies"
                 fill
@@ -238,7 +239,7 @@ export default function BlogIndexPage() {
           {/* Article Card: Can Liver Cirrhosis Be Managed with Ayurveda? */}
           <Link href="/blog/can-liver-cirrhosis-be-managed-with-ayurveda" className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBCFA8] hover:shadow-md transition-shadow">
             <div className="relative h-64 w-full overflow-hidden">
-              <Image 
+              <Image
                 src="/images/blog/liver-cirrhosis-ayurveda-hero.jpg"
                 alt="Can liver cirrhosis be managed with Ayurveda - holistic liver support"
                 fill

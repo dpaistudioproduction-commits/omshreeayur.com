@@ -64,6 +64,10 @@ export function ClarityScript() {
         function initClarity() {
           if (window.__clarityLoaded) return;
           window.__clarityLoaded = true;
+          window.removeEventListener('scroll', initClarity);
+          window.removeEventListener('pointerdown', initClarity);
+          window.removeEventListener('touchstart', initClarity);
+          window.removeEventListener('keydown', initClarity);
           var t = document.createElement("script");
           t.async = 1;
           t.src = "https://www.clarity.ms/tag/${clarityId}";
@@ -72,10 +76,14 @@ export function ClarityScript() {
         }
 
         if (typeof window !== 'undefined') {
+          window.addEventListener('scroll', initClarity, { passive: true, once: true });
+          window.addEventListener('pointerdown', initClarity, { passive: true, once: true });
+          window.addEventListener('touchstart', initClarity, { passive: true, once: true });
+          window.addEventListener('keydown', initClarity, { passive: true, once: true });
           if ('requestIdleCallback' in window) {
-            requestIdleCallback(initClarity, { timeout: 2500 });
+            requestIdleCallback(initClarity, { timeout: 4000 });
           } else {
-            setTimeout(initClarity, 1500);
+            setTimeout(initClarity, 3500);
           }
         }
       `}
