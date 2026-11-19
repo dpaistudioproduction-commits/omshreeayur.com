@@ -14,16 +14,30 @@ export function AnalyticsScripts() {
   return (
     <>
       {/* Google Tag Manager (container GTM-K5C9V6K manages GA4 G-4GFE7SYQPF & Google Ads AW-954968743) */}
-      <Script id="google-tag-manager" strategy="lazyOnload">
+      <Script id="google-tag-manager" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-K5C9V6K');
+          window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+
+          function initGTM() {
+            if (window.__gtmLoaded) return;
+            window.__gtmLoaded = true;
+            var f = document.getElementsByTagName('script')[0],
+                j = document.createElement('script');
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-K5C9V6K';
+            f.parentNode.insertBefore(j, f);
+          }
+
+          if (typeof window !== 'undefined') {
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(initGTM, { timeout: 1800 });
+            } else {
+              setTimeout(initGTM, 1000);
+            }
+          }
         `}
       </Script>
       {/* Google Tag Manager (noscript) */}
@@ -36,40 +50,40 @@ export function AnalyticsScripts() {
         />
       </noscript>
 
-      {/* Google Analytics 4 - Activates only when NEXT_PUBLIC_GA_ID is set */}
-      {gaId && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            strategy="lazyOnload"
-          />
-          <Script id="google-analytics" strategy="lazyOnload">
-            {`
-              gtag('js', new Date());
-              gtag('config', '${gaId}', {
-                page_path: window.location.pathname,
-                anonymize_ip: true
-              });
-            `}
-          </Script>
-        </>
-      )}
-
       {/* Meta Pixel (Omshree pixel: 1210872533263374) */}
       {metaPixelId && (
         <>
-          <Script id="meta-pixel" strategy="lazyOnload">
+          <Script id="meta-pixel" strategy="afterInteractive">
             {`
               !function(f,b,e,v,n,t,s)
               {if(f.fbq && f.fbq.callMethod)return;n=f.fbq=f.fbq||function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
               if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=n.queue||[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${metaPixelId}');
-              fbq('track', 'PageView');
+              n.queue=n.queue||[];}(window, document);
+
+              if (!window.__fbqInitialized) {
+                window.__fbqInitialized = true;
+                fbq('init', '${metaPixelId}');
+                fbq('track', 'PageView');
+              }
+
+              function initMetaPixel() {
+                if (window.__fbqScriptLoaded) return;
+                window.__fbqScriptLoaded = true;
+                var t = document.createElement('script');
+                t.async = true;
+                t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(t, s);
+              }
+
+              if (typeof window !== 'undefined') {
+                if ('requestIdleCallback' in window) {
+                  requestIdleCallback(initMetaPixel, { timeout: 2000 });
+                } else {
+                  setTimeout(initMetaPixel, 1200);
+                }
+              }
             `}
           </Script>
           <noscript>

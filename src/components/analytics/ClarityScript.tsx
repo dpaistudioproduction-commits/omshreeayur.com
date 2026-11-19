@@ -57,13 +57,27 @@ export function ClarityScript() {
   }
 
   return (
-    <Script id="microsoft-clarity" strategy="lazyOnload">
+    <Script id="microsoft-clarity" strategy="afterInteractive">
       {`
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "${clarityId}");
+        window.clarity = window.clarity || function(){(window.clarity.q = window.clarity.q || []).push(arguments);};
+
+        function initClarity() {
+          if (window.__clarityLoaded) return;
+          window.__clarityLoaded = true;
+          var t = document.createElement("script");
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/${clarityId}";
+          var y = document.getElementsByTagName("script")[0];
+          y.parentNode.insertBefore(t, y);
+        }
+
+        if (typeof window !== 'undefined') {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(initClarity, { timeout: 2500 });
+          } else {
+            setTimeout(initClarity, 1500);
+          }
+        }
       `}
     </Script>
   );
