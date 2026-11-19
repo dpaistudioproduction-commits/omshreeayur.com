@@ -69,6 +69,47 @@ const nextConfig: NextConfig = {
         destination: '/treatments/ulcerative-colitis',
         permanent: true,
       },
+      // Historical WordPress Blog Redirects (Phase 3A: Safe Verified Mappings)
+      {
+        source: '/ayurvedic-solutions-for-migraine-relief-and-long-term-balance',
+        destination: '/blog/why-do-i-get-migraines',
+        permanent: true,
+      },
+      {
+        source: '/blog/ayurveda-treatment-for-asthma',
+        destination: '/blog/asthma-and-ayurveda',
+        permanent: true,
+      },
+      {
+        source: '/blog/ayurvedic-herbal-remedies-for-asthma',
+        destination: '/blog/asthma-and-ayurveda',
+        permanent: true,
+      },
+      {
+        source: '/cochin-office-inauguration',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/liver-cirrhosis-treatment-in-ayurveda',
+        destination: '/blog/can-liver-cirrhosis-be-managed-with-ayurveda',
+        permanent: true,
+      },
+      {
+        source: '/low-heart-ejection-fraction-low-e-f',
+        destination: '/blog/what-is-ejection-fraction-and-what-does-it-tell-you-about-heart-function',
+        permanent: true,
+      },
+      {
+        source: '/why-ayurvedic-treatment-for-asthma-focuses-on-balancing-kapha-and-vata',
+        destination: '/blog/asthma-and-ayurveda',
+        permanent: true,
+      },
+      {
+        source: '/why-do-people-snore-causes-ayurvedic-solutions',
+        destination: '/blog/how-to-stop-snoring-naturally-without-surgery',
+        permanent: true,
+      },
       {
         source: '/our-challenging-offer',
         destination: '/patient-care/challenging-offer',
