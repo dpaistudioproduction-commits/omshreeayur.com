@@ -20,7 +20,7 @@ export const therapies: TherapyData[] = [
     ],
     seoTitle: "Abhyanga Ayurvedic Massage in Kerala | Omshree Sidha Hospital",
     seoDescription: "Learn about Abhyanga, the traditional Ayurvedic therapeutic oil massage offered as part of clinical care at Omshree Sidha Hospital.",
-    heroImage: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070"
+    heroImage: "/images/therapies/abhyanga.webp"
   },
   {
     slug: "hrid-basti",
@@ -41,7 +41,7 @@ export const therapies: TherapyData[] = [
     ],
     seoTitle: "Hrid Basti Ayurvedic Treatment for Heart | Omshree Sidha Hospital",
     seoDescription: "Discover Hrid Basti, an authentic Ayurvedic therapy for strengthening heart muscles and relieving stress, available at Omshree Sidha Hospital, Kerala.",
-    heroImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2020"
+    heroImage: "/images/therapies/hrid-basti.webp"
   },
   {
     slug: "elakizhi",
@@ -96,6 +96,6 @@ export const therapies: TherapyData[] = [
     ],
     seoTitle: "Virechana Panchakarma Therapy | Omshree Sidha Hospital",
     seoDescription: "Virechana is a core Panchakarma purification therapy used for Pitta and liver disorders. Read about its clinical application at Omshree Sidha Hospital.",
-    heroImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070"
+    heroImage: "/images/therapies/virechana.webp"
   }
 ];

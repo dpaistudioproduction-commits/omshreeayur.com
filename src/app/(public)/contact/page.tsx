@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle2, AlertCircle, Loader2, MessageCircle } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { EnquiryPayload, EnquiryResponse } from "@/types/enquiry";
 
@@ -154,14 +154,12 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-emerald-900 text-white py-20 lg:py-24 relative overflow-hidden">
         <div className="w-full relative z-10 px-[4%] text-center">
-          <FadeIn>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Book a Consultation
-            </h1>
-            <p className="text-lg text-emerald-100 max-w-2xl mx-auto leading-relaxed">
-              Begin your Ayurvedic healing journey. Share your health concern with our specialists and our clinical coordination team will guide you on the next steps.
-            </p>
-          </FadeIn>
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            Book a Consultation
+          </h1>
+          <p className="text-lg text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+            Begin your Ayurvedic healing journey. Share your health concern with our specialists and our clinical coordination team will guide you on the next steps.
+          </p>
         </div>
       </section>
 
@@ -213,9 +211,12 @@ export default function ContactPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => analytics.whatsappClick("contact_page")}
-                        className="text-[#25D366] hover:text-[#128C7E] block font-medium transition-colors"
+                        className="text-[#075E54] hover:text-[#128C7E] font-medium transition-colors inline-flex items-center gap-1.5 mt-1"
                       >
-                        WhatsApp: +91 98469 92789
+                        <span className="inline-flex items-center justify-center h-4 w-4 rounded-full bg-[#25D366] text-white shrink-0">
+                          <MessageCircle className="h-2.5 w-2.5 fill-current" />
+                        </span>
+                        <span>WhatsApp: +91 98469 92789</span>
                       </a>
                     </div>
                   </CardContent>
@@ -461,7 +462,7 @@ export default function ContactPage() {
                         ) : (
                           <div className="space-y-2">
                             <Label htmlFor="state" className="text-slate-700 font-medium">
-                              State / City <span className="text-slate-400 font-normal">(Optional)</span>
+                              State / City <span className="text-slate-600 font-normal">(Optional)</span>
                             </Label>
                             <Input 
                               id="state" 
@@ -498,7 +499,7 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <Label htmlFor="message" className="text-slate-700 font-medium flex justify-between">
                           <span>Briefly describe your enquiry</span>
-                          <span className="text-slate-400 font-normal text-xs">(Optional)</span>
+                          <span className="text-slate-600 font-normal text-xs">(Optional)</span>
                         </Label>
                         <Textarea 
                           id="message" 

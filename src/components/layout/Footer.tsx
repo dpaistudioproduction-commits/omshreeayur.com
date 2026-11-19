@@ -13,14 +13,18 @@ export function Footer() {
           {/* Column 1 & 2: Brand & Intro */}
           <div className="lg:col-span-2 space-y-8 pr-4">
             <BrandLogo variant="footer" />
-            <p className="text-sm leading-relaxed text-[#E3D8C1]/70 max-w-sm">
+            <p className="text-sm leading-relaxed text-[#E3D8C1]/80 max-w-sm">
               An authentic Ayurvedic Hospital in Kerala, India. We bring over 140 years of traditional healing heritage, combining clinical rigor with personalized patient care.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <a href="mailto:info@omshreeayur.com" className="flex items-center justify-center h-10 w-10 rounded-full bg-white/5 border border-white/10 hover:bg-[#B4833D] hover:border-[#B4833D] hover:text-white transition-all text-[#E3D8C1]">
+              <a 
+                href="mailto:info@omshreeayur.com" 
+                aria-label="Send email to Omshree Sidha Hospital at info@omshreeayur.com"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-white/5 border border-white/10 hover:bg-[#D4A760] hover:border-[#D4A760] hover:text-[#362111] transition-all text-[#E3D8C1]"
+              >
                 <Mail className="h-4 w-4" />
               </a>
-              <a href="/contact" className="text-xs font-bold uppercase tracking-widest text-[#B4833D] hover:text-[#E3D8C1] transition-colors border-b border-[#B4833D]/30 hover:border-[#E3D8C1] pb-1">
+              <a href="/contact" className="text-xs font-bold uppercase tracking-widest text-[#D4A760] hover:text-[#E3D8C1] transition-colors border-b border-[#D4A760]/40 hover:border-[#E3D8C1] pb-1">
                 View Contact details
               </a>
             </div>
@@ -28,53 +32,53 @@ export function Footer() {
 
           {/* Column 3: Explore */}
           <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1]">Explore</h3>
-            <ul className="space-y-4 text-sm text-[#E3D8C1]/70">
-              <li><Link href="/about" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">About Us</Link></li>
-              <li><Link href="/ayurveda" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Ayurveda</Link></li>
-              <li><Link href="/treatments" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Treatments</Link></li>
-              <li><Link href="/conditions" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Health Conditions</Link></li>
-              <li><Link href="/about/doctors" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Our Doctors</Link></li>
-              <li><Link href="/patient-care/facilities" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Facilities</Link></li>
-              <li><Link href="/blog" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Blog</Link></li>
+            <h2 className="font-heading font-normal text-xl text-[#F7F1E1]">Explore</h2>
+            <ul className="space-y-4 text-sm text-[#E3D8C1]/80">
+              <li><Link href="/about" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">About Us</Link></li>
+              <li><Link href="/ayurveda" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Ayurveda</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Treatments</Link></li>
+              <li><Link href="/conditions" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Health Conditions</Link></li>
+              <li><Link href="/about/doctors" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Our Doctors</Link></li>
+              <li><Link href="/patient-care/facilities" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Facilities</Link></li>
+              <li><Link href="/blog" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Blog</Link></li>
             </ul>
           </div>
 
           {/* Column 4: Patient Care */}
           <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1]">Patient Care</h3>
-            <ul className="space-y-4 text-sm text-[#E3D8C1]/70">
-              <li><Link href="/patient-care/consultation" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Consultation</Link></li>
-              <li><Link href="/patient-care/journey" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Patient Journey</Link></li>
-              <li><Link href="/patient-care/tariff" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Tariff</Link></li>
-              <li><Link href="/international-patients" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">International Patients</Link></li>
-              <li><Link href="/patient-care/challenging-offer" className="hover:text-[#B4833D] focus:text-[#B4833D] transition-colors inline-block">Challenging Offer</Link></li>
+            <h2 className="font-heading font-normal text-xl text-[#F7F1E1]">Patient Care</h2>
+            <ul className="space-y-4 text-sm text-[#E3D8C1]/80">
+              <li><Link href="/patient-care/consultation" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Consultation</Link></li>
+              <li><Link href="/patient-care/journey" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Patient Journey</Link></li>
+              <li><Link href="/patient-care/tariff" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Tariff</Link></li>
+              <li><Link href="/international-patients" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">International Patients</Link></li>
+              <li><Link href="/patient-care/challenging-offer" className="hover:text-[#D4A760] focus:text-[#D4A760] transition-colors inline-block">Challenging Offer</Link></li>
             </ul>
           </div>
 
           {/* Column 5: Kottayam Hospital */}
           <div className="space-y-6">
-            <h3 className="font-heading font-normal text-xl text-[#F7F1E1] flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-[#B4833D]" /> Kottayam
-            </h3>
-            <div className="space-y-4 text-sm text-[#E3D8C1]/70">
+            <h2 className="font-heading font-normal text-xl text-[#F7F1E1] flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-[#D4A760]" /> Kottayam
+            </h2>
+            <div className="space-y-4 text-sm text-[#E3D8C1]/80">
               <p className="leading-relaxed">
                 <strong className="text-[#E3D8C1] font-medium block mb-1">Main Hospital</strong>
                 Vayala P.O, Kottayam<br />
                 Kerala 686587, India
               </p>
               <div className="pt-2 space-y-2">
-                <a href="tel:+919846992789" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 98469 92789
+                <a href="tel:+919846992789" className="flex items-center gap-2 hover:text-[#D4A760] transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-[#D4A760]" /> +91 98469 92789
                 </a>
-                <a href="tel:+914822229434" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4822 229434
+                <a href="tel:+914822229434" className="flex items-center gap-2 hover:text-[#D4A760] transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-[#D4A760]" /> +91 4822 229434
                 </a>
-                <a href="tel:+914822229435" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 4822 229435
+                <a href="tel:+914822229435" className="flex items-center gap-2 hover:text-[#D4A760] transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-[#D4A760]" /> +91 4822 229435
                 </a>
-                <a href="tel:+918086662789" className="flex items-center gap-2 hover:text-[#B4833D] transition-colors">
-                  <Phone className="h-3.5 w-3.5 text-[#B4833D]/70" /> +91 8086 662789
+                <a href="tel:+918086662789" className="flex items-center gap-2 hover:text-[#D4A760] transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-[#D4A760]" /> +91 8086 662789
                 </a>
               </div>
             </div>
@@ -84,15 +88,15 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#E3D8C1]/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E3D8C1]/50">
+        <div className="border-t border-[#E3D8C1]/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E3D8C1]/80">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
             <p>© {new Date().getFullYear()} Omshree Sidha Hospital. All rights reserved.</p>
-            <span className="hidden md:inline px-1 text-[#E3D8C1]/20">|</span>
+            <span className="hidden md:inline px-1 text-[#E3D8C1]/40">|</span>
             <span>Ayurvedic Hospital • Healing Since 1880</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-[#E3D8C1] transition-colors">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-[#E3D8C1] transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors underline underline-offset-2">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors underline underline-offset-2">Terms of Service</Link>
           </div>
         </div>
       </div>

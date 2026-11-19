@@ -41,11 +41,20 @@ export function trackEvent(eventName: string, params: Record<string, unknown> = 
     safeParams[key] = value;
   }
 
-  // Google Analytics 4
+  // Google Analytics 4 & Google Tag Manager
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-4GFE7SYQPF";
-  if (window.gtag && gaId) {
+  if (typeof window.gtag === "function" && gaId) {
     try {
       window.gtag("event", eventName, safeParams);
+    } catch {
+      // Ignore client-side tracking error
+    }
+  } else if (Array.isArray(window.dataLayer)) {
+    try {
+      window.dataLayer.push({
+        event: eventName,
+        ...safeParams,
+      });
     } catch {
       // Ignore client-side tracking error
     }

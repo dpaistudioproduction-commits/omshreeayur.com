@@ -33,7 +33,7 @@ export function SectionHeading({
           <span
             className={cn(
               "text-xs font-bold uppercase tracking-[0.2em]",
-              dark ? "text-[#E3D8C1]" : "text-[#517B32]"
+              dark ? "text-[#E3D8C1]" : "text-[#3D5F26]"
             )}
           >
             {eyebrow}
@@ -54,7 +54,7 @@ export function SectionHeading({
         <p
           className={cn(
             "text-base sm:text-lg leading-relaxed font-light",
-            dark ? "text-[#E3D8C1]/90" : "text-[#81754B]"
+            dark ? "text-[#E3D8C1]/90" : "text-[#5C5232]"
           )}
         >
           {description}

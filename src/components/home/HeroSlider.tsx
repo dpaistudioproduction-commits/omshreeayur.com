@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { BRAND_ASSETS } from "@/lib/brand-assets";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface SlideData {
   id: string;
@@ -33,7 +32,7 @@ const HERO_SLIDES: SlideData[] = [
     tag: "A Multi Speciality Ayurveda Hospital & Research Centre",
     title: "Omshree Sidha Hospital: Multi-Speciality Clinical Ayurveda in Kerala",
     subtitle: "A licensed, clinical Ayurvedic institution in Vayala, Kerala with 24-hour resident doctor supervision, GMP-certified pharmacy, and dedicated departments for cardiovascular, hepatic, gastrointestinal, and chronic diseases.",
-    imageSrc: "/images/hospital/banner.png",
+    imageSrc: "/images/hospital/banner.webp",
     imageAlt: "Omshree Sidha Hospital Campus and Clinical Environment in Kerala",
     primaryCtaText: "Book Consultation",
     primaryCtaLink: "/contact",
@@ -104,51 +103,33 @@ export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [progress, setProgress] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    setProgress(0);
   }, []);
 
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-    setProgress(0);
   }, []);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setProgress(0);
   };
 
-  // Autoplay & Progress Timer
+  // Autoplay Timer (Single timeout per slide, offloading progress animation to CSS)
   useEffect(() => {
     if (!isPlaying) {
-      if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
       if (timerRef.current) clearTimeout(timerRef.current);
       return;
     }
 
-    const stepMs = 50;
-    const increment = (stepMs / AUTOPLAY_DURATION) * 100;
+    timerRef.current = setTimeout(() => {
+      nextSlide();
+    }, AUTOPLAY_DURATION);
 
-    progressIntervalRef.current = setInterval(() => {
-      setProgress((p) => {
-        if (p >= 100) {
-          nextSlide();
-          return 0;
-        }
-        return p + increment;
-      });
-    }, stepMs);
-
-    const timer = timerRef.current;
-    const progressInterval = progressIntervalRef.current;
     return () => {
-      if (progressInterval) clearInterval(progressInterval);
-      if (timer) clearTimeout(timer);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, [isPlaying, nextSlide, currentSlide]);
 
@@ -161,6 +142,7 @@ export function HeroSlider() {
         nextSlide();
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [nextSlide, prevSlide]);
@@ -192,26 +174,36 @@ export function HeroSlider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Slides with Crossfade */}
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={activeSlide.id}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0 z-0 pointer-events-none"
-        >
-          <Image
-            src={activeSlide.imageSrc}
-            alt={activeSlide.imageAlt}
-            fill
-            sizes="100vw"
-            priority={currentSlide === 0}
-            className="object-cover object-center"
-          />
-        </motion.div>
-      </AnimatePresence>
+      {/* Background Slides with Native CSS Crossfade (eliminates JS animation render delay) */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {HERO_SLIDES.map((slide, idx) => {
+          const isActive = idx === currentSlide;
+          // Only render active slide (slide 0 on SSR) to prevent pre-fetching offscreen slides
+          const shouldRender = isActive;
+          return (
+            <div
+              key={slide.id}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-1000 ease-in-out",
+                isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+              )}
+            >
+              {shouldRender && (
+                <Image
+                  src={slide.imageSrc}
+                  alt={slide.imageAlt}
+                  fill
+                  sizes="100vw"
+                  priority={idx === 0}
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  className="object-cover object-center"
+                />
+              )}
+            </div>
+          );
+        })}
+      </div>
 
       {/* Refined Dark Vignette / Overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#2c1b0f]/90 via-[#402816]/50 to-transparent pointer-events-none" />
@@ -220,121 +212,93 @@ export function HeroSlider() {
       {/* Main Content Area */}
       <div className="w-full px-[4%] relative z-10 py-24">
         <div className="max-w-3xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeSlide.id}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              variants={{
-                visible: { transition: { staggerChildren: 0.1 } },
-                exit: { transition: { staggerChildren: 0.05 } }
-              }}
-              className="flex flex-col items-start"
-            >
-              {/* Tag / Category Badge (Glassmorphism) */}
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-sm"
-              >
-                <span className="h-2 w-2 rounded-full bg-[#B4833D] animate-pulse shadow-[0_0_8px_rgba(180,131,61,0.8)]" />
-                <span className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#F7F1E1]">
-                  {activeSlide.tag}
-                </span>
-              </motion.div>
+          <div
+            key={activeSlide.id}
+            className={cn(
+              "flex flex-col items-start",
+              currentSlide !== 0 && "animate-fadeIn"
+            )}
+          >
+            {/* Tag / Category Badge (Glassmorphism) */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-[#B4833D] animate-pulse shadow-[0_0_8px_rgba(180,131,61,0.8)]" />
+              <span className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#F7F1E1]">
+                {activeSlide.tag}
+              </span>
+            </div>
 
-              {/* Heading */}
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F1E1] mb-6 leading-[1.12] tracking-tight drop-shadow-lg"
-              >
-                {activeSlide.title}
-              </motion.h1>
+            {/* Heading */}
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F1E1] mb-6 leading-[1.12] tracking-tight drop-shadow-lg">
+              {activeSlide.title}
+            </h1>
 
-              {/* Subtitle */}
-              <motion.p
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="text-base sm:text-lg md:text-xl text-[#E3D8C1] mb-10 leading-relaxed font-light max-w-2xl drop-shadow-md"
-              >
-                {activeSlide.subtitle}
-              </motion.p>
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg md:text-xl text-[#E3D8C1] mb-10 leading-relaxed font-light max-w-2xl drop-shadow-md">
+              {activeSlide.subtitle}
+            </p>
 
-              {/* CTAs */}
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                  exit: { opacity: 0, y: -20, transition: { duration: 0.4 } }
-                }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <Button
+                render={<Link href={activeSlide.primaryCtaLink} />}
+                variant="default"
+                size="lg"
+                className="px-8 shadow-[0_0_20px_rgba(81,123,50,0.4)] hover:-translate-y-0.5"
               >
-                <Button
-                  render={<Link href={activeSlide.primaryCtaLink} />}
-                  variant="default"
-                  size="lg"
-                  className="px-8 shadow-[0_0_20px_rgba(81,123,50,0.4)] hover:-translate-y-0.5"
-                >
-                  {activeSlide.primaryCtaText}
-                </Button>
+                {activeSlide.primaryCtaText}
+              </Button>
 
-                <Button
-                  render={<Link href={activeSlide.secondaryCtaLink} />}
-                  variant="outline"
-                  size="lg"
-                  className="px-8 bg-black/20 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
-                >
-                  {activeSlide.secondaryCtaText}
-                </Button>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+              <Button
+                render={<Link href={activeSlide.secondaryCtaLink} />}
+                variant="outline"
+                size="lg"
+                className="px-8 bg-black/20 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
+              >
+                {activeSlide.secondaryCtaText}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Slider Controls - Unified Control Island at Bottom Right */}
       <div className="absolute bottom-8 right-[4%] z-20 pointer-events-auto">
         <div className="flex items-center gap-4 bg-[#2c1b0f]/60 backdrop-blur-xl border border-[#E3D8C1]/10 rounded-full px-6 py-3 shadow-2xl">
-          
           {/* Slide Indicator */}
           <div className="flex items-center gap-2 border-r border-[#E3D8C1]/20 pr-4">
-            <span className="font-mono text-sm md:text-base font-bold text-[#B4833D]">
+            <span className="font-mono text-sm md:text-base font-bold text-[#D4A760]">
               {activeSlide.number}
             </span>
-            <span className="font-mono text-sm md:text-base text-[#E3D8C1]/50">
+            <span className="font-mono text-sm md:text-base text-[#E3D8C1]/80">
               / 05
             </span>
           </div>
 
           {/* Jump Dots with internal progress */}
-          <div className="hidden sm:flex items-center gap-2 px-2">
+          <div className="hidden sm:flex items-center gap-1 px-1">
             {HERO_SLIDES.map((slide, idx) => (
               <button
                 key={slide.id}
                 onClick={() => goToSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={cn(
-                  "rounded-full transition-all duration-300 relative overflow-hidden",
-                  idx === currentSlide ? "w-10 h-1.5 bg-[#E3D8C1]/20" : "w-1.5 h-1.5 bg-[#E3D8C1]/40 hover:bg-[#E3D8C1]/70"
-                )}
+                className="min-h-[36px] min-w-[36px] p-1 flex items-center justify-center focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D4A760] rounded-full"
               >
-                {idx === currentSlide && (
-                  <div 
-                    className="absolute top-0 left-0 bottom-0 bg-[#B4833D] transition-all duration-75 ease-linear rounded-full"
-                    style={{ width: `${progress}%` }}
-                  />
-                )}
+                <span
+                  className={cn(
+                    "rounded-full transition-all duration-300 relative overflow-hidden block",
+                    idx === currentSlide ? "w-10 h-1.5 bg-[#E3D8C1]/20" : "w-1.5 h-1.5 bg-[#E3D8C1]/40 hover:bg-[#E3D8C1]/70"
+                  )}
+                >
+                  {idx === currentSlide && (
+                    <span
+                      key={`progress-${currentSlide}`}
+                      className="absolute top-0 left-0 bottom-0 bg-[#D4A760] rounded-full block"
+                      style={{
+                        animation: isPlaying ? `heroProgress ${AUTOPLAY_DURATION}ms linear forwards` : "none",
+                      }}
+                    />
+                  )}
+                </span>
               </button>
             ))}
           </div>
@@ -344,7 +308,7 @@ export function HeroSlider() {
             <button
               onClick={() => setIsPlaying((p) => !p)}
               aria-label={isPlaying ? "Pause hero slider" : "Play hero slider"}
-              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-8 sm:w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
             </button>
@@ -352,7 +316,7 @@ export function HeroSlider() {
             <button
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-8 sm:w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -360,7 +324,7 @@ export function HeroSlider() {
             <button
               onClick={nextSlide}
               aria-label="Next slide"
-              className="h-8 w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-8 sm:w-8 rounded-full text-[#E3D8C1]/80 hover:text-[#F7F1E1] hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

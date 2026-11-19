@@ -54,7 +54,7 @@ export const BRAND_ASSETS = {
     },
   ],
   hospital: {
-    campusExterior: "/images/hospital/hospital-1.png",
+    campusExterior: "/images/hospital/hospital-1.webp",
     pharmacy: "/images/hospital/ayurvedic-pharmacy.webp",
   },
   facilities: {
@@ -62,11 +62,11 @@ export const BRAND_ASSETS = {
     consultationChambers: "/images/facilities/consultation-chambers.webp",
   },
   therapies: {
-    kizhi: "/images/kizhi_hero.png",
-    shirodhara: "/images/shirodhara_hero.png",
-    abhyanga: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070",
-    hridBasti: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2020",
-    virechana: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070",
+    kizhi: "/images/kizhi_hero.webp",
+    shirodhara: "/images/shirodhara_hero.webp",
+    abhyanga: "/images/therapies/abhyanga.webp",
+    hridBasti: "/images/therapies/hrid-basti.webp",
+    virechana: "/images/therapies/virechana.webp",
   },
   products: {
     bottle: "/images/products/bottle.png",

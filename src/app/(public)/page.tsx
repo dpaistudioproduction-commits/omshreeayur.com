@@ -60,7 +60,7 @@ export default function HomePage() {
                 </span>
                 <div className="font-heading font-bold text-6xl sm:text-7xl lg:text-8xl text-[#F7F1E1] leading-[0.9] tracking-tight">
                   140+
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl text-[#B4833D] font-serif font-normal italic mt-3">
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl text-[#D4A760] font-serif font-normal italic mt-3">
                     Years of Lineage
                   </span>
                 </div>
@@ -70,15 +70,15 @@ export default function HomePage() {
             {/* Right: Institutional Content */}
             <div className="lg:col-span-7 flex flex-col justify-center space-y-8 lg:pl-4 py-4">
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#517B32] block mb-4">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#3D5F26] block mb-4">
                   Institutional Definition
                 </span>
-                <h3 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#66371B] leading-[1.15]">
-                  An Authentic In-Patient Ayurvedic Hospital, <span className="text-[#B4833D] italic font-serif font-normal">Not a Wellness Resort</span>
-                </h3>
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#66371B] leading-[1.15]">
+                  An Authentic In-Patient Ayurvedic Hospital, <span className="text-[#8F5E18] italic font-serif font-normal">Not a Wellness Resort</span>
+                </h2>
               </div>
 
-              <div className="space-y-6 text-base sm:text-lg text-[#81754B] leading-relaxed font-light">
+              <div className="space-y-6 text-base sm:text-lg text-[#5C5232] leading-relaxed font-light">
                 <p>
                   Founded in the late nineteenth century by Sri Kochukutty Vaidhyar, Omshree Sidha Hospital has carried forward pure Kerala Ayurvedic clinical traditions across three generations of the Marozhukayil family.
                 </p>
@@ -87,7 +87,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="bg-[#E3D8C1]/40 border-l-4 border-[#B4833D] p-5 sm:p-6 rounded-r-2xl">
+              <div className="bg-[#E3D8C1]/40 border-l-4 border-[#8F5E18] p-5 sm:p-6 rounded-r-2xl">
                 <p className="text-sm sm:text-base text-[#66371B] leading-relaxed italic">
                   <span className="font-bold mr-1">Note on terminology:</span> 
                   While our heritage institution bears the proper family brand name &ldquo;Sidha&rdquo;, we practice exclusively the classical medical system of Kerala Ayurveda.
@@ -97,9 +97,9 @@ export default function HomePage() {
               <div className="pt-4">
                 <Link
                   href="/about/history"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#517B32] hover:text-[#6F9940] transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#3D5F26] hover:text-[#28422B] transition-colors group/link"
                 >
-                  <span className="border-b border-[#517B32]/30 pb-0.5 group-hover/link:border-[#6F9940]">Read our full institutional history</span>
+                  <span className="border-b border-[#3D5F26]/30 pb-0.5 group-hover/link:border-[#28422B]">Read our full institutional history</span>
                   <ArrowRight className="h-4 w-4 transform group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
 
               {/* Content Panel */}
               <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 transform transition-transform duration-500 group-hover:-translate-y-2">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mb-3 drop-shadow-md">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4A760] block mb-3 drop-shadow-md">
                   Nervous System & Calm
                 </span>
                 <h3 className="font-heading font-bold text-3xl sm:text-4xl text-white mb-3 drop-shadow-lg">
@@ -171,8 +171,8 @@ export default function HomePage() {
                   Continuous rhythmic pouring of warm medicated herbal oil over the forehead to soothe Prana Vata and support neurological equilibrium.
                 </p>
                 
-                <div className="flex items-center gap-2 text-sm font-bold text-[#B4833D] drop-shadow-md">
-                  <span className="border-b border-[#B4833D]/50 pb-0.5 group-hover:border-[#B4833D] transition-colors">View Protocol</span>
+                <div className="flex items-center gap-2 text-sm font-bold text-[#D4A760] drop-shadow-md">
+                  <span className="border-b border-[#D4A760]/50 pb-0.5 group-hover:border-[#D4A760] transition-colors">View Protocol</span>
                   <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-500 group-hover:opacity-100" />
 
               <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 transform transition-transform duration-500 group-hover:-translate-y-2">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mb-3 drop-shadow-md">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4A760] block mb-3 drop-shadow-md">
                   Musculoskeletal Rejuvenation
                 </span>
                 <h3 className="font-heading font-bold text-3xl sm:text-4xl text-white mb-3 drop-shadow-lg">
@@ -204,8 +204,8 @@ export default function HomePage() {
                   Warm herbal bolus fermentation prepared with medicated leaves to alleviate deep inflammation, stiffness, and chronic joint pain.
                 </p>
                 
-                <div className="flex items-center gap-2 text-sm font-bold text-[#B4833D] drop-shadow-md">
-                  <span className="border-b border-[#B4833D]/50 pb-0.5 group-hover:border-[#B4833D] transition-colors">View Protocol</span>
+                <div className="flex items-center gap-2 text-sm font-bold text-[#D4A760] drop-shadow-md">
+                  <span className="border-b border-[#D4A760]/50 pb-0.5 group-hover:border-[#D4A760] transition-colors">View Protocol</span>
                   <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-500 group-hover:opacity-100" />
 
               <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 transform transition-transform duration-500 group-hover:-translate-y-2">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mb-3 drop-shadow-md">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4A760] block mb-3 drop-shadow-md">
                   Cardiovascular Nourishment
                 </span>
                 <h3 className="font-heading font-bold text-3xl sm:text-4xl text-white mb-3 drop-shadow-lg">
@@ -237,8 +237,8 @@ export default function HomePage() {
                   Retention of specially formulated warm medicated lipid decoctions over the cardiac region to support heart muscle strength.
                 </p>
                 
-                <div className="flex items-center gap-2 text-sm font-bold text-[#B4833D] drop-shadow-md">
-                  <span className="border-b border-[#B4833D]/50 pb-0.5 group-hover:border-[#B4833D] transition-colors">View Protocol</span>
+                <div className="flex items-center gap-2 text-sm font-bold text-[#D4A760] drop-shadow-md">
+                  <span className="border-b border-[#D4A760]/50 pb-0.5 group-hover:border-[#D4A760] transition-colors">View Protocol</span>
                   <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -256,13 +256,13 @@ export default function HomePage() {
           
           {/* Minimal Header */}
           <div className="text-center mb-16">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B4833D] block mb-3">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8F5E18] block mb-3">
               Clinical Leadership
             </span>
             <h2 className="font-heading text-3xl md:text-4xl text-[#66371B] mb-4">
               Qualified Ayurvedic Physicians
             </h2>
-            <p className="text-sm md:text-base text-[#81754B] leading-relaxed font-light max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-[#5C5232] leading-relaxed font-light max-w-2xl mx-auto">
               Our clinical team blends unbroken hereditary healing traditions with modern BAMS university medical qualifications.
             </p>
           </div>
@@ -285,13 +285,13 @@ export default function HomePage() {
                 </div>
                 
                 {/* Refined Compact Typography */}
-                <span className="text-[9px] font-bold uppercase tracking-widest text-[#B4833D] mb-2">
+                <span className="text-[9px] font-bold uppercase tracking-widest text-[#8F5E18] mb-2">
                   {doc.role}
                 </span>
                 <h3 className="font-heading text-lg md:text-xl text-[#66371B] mb-1 font-semibold">
                   {doc.name}
                 </h3>
-                <p className="text-[10px] text-[#81754B] uppercase tracking-wider">
+                <p className="text-[10px] text-[#5C5232] uppercase tracking-wider">
                   {doc.qualifications}
                 </p>
               </div>
@@ -302,7 +302,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link
               href="/about/doctors"
-              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#517B32] hover:text-[#6F9940] transition-colors border-b border-[#517B32]/30 hover:border-[#6F9940] pb-1 group"
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#3D5F26] hover:text-[#28422B] transition-colors border-b border-[#3D5F26]/30 hover:border-[#28422B] pb-1 group"
             >
               <span>View Full Profiles</span>
               <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -326,14 +326,14 @@ export default function HomePage() {
           {/* Custom Editorial Header */}
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20 md:mb-24">
             <div className="inline-flex items-center gap-3 mb-6">
-              <span className="h-px w-8 bg-[#B4833D] hidden md:block"></span>
-              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#B4833D]">Care Pathway</span>
-              <span className="h-px w-8 bg-[#B4833D] hidden md:block"></span>
+              <span className="h-px w-8 bg-[#8F5E18] hidden md:block"></span>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#8F5E18]">Care Pathway</span>
+              <span className="h-px w-8 bg-[#8F5E18] hidden md:block"></span>
             </div>
             <h2 className="font-heading font-normal text-4xl sm:text-5xl md:text-6xl text-[#66371B] leading-[1.1] mb-6">
               The Patient Healing Journey
             </h2>
-            <p className="text-base text-[#81754B] leading-relaxed font-light max-w-2xl">
+            <p className="text-base text-[#5C5232] leading-relaxed font-light max-w-2xl">
               A structured, compassionate clinical process designed to provide clarity, comfort, and sustainable health restoration.
             </p>
           </div>
@@ -373,16 +373,16 @@ export default function HomePage() {
               ].map((item) => (
                 <div key={item.step} className="relative flex flex-col items-center text-center group">
                   {/* Step Node */}
-                  <div className="w-20 h-20 rounded-full bg-white border border-[#DBCFA8] text-[#B4833D] font-heading text-2xl font-light flex items-center justify-center shadow-sm mb-8 relative z-10 group-hover:bg-[#66371B] group-hover:text-white group-hover:border-[#66371B] transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl">
+                  <div className="w-20 h-20 rounded-full bg-white border border-[#DBCFA8] text-[#8F5E18] font-heading text-2xl font-light flex items-center justify-center shadow-sm mb-8 relative z-10 group-hover:bg-[#66371B] group-hover:text-white group-hover:border-[#66371B] transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl">
                     {item.step}
                   </div>
                   
                   {/* Content */}
                   <div className="flex-1 px-2">
-                    <h4 className="font-heading font-medium text-lg text-[#66371B] mb-4 group-hover:text-[#517B32] transition-colors">
+                    <h3 className="font-heading font-medium text-lg text-[#66371B] mb-4 group-hover:text-[#3D5F26] transition-colors">
                       {item.title}
-                    </h4>
-                    <p className="text-[13px] text-[#81754B] leading-relaxed font-light">
+                    </h3>
+                    <p className="text-[13px] text-[#5C5232] leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>
@@ -405,13 +405,13 @@ export default function HomePage() {
             <div className="lg:w-1/3">
               <div className="sticky top-32">
                 <div className="inline-flex items-center gap-3 mb-6">
-                  <span className="h-px w-8 bg-[#B4833D]"></span>
-                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#B4833D]">Answers & Guidance</span>
+                  <span className="h-px w-8 bg-[#8F5E18]"></span>
+                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#8F5E18]">Answers & Guidance</span>
                 </div>
                 <h2 className="font-heading font-normal text-4xl sm:text-5xl text-[#66371B] leading-[1.1] mb-6">
                   Frequently Asked Questions
                 </h2>
-                <p className="text-base text-[#81754B] leading-relaxed font-light">
+                <p className="text-base text-[#5C5232] leading-relaxed font-light">
                   Clear clinical answers regarding consultations, inpatient admissions, and treatment protocols at Omshree Sidha Hospital.
                 </p>
               </div>
@@ -443,10 +443,10 @@ export default function HomePage() {
                     value={`item-${idx}`}
                     className="border-b border-[#DBCFA8]/50"
                   >
-                    <AccordionTrigger className="text-left font-heading font-normal text-xl md:text-2xl text-[#66371B] hover:text-[#517B32] py-8 data-[state=open]:text-[#517B32] transition-colors">
+                    <AccordionTrigger className="text-left font-heading font-normal text-xl md:text-2xl text-[#66371B] hover:text-[#3D5F26] py-8 data-[state=open]:text-[#3D5F26] transition-colors">
                       {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm md:text-base text-[#81754B] leading-relaxed font-light pb-8 pr-12">
+                    <AccordionContent className="text-sm md:text-base text-[#5C5232] leading-relaxed font-light pb-8 pr-12">
                       {faq.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -470,18 +470,18 @@ export default function HomePage() {
 
           <div className="relative z-10 max-w-3xl mx-auto space-y-8">
             <div className="inline-flex items-center gap-3 mx-auto">
-              <span className="h-px w-6 bg-[#B4833D]"></span>
-              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#B4833D]">
+              <span className="h-px w-6 bg-[#8F5E18]"></span>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#8F5E18]">
                 Begin Your Healing Journey
               </span>
-              <span className="h-px w-6 bg-[#B4833D]"></span>
+              <span className="h-px w-6 bg-[#8F5E18]"></span>
             </div>
             
             <h2 className="font-heading font-normal text-4xl sm:text-5xl md:text-6xl text-[#66371B] leading-[1.1]">
               Personalized Ayurvedic Clinical Care in Kerala
             </h2>
             
-            <p className="text-base sm:text-lg text-[#81754B] font-light leading-relaxed max-w-2xl mx-auto pb-4">
+            <p className="text-base sm:text-lg text-[#5C5232] font-light leading-relaxed max-w-2xl mx-auto pb-4">
               Schedule a comprehensive clinical consultation with our experienced physicians or speak directly with our care coordination team.
             </p>
 
@@ -498,7 +498,7 @@ export default function HomePage() {
                 render={<a href="https://wa.me/919846992789" target="_blank" rel="noreferrer" />}
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto px-10 border-[#B4833D] text-[#B4833D] hover:bg-[#B4833D] hover:text-white"
+                className="w-full sm:w-auto px-10 border-[#8F5E18] text-[#8F5E18] hover:bg-[#8F5E18] hover:text-white"
               >
                 Chat on WhatsApp
               </Button>
