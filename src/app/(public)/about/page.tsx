@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { TrustSignals } from "@/components/ui/TrustSignals";
 import { MapPin, ArrowRight, Info, CheckCircle2 } from "lucide-react";
 
@@ -117,27 +116,19 @@ export default function AboutMasterPage() {
         <div className="w-full px-[4%]">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             
-            <div className="w-full lg:w-1/2 relative">
+            <div className="w-full lg:w-1/2">
               <div className="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-lg border border-[#DBCFA8]">
                 <Image 
-                  src="/images/hospital/hospital-1.png" 
-                  alt="Omshree Sidha Hospital Interior" 
+                  src="/images/hospital/hospital-1.webp" 
+                  alt="Omshree Sidha Hospital Campus Exterior" 
                   fill 
-                  className="object-cover"
-                />
-              </div>
-              
-              <div className="absolute top-[60%] -right-8 lg:-right-16 w-3/5 lg:w-1/2 aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform -translate-y-1/2 hidden md:block">
-                <Image 
-                  src="/images/hospital/hospital-2.png" 
-                  alt="Omshree Sidha Hospital Treatment" 
-                  fill 
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2 lg:pl-16 relative z-10 mt-8 md:mt-0">
+            <div className="w-full lg:w-1/2 relative z-10 mt-8 md:mt-0">
               <div className="inline-flex justify-center items-center h-16 w-16 rounded-full bg-[#FDFBF7] border border-[#DBCFA8] text-[#B4833D] mb-8 shadow-sm">
                 <Info className="h-6 w-6" />
               </div>
@@ -150,7 +141,7 @@ export default function AboutMasterPage() {
                 </p>
                 <div className="p-6 bg-[#FDFBF7] border border-[#DBCFA8]/50 rounded-2xl shadow-xs">
                   <p className="text-[#66371B] text-base leading-relaxed font-light">
-                    <strong className="text-[#B4833D] font-bold">Note on our name:</strong> While the institution bears the proper name "Sidha", we are exclusively an Ayurvedic hospital. We practice the classical medical systems of Kerala Ayurveda, utilizing our own GMP-certified medicinal preparations.
+                    <strong className="text-[#B4833D] font-bold">Note on our name:</strong> While the institution bears the proper name &quot;Sidha&quot;, we are exclusively an Ayurvedic hospital. We practice the classical medical systems of Kerala Ayurveda, utilizing our own GMP-certified medicinal preparations.
                   </p>
                 </div>
               </div>

@@ -68,22 +68,8 @@ const HERO_SLIDES: SlideData[] = [
     secondaryCtaLink: "/about/why-omshree",
   },
   {
-    id: "slide-heart",
-    number: "04",
-    theme: "Heart Care",
-    tag: "Cardiovascular Speciality",
-    title: "Integrative Ayurvedic Care for Heart & Cardiovascular Health",
-    subtitle: "Non-invasive supportive management for Low Ejection Fraction, coronary blocks, and hypertension under experienced Ayurvedic physicians.",
-    imageSrc: BRAND_ASSETS.therapies.hridBasti,
-    imageAlt: "Ayurvedic Hrid Basti and Cardiovascular Management at Omshree Sidha Hospital",
-    primaryCtaText: "Explore Heart Care",
-    primaryCtaLink: "/conditions/cardiovascular",
-    secondaryCtaText: "Hrid Basti Protocol",
-    secondaryCtaLink: "/treatments/therapies/hrid-basti",
-  },
-  {
     id: "slide-liver-gastro",
-    number: "05",
+    number: "04",
     theme: "Liver & Gastro",
     tag: "Hepatic & Digestive Health",
     title: "Specialized Management for Liver & Gastrointestinal Disorders",
@@ -271,7 +257,7 @@ export function HeroSlider() {
               {activeSlide.number}
             </span>
             <span className="font-mono text-sm md:text-base text-[#E3D8C1]/80">
-              / 05
+              / {String(HERO_SLIDES.length).padStart(2, "0")}
             </span>
           </div>
 
