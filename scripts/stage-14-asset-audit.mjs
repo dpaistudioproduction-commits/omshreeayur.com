@@ -5,7 +5,7 @@ const localAssetsToVerify = [
   { path: '/images/logo/logo.webp', label: 'Official Omshree Sidha Hospital Logo' },
   { path: '/images/kizhi_hero.png', label: 'Authentic Kizhi Therapy Hero Image' },
   { path: '/images/shirodhara_hero.png', label: 'Authentic Shirodhara Therapy Hero Image' },
-  { path: '/images/products/coughpro.png', label: 'Authentic CoughPro Product Asset' },
+  { path: '/images/products/coughpro.png', label: 'Authentic Cufpro Product Asset' },
   { path: '/images/products/gandha.png', label: 'Authentic Gandha Rasayana Product Asset' },
   { path: '/images/products/kafastha.png', label: 'Authentic Kafastha Product Asset' },
   { path: '/images/products/maha.png', label: 'Authentic Maha Rasayana Product Asset' },

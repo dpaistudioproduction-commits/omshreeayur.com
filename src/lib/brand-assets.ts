@@ -73,6 +73,7 @@ export const BRAND_ASSETS = {
     jar: "/images/products/jar.png",
     premiumBottle: "/images/products/premium_bottle.png",
     coughpro: "/images/products/coughpro.png",
+    cufpro: "/images/products/coughpro.png",
     gandha: "/images/products/gandha.png",
     kafastha: "/images/products/kafastha.png",
     maha: "/images/products/maha.png",

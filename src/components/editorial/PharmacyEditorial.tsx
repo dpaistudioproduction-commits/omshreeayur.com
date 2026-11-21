@@ -160,16 +160,27 @@ export function PharmacyEditorial({ headingAs = "h2" }: PharmacyEditorialProps =
                     <span className="text-[11px] sm:text-xs text-[#66371B] font-medium">
                       {product.detailPath ? "Tap to view & order" : "* Physician Prescribed"}
                     </span>
-                    <a
-                      href={`https://wa.me/919846992789?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20Ayurvedic%20medicine%20${encodeURIComponent(product.name)}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="relative z-20 inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors shrink-0"
-                      title="Enquire on WhatsApp"
-                      aria-label={`Enquire on WhatsApp about ${product.name}`}
-                    >
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </a>
+                    {product.detailPath ? (
+                      <Link
+                        href={product.detailPath}
+                        className="relative z-20 inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors shrink-0"
+                        title={`View ${product.name} details and order`}
+                        aria-label={`View ${product.name} details and order`}
+                      >
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    ) : (
+                      <a
+                        href={`https://wa.me/919846992789?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20Ayurvedic%20medicine%20${encodeURIComponent(product.name)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="relative z-20 inline-flex items-center justify-center h-8 w-8 rounded-full bg-[#517B32]/10 text-[#517B32] hover:bg-[#517B32] hover:text-white transition-colors shrink-0"
+                        title="Enquire on WhatsApp"
+                        aria-label={`Enquire on WhatsApp about ${product.name}`}
+                      >
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

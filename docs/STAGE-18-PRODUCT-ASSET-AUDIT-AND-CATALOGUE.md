@@ -10,7 +10,7 @@ A complete inspection of `d:\Workstation DP-2\DP Clients\WEB DEVELOPMENT\omshree
 
 | Asset Filename | File Size | Product Identity | Packaging Type | Background |
 |---|---|---|---|---|
-| **`coughpro.png`** | 1.28 MB | **CoughPro** | High-grade clinical bottle | Clean / Transparent |
+| **`coughpro.png`** | 1.28 MB | **Cufpro** | High-grade clinical bottle | Clean / Transparent |
 | **`gandha.png`** | 1.17 MB | **Gandha Rasayana** | Medicated Rasayana jar | Clean / Transparent |
 | **`kafastha.png`** | 1.17 MB | **Kafastha** | Bronchial herbal bottle | Clean / Transparent |
 | **`maha.png`** | 1.35 MB | **Maha Rasayana** | Classical preparation jar | Clean / Transparent |
@@ -39,7 +39,7 @@ export interface ProductItem {
 ```
 
 ### Registered Formulations:
-1. **CoughPro (`/images/products/coughpro.png`)** — Government of India Patented respiratory herbal formulation prepared from fresh botanicals in our Vayala medicinal gardens.
+1. **Cufpro (`/images/products/coughpro.png`)** — Government of India Patented respiratory herbal formulation prepared from fresh botanicals in our Vayala medicinal gardens.
 2. **Gandha Rasayana (`/images/products/gandha.png`)** — Classical mineral-herbal purified formulation processed through traditional Bhavana techniques for cellular rejuvenation and metabolic correction.
 3. **Kafastha (`/images/products/kafastha.png`)** — Targeted Ayurvedic compound formulated to alleviate stubborn mucus accumulation and balance respiratory Agni.
 4. **Maha Rasayana (`/images/products/maha.png`)** — Classical deep-tissue lipid and herbal decoction formulated to promote Dhatu Poshana (tissue nourishment).

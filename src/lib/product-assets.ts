@@ -23,8 +23,8 @@ export interface ProductItem {
 
 export const AUTHENTIC_PRODUCTS: ProductItem[] = [
   {
-    id: "coughpro",
-    name: "CoughPro",
+    id: "cufpro",
+    name: "Cufpro",
     category: "Respiratory",
     categoryLabel: "Respiratory & Shwasahara",
     image: "/images/products/coughpro.png",
