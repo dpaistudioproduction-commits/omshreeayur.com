@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { SchemaMarkup, generateMedicalOrganizationSchema } from "@/components/seo/SchemaMarkup";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
 import { HeatmapTracker } from "@/components/analytics/HeatmapTracker";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
@@ -45,7 +44,6 @@ export default function PublicLayout({
     <>
       <AnalyticsScripts />
       <HeatmapTracker />
-      <SchemaMarkup schema={generateMedicalOrganizationSchema()} />
       <Header />
       <main className="flex-1 pb-16 md:pb-0">
         {children}

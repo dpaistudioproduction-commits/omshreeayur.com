@@ -12,13 +12,15 @@ import { BRAND_ASSETS } from "@/lib/brand-assets";
 
 export default function HomePage() {
   const jsonLd = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": "WebSite",
-    "@id": "https://www.omshreeayur.com/#website",
-    "url": "https://www.omshreeayur.com",
     "name": "Omshree Sidha Hospital",
-    "description": "Multi-speciality Ayurvedic Hospital in Vayala, Kottayam, Kerala. Specialized in cardiac care, liver disorders, gastrointestinal conditions, and classical Panchakarma.",
-    "publisher": { "@id": "https://www.omshreeayur.com/#organization" }
+    "url": "https://www.omshreeayur.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.omshreeayur.com/{search_term_string}treatments",
+      "query-input": "required name=search_term_string"
+    }
   };
 
   return (
