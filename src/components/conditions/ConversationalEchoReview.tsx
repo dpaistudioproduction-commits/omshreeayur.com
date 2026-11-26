@@ -29,6 +29,7 @@ export function ConversationalEchoReview() {
   // Callback form state
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -71,6 +72,7 @@ I have my medical / Echo reports ready to share for Dr. Jose Vaidhyan's review.`
       const payload = {
         fullName: name.trim(),
         phone: phone.trim(),
+        email: email.trim() || undefined,
         city: city.trim() || undefined,
         healthConcern: `Low Ejection Fraction (EF: ${selectedEF})`,
         message: `Current EF: ${selectedEF}. Symptoms: ${selectedSymptoms.join(", ") || "None selected"}. Requesting callback regarding Ayurvedic cardiology protocol.`,
@@ -263,7 +265,7 @@ I have my medical / Echo reports ready to share for Dr. Jose Vaidhyan's review.`
             </div>
           ) : (
             <form onSubmit={handleCallbackSubmit} className="space-y-3">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 <div>
                   <label className="block text-xs font-bold text-[#66371B] mb-1">Your Full Name *</label>
                   <input
@@ -276,13 +278,23 @@ I have my medical / Echo reports ready to share for Dr. Jose Vaidhyan's review.`
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-[#66371B] mb-1">Mobile / WhatsApp Number *</label>
+                  <label className="block text-xs font-bold text-[#66371B] mb-1">Mobile / WhatsApp *</label>
                   <input
                     type="tel"
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="e.g. +91 98765 43210"
+                    className="w-full h-11 px-3 text-sm bg-white rounded-xl border border-[#DBCFA8] focus:outline-hidden focus:border-[#517B32]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-[#66371B] mb-1">Email Address (Optional)</label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="e.g. name@gmail.com"
                     className="w-full h-11 px-3 text-sm bg-white rounded-xl border border-[#DBCFA8] focus:outline-hidden focus:border-[#517B32]"
                   />
                 </div>

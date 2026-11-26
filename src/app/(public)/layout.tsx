@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
+import { GlobalConversionTracker } from "@/components/analytics/GlobalConversionTracker";
 import { HeatmapTracker } from "@/components/analytics/HeatmapTracker";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
 
@@ -43,6 +44,7 @@ export default function PublicLayout({
   return (
     <>
       <AnalyticsScripts />
+      <GlobalConversionTracker />
       <HeatmapTracker />
       <Header />
       <main className="flex-1 pb-16 md:pb-0">

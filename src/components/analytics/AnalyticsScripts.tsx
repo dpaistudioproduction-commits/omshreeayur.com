@@ -21,22 +21,13 @@ export function AnalyticsScripts() {
           window.gtag = gtag;
           window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
 
-          function initGTM() {
-            if (window.__gtmLoaded) return;
+          if (!window.__gtmLoaded) {
             window.__gtmLoaded = true;
             var f = document.getElementsByTagName('script')[0],
                 j = document.createElement('script');
             j.async = true;
             j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-K5C9V6K';
             f.parentNode.insertBefore(j, f);
-          }
-
-          if (typeof window !== 'undefined') {
-            if ('requestIdleCallback' in window) {
-              requestIdleCallback(initGTM, { timeout: 1800 });
-            } else {
-              setTimeout(initGTM, 1000);
-            }
           }
         `}
       </Script>

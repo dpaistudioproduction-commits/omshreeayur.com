@@ -41,20 +41,37 @@ export function trackEvent(eventName: string, params: Record<string, unknown> = 
     safeParams[key] = value;
   }
 
-  // Google Analytics 4 & Google Tag Manager
-  const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-4GFE7SYQPF";
-  if (typeof window.gtag === "function" && gaId) {
+  // 1. Google Analytics 4 & Google Ads gtag call
+  if (typeof window.gtag === "function") {
     try {
       window.gtag("event", eventName, safeParams);
     } catch {
       // Ignore client-side tracking error
     }
-  } else if (Array.isArray(window.dataLayer)) {
+  }
+
+  // 2. Google Tag Manager dataLayer push (Custom Event triggers & GA4 standard conversions)
+  if (typeof window !== "undefined") {
+    window.dataLayer = window.dataLayer || [];
     try {
       window.dataLayer.push({
         event: eventName,
         ...safeParams,
       });
+
+      // Also dispatch standard conversion aliases for GTM / Google Ads / GA4
+      if (eventName === "enquiry_form_success") {
+        window.dataLayer.push({
+          event: "generate_lead",
+          patient_type: safeParams.patient_type || "domestic",
+        });
+      } else if (eventName === "whatsapp_click" || eventName === "phone_click" || eventName === "email_click") {
+        window.dataLayer.push({
+          event: "contact",
+          contact_method: eventName === "phone_click" ? "phone" : eventName === "whatsapp_click" ? "whatsapp" : "email",
+          source_page: safeParams.source_page,
+        });
+      }
     } catch {
       // Ignore client-side tracking error
     }
@@ -96,6 +113,9 @@ export const analytics = {
   },
   phoneClick: (sourcePage: string) => {
     trackEvent("phone_click", { source_page: sourcePage });
+  },
+  emailClick: (sourcePage: string, emailAddress?: string) => {
+    trackEvent("email_click", { source_page: sourcePage, destination: emailAddress || "info@omshreeayur.com" });
   },
   enquiryFormStart: (patientType: "domestic" | "international") => {
     trackEvent("enquiry_form_start", { patient_type: patientType });

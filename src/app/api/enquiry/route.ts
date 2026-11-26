@@ -82,7 +82,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!body.email || !emailRegex.test(body.email.trim())) {
+    if (body.email && body.email.trim().length > 0 && !emailRegex.test(body.email.trim())) {
       fieldErrors.email = "Please enter a valid email address.";
     }
 
@@ -144,11 +144,12 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
     // 3. Strict HTML Escaping for All User-Controlled Body Values
     const safeFullName = sanitizeHtml(body.fullName.trim());
     const safeHealthConcern = sanitizeHtml(body.healthConcern.trim());
-    const safeEmailDisplay = sanitizeHtml(body.email.trim());
+    const hasEmail = Boolean(body.email && body.email.trim().length > 0);
+    const safeEmailDisplay = hasEmail ? sanitizeHtml(body.email!.trim()) : "";
     const safePhoneDisplay = sanitizeHtml(body.phone.trim());
 
     // Normalize and escape mailto: and tel: links
-    const safeEmailHref = encodeURIComponent(body.email.trim());
+    const safeEmailHref = hasEmail ? encodeURIComponent(body.email!.trim()) : "";
     const safeTelDigits = body.phone.replace(/[^0-9+]/g, "");
     const safeTelHref = sanitizeHtml(safeTelDigits);
 
@@ -186,7 +187,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
             </tr>
             <tr>
               <td style="padding: 8px 0; font-weight: bold;">Email:</td>
-              <td style="padding: 8px 0;"><a href="mailto:${safeEmailHref}">${safeEmailDisplay}</a></td>
+              <td style="padding: 8px 0;">${hasEmail ? `<a href="mailto:${safeEmailHref}">${safeEmailDisplay}</a>` : '<span style="color: #64748b; font-style: italic;">Not provided (Direct Phone / WhatsApp Callback)</span>'}</td>
             </tr>
             <tr>
               <td style="padding: 8px 0; font-weight: bold;">Phone / WhatsApp:</td>
@@ -216,7 +217,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
     `;
 
     try {
-      const safeReplyTo = body.email.trim().replace(/[\r\n]+/g, "");
+      const safeReplyTo = hasEmail ? body.email!.trim().replace(/[\r\n]+/g, "") : undefined;
 
       const resendResponse = await fetch(`${resendBaseUrl}/emails`, {
         method: "POST",
@@ -227,7 +228,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
         body: JSON.stringify({
           from: emailFrom,
           to: [emailTo],
-          reply_to: safeReplyTo,
+          ...(safeReplyTo ? { reply_to: safeReplyTo } : {}),
           subject: emailSubject,
           html: emailHtml,
         }),

@@ -1,7 +1,7 @@
 export interface EnquiryPayload {
   patientType: 'domestic' | 'international';
   fullName: string;
-  email: string;
+  email?: string;
   phone: string;
   state?: string;
   city?: string;
